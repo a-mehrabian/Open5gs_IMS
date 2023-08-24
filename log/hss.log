@@ -84,3 +84,11 @@ Open5GS daemon v2.6.4-78-g7f08873
 08/24 14:30:51.042: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
 08/24 14:34:13.086: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
  ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/24 15:54:28.237: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+08/24 15:54:28.237: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+08/24 15:54:28.239: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+08/24 15:54:28.257: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+08/24 15:54:28.258: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+08/24 15:55:48.819: [dbi] INFO: [imsi-302610046963740] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
