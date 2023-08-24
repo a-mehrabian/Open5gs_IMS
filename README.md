@@ -133,8 +133,23 @@ Open (http://<DOCKER_HOST_IP>:3000) in a web browser, where <DOCKER_HOST_IP> is 
 Username : admin
 Password : 1423
 ```
-
 Using Web UI, add a subscriber
+
+<!-- <h3 id="register_open5gs">Register subscribers information with Open5GS</h3> -->
+
+**Please also register MSISDN.** At that time, set the APN setting information as follows.
+| APN | Type | QCI | ARP | Capability | Vulnerablility | MBR DL/UL(Kbps) | GBR DL/UL(Kbps) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| internet | IPv4 | 9 | 8 | Disabled | Disabled | unlimited/unlimited | |
+| ims | IPv4 | 5 | 1 | Disabled | Disabled | 3850/1530 | |
+| | | 1 | 2 | Enabled | Enabled | 128/128 | 128/128 |
+
+<summary>ScreenCapture Preview </summary> </br>
+  <body>
+    <p align="center"> <img src="./stuff/open5gs_hss.png" width="500"> </p>
+  </body>
+</details>
+
 
 ### Provisioning of IMSI and MSISDN with OsmoHLR as follows:
 
@@ -190,7 +205,7 @@ Please login to the `osmomsc` container and send SMS from the command line as fo
 https://downloads.osmocom.org/docs/latest/osmomsc-usermanual.pdf
 
 
-**For example, if the following IMSI and MSISDN are registered in OsmoHLR)**
+**For example, if the following IMSI and MSISDN are registered in OsmoHLR**
 | IMSI | MSISDN | SIM |
 | --- | --- | --- |
 | 001010000000001 | 001001 | x |
@@ -216,6 +231,12 @@ OsmoMSC# subscriber msisdn 001002 sms sender msisdn 001001 send TEST MESSAGE
 ```
 OsmoMSC# subscriber msisdn 001002 sms sender msisdn 001001 send TEST MESSAGE
 ```
+
+<summary>ScreenCapture Preview </summary> </br>
+  <body>
+    <p align="center"> <img src="./stuff/sms.png" width="300"> </p>
+  </body>
+</details>
 
 <!-- 
 **Replace IMSI and MSISDN as per your programmed SIM**

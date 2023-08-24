@@ -1,0 +1,44 @@
+2023-08-24T19:55:07.854418 [ENB    ] [I] Using binary /usr/local/bin/srsenb with arguments: 
+2023-08-24T19:55:07.878838 [ENB    ] [I] Built in Release mode using commit fa56836b1 on branch HEAD.
+2023-08-24T19:55:07.912249 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:2152
+2023-08-24T19:55:07.912255 [COMN   ] [D] [    0] RxSockets: socket fd=6 has been registered.
+2023-08-24T19:55:07.912272 [COMN   ] [D] [    0] Opened SCTP socket=7
+2023-08-24T19:55:07.912277 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2023-08-24T19:55:07.912278 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2023-08-24T19:55:07.912285 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2023-08-24T19:55:07.913503 [COMN   ] [D] [    0] RxSockets: socket fd=7 has been registered.
+2023-08-24T19:55:50.260717 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-08-24T19:56:24.158790 [RLC    ] [E] DRB1: Generated empty RLC PDU.
+2023-08-24T19:56:24.158791 [RLC    ] [E] DRB1: Generated empty RLC PDU.
+2023-08-24T19:56:25.019708 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T19:56:38.116083 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-24T19:56:38.175760 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T19:57:17.778274 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-24T19:57:17.827780 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T19:58:14.938211 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-24T19:58:14.987662 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T19:59:51.335604 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-24T19:59:51.395140 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T20:00:58.055199 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-24T20:00:58.115132 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T20:06:54.576173 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-24T20:06:54.624608 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T20:07:24.775573 [MAC    ] [W] [ 7589] UE buffers: Removing old buffer tti=7584, interval=13
+2023-08-24T20:08:50.516218 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-24T20:08:50.565896 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T20:10:57.776531 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-24T20:10:57.825060 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T20:11:03.518326 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-24T20:11:03.577898 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T20:13:03.857126 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-24T20:13:03.905111 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T20:14:30.376801 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-24T20:14:30.425190 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T20:15:17.016689 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-24T20:15:17.065158 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T20:20:11.376491 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-24T20:20:11.424990 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T20:22:41.016469 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-24T20:22:41.064906 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T20:24:54.316339 [S1AP   ] [W] Not handling feature - UERadioCapability
+202
