@@ -29,6 +29,7 @@ RF simulated setups:
 * Mandatory requirements:
 	* [docker-ce](https://docs.docker.com/install/linux/docker-ce/ubuntu) - Version 22.0.5 or above
 	* [docker-compose](https://docs.docker.com/compose) - Version 2.14 or above
+  * [UHD](https://github.com/EttusResearch/uhd) - Version 4.0 or above (official or [MicroPhase](https://github.com/MicroPhase/antsdr_uhd))
 
 
 #### Clone repository and build base docker image of open5gs, kamailio, ueransim
@@ -232,7 +233,7 @@ OsmoMSC# subscriber msisdn 001002 sms sender msisdn 001001 send TEST MESSAGE
 OsmoMSC# subscriber msisdn 001002 sms sender msisdn 001001 send TEST MESSAGE
 ```
 
-<summary>ScreenCapture Preview </summary> </br>
+<summary><b> ScreenCapture Preview: </b> </summary> </br>
   <body>
     <p align="center"> <img src="./stuff/sms.png" width="300"> </p>
   </body>
