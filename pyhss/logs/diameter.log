@@ -1,0 +1,72 @@
+2023-08-23 14:59:02,003 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-23 14:59:02,003 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-23 14:59:32,156 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-23 14:59:32,156 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-23 15:00:20,031 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-23 15:00:20,031 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-23 15:00:50,170 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-23 15:00:50,170 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-23 15:02:18,968 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-23 15:02:18,968 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-23 15:02:20,345 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-23 15:02:20,345 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-23 15:02:50,494 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-23 15:02:50,494 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-23 15:03:15,264 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-23 15:03:15,264 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-23 15:08:44,245 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-23 15:08:44,245 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-23 15:09:49,486 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-23 15:09:49,486 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-24 12:06:28,127 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-24 12:06:28,128 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-24 12:06:58,961 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-24 12:06:58,961 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-24 12:34:38,238 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-24 12:34:38,238 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-24 12:35:08,374 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-24 12:35:08,374 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-24 12:46:10,659 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-24 12:46:10,659 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-24 12:46:37,192 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-24 12:46:37,192 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-24 13:53:18,165 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-24 13:53:18,170 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input
+2023-08-24 13:53:50,770 	 ERROR 	 {/pyhss/diameter.py:1139} 	 Threw Exception: No row was found when one was required
+Threw Exception: No row was found when one was required
+2023-08-24 13:53:50,770 	 ERROR 	 {/pyhss/diameter.py:1140} 	 No known MSISDN or IMSI in Answer_16777216_300() input
+No known MSISDN or IMSI in Answer_16777216_300() input

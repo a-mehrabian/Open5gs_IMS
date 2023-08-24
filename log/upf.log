@@ -1,0 +1,392 @@
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/23 14:29:35.519: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:126)
+08/23 14:29:35.519: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:129)
+08/23 14:29:35.539: [metrics] INFO: metrics_server() [http://172.22.0.8]:9091 (../lib/metrics/prometheus/context.c:299)
+08/23 14:29:35.539: [pfcp] INFO: pfcp_server() [172.22.0.8]:8805 (../lib/pfcp/path.c:30)
+08/23 14:29:35.539: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.7]:8805 (../lib/pfcp/path.c:61)
+08/23 14:29:35.540: [gtp] INFO: gtp_server() [172.22.0.8]:2152 (../lib/gtp/path.c:30)
+08/23 14:29:35.540: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
+08/23 14:29:35.540: [upf] INFO: PFCP associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:184)
+08/23 14:29:35.540: [upf] WARNING: PFCP[RSP] has already been associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:277)
+08/23 14:44:24.954: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/23 14:44:24.954: [gtp] INFO: gtp_connect() [172.22.0.6]:2152 (../lib/gtp/path.c:60)
+08/23 14:44:24.954: [gtp] INFO: gtp_connect() [172.22.0.7]:2152 (../lib/gtp/path.c:60)
+08/23 14:44:24.954: [upf] INFO: UE F-SEID[UP:0x3c7 CP:0xaf7] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/23 14:44:24.954: [upf] INFO: UE F-SEID[UP:0x3c7 CP:0xaf7] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/23 14:44:24.959: [upf] INFO: [Removed] Number of UPF-sessions is now 0 (../src/upf/context.c:250)
+08/23 14:44:35.494: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/23 14:44:35.494: [upf] INFO: UE F-SEID[UP:0xbe7 CP:0xf1a] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/23 14:44:35.494: [upf] INFO: UE F-SEID[UP:0xbe7 CP:0xf1a] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/23 14:44:35.496: [upf] INFO: [Removed] Number of UPF-sessions is now 0 (../src/upf/context.c:250)
+08/23 14:44:46.054: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/23 14:44:46.054: [upf] INFO: UE F-SEID[UP:0x83f CP:0x119] APN[internet] PDN-Type[1] IPv4[192.168.100.4] IPv6[] (../src/upf/context.c:483)
+08/23 14:44:46.054: [upf] INFO: UE F-SEID[UP:0x83f CP:0x119] APN[internet] PDN-Type[1] IPv4[192.168.100.4] IPv6[] (../src/upf/context.c:483)
+08/23 14:44:46.055: [upf] INFO: [Removed] Number of UPF-sessions is now 0 (../src/upf/context.c:250)
+08/23 14:44:56.594: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/23 14:44:56.594: [upf] INFO: UE F-SEID[UP:0x340 CP:0xd22] APN[internet] PDN-Type[1] IPv4[192.168.100.5] IPv6[] (../src/upf/context.c:483)
+08/23 14:44:56.594: [upf] INFO: UE F-SEID[UP:0x340 CP:0xd22] APN[internet] PDN-Type[1] IPv4[192.168.100.5] IPv6[] (../src/upf/context.c:483)
+08/23 14:44:56.595: [upf] INFO: [Removed] Number of UPF-sessions is now 0 (../src/upf/context.c:250)
+08/23 14:45:07.174: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/23 14:45:07.174: [upf] INFO: UE F-SEID[UP:0xe9a CP:0x98e] APN[internet] PDN-Type[1] IPv4[192.168.100.6] IPv6[] (../src/upf/context.c:483)
+08/23 14:45:07.174: [upf] INFO: UE F-SEID[UP:0xe9a CP:0x98e] APN[internet] PDN-Type[1] IPv4[192.168.100.6] IPv6[] (../src/upf/context.c:483)
+08/23 14:45:07.175: [upf] INFO: [Removed] Number of UPF-sessions is now 0 (../src/upf/context.c:250)
+08/23 14:45:30.434: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/23 14:45:30.434: [upf] INFO: UE F-SEID[UP:0x831 CP:0xb2b] APN[internet] PDN-Type[1] IPv4[192.168.100.7] IPv6[] (../src/upf/context.c:483)
+08/23 14:45:30.434: [upf] INFO: UE F-SEID[UP:0x831 CP:0xb2b] APN[internet] PDN-Type[1] IPv4[192.168.100.7] IPv6[] (../src/upf/context.c:483)
+08/23 14:45:30.434: [upf] INFO: [Removed] Number of UPF-sessions is now 0 (../src/upf/context.c:250)
+08/23 14:45:40.954: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/23 14:45:40.954: [upf] INFO: UE F-SEID[UP:0x334 CP:0x656] APN[internet] PDN-Type[1] IPv4[192.168.100.8] IPv6[] (../src/upf/context.c:483)
+08/23 14:45:40.954: [upf] INFO: UE F-SEID[UP:0x334 CP:0x656] APN[internet] PDN-Type[1] IPv4[192.168.100.8] IPv6[] (../src/upf/context.c:483)
+08/23 14:45:40.955: [upf] INFO: [Removed] Number of UPF-sessions is now 0 (../src/upf/context.c:250)
+08/23 14:45:51.493: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/23 14:45:51.494: [upf] INFO: UE F-SEID[UP:0x9cd CP:0x615] APN[internet] PDN-Type[1] IPv4[192.168.100.9] IPv6[] (../src/upf/context.c:483)
+08/23 14:45:51.494: [upf] INFO: UE F-SEID[UP:0x9cd CP:0x615] APN[internet] PDN-Type[1] IPv4[192.168.100.9] IPv6[] (../src/upf/context.c:483)
+08/23 14:48:37.671: [upf] INFO: [Removed] Number of UPF-sessions is now 0 (../src/upf/context.c:250)
+08/23 14:48:38.055: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/23 14:48:38.055: [upf] INFO: UE F-SEID[UP:0x1f9 CP:0x370] APN[internet] PDN-Type[1] IPv4[192.168.100.10] IPv6[] (../src/upf/context.c:483)
+08/23 14:48:38.055: [upf] INFO: UE F-SEID[UP:0x1f9 CP:0x370] APN[internet] PDN-Type[1] IPv4[192.168.100.10] IPv6[] (../src/upf/context.c:483)
+08/23 14:53:53.520: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/23 14:53:53.520: [upf] INFO: UE F-SEID[UP:0xf91 CP:0xddd] APN[internet] PDN-Type[1] IPv4[192.168.100.11] IPv6[] (../src/upf/context.c:483)
+08/23 14:53:53.520: [upf] INFO: UE F-SEID[UP:0xf91 CP:0xddd] APN[internet] PDN-Type[1] IPv4[192.168.100.11] IPv6[] (../src/upf/context.c:483)
+08/23 14:54:08.094: [upf] INFO: [Removed] Number of UPF-sessions is now 1 (../src/upf/context.c:250)
+08/23 14:59:00.556: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/23 14:59:00.556: [upf] INFO: UE F-SEID[UP:0x933 CP:0x126] APN[internet] PDN-Type[1] IPv4[192.168.100.12] IPv6[] (../src/upf/context.c:483)
+08/23 14:59:00.556: [upf] INFO: UE F-SEID[UP:0x933 CP:0x126] APN[internet] PDN-Type[1] IPv4[192.168.100.12] IPv6[] (../src/upf/context.c:483)
+08/23 14:59:01.274: [upf] INFO: [Added] Number of UPF-Sessions is now 3 (../src/upf/context.c:206)
+08/23 14:59:01.274: [upf] INFO: UE F-SEID[UP:0x97c CP:0xba6] APN[ims] PDN-Type[1] IPv4[192.168.101.2] IPv6[] (../src/upf/context.c:483)
+08/23 14:59:01.274: [upf] INFO: UE F-SEID[UP:0x97c CP:0xba6] APN[ims] PDN-Type[1] IPv4[192.168.101.2] IPv6[] (../src/upf/context.c:483)
+08/23 14:59:01.280: [upf] ERROR: [DROP] Source IP-4 Spoofing APN:internet SrcIf:0 DstIf:1 TEID:0x9c94 (../src/upf/gtp-path.c:542)
+08/23 14:59:01.280: [upf] ERROR:        SRC:645B8BD3, UE:C0A8640C (../src/upf/gtp-path.c:544)
+0000: 450005a0 00004000 4006a0ec 645b8bd3   E.....@.@...d[..
+0010: 11399304 e9ba1467 6c1e336c d1902aac   .9.....gl.3l..*.
+0020: 80100800 f8710000 0101080a 10389e0b   .....q.......8..
+0030: 726c8d66 17030317 5f0d24fd 5a7c2438   rl.f...._.$.Z|$8
+0040: e9b50cec 0cdafffc f2f603a8 a6271762   .............'.b
+0050: 13433f41 c4e7abc7 62a9709c 90eddc91   .C?A....b.p.....
+0060: ca85b373 deca57e8 420e1866 e04849a8   ...s..W.B..f.HI.
+0070: daa4c762 66f01c4d 54b765d0 273079a7   ...bf..MT.e.'0y.
+0080: a08a97eb 9fe3ebfe 43f791ad 2d6c09b8   ........C...-l..
+0090: 0b5287f5 fb7e2dfc e5535c91 3bb4a736   .R...~-..S\.;..6
+00a0: 92d9e4d8 6f19f7cc 455d7e2d 8d7f8788   ....o...E]~-....
+00b0: 42a2a616 302a0e4f 05af23cf 2af8a13b   B...0*.O..#.*..;
+00c0: cf11fdad 2c29aa8d 15e02c87 6d65845a   ....,)....,.me.Z
+00d0: e70c6fbf 286ba346 64715444 0f0c22a3   ..o.(k.FdqTD..".
+00e0: fbca0be7 8e04d17c 5cddacff 6cb2eb39   .......|\...l..9
+00f0: c60fad5a a4c3563b 3de98011 c07b88d8   ...Z..V;=....{..
+0100: 0a114b0a 4995ec18 3802b224 12ee4b92   ..K.I...8..$..K.
+0110: e46d4642 ecebe586 a34c3ee1 44c5ded5   .mFB.....L>.D...
+0120: 685f67a6 fa82c98f 2fe9f1e5 5d56a44e   h_g...../...]V.N
+0130: cb3b6860 2561f960 74c6ea0d 74f8eae8   .;h`%a.`t...t...
+0140: 35f1a099 4b32e2c0 889ddf31 3dd59564   5...K2.....1=..d
+0150: 3b7e19bc 3cd384cf 12a27f9c 85355ab5   ;~..<........5Z.
+0160: 28a862b9 c8339399 c05bcc33 b2a83d3f   (.b..3...[.3..=?
+0170: 7cb0ff2c 87c91ab4 873627c4 5140875f   |..,.....6'.Q@._
+0180: 3c949db0 2c498efd d3633c8a 7795ffd9   <...,I...c<.w...
+0190: 1a10a684 6f49ba49 6591e499 b72c0c71   ....oI.Ie....,.q
+01a0: 6359b30f c90fc1bf d66e2fb3 6ad99794   cY.......n/.j...
+01b0: 1e61b05c 24358721 142fbc1a d6fd5f7e   .a.\$5.!./...._~
+01c0: d9cf865f bd9e6079 c40f2dbd 831a7604   ..._..`y..-...v.
+01d0: f5ec540d 3d78ed86 1cbd43d0 27e7a2f7   ..T.=x....C.'...
+01e0: d7854474 e0718871 1d7edc47 548b26b7   ..Dt.q.q.~.GT.&.
+01f0: 5082a7f2 7aba46ef 7b0448ed 34680f6c   P...z.F.{.H.4h.l
+0200: eed31952 c9146ca3 c449c5f0 eedfe541   ...R..l..I.....A
+0210: 3dcf5137 4be69d20 321bbd33 542dde5a   =.Q7K.. 2..3T-.Z
+0220: 5f6c1b5e 59a1d0d6 4b138598 ae0c4a10   _l.^Y...K.....J.
+0230: 3a76679b 3af77bc2 c370648b 5a3cbca1   :vg.:.{..pd.Z<..
+0240: 31b014e2 6fb2b898 3ebb1961 b5a2bd65   1...o...>..a...e
+0250: e781a7d2 c17bab5e 5634d00d 3d328821   .....{.^V4..=2.!
+0260: ec669b9f 2ea7663c 06792243 0cfedb6e   .f....f<.y"C...n
+0270: 4ceef637 4978f212 72b9a12c c166e13f   L..7Ix..r..,.f.?
+0280: aa67dc3a af7a8caf 9c0b052c 9c3af233   .g.:.z.....,.:.3
+0290: 5aa369f2 049f1171 cb24848f 25cb0cf3   Z.i....q.$..%...
+02a0: 78f8b6a5 4b4f74f0 f91e5a9b 42b3f47f   x...KOt...Z.B...
+02b0: 768d5b54 c9e44e51 e5c5f506 9eb3707e   v.[T..NQ......p~
+02c0: 026935d3 9b554a0d 6d9c3391 b592f6ab   .i5..UJ.m.3.....
+02d0: 8c7d1f01 f2abfb51 ed0a4918 aef46a42   .}.....Q..I...jB
+02e0: 948d2ee6 344504a2 25cc2c80 17e706c9   ....4E..%.,.....
+02f0: 4f5b4ffc d381f19b 0648f8db cb1ea0d4   O[O......H......
+0300: 98e02b4f 683c9245 dcf666b3 434b5ca1   ..+Oh<.E..f.CK\.
+0310: fc555125 a61c2f67 1cbd21d8 4cf890ab   .UQ%../g..!.L...
+0320: bbd1320d 6cc3cfa6 584e20aa 8fa75b94   ..2.l...XN ...[.
+0330: a0c42edc 0779c0d6 da192343 8cdb3410   .....y....#C..4.
+0340: 368ffa59 c6b833a2 9526e28a 786c40b5   6..Y..3..&..xl@.
+0350: 342c1ba7 60ec4cc4 f24b08ab aa183fec   4,..`.L..K....?.
+0360: 2beb4dd2 3cef1d05 893a45e7 e09ccef5   +.M.<....:E.....
+0370: a29ef34e 72801445 715004cf 9a9df86d   ...Nr..EqP.....m
+0380: 067b4f20 e39677ce a2f0886c 6191dcac   .{O ..w....la...
+0390: 47b8eacd c90d1ff9 3130baf9 c830cf1b   G.......10...0..
+03a0: 22826799 0a98169a b3e69b9c 428046d1   ".g.........B.F.
+03b0: b68d1b34 4b274ab4 83181c40 20bb1f6d   ...4K'J....@ ..m
+03c0: b8af7718 1f7d327e f37496dd dd437a2d   ..w..}2~.t...Cz-
+03d0: 742a518b 0ae1a2a4 6668bcab da856001   t*Q.....fh....`.
+03e0: d2d87f07 02982770 637f2573 55a3c921   ......'pc.%sU..!
+03f0: f7dccc6c b0e6b1a5 139f6251 ddae902e   ...l......bQ....
+0400: e809acf5 7ec3d7fd 46737536 0d553980   ....~...Fsu6.U9.
+0410: 1d89fef0 a61e8631 d1ff7d28 6c0eb0d4   .......1..}(l...
+0420: 90cf79e7 57486ec3 03c3e000 c7c8d539   ..y.WHn........9
+0430: 8ff5ca10 ab60810e 9b991c8e 35c1536c   .....`......5.Sl
+0440: 62dd0c2a 53a4f2b0 f70a7d87 7d741f28   b..*S.....}.}t.(
+0450: 3b9db2cc d14d70c6 681d1a7e e0b9031d   ;....Mp.h..~....
+0460: fa218e82 106b0e1f 759e5efe d01927a8   .!...k..u.^...'.
+0470: 605b138e b47be00a 478b2e39 71256b61   `[...{..G..9q%ka
+0480: 1aaa9817 ae2d0858 5566270e 6a64724d   .....-.XUf'.jdrM
+0490: dfb22ffe 0a0b3708 1dddc562 5ed72a97   ../...7....b^.*.
+04a0: 73e28cc8 e6dc30a8 e13857e5 e668d64c   s.....0..8W..h.L
+04b0: 672e796a d7897211 8ff9cec7 fa317a26   g.yj..r......1z&
+04c0: b7b0b621 2c2833b7 dbfc94d8 1be82957   ...!,(3.......)W
+04d0: 7732eee9 81a2d1ab 278bfc9e 5b3f3a2a   w2......'...[?:*
+04e0: d9f4c97b a3543f61 961bab6b 6fee379d   ...{.T?a...ko.7.
+04f0: 94d47ebe e3451661 809dc801 6ef1a4f1   ..~..E.a....n...
+0500: dd088782 9ce08368 15b6bbef a6518247   .......h.....Q.G
+0510: 54c1cb17 56346d27 23c569e2 4e69a349   T...V4m'#.i.Ni.I
+0520: 7a6b426f a3d0c943 1f01d70c eedde520   zkBo...C....... 
+0530: 128f1b48 8316e583 175bf77b 18c64b2c   ...H.....[.{..K,
+0540: c5795417 0f07e789 50bee33e c00afdd8   .yT.....P..>....
+0550: b928d291 5a795237 319c1494 1d88d814   .(..ZyR71.......
+0560: 96d654d9 5c702bd2 0a4c36ec 1a837e3f   ..T.\p+..L6...~?
+0570: e14ae697 e48a8cd8 c7aca7fc dfc1823e   .J.............>
+0580: e31e1a9a 56b34f73 e4b1fe49 d7457160   ....V.Os...I.Eq`
+0590: 14ddd52e 8cc27bf2 5a95db8c be2ae5f3   ......{.Z....*..
+08/23 14:59:32.212: [upf] INFO: [Removed] Number of UPF-sessions is now 2 (../src/upf/context.c:250)
+08/23 15:00:19.216: [upf] INFO: [Added] Number of UPF-Sessions is now 3 (../src/upf/context.c:206)
+08/23 15:00:19.216: [upf] INFO: UE F-SEID[UP:0x1cc CP:0x843] APN[ims] PDN-Type[1] IPv4[192.168.101.3] IPv6[] (../src/upf/context.c:483)
+08/23 15:00:19.216: [upf] INFO: UE F-SEID[UP:0x1cc CP:0x843] APN[ims] PDN-Type[1] IPv4[192.168.101.3] IPv6[] (../src/upf/context.c:483)
+08/23 15:00:50.213: [upf] INFO: [Removed] Number of UPF-sessions is now 2 (../src/upf/context.c:250)
+08/23 15:02:14.013: [upf] INFO: [Removed] Number of UPF-sessions is now 1 (../src/upf/context.c:250)
+08/23 15:02:17.795: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/23 15:02:17.795: [upf] INFO: UE F-SEID[UP:0x100 CP:0xd10] APN[internet] PDN-Type[1] IPv4[192.168.100.11] IPv6[] (../src/upf/context.c:483)
+08/23 15:02:17.795: [upf] INFO: UE F-SEID[UP:0x100 CP:0xd10] APN[internet] PDN-Type[1] IPv4[192.168.100.11] IPv6[] (../src/upf/context.c:483)
+08/23 15:02:18.135: [upf] INFO: [Added] Number of UPF-Sessions is now 3 (../src/upf/context.c:206)
+08/23 15:02:18.135: [upf] INFO: UE F-SEID[UP:0x524 CP:0xca2] APN[ims] PDN-Type[1] IPv4[192.168.101.3] IPv6[] (../src/upf/context.c:483)
+08/23 15:02:18.135: [upf] INFO: UE F-SEID[UP:0x524 CP:0xca2] APN[ims] PDN-Type[1] IPv4[192.168.101.3] IPv6[] (../src/upf/context.c:483)
+08/23 15:02:18.338: [upf] INFO: [Removed] Number of UPF-sessions is now 2 (../src/upf/context.c:250)
+08/23 15:02:19.174: [upf] INFO: [Added] Number of UPF-Sessions is now 3 (../src/upf/context.c:206)
+08/23 15:02:19.174: [upf] INFO: UE F-SEID[UP:0x2d8 CP:0x94] APN[internet] PDN-Type[1] IPv4[192.168.100.12] IPv6[] (../src/upf/context.c:483)
+08/23 15:02:19.174: [upf] INFO: UE F-SEID[UP:0x2d8 CP:0x94] APN[internet] PDN-Type[1] IPv4[192.168.100.12] IPv6[] (../src/upf/context.c:483)
+08/23 15:02:19.633: [upf] INFO: [Added] Number of UPF-Sessions is now 4 (../src/upf/context.c:206)
+08/23 15:02:19.633: [upf] INFO: UE F-SEID[UP:0x239 CP:0xd1] APN[ims] PDN-Type[1] IPv4[192.168.101.2] IPv6[] (../src/upf/context.c:483)
+08/23 15:02:19.633: [upf] INFO: UE F-SEID[UP:0x239 CP:0xd1] APN[ims] PDN-Type[1] IPv4[192.168.101.2] IPv6[] (../src/upf/context.c:483)
+08/23 15:02:50.550: [upf] INFO: [Removed] Number of UPF-sessions is now 3 (../src/upf/context.c:250)
+08/23 15:03:15.394: [upf] INFO: [Removed] Number of UPF-sessions is now 2 (../src/upf/context.c:250)
+08/23 15:07:22.532: [upf] INFO: [Removed] Number of UPF-sessions is now 1 (../src/upf/context.c:250)
+08/23 15:07:22.915: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/23 15:07:22.915: [upf] INFO: UE F-SEID[UP:0x8be CP:0x433] APN[internet] PDN-Type[1] IPv4[192.168.100.13] IPv6[] (../src/upf/context.c:483)
+08/23 15:07:22.915: [upf] INFO: UE F-SEID[UP:0x8be CP:0x433] APN[internet] PDN-Type[1] IPv4[192.168.100.13] IPv6[] (../src/upf/context.c:483)
+08/23 15:08:36.690: [upf] INFO: [Removed] Number of UPF-sessions is now 1 (../src/upf/context.c:250)
+08/23 15:08:43.293: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/23 15:08:43.293: [upf] INFO: UE F-SEID[UP:0xd4f CP:0xb74] APN[internet] PDN-Type[1] IPv4[192.168.100.14] IPv6[] (../src/upf/context.c:483)
+08/23 15:08:43.293: [upf] INFO: UE F-SEID[UP:0xd4f CP:0xb74] APN[internet] PDN-Type[1] IPv4[192.168.100.14] IPv6[] (../src/upf/context.c:483)
+08/23 15:08:43.596: [upf] INFO: [Added] Number of UPF-Sessions is now 3 (../src/upf/context.c:206)
+08/23 15:08:43.597: [upf] INFO: UE F-SEID[UP:0x223 CP:0x413] APN[ims] PDN-Type[1] IPv4[192.168.101.4] IPv6[] (../src/upf/context.c:483)
+08/23 15:08:43.597: [upf] INFO: UE F-SEID[UP:0x223 CP:0x413] APN[ims] PDN-Type[1] IPv4[192.168.101.4] IPv6[] (../src/upf/context.c:483)
+08/23 15:08:43.668: [upf] ERROR: [DROP] Source IP-4 Spoofing APN:ims SrcIf:0 DstIf:1 TEID:0x15d4 (../src/upf/gtp-path.c:542)
+08/23 15:08:43.668: [upf] ERROR:        SRC:C0A86503, UE:C0A86504 (../src/upf/gtp-path.c:544)
+0000: 45680034 00004000 40066885 c0a86503   Eh.4..@.@.h...e.
+0010: ac160015 d98313c4 55e603dd 32298e92   ........U...2)..
+0020: 80110800 28510000 0101080a c8ca1cfd   ....(Q..........
+0030: e7cb9f39                              ...9
+08/23 15:09:49.614: [upf] INFO: [Removed] Number of UPF-sessions is now 2 (../src/upf/context.c:250)
+08/23 15:17:23.370: [upf] INFO: [Removed] Number of UPF-sessions is now 1 (../src/upf/context.c:250)
+08/23 15:23:19.927: [upf] INFO: [Removed] Number of UPF-sessions is now 0 (../src/upf/context.c:250)
+08/23 15:24:17.790: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/23 15:24:17.790: [upf] INFO: UE F-SEID[UP:0x7b3 CP:0x33e] APN[internet] PDN-Type[1] IPv4[192.168.100.15] IPv6[] (../src/upf/context.c:483)
+08/23 15:24:17.790: [upf] INFO: UE F-SEID[UP:0x7b3 CP:0x33e] APN[internet] PDN-Type[1] IPv4[192.168.100.15] IPv6[] (../src/upf/context.c:483)
+08/23 15:38:13.871: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/23 15:38:13.871: [upf] INFO: UE F-SEID[UP:0x7d6 CP:0x535] APN[internet] PDN-Type[1] IPv4[192.168.100.16] IPv6[] (../src/upf/context.c:483)
+08/23 15:38:13.871: [upf] INFO: UE F-SEID[UP:0x7d6 CP:0x535] APN[internet] PDN-Type[1] IPv4[192.168.100.16] IPv6[] (../src/upf/context.c:483)
+08/23 15:39:21.675: [upf] INFO: [Removed] Number of UPF-sessions is now 1 (../src/upf/context.c:250)
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/24 11:07:59.721: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:126)
+08/24 11:07:59.721: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:129)
+08/24 11:07:59.744: [metrics] INFO: metrics_server() [http://172.22.0.8]:9091 (../lib/metrics/prometheus/context.c:299)
+08/24 11:07:59.744: [pfcp] INFO: pfcp_server() [172.22.0.8]:8805 (../lib/pfcp/path.c:30)
+08/24 11:07:59.744: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.7]:8805 (../lib/pfcp/path.c:61)
+08/24 11:07:59.744: [gtp] INFO: gtp_server() [172.22.0.8]:2152 (../lib/gtp/path.c:30)
+08/24 11:07:59.763: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
+08/24 11:07:59.763: [upf] INFO: PFCP associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:184)
+08/24 11:07:59.763: [upf] WARNING: PFCP[RSP] has already been associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:277)
+08/24 11:09:35.319: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/24 11:09:35.319: [gtp] INFO: gtp_connect() [172.22.0.6]:2152 (../lib/gtp/path.c:60)
+08/24 11:09:35.319: [gtp] INFO: gtp_connect() [172.22.0.7]:2152 (../lib/gtp/path.c:60)
+08/24 11:09:35.319: [upf] INFO: UE F-SEID[UP:0xaad CP:0x61d] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/24 11:09:35.319: [upf] INFO: UE F-SEID[UP:0xaad CP:0x61d] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/24 11:12:40.270: [upf] INFO: [Removed] Number of UPF-sessions is now 0 (../src/upf/context.c:250)
+08/24 11:12:40.275: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/24 11:12:40.275: [upf] INFO: UE F-SEID[UP:0x1c3 CP:0x730] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/24 11:12:40.275: [upf] INFO: UE F-SEID[UP:0x1c3 CP:0x730] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/24 11:16:32.772: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/24 11:16:32.772: [upf] INFO: UE F-SEID[UP:0x439 CP:0x215] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/24 11:16:32.772: [upf] INFO: UE F-SEID[UP:0x439 CP:0x215] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/24 11:18:30.825: [upf] INFO: [Removed] Number of UPF-sessions is now 1 (../src/upf/context.c:250)
+08/24 11:18:31.189: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/24 11:18:31.189: [upf] INFO: UE F-SEID[UP:0xbfe CP:0xfb5] APN[internet] PDN-Type[1] IPv4[192.168.100.4] IPv6[] (../src/upf/context.c:483)
+08/24 11:18:31.189: [upf] INFO: UE F-SEID[UP:0xbfe CP:0xfb5] APN[internet] PDN-Type[1] IPv4[192.168.100.4] IPv6[] (../src/upf/context.c:483)
+08/24 11:22:22.265: [upf] INFO: [Removed] Number of UPF-sessions is now 1 (../src/upf/context.c:250)
+08/24 11:22:22.269: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/24 11:22:22.269: [upf] INFO: UE F-SEID[UP:0xf43 CP:0x8a4] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/24 11:22:22.269: [upf] INFO: UE F-SEID[UP:0xf43 CP:0x8a4] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/24 11:25:00.045: [upf] INFO: [Removed] Number of UPF-sessions is now 1 (../src/upf/context.c:250)
+08/24 11:25:00.409: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/24 11:25:00.409: [upf] INFO: UE F-SEID[UP:0x34f CP:0x8dc] APN[internet] PDN-Type[1] IPv4[192.168.100.5] IPv6[] (../src/upf/context.c:483)
+08/24 11:25:00.409: [upf] INFO: UE F-SEID[UP:0x34f CP:0x8dc] APN[internet] PDN-Type[1] IPv4[192.168.100.5] IPv6[] (../src/upf/context.c:483)
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/24 11:59:55.247: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:126)
+08/24 11:59:55.247: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:129)
+08/24 11:59:55.266: [metrics] INFO: metrics_server() [http://172.22.0.8]:9091 (../lib/metrics/prometheus/context.c:299)
+08/24 11:59:55.266: [pfcp] INFO: pfcp_server() [172.22.0.8]:8805 (../lib/pfcp/path.c:30)
+08/24 11:59:55.266: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.7]:8805 (../lib/pfcp/path.c:61)
+08/24 11:59:55.266: [gtp] INFO: gtp_server() [172.22.0.8]:2152 (../lib/gtp/path.c:30)
+08/24 11:59:55.267: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
+08/24 11:59:55.267: [upf] INFO: PFCP associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:184)
+08/24 11:59:55.267: [upf] WARNING: PFCP[RSP] has already been associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:277)
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/24 12:04:44.774: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:126)
+08/24 12:04:44.774: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:129)
+08/24 12:04:44.798: [metrics] INFO: metrics_server() [http://172.22.0.8]:9091 (../lib/metrics/prometheus/context.c:299)
+08/24 12:04:44.798: [pfcp] INFO: pfcp_server() [172.22.0.8]:8805 (../lib/pfcp/path.c:30)
+08/24 12:04:44.798: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.7]:8805 (../lib/pfcp/path.c:61)
+08/24 12:04:44.798: [gtp] INFO: gtp_server() [172.22.0.8]:2152 (../lib/gtp/path.c:30)
+08/24 12:04:44.799: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
+08/24 12:04:44.799: [upf] INFO: PFCP associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:184)
+08/24 12:04:44.799: [upf] WARNING: PFCP[RSP] has already been associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:277)
+08/24 12:05:48.041: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/24 12:05:48.041: [gtp] INFO: gtp_connect() [172.22.0.6]:2152 (../lib/gtp/path.c:60)
+08/24 12:05:48.041: [gtp] INFO: gtp_connect() [172.22.0.7]:2152 (../lib/gtp/path.c:60)
+08/24 12:05:48.041: [upf] INFO: UE F-SEID[UP:0x77 CP:0xb5c] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/24 12:05:48.041: [upf] INFO: UE F-SEID[UP:0x77 CP:0xb5c] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/24 12:06:27.042: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/24 12:06:27.042: [upf] INFO: UE F-SEID[UP:0x9a5 CP:0xe98] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/24 12:06:27.042: [upf] INFO: UE F-SEID[UP:0x9a5 CP:0xe98] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/24 12:06:27.365: [upf] INFO: [Added] Number of UPF-Sessions is now 3 (../src/upf/context.c:206)
+08/24 12:06:27.365: [upf] INFO: UE F-SEID[UP:0x91f CP:0x20b] APN[ims] PDN-Type[1] IPv4[192.168.101.2] IPv6[] (../src/upf/context.c:483)
+08/24 12:06:27.365: [upf] INFO: UE F-SEID[UP:0x91f CP:0x20b] APN[ims] PDN-Type[1] IPv4[192.168.101.2] IPv6[] (../src/upf/context.c:483)
+08/24 12:06:59.255: [upf] INFO: [Removed] Number of UPF-sessions is now 2 (../src/upf/context.c:250)
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/24 12:33:40.277: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:126)
+08/24 12:33:40.277: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:129)
+08/24 12:33:40.296: [metrics] INFO: metrics_server() [http://172.22.0.8]:9091 (../lib/metrics/prometheus/context.c:299)
+08/24 12:33:40.296: [pfcp] INFO: pfcp_server() [172.22.0.8]:8805 (../lib/pfcp/path.c:30)
+08/24 12:33:40.296: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.7]:8805 (../lib/pfcp/path.c:61)
+08/24 12:33:40.297: [gtp] INFO: gtp_server() [172.22.0.8]:2152 (../lib/gtp/path.c:30)
+08/24 12:33:40.297: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
+08/24 12:33:40.297: [upf] INFO: PFCP associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:184)
+08/24 12:33:41.732: [upf] WARNING: PFCP[REQ] has already been associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:270)
+08/24 12:34:37.221: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/24 12:34:37.221: [gtp] INFO: gtp_connect() [172.22.0.6]:2152 (../lib/gtp/path.c:60)
+08/24 12:34:37.221: [gtp] INFO: gtp_connect() [172.22.0.7]:2152 (../lib/gtp/path.c:60)
+08/24 12:34:37.221: [upf] INFO: UE F-SEID[UP:0x2c5 CP:0x3c2] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/24 12:34:37.221: [upf] INFO: UE F-SEID[UP:0x2c5 CP:0x3c2] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/24 12:34:37.540: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/24 12:34:37.540: [upf] INFO: UE F-SEID[UP:0xa90 CP:0xa3f] APN[ims] PDN-Type[1] IPv4[192.168.101.2] IPv6[] (../src/upf/context.c:483)
+08/24 12:34:37.540: [upf] INFO: UE F-SEID[UP:0xa90 CP:0xa3f] APN[ims] PDN-Type[1] IPv4[192.168.101.2] IPv6[] (../src/upf/context.c:483)
+08/24 12:35:08.416: [upf] INFO: [Removed] Number of UPF-sessions is now 1 (../src/upf/context.c:250)
+08/24 12:35:26.863: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/24 12:35:26.863: [upf] INFO: UE F-SEID[UP:0xc86 CP:0x9a0] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/24 12:35:26.863: [upf] INFO: UE F-SEID[UP:0xc86 CP:0x9a0] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/24 12:45:03.647: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:126)
+08/24 12:45:03.647: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:129)
+08/24 12:45:03.667: [metrics] INFO: metrics_server() [http://172.22.0.8]:9091 (../lib/metrics/prometheus/context.c:299)
+08/24 12:45:03.667: [pfcp] INFO: pfcp_server() [172.22.0.8]:8805 (../lib/pfcp/path.c:30)
+08/24 12:45:03.667: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.7]:8805 (../lib/pfcp/path.c:61)
+08/24 12:45:03.668: [gtp] INFO: gtp_server() [172.22.0.8]:2152 (../lib/gtp/path.c:30)
+08/24 12:45:03.668: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
+08/24 12:45:03.668: [upf] INFO: PFCP associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:184)
+08/24 12:45:03.668: [upf] WARNING: PFCP[RSP] has already been associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:277)
+08/24 12:45:48.239: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/24 12:45:48.240: [gtp] INFO: gtp_connect() [172.22.0.6]:2152 (../lib/gtp/path.c:60)
+08/24 12:45:48.240: [gtp] INFO: gtp_connect() [172.22.0.7]:2152 (../lib/gtp/path.c:60)
+08/24 12:45:48.240: [upf] INFO: UE F-SEID[UP:0xea1 CP:0xb36] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/24 12:45:48.240: [upf] INFO: UE F-SEID[UP:0xea1 CP:0xb36] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/24 12:46:09.682: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/24 12:46:09.682: [upf] INFO: UE F-SEID[UP:0x29b CP:0x9b0] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/24 12:46:09.682: [upf] INFO: UE F-SEID[UP:0x29b CP:0x9b0] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/24 12:46:10.001: [upf] INFO: [Added] Number of UPF-Sessions is now 3 (../src/upf/context.c:206)
+08/24 12:46:10.001: [upf] INFO: UE F-SEID[UP:0xbe1 CP:0x503] APN[ims] PDN-Type[1] IPv4[192.168.101.2] IPv6[] (../src/upf/context.c:483)
+08/24 12:46:10.001: [upf] INFO: UE F-SEID[UP:0xbe1 CP:0x503] APN[ims] PDN-Type[1] IPv4[192.168.101.2] IPv6[] (../src/upf/context.c:483)
+08/24 12:46:32.556: [upf] INFO: [Removed] Number of UPF-sessions is now 2 (../src/upf/context.c:250)
+08/24 12:46:35.545: [upf] INFO: [Removed] Number of UPF-sessions is now 1 (../src/upf/context.c:250)
+08/24 12:46:36.199: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/24 12:46:36.199: [upf] INFO: UE F-SEID[UP:0x241 CP:0xdc0] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/24 12:46:36.199: [upf] INFO: UE F-SEID[UP:0x241 CP:0xdc0] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/24 12:46:36.525: [upf] INFO: [Added] Number of UPF-Sessions is now 3 (../src/upf/context.c:206)
+08/24 12:46:36.525: [upf] INFO: UE F-SEID[UP:0x1d7 CP:0x8d5] APN[ims] PDN-Type[1] IPv4[192.168.101.2] IPv6[] (../src/upf/context.c:483)
+08/24 12:46:36.525: [upf] INFO: UE F-SEID[UP:0x1d7 CP:0x8d5] APN[ims] PDN-Type[1] IPv4[192.168.101.2] IPv6[] (../src/upf/context.c:483)
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/24 13:51:27.705: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:126)
+08/24 13:51:27.705: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:129)
+08/24 13:51:27.724: [metrics] INFO: metrics_server() [http://172.22.0.8]:9091 (../lib/metrics/prometheus/context.c:299)
+08/24 13:51:27.724: [pfcp] INFO: pfcp_server() [172.22.0.8]:8805 (../lib/pfcp/path.c:30)
+08/24 13:51:27.724: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.7]:8805 (../lib/pfcp/path.c:61)
+08/24 13:51:27.725: [gtp] INFO: gtp_server() [172.22.0.8]:2152 (../lib/gtp/path.c:30)
+08/24 13:51:27.726: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
+08/24 13:51:27.726: [upf] INFO: PFCP associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:184)
+08/24 13:51:27.726: [upf] WARNING: PFCP[RSP] has already been associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:277)
+08/24 13:52:40.098: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/24 13:52:40.098: [gtp] INFO: gtp_connect() [172.22.0.6]:2152 (../lib/gtp/path.c:60)
+08/24 13:52:40.098: [gtp] INFO: gtp_connect() [172.22.0.7]:2152 (../lib/gtp/path.c:60)
+08/24 13:52:40.098: [upf] INFO: UE F-SEID[UP:0x35d CP:0x80] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/24 13:52:40.098: [upf] INFO: UE F-SEID[UP:0x35d CP:0x80] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/24 13:53:16.900: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/24 13:53:16.900: [upf] INFO: UE F-SEID[UP:0x1fc CP:0x67d] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/24 13:53:16.900: [upf] INFO: UE F-SEID[UP:0x1fc CP:0x67d] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/24 13:53:17.338: [upf] INFO: [Added] Number of UPF-Sessions is now 3 (../src/upf/context.c:206)
+08/24 13:53:17.338: [upf] INFO: UE F-SEID[UP:0x1c8 CP:0xbde] APN[ims] PDN-Type[1] IPv4[192.168.101.2] IPv6[] (../src/upf/context.c:483)
+08/24 13:53:17.338: [upf] INFO: UE F-SEID[UP:0x1c8 CP:0xbde] APN[ims] PDN-Type[1] IPv4[192.168.101.2] IPv6[] (../src/upf/context.c:483)
+08/24 13:53:50.813: [upf] INFO: [Removed] Number of UPF-sessions is now 2 (../src/upf/context.c:250)
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/24 13:56:40.017: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:126)
+08/24 13:56:40.017: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:129)
+08/24 13:56:40.036: [metrics] INFO: metrics_server() [http://172.22.0.8]:9091 (../lib/metrics/prometheus/context.c:299)
+08/24 13:56:40.036: [pfcp] INFO: pfcp_server() [172.22.0.8]:8805 (../lib/pfcp/path.c:30)
+08/24 13:56:40.036: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.7]:8805 (../lib/pfcp/path.c:61)
+08/24 13:56:40.036: [gtp] INFO: gtp_server() [172.22.0.8]:2152 (../lib/gtp/path.c:30)
+08/24 13:56:40.151: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
+08/24 13:56:40.151: [upf] INFO: PFCP associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:184)
+08/24 13:56:40.151: [upf] WARNING: PFCP[RSP] has already been associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:277)
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/24 14:08:01.320: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:126)
+08/24 14:08:01.320: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:129)
+08/24 14:08:01.339: [metrics] INFO: metrics_server() [http://172.22.0.8]:9091 (../lib/metrics/prometheus/context.c:299)
+08/24 14:08:01.339: [pfcp] INFO: pfcp_server() [172.22.0.8]:8805 (../lib/pfcp/path.c:30)
+08/24 14:08:01.339: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.7]:8805 (../lib/pfcp/path.c:61)
+08/24 14:08:01.340: [gtp] INFO: gtp_server() [172.22.0.8]:2152 (../lib/gtp/path.c:30)
+08/24 14:08:01.340: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
+08/24 14:08:01.340: [upf] INFO: PFCP associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:184)
+08/24 14:08:01.340: [upf] WARNING: PFCP[RSP] has already been associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:277)
+08/24 14:08:50.347: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/24 14:08:50.347: [gtp] INFO: gtp_connect() [172.22.0.6]:2152 (../lib/gtp/path.c:60)
+08/24 14:08:50.347: [gtp] INFO: gtp_connect() [172.22.0.7]:2152 (../lib/gtp/path.c:60)
+08/24 14:08:50.347: [upf] INFO: UE F-SEID[UP:0x9a4 CP:0x543] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/24 14:08:50.347: [upf] INFO: UE F-SEID[UP:0x9a4 CP:0x543] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/24 14:23:15.200: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/24 14:23:15.200: [upf] INFO: UE F-SEID[UP:0x89b CP:0xff2] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/24 14:23:15.200: [upf] INFO: UE F-SEID[UP:0x89b CP:0xff2] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/24 14:30:41.510: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:126)
+08/24 14:30:41.510: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:129)
+08/24 14:30:41.530: [metrics] INFO: metrics_server() [http://172.22.0.8]:9091 (../lib/metrics/prometheus/context.c:299)
+08/24 14:30:41.530: [pfcp] INFO: pfcp_server() [172.22.0.8]:8805 (../lib/pfcp/path.c:30)
+08/24 14:30:41.530: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.7]:8805 (../lib/pfcp/path.c:61)
+08/24 14:30:41.530: [gtp] INFO: gtp_server() [172.22.0.8]:2152 (../lib/gtp/path.c:30)
+08/24 14:30:41.530: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
+08/24 14:30:41.530: [upf] INFO: PFCP associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:184)
+08/24 14:30:41.530: [upf] WARNING: PFCP[RSP] has already been associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:277)
+08/24 14:32:10.183: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/24 14:32:10.183: [gtp] INFO: gtp_connect() [172.22.0.6]:2152 (../lib/gtp/path.c:60)
+08/24 14:32:10.183: [gtp] INFO: gtp_connect() [172.22.0.7]:2152 (../lib/gtp/path.c:60)
+08/24 14:32:10.183: [upf] INFO: UE F-SEID[UP:0x569 CP:0x861] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/24 14:32:10.183: [upf] INFO: UE F-SEID[UP:0x569 CP:0x861] APN[internet] PDN-Type[1] IPv4[192.168.100.2] IPv6[] (../src/upf/context.c:483)
+08/24 14:33:16.117: [upf] INFO: [Added] Number of UPF-Sessions is now 2 (../src/upf/context.c:206)
+08/24 14:33:16.117: [upf] INFO: UE F-SEID[UP:0x13 CP:0x66d] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)
+08/24 14:33:16.117: [upf] INFO: UE F-SEID[UP:0x13 CP:0x66d] APN[internet] PDN-Type[1] IPv4[192.168.100.3] IPv6[] (../src/upf/context.c:483)

@@ -1,0 +1,20 @@
+2023-08-24T18:31:55.350604 [ENB    ] [I] Using binary /usr/local/bin/srsenb with arguments: 
+2023-08-24T18:31:55.375186 [ENB    ] [I] Built in Release mode using commit fa56836b1 on branch HEAD.
+2023-08-24T18:31:55.409147 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:2152
+2023-08-24T18:31:55.409154 [COMN   ] [D] [    0] RxSockets: socket fd=6 has been registered.
+2023-08-24T18:31:55.409241 [COMN   ] [D] [    0] Opened SCTP socket=7
+2023-08-24T18:31:55.409245 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2023-08-24T18:31:55.409246 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2023-08-24T18:31:55.409253 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2023-08-24T18:31:55.410451 [COMN   ] [D] [    0] RxSockets: socket fd=7 has been registered.
+2023-08-24T18:33:06.511294 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-24T18:33:06.590738 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T18:33:20.284560 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=5
+2023-08-24T18:33:21.694679 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T18:33:57.553268 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-24T18:33:57.601533 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-24T18:34:06.406290 [COMN   ] [D] [    0] RxSockets: Closing rx socket handler thread
+2023-08-24T18:34:06.406714 [COMN   ] [D] [    0] RxSockets: closed.
+2023-08-24T18:34:06.406766 [COMN   ] [D] [    0] Socket=7 was closed.
+2023-08-24T18:34:06.409978 [COMN   ] [D] [    0] Socket=-1 could not be closed.
+2023-08-24T18:34:06.411310 [COMN   ] [D] [    0] Socket=-1 could not be closed.
