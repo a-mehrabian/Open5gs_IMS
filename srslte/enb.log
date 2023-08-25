@@ -1,44 +1,204 @@
-2023-08-24T19:55:07.854418 [ENB    ] [I] Using binary /usr/local/bin/srsenb with arguments: 
-2023-08-24T19:55:07.878838 [ENB    ] [I] Built in Release mode using commit fa56836b1 on branch HEAD.
-2023-08-24T19:55:07.912249 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:2152
-2023-08-24T19:55:07.912255 [COMN   ] [D] [    0] RxSockets: socket fd=6 has been registered.
-2023-08-24T19:55:07.912272 [COMN   ] [D] [    0] Opened SCTP socket=7
-2023-08-24T19:55:07.912277 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
-2023-08-24T19:55:07.912278 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
-2023-08-24T19:55:07.912285 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
-2023-08-24T19:55:07.913503 [COMN   ] [D] [    0] RxSockets: socket fd=7 has been registered.
-2023-08-24T19:55:50.260717 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
-2023-08-24T19:56:24.158790 [RLC    ] [E] DRB1: Generated empty RLC PDU.
-2023-08-24T19:56:24.158791 [RLC    ] [E] DRB1: Generated empty RLC PDU.
-2023-08-24T19:56:25.019708 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-24T19:56:38.116083 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-24T19:56:38.175760 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-24T19:57:17.778274 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-24T19:57:17.827780 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-24T19:58:14.938211 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-24T19:58:14.987662 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-24T19:59:51.335604 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-24T19:59:51.395140 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-24T20:00:58.055199 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-24T20:00:58.115132 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-24T20:06:54.576173 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-24T20:06:54.624608 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-24T20:07:24.775573 [MAC    ] [W] [ 7589] UE buffers: Removing old buffer tti=7584, interval=13
-2023-08-24T20:08:50.516218 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-24T20:08:50.565896 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-24T20:10:57.776531 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-24T20:10:57.825060 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-24T20:11:03.518326 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-24T20:11:03.577898 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-24T20:13:03.857126 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-24T20:13:03.905111 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-24T20:14:30.376801 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-24T20:14:30.425190 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-24T20:15:17.016689 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-24T20:15:17.065158 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-24T20:20:11.376491 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-24T20:20:11.424990 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-24T20:22:41.016469 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-24T20:22:41.064906 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-24T20:24:54.316339 [S1AP   ] [W] Not handling feature - UERadioCapability
-202
+2023-08-25T14:22:19.212146 [ENB    ] [I] Using binary /usr/local/bin/srsenb with arguments: 
+2023-08-25T14:22:19.236222 [ENB    ] [I] Built in Release mode using commit fa56836b1 on branch HEAD.
+2023-08-25T14:22:19.270917 [COMN   ] [D] [    0] Opened SCTP socket=7
+2023-08-25T14:22:19.270919 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:2152
+2023-08-25T14:22:19.270922 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2023-08-25T14:22:19.270924 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2023-08-25T14:22:19.270924 [COMN   ] [D] [    0] RxSockets: socket fd=6 has been registered.
+2023-08-25T14:22:19.270931 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2023-08-25T14:22:19.272307 [COMN   ] [D] [    0] RxSockets: socket fd=7 has been registered.
+2023-08-25T14:23:27.487967 [S1AP   ] [W] Not handling feature - RegisteredLAI
+2023-08-25T14:24:08.887964 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T14:24:08.936356 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T14:26:47.867089 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T14:26:47.915589 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T14:28:15.513292 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T14:29:13.646585 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T14:29:13.695083 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T14:30:19.726298 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T14:30:19.774655 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T14:30:42.968122 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T14:30:43.016593 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T14:31:47.385760 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T14:31:47.434297 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T14:32:47.165586 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T14:32:47.214206 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T14:33:38.227517 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T14:33:38.275858 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T14:33:52.185562 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T14:33:52.233849 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T14:34:48.945309 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T14:34:48.993605 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T14:36:45.044819 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T14:36:45.093353 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T14:38:27.724333 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T14:38:27.772914 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T14:39:17.466497 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T14:39:17.514766 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T14:46:06.222880 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T14:46:06.271440 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T14:46:49.131679 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=3
+2023-08-25T15:18:29.963996 [S1AP   ] [W] Not handling feature - RegisteredLAI
+2023-08-25T15:19:09.124322 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:19:09.172780 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:19:18.563817 [S1AP   ] [W] Not handling feature - RegisteredLAI
+2023-08-25T15:20:42.769190 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:21:40.984157 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:21:41.032567 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:21:41.032568 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:21:41.032954 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:22:40.824051 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:22:40.872508 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:22:40.872509 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:22:40.872882 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:23:40.984064 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:23:41.032382 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:23:41.032383 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:23:41.032811 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:25:25.714995 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=3
+2023-08-25T15:25:40.984582 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:25:41.032782 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:25:41.032783 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:25:41.033195 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:26:40.844788 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:26:40.893048 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:26:40.893049 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:26:40.893478 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:27:40.984779 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:27:41.033205 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:27:41.033218 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:27:41.033664 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:28:40.824978 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:28:40.873328 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:28:40.873328 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:28:40.873745 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:29:40.984839 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:29:41.033459 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:29:41.033460 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:29:41.033835 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:30:17.308645 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:32:40.845193 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:32:40.893762 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:32:40.893762 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:32:40.894171 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:33:41.005282 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:33:41.054852 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:33:41.054852 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:33:41.055288 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:35:41.005456 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:35:41.054013 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:35:41.054014 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:35:41.054457 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:36:40.845436 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:36:40.894056 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:36:40.894056 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:36:40.894512 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:37:41.005470 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:37:41.053976 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:37:41.053977 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:37:41.054364 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:38:40.845389 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:38:40.894012 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:38:40.894012 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:38:40.894445 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:39:41.005493 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:39:41.053982 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:39:41.053982 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:39:41.054378 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:40:40.845584 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:40:40.901922 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:40:40.901922 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:40:40.902327 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:42:40.845485 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:42:40.893955 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:42:40.893955 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:42:40.894341 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:43:28.145430 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:43:28.193947 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:43:28.193948 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:43:28.194358 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:44:40.845448 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:44:40.893859 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:44:40.893860 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:44:40.894258 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:45:41.005336 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:45:41.053869 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:45:41.053869 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:45:41.054301 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:46:40.845474 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:46:40.893844 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:46:40.893845 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:46:40.894226 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:47:41.005440 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:47:41.053826 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:47:41.053827 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:47:41.054228 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:48:40.845372 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:48:40.893804 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:48:40.893804 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:48:40.894179 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:49:37.029285 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:57:40.147133 [S1AP   ] [W] Not handling feature - RegisteredLAI
+2023-08-25T15:57:40.147134 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:57:40.165270 [PDCP   ] [W] Integrity check input - COUNT 1, Bearer ID 1, Direction Uplink
+2023-08-25T15:57:40.165270 [PDCP   ] [W] Integrity check key:
+    0000: db 2c 20 a6 f5 a2 a1 3b 2c 90 62 da bc 37 bb 28
+    0010: b2 a8 5e 42 06 c7 03 f1 fc 00 98 a8 5b f2 08 b0
+2023-08-25T15:57:40.165271 [PDCP   ] [W] MAC mismatch (expected):
+    0000: 29 b1 ef 91
+2023-08-25T15:57:40.165271 [PDCP   ] [W] MAC mismatch (found):
+    0000: 00 00 00 00
+2023-08-25T15:57:40.165271 [PDCP   ] [W] Integrity check input msg (Bytes=3):
+    0000: 01 30 00
+2023-08-25T15:57:40.165272 [PDCP   ] [E] SRB1 Dropping PDU
+    0000: 01 30 00
+2023-08-25T15:57:40.165272 [RRC    ] [W] Received integrity protection failure indication, rnti=0x9d, lcid=1
+2023-08-25T15:58:21.884876 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:58:21.933116 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:58:28.629615 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T15:58:50.603830 [S1AP   ] [W] Not handling feature - RegisteredLAI
+2023-08-25T15:59:27.563773 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T15:59:27.613207 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T15:59:27.613207 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T15:59:27.613593 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T16:00:01.865503 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:00:01.934932 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:00:40.842941 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:00:40.912305 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:00:40.912305 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T16:00:40.912690 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T16:00:42.244935 [S1AP   ] [W] Not handling feature - RegisteredLAI
+2023-08-25T16:00:42.244936 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:00:42.263344 [PDCP   ] [W] Integrity check input - COUNT 1, Bearer ID 1, Direction Uplink
+2023-08-25T16:00:42.263344 [PDCP   ] [W] Integrity check key:
+    0000: 4e 4f 09 c3 bc e5 25 73 d9 26 4e 97 74 3e 5d 63
+    0010: 5b 23 0c d8 77 d2 c9 dd 7b f1 b5 cf 8f 7b a6 51
+2023-08-25T16:00:42.263345 [PDCP   ] [W] MAC mismatch (expected):
+    0000: 91 ef 0f 5e
+2023-08-25T16:00:42.263345 [PDCP   ] [W] MAC mismatch (found):
+    0000: 00 00 00 00
+2023-08-25T16:00:42.263345 [PDCP   ] [W] Integrity check input msg (Bytes=3):
+    0000: 01 30 00
+2023-08-25T16:00:42.263346 [PDCP   ] [E] SRB1 Dropping PDU
+    0000: 01 30 00
+2023-08-25T16:00:42.263346 [RRC    ] [W] Received integrity protection failure indication, rnti=0xa5, lcid=1
+2023-08-25T16:00:42.263347 [S1AP   ] [W] Released UE with rnti=0xa5 not found
+2023-08-25T16:00:42.314206 [RRC    ] [W] Ignoring rnti=0xa5 command -65535 arg 0. Cause: unknown rnti
+2023-08-25T16:01:19.536758 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=3
+2023-08-25T16:01:20.723785 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:01:20.723786 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-08-25T16:01:20.724234 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-08-25T16:01:31.922333 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:01:31.970873 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:02:03.270836 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=3
+2023-08-25T16:05:34.180378 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:05:34.228793 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:05:34.229014 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=3
+2023-08-25T16:09:00.347725 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=3
+2023-08-25T16:15:31.925966 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=3
+2023-08-25T16:17:57.336928 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:17:57.385194 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:18:28.736691 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:18:28.785005 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:19:46.416312 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:19:46.464798 [RRC    ] [W] Not adding NAS mes
