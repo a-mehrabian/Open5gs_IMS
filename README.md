@@ -127,7 +127,7 @@ I'm already make this two sim card (<i>test1,test2</i>), so you can follow the s
 
 
 
-### Provisioning of SIM information in open5gs HSS as follows:
+### 1) Add SIM information in open5gs HSS as follows:
 
 Open (http://<DOCKER_HOST_IP>:3000) in a web browser, where <DOCKER_HOST_IP> is the IP of the machine/VM running the open5gs containers (you can find that with ```ifconfig``` ). Login with following credentials
 ```
@@ -152,7 +152,7 @@ Using Web UI, add a subscriber
 </details>
 
 
-### Provisioning of IMSI and MSISDN with OsmoHLR as follows:
+### 2) Add SIM card in OsmoHLR as follows:
 
 1. First, login to the osmohlr container
 
@@ -239,11 +239,9 @@ OsmoMSC# subscriber msisdn 001002 sms sender msisdn 001001 send TEST MESSAGE
   </body>
 </details>
 
-<!-- 
-**Replace IMSI and MSISDN as per your programmed SIM**
 
 
-### Provisioning of SIM information in pyHSS is as follows:
+### Add SIM information in pyHSS is as follows (realated SIP (VoLTE)):
 
 1. Goto http://172.22.0.18:8080/docs/
 2. Select **apn** -> **Create new APN** -> Press on **Try it out**. Then, in payload section use the below JSON and then press **Execute**
@@ -276,11 +274,11 @@ Take note of **apn_id** specified in **Response body** under **Server response**
 
 ```
 {
-  "ki": "8baf473f2f8fd09487cccbd7097c6862",
-  "opc": "8E27B6AF0E692E750F32667A3B14605D",
+  "ki": "00112233445566778899AABBCCDDEE01",
+  "opc": "00112233445566778899AABBCCDDEE00",
   "amf": "8000",
   "sqn": 0,
-  "imsi": "001010123456790"
+  "imsi": "001010000000001"
 }
 ```
 
@@ -292,12 +290,12 @@ Take note of **auc_id** specified in **Response body** under **Server response**
 
 ```
 {
-  "imsi": "001010123456790",
+  "imsi": "001010000000001",
   "enabled": true,
   "auc_id": 1,
   "default_apn": 1,
   "apn_list": "0,1",
-  "msisdn": "9076543210",
+  "msisdn": "001001",
   "ue_ambr_dl": 0,
   "ue_ambr_ul": 0
 }
@@ -313,11 +311,11 @@ Take note of **auc_id** specified in **Response body** under **Server response**
 
 ```
 {
-    "imsi": "001010123456790",
-    "msisdn": "9076543210",
+    "imsi": "001010000000001",
+    "msisdn": "001001",
     "sh_profile": "string",
     "scscf_peer": "scscf.ims.mnc001.mcc001.3gppnetwork.org",
-    "msisdn_list": "[9076543210]",
+    "msisdn_list": "[001001]",
     "ifc_path": "default_ifc.xml",
     "scscf": "sip:scscf.ims.mnc001.mcc001.3gppnetwork.org:6060",
     "scscf_realm": "ims.mnc001.mcc001.3gppnetwork.org"
@@ -326,7 +324,35 @@ Take note of **auc_id** specified in **Response body** under **Server response**
 
 **Replace imsi, msisdn and msisdn_list as per your programmed SIM**
 
-**Replace scscf_peer, scscf and scscf_realm as per your deployment** -->
+**Replace scscf_peer, scscf and scscf_realm as per your deployment** --> -->
+
+## Test and Analyze
+
+### Sniff Network
+For wirshark SMS and VoLTE sniffing:
+- open **Wireshark** as root.
+- choose the ```br-6851400878ea```  interface (addr: 172.22.0.1).
+- enter a new filter : ```sip || s1ap || gtpv2``` , and then apply the filter (OK)
+
+### Internet speed test
+First install the Iperf3 (optional), 
+```sh
+sudo apt update
+sudo apt -y install iperf3
+```
+On the host device run this command: (or you can see the --help)
+```sh
+iperf3 -s -i 20 D
+```
+And on the UE side choose an app that support iperf3 and add:
+- <b>ip</b>: 172.22.0.1
+- <b>port</b>: 5201 (check the port on the host terminal)
+And run the test.
+
+maybe you need to enter some command you can use this as example:
+```sh
+iperf3 -c 172.22.0.1 -p 5201 -t 10 -i 30
+```
 
 ## Configuration (optional for advanced use)
 

@@ -567,3 +567,7 @@ Open5GS daemon v2.6.4-78-g7f08873
 08/25 12:16:07.319: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
 08/25 12:16:07.319: [upf] INFO: UE F-SEID[UP:0x5ef CP:0xaa5] APN[internet] PDN-Type[1] IPv4[192.168.100.9] IPv6[] (../src/upf/context.c:483)
 08/25 12:16:07.319: [upf] INFO: UE F-SEID[UP:0x5ef CP:0xaa5] APN[internet] PDN-Type[1] IPv4[192.168.100.9] IPv6[] (../src/upf/context.c:483)
+08/25 13:25:51.507: [upf] INFO: [Removed] Number of UPF-sessions is now 0 (../src/upf/context.c:250)
+08/25 13:25:57.449: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:206)
+08/25 13:25:57.449: [upf] INFO: UE F-SEID[UP:0x31 CP:0x627] APN[internet] PDN-Type[1] IPv4[192.168.100.9] IPv6[] (../src/upf/context.c:483)
+08/25 13:25:57.449: [upf] INFO: UE F-SEID[UP:0x31 CP:0x627] APN[internet] PDN-Type[1] IPv4[192.168.100.9] IPv6[] (../src/upf/context.c:483)

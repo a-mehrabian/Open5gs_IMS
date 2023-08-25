@@ -467,3 +467,8 @@ Open5GS daemon v2.6.4-78-g7f08873
 08/25 12:16:07.316: [sgwc] INFO: [Added] Number of SGWC-UEs is now 2 (../src/sgwc/context.c:237)
 08/25 12:16:07.316: [sgwc] INFO: [Added] Number of SGWC-Sessions is now 1 (../src/sgwc/context.c:879)
 08/25 12:16:07.316: [sgwc] INFO: UE IMSI[001010000000001] APN[internet] (../src/sgwc/s11-handler.c:237)
+08/25 13:25:51.509: [sgwc] INFO: [Removed] Number of SGWC-Sessions is now 0 (../src/sgwc/context.c:885)
+08/25 13:25:57.446: [sgwc] INFO: [Removed] Number of SGWC-UEs is now 1 (../src/sgwc/context.c:258)
+08/25 13:25:57.446: [sgwc] INFO: [Added] Number of SGWC-UEs is now 2 (../src/sgwc/context.c:237)
+08/25 13:25:57.446: [sgwc] INFO: [Added] Number of SGWC-Sessions is now 1 (../src/sgwc/context.c:879)
+08/25 13:25:57.446: [sgwc] INFO: UE IMSI[001010000000001] APN[internet] (../src/sgwc/s11-handler.c:237)

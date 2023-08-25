@@ -201,4 +201,53 @@
 2023-08-25T16:18:28.736691 [S1AP   ] [W] Not handling feature - UERadioCapability
 2023-08-25T16:18:28.785005 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
 2023-08-25T16:19:46.416312 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-25T16:19:46.464798 [RRC    ] [W] Not adding NAS mes
+2023-08-25T16:19:46.464798 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:19:58.404003 [S1AP   ] [W] Not handling feature - RegisteredLAI
+2023-08-25T16:21:15.376117 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:21:15.424479 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:21:57.935836 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:21:57.984430 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:22:29.615716 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:22:29.664249 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:23:37.235546 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:23:37.284128 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:30:15.954593 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:30:16.002971 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:33:00.974247 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:33:01.022727 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:33:40.334294 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:33:40.390655 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:37:40.974109 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:37:41.022588 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:39:49.493966 [S1AP   ] [W] Not handling feature - RegisteredLAI
+2023-08-25T16:39:49.493967 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:39:49.512378 [PDCP   ] [W] Integrity check input - COUNT 1, Bearer ID 1, Direction Uplink
+2023-08-25T16:39:49.512378 [PDCP   ] [W] Integrity check key:
+    0000: 5d 24 df 5c 4d 8c ea 7a 12 0b 4d 4f 86 31 56 1d
+    0010: 0e ea 0e ee 8e e7 2e cb 8c 0c da 40 2f 03 45 c2
+2023-08-25T16:39:49.512379 [PDCP   ] [W] MAC mismatch (expected):
+    0000: 20 95 74 4c
+2023-08-25T16:39:49.512379 [PDCP   ] [W] MAC mismatch (found):
+    0000: 00 00 00 00
+2023-08-25T16:39:49.512379 [PDCP   ] [W] Integrity check input msg (Bytes=3):
+    0000: 01 30 00
+2023-08-25T16:39:49.512380 [PDCP   ] [E] SRB1 Dropping PDU
+    0000: 01 30 00
+2023-08-25T16:39:49.512380 [RRC    ] [W] Received integrity protection failure indication, rnti=0xc3, lcid=1
+2023-08-25T16:39:49.512381 [S1AP   ] [W] Released UE with rnti=0xc3 not found
+2023-08-25T16:39:49.563302 [RRC    ] [W] Ignoring rnti=0xc3 command -65535 arg 0. Cause: unknown rnti
+2023-08-25T16:44:16.433722 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:44:16.482199 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:50:26.853061 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:50:26.901514 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T16:58:16.932567 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T16:58:16.980742 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T17:01:27.972013 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T17:01:28.020364 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T17:05:44.531435 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T17:05:44.579903 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T17:08:15.311004 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T17:08:15.380221 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T17:19:48.328379 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-08-25T17:19:48.376870 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-08-25T17:20:25.128470 [S1AP   ] [W] Not handling feature - UERadioC
