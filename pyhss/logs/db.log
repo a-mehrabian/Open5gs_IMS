@@ -1,0 +1,2 @@
+2023-08-28 16:25:34,730 	 ERROR 	 {/pyhss/database.py:1233} 	 Exception in DeleteObj, error: The specified row does not exist
+Exception in DeleteObj, error: The specified row does not exist
