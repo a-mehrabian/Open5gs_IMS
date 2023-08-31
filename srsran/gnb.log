@@ -1,2 +1,2 @@
-2023-08-24T16:00:54.657896 [GNB     ] [W] DRM KMS polling is enabled, which may hinder performance. You can disable it using the "srsran_performance" script
-2023-08-24T16:00:59.211727 [FAPI    ] [W] [     0.0] Real-time failure in FAPI: Received late DL_TTI.request. Current slot is 451.13 while message corresponds to 451.12
+2023-08-30T20:07:45.591021 [GNB     ] [W] DRM KMS polling is enabled, which may hinder performance. You can disable it using the "srsran_performance" script
+2023-08-30T20:07:48.731121 [FAPI    ] [W] [     0.0] Real-time failure in FAPI: Received late DL_TTI.request. Current slot is 309.15 while message corresponds to 309.14

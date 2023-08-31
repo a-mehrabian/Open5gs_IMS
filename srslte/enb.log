@@ -1,130 +1,14 @@
-2023-08-30T15:39:14.871022 [ENB    ] [I] Using binary /usr/local/bin/srsenb with arguments: 
-2023-08-30T15:39:14.895978 [ENB    ] [I] Built in Release mode using commit fa56836b1 on branch HEAD.
-2023-08-30T15:39:14.930710 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:2152
-2023-08-30T15:39:14.930715 [COMN   ] [D] [    0] RxSockets: socket fd=6 has been registered.
-2023-08-30T15:39:14.930821 [COMN   ] [D] [    0] Opened SCTP socket=7
-2023-08-30T15:39:14.930825 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
-2023-08-30T15:39:14.930827 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
-2023-08-30T15:39:14.930834 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
-2023-08-30T15:39:14.931930 [COMN   ] [D] [    0] RxSockets: socket fd=7 has been registered.
-2023-08-30T15:43:22.566790 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T15:43:22.615399 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T15:47:23.047422 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T15:47:23.095777 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T15:53:24.468112 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T15:53:24.516517 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T15:55:51.303267 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T15:55:51.351828 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T16:04:19.034068 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T16:04:19.082695 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T16:07:26.552462 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T16:07:26.600953 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T16:13:26.550459 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T16:13:26.598849 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T16:17:28.149473 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T16:17:28.198119 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T16:21:26.888873 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T16:21:26.937308 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T16:40:39.926829 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T16:40:39.975195 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T16:41:23.626475 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T16:41:23.675128 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T16:43:35.186993 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T16:43:35.236460 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T16:43:40.331213 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=3
-2023-08-30T16:43:41.108322 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T16:44:01.481290 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=2
-2023-08-30T16:44:02.246246 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T16:45:16.426847 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T16:45:16.475320 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T16:53:07.565989 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T16:53:07.614668 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:12:52.385558 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:12:52.434179 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:14:13.585458 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:14:13.634083 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:14:48.145393 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:14:48.193920 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:22:36.982316 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:22:37.041916 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:24:25.122377 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:24:25.170927 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:25:24.362265 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:25:24.418900 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:26:02.104007 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:26:02.143639 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:28:45.125623 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:28:45.127508 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:29:44.462287 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:29:44.518632 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:29:48.984026 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:29:49.043511 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:30:35.721727 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:30:35.781493 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:31:11.504021 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:31:11.552568 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:32:48.701626 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:32:48.761200 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:32:53.403876 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:32:53.452402 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:34:23.401720 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:34:23.450160 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:34:45.303407 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:34:45.363053 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:37:52.921428 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:37:52.969865 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:38:47.381172 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:38:47.429650 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:40:07.580673 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:40:07.640441 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:40:24.842990 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:40:24.891542 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:41:54.440781 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:41:54.497246 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:43:24.320742 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:43:24.369098 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:44:10.400585 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:44:10.457072 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:46:54.360207 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:46:54.416692 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:50:15.219540 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:50:15.279113 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:50:18.641728 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:50:18.698304 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:51:16.621812 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:51:16.678257 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:51:47.419646 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:51:47.476161 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:52:12.341432 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:52:12.400945 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:52:48.347494 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:52:48.416115 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:53:23.699436 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:53:23.756043 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:53:55.359359 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:53:55.415966 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:55:53.639223 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:55:53.695753 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:56:39.379202 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:56:39.435731 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:57:24.619162 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:57:24.675641 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T17:59:44.358817 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T17:59:44.415440 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T18:02:10.418369 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T18:02:10.477942 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T18:03:01.018393 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T18:03:01.075014 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T18:04:04.758387 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T18:04:04.807011 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T18:06:49.318242 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T18:06:49.366789 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T18:07:54.498057 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T18:07:54.546558 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T18:12:36.643652 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T18:12:36.692198 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T18:13:19.844934 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T18:13:19.893439 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T18:17:20.470587 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-30T18:17:20.518974 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-30T18:20:50.353995 [S1AP   
+2023-08-30T18:54:15.679444 [ENB    ] [I] Using binary /usr/local/bin/srsenb with arguments: 
+2023-08-30T18:54:15.704296 [ENB    ] [I] Built in Release mode using commit fa56836b1 on branch HEAD.
+2023-08-30T18:54:15.737652 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:2152
+2023-08-30T18:54:15.737659 [COMN   ] [D] [    0] RxSockets: socket fd=6 has been registered.
+2023-08-30T18:54:15.737659 [COMN   ] [D] [    0] Opened SCTP socket=7
+2023-08-30T18:54:15.737663 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2023-08-30T18:54:15.737664 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2023-08-30T18:54:15.737671 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2023-08-30T18:54:15.738903 [COMN   ] [D] [    0] RxSockets: socket fd=7 has been registered.
+2023-08-30T18:56:13.716425 [COMN   ] [D] [    0] RxSockets: Closing rx socket handler thread
+2023-08-30T18:56:13.716842 [COMN   ] [D] [    0] RxSockets: closed.
+2023-08-30T18:56:13.716914 [COMN   ] [D] [    0] Socket=7 was closed.
+2023-08-30T18:56:13.718102 [COMN   ] [D] [    0] Socket=-1 could not be closed.
+2023-08-30T18:56:13.719299 [COMN   ] [D] [    0] Socket=-1 could not be closed.

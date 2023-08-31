@@ -667,3 +667,6 @@ Open5GS daemon v2.6.4-78-g7f08873
 08/30 14:10:00.839: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 1 (../src/sgwu/context.c:200)
 08/30 14:10:00.980: [sgwu] INFO: UE F-SEID[UP:0xc5e CP:0x5d0] (../src/sgwu/context.c:169)
 08/30 14:10:00.980: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 2 (../src/sgwu/context.c:174)
+08/30 14:54:51.859: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 1 (../src/sgwu/context.c:200)
+08/30 14:54:51.998: [sgwu] INFO: UE F-SEID[UP:0xe55 CP:0x75a] (../src/sgwu/context.c:169)
+08/30 14:54:51.998: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 2 (../src/sgwu/context.c:174)
