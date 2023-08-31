@@ -17,7 +17,7 @@ Docker host machine
 Over-The-Air setups: 
 
 - srsRAN (eNB/gNB) using Ettus USRP B210
-- ...
+- srsRAN (eNB/gNB) using Microphase ANTSDR U220 (check [antsdr-branch](https://gitlab.com/humanitasio/telecom/open5gs_ims/-/tree/antsdr-branch?ref_type=heads))
 
 RF simulated setups:
 

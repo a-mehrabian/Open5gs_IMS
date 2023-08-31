@@ -1343,3 +1343,5 @@ Open5GS daemon v2.6.4-78-g7f08873
 08/31 15:06:19.331: [smf] INFO: [Added] Number of SMF-UEs is now 1 (../src/smf/context.c:1010)
 08/31 15:06:19.331: [smf] INFO: [Added] Number of SMF-Sessions is now 1 (../src/smf/context.c:3050)
 08/31 15:06:19.331: [smf] INFO: UE IMSI[001010000000002] APN[internet] IPv4[192.168.100.3] IPv6[] (../src/smf/s5c-handler.c:255)
+08/31 15:17:54.465: [diam] ERROR: pid:PSM/pcrf.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'pcrf.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
