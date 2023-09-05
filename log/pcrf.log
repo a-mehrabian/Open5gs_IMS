@@ -728,3 +728,59 @@ Open5GS daemon v2.6.4-78-g7f08873
 08/31 14:56:00.921: [app] INFO: PCRF initialize...done (../src/pcrf/app-init.c:31)
 08/31 14:56:00.922: [diam] INFO: CONNECTED TO 'smf.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#16): (../lib/diameter/common/logger.c:108)
 08/31 14:56:13.273: [diam] INFO: CONNECTED TO 'pcscf.ims.mnc001.mcc001.3gppnetwork.org' (TCP,soc#12): (../lib/diameter/common/logger.c:108)
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/31 16:34:53.940: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/pcrf.yaml' (../lib/app/ogs-init.c:126)
+08/31 16:34:53.940: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/pcrf.log' (../lib/app/ogs-init.c:129)
+08/31 16:34:53.941: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+08/31 16:34:53.959: [app] INFO: PCRF initialize...done (../src/pcrf/app-init.c:31)
+08/31 16:34:53.961: [diam] INFO: CONNECTED TO 'smf.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#16): (../lib/diameter/common/logger.c:108)
+08/31 16:35:06.480: [diam] INFO: CONNECTED TO 'pcscf.ims.mnc001.mcc001.3gppnetwork.org' (TCP,soc#13): (../lib/diameter/common/logger.c:108)
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/31 17:04:38.307: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/pcrf.yaml' (../lib/app/ogs-init.c:126)
+08/31 17:04:38.307: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/pcrf.log' (../lib/app/ogs-init.c:129)
+08/31 17:04:38.308: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+08/31 17:04:38.336: [app] INFO: PCRF initialize...done (../src/pcrf/app-init.c:31)
+08/31 17:04:38.338: [diam] INFO: CONNECTED TO 'smf.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#16): (../lib/diameter/common/logger.c:108)
+08/31 17:04:45.322: [diam] INFO: CONNECTED TO 'pcscf.ims.mnc001.mcc001.3gppnetwork.org' (TCP,soc#13): (../lib/diameter/common/logger.c:108)
+Open5GS daemon v2.6.4-78-g7f08873
+
+09/01 08:55:50.600: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/pcrf.yaml' (../lib/app/ogs-init.c:126)
+09/01 08:55:50.600: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/pcrf.log' (../lib/app/ogs-init.c:129)
+09/01 08:55:50.601: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+09/01 08:55:50.619: [app] INFO: PCRF initialize...done (../src/pcrf/app-init.c:31)
+09/01 08:55:50.621: [diam] INFO: CONNECTED TO 'smf.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+09/01 08:56:02.714: [diam] INFO: CONNECTED TO 'pcscf.ims.mnc001.mcc001.3gppnetwork.org' (TCP,soc#14): (../lib/diameter/common/logger.c:108)
+Open5GS daemon v2.6.4-78-g7f08873
+
+09/01 14:15:27.875: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/pcrf.yaml' (../lib/app/ogs-init.c:126)
+09/01 14:15:27.875: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/pcrf.log' (../lib/app/ogs-init.c:129)
+09/01 14:15:27.877: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+09/01 14:15:27.953: [app] INFO: PCRF initialize...done (../src/pcrf/app-init.c:31)
+09/01 14:15:27.955: [diam] INFO: CONNECTED TO 'smf.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+09/01 14:15:34.077: [diam] INFO: CONNECTED TO 'pcscf.ims.mnc001.mcc001.3gppnetwork.org' (TCP,soc#13): (../lib/diameter/common/logger.c:108)
+Open5GS daemon v2.6.4-78-g7f08873
+
+09/05 14:16:30.757: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/pcrf.yaml' (../lib/app/ogs-init.c:126)
+09/05 14:16:30.757: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/pcrf.log' (../lib/app/ogs-init.c:129)
+09/05 14:16:30.759: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+09/05 14:16:30.797: [app] INFO: PCRF initialize...done (../src/pcrf/app-init.c:31)
+09/05 14:16:30.799: [diam] INFO: CONNECTED TO 'smf.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#14): (../lib/diameter/common/logger.c:108)
+09/05 14:16:42.393: [diam] INFO: CONNECTED TO 'pcscf.ims.mnc001.mcc001.3gppnetwork.org' (TCP,soc#13): (../lib/diameter/common/logger.c:108)
+Open5GS daemon v2.6.4-78-g7f08873
+
+09/05 15:17:07.209: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/pcrf.yaml' (../lib/app/ogs-init.c:126)
+09/05 15:17:07.209: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/pcrf.log' (../lib/app/ogs-init.c:129)
+09/05 15:17:07.210: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+09/05 15:17:07.229: [app] INFO: PCRF initialize...done (../src/pcrf/app-init.c:31)
+09/05 15:17:07.231: [diam] INFO: CONNECTED TO 'smf.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+09/05 15:17:19.111: [diam] INFO: CONNECTED TO 'pcscf.ims.mnc001.mcc001.3gppnetwork.org' (TCP,soc#14): (../lib/diameter/common/logger.c:108)
+Open5GS daemon v2.6.4-78-g7f08873
+
+09/05 15:34:38.142: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/pcrf.yaml' (../lib/app/ogs-init.c:126)
+09/05 15:34:38.142: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/pcrf.log' (../lib/app/ogs-init.c:129)
+09/05 15:34:38.143: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+09/05 15:34:38.165: [app] INFO: PCRF initialize...done (../src/pcrf/app-init.c:31)
+09/05 15:34:38.166: [diam] INFO: CONNECTED TO 'smf.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+09/05 15:34:50.500: [diam] INFO: CONNECTED TO 'pcscf.ims.mnc001.mcc001.3gppnetwork.org' (TCP,soc#13): (../lib/diameter/common/logger.c:108)

@@ -1,22 +1,741 @@
-2023-08-31T19:06:00.291058 [ENB    ] [I] Using binary /usr/local/bin/srsenb with arguments: 
-2023-08-31T19:06:00.316596 [ENB    ] [I] Built in Release mode using commit fa56836b1 on branch HEAD.
-2023-08-31T19:06:00.350537 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:2152
-2023-08-31T19:06:00.350544 [COMN   ] [D] [    0] RxSockets: socket fd=6 has been registered.
-2023-08-31T19:06:00.350631 [COMN   ] [D] [    0] Opened SCTP socket=7
-2023-08-31T19:06:00.350635 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
-2023-08-31T19:06:00.350637 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
-2023-08-31T19:06:00.350643 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
-2023-08-31T19:06:00.351783 [COMN   ] [D] [    0] RxSockets: socket fd=7 has been registered.
-2023-08-31T19:08:49.548740 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-31T19:08:49.628245 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-31T19:13:53.888630 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-31T19:13:53.968367 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-31T19:15:55.028735 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-31T19:15:55.108487 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-31T19:16:48.228929 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-08-31T19:16:48.308574 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-08-31T19:17:42.089375 [COMN   ] [D] [    0] RxSockets: Closing rx socket handler thread
-2023-08-31T19:17:42.089819 [COMN   ] [D] [    0] RxSockets: closed.
-2023-08-31T19:17:42.089870 [COMN   ] [D] [    0] Socket=7 was closed.
-2023-08-31T19:17:42.092120 [COMN   ] [D] [    0] Socket=-1 could not be closed.
-2023-08-31T19:17:42.093528 [COMN   ] [D] [    0] Socket=-1 could not be closed.
+2023-09-01T19:53:57.693534 [ENB    ] [I] Using binary /usr/local/bin/srsenb with arguments: 
+2023-09-01T19:53:57.717989 [ENB    ] [I] Built in Release mode using commit fa56836b1 on branch HEAD.
+2023-09-01T19:53:57.752132 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:2152
+2023-09-01T19:53:57.752138 [COMN   ] [D] [    0] RxSockets: socket fd=6 has been registered.
+2023-09-01T19:53:57.752233 [COMN   ] [D] [    0] Opened SCTP socket=7
+2023-09-01T19:53:57.752237 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2023-09-01T19:53:57.752239 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2023-09-01T19:53:57.752246 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2023-09-01T19:53:57.753451 [COMN   ] [D] [    0] RxSockets: socket fd=7 has been registered.
+2023-09-01T19:54:13.518702 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=1
+2023-09-01T19:54:13.882791 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:54:14.285674 [RLC    ] [W] SRB2: Signaling max number of reTx=4 for SN=0
+2023-09-01T19:54:15.973915 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:54:16.776739 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:54:16.776748 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:54:18.223888 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:54:18.404779 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=2
+2023-09-01T19:54:19.190781 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:54:19.190790 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:54:19.410630 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=1
+2023-09-01T19:54:21.353844 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:54:21.628713 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:54:21.628722 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:54:21.856697 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=1
+2023-09-01T19:54:23.243850 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:54:23.538724 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:54:23.538733 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:54:23.720694 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T19:54:24.953965 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:54:25.423826 [MAC    ] [W] [ 2732] UE buffers: Removing old buffer tti=2727, interval=13
+2023-09-01T19:54:25.456781 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:54:25.456790 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:54:25.638647 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T19:54:27.242748 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:54:27.242758 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:54:32.153879 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:54:32.334718 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=2
+2023-09-01T19:54:32.836682 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:54:32.836692 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:54:34.243899 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:54:34.424667 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=2
+2023-09-01T19:54:36.373926 [MAC    ] [W] [ 3442] Updating user C-RNTI: rnti=0x79 already released.
+2023-09-01T19:54:36.451894 [MAC    ] [W] [ 3520] UE buffers: Removing old buffer tti=3515, interval=13
+2023-09-01T19:54:36.453847 [MAC    ] [W] [ 3522] Updating user C-RNTI: rnti=0x79 already released.
+2023-09-01T19:54:36.531814 [MAC    ] [W] [ 3600] UE buffers: Removing old buffer tti=3595, interval=13
+2023-09-01T19:54:36.533949 [MAC    ] [W] [ 3602] Updating user C-RNTI: rnti=0x79 already released.
+2023-09-01T19:54:36.611879 [MAC    ] [W] [ 3680] UE buffers: Removing old buffer tti=3675, interval=13
+2023-09-01T19:54:36.613909 [MAC    ] [W] [ 3682] Updating user C-RNTI: rnti=0x79 already released.
+2023-09-01T19:54:36.691833 [MAC    ] [W] [ 3760] UE buffers: Removing old buffer tti=3755, interval=13
+2023-09-01T19:54:36.693954 [MAC    ] [W] [ 3762] Updating user C-RNTI: rnti=0x79 already released.
+2023-09-01T19:54:36.771894 [MAC    ] [W] [ 3840] UE buffers: Removing old buffer tti=3835, interval=13
+2023-09-01T19:54:36.773892 [MAC    ] [W] [ 3842] Updating user C-RNTI: rnti=0x79 already released.
+2023-09-01T19:54:36.851850 [MAC    ] [W] [ 3920] UE buffers: Removing old buffer tti=3915, interval=13
+2023-09-01T19:54:36.853958 [MAC    ] [W] [ 3922] Updating user C-RNTI: rnti=0x79 already released.
+2023-09-01T19:54:36.931858 [MAC    ] [W] [ 4000] UE buffers: Removing old buffer tti=3995, interval=13
+2023-09-01T19:54:36.933864 [MAC    ] [W] [ 4002] Updating user C-RNTI: rnti=0x79 already released.
+2023-09-01T19:54:37.011788 [MAC    ] [W] [ 4080] UE buffers: Removing old buffer tti=4075, interval=13
+2023-09-01T19:54:39.174686 [S1AP   ] [W] Released UE with rnti=0x83 not found
+2023-09-01T19:54:40.934787 [S1AP   ] [W] Released UE with rnti=0x87 not found
+2023-09-01T19:54:40.943920 [MAC    ] [W] [ 8012] UE buffers: Removing old buffer tti=8007, interval=13
+2023-09-01T19:54:42.674821 [S1AP   ] [W] Released UE with rnti=0x8a not found
+2023-09-01T19:54:42.711128 [RRC    ] [W] Unrecognised rnti: 0x79
+2023-09-01T19:54:42.711749 [RRC    ] [W] Ignoring rnti=0x79 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T19:54:42.891800 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T19:54:45.361800 [MAC    ] [W] [ 2190] UE buffers: Removing old buffer tti=2185, interval=13
+2023-09-01T19:54:46.703952 [MAC    ] [W] [ 3532] Updating user C-RNTI: rnti=0x8f already released.
+2023-09-01T19:54:46.781932 [MAC    ] [W] [ 3610] UE buffers: Removing old buffer tti=3605, interval=13
+2023-09-01T19:54:46.783864 [MAC    ] [W] [ 3612] Updating user C-RNTI: rnti=0x8f already released.
+2023-09-01T19:54:46.861809 [MAC    ] [W] [ 3690] UE buffers: Removing old buffer tti=3685, interval=13
+2023-09-01T19:54:46.863928 [MAC    ] [W] [ 3692] Updating user C-RNTI: rnti=0x8f already released.
+2023-09-01T19:54:46.941904 [MAC    ] [W] [ 3770] UE buffers: Removing old buffer tti=3765, interval=13
+2023-09-01T19:54:46.943927 [MAC    ] [W] [ 3772] Updating user C-RNTI: rnti=0x8f already released.
+2023-09-01T19:54:47.021796 [MAC    ] [W] [ 3850] UE buffers: Removing old buffer tti=3845, interval=13
+2023-09-01T19:54:47.023909 [MAC    ] [W] [ 3852] Updating user C-RNTI: rnti=0x8f already released.
+2023-09-01T19:54:47.101868 [MAC    ] [W] [ 3930] UE buffers: Removing old buffer tti=3925, interval=13
+2023-09-01T19:54:47.103879 [MAC    ] [W] [ 3932] Updating user C-RNTI: rnti=0x8f already released.
+2023-09-01T19:54:47.181805 [MAC    ] [W] [ 4010] UE buffers: Removing old buffer tti=4005, interval=13
+2023-09-01T19:54:47.183944 [MAC    ] [W] [ 4012] Updating user C-RNTI: rnti=0x8f already released.
+2023-09-01T19:54:47.261835 [MAC    ] [W] [ 4090] UE buffers: Removing old buffer tti=4085, interval=13
+2023-09-01T19:54:47.264023 [MAC    ] [W] [ 4092] Updating user C-RNTI: rnti=0x8f already released.
+2023-09-01T19:54:47.341807 [MAC    ] [W] [ 4170] UE buffers: Removing old buffer tti=4165, interval=13
+2023-09-01T19:54:59.444713 [S1AP   ] [W] Released UE with rnti=0x99 not found
+2023-09-01T19:54:59.450773 [MAC    ] [W] [ 6039] UE buffers: Removing old buffer tti=6034, interval=13
+2023-09-01T19:55:00.812135 [RRC    ] [W] Unrecognised rnti: 0x8f
+2023-09-01T19:55:00.812776 [RRC    ] [W] Ignoring rnti=0x8f command -65534 arg 0. Cause: unknown rnti
+2023-09-01T19:55:01.193815 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=2
+2023-09-01T19:55:03.753999 [MAC    ] [W] [  102] Updating user C-RNTI: rnti=0xa1 already released.
+2023-09-01T19:55:03.831780 [MAC    ] [W] [  180] UE buffers: Removing old buffer tti=175, interval=13
+2023-09-01T19:55:03.834029 [MAC    ] [W] [  182] Updating user C-RNTI: rnti=0xa1 already released.
+2023-09-01T19:55:03.911862 [MAC    ] [W] [  260] UE buffers: Removing old buffer tti=255, interval=13
+2023-09-01T19:55:03.913998 [MAC    ] [W] [  262] Updating user C-RNTI: rnti=0xa1 already released.
+2023-09-01T19:55:03.991928 [MAC    ] [W] [  340] UE buffers: Removing old buffer tti=335, interval=13
+2023-09-01T19:55:03.993871 [MAC    ] [W] [  342] Updating user C-RNTI: rnti=0xa1 already released.
+2023-09-01T19:55:04.071856 [MAC    ] [W] [  420] UE buffers: Removing old buffer tti=415, interval=13
+2023-09-01T19:55:04.073972 [MAC    ] [W] [  422] Updating user C-RNTI: rnti=0xa1 already released.
+2023-09-01T19:55:04.151950 [MAC    ] [W] [  500] UE buffers: Removing old buffer tti=495, interval=13
+2023-09-01T19:55:04.153876 [MAC    ] [W] [  502] Updating user C-RNTI: rnti=0xa1 already released.
+2023-09-01T19:55:04.231858 [MAC    ] [W] [  580] UE buffers: Removing old buffer tti=575, interval=13
+2023-09-01T19:55:04.233979 [MAC    ] [W] [  582] Updating user C-RNTI: rnti=0xa1 already released.
+2023-09-01T19:55:04.311937 [MAC    ] [W] [  660] UE buffers: Removing old buffer tti=655, interval=13
+2023-09-01T19:55:04.313870 [MAC    ] [W] [  662] Updating user C-RNTI: rnti=0xa1 already released.
+2023-09-01T19:55:04.391878 [MAC    ] [W] [  740] UE buffers: Removing old buffer tti=735, interval=13
+2023-09-01T19:55:06.514819 [S1AP   ] [W] Released UE with rnti=0xab not found
+2023-09-01T19:55:06.521904 [MAC    ] [W] [ 2870] UE buffers: Removing old buffer tti=2865, interval=13
+2023-09-01T19:55:07.964557 [RRC    ] [W] Unrecognised rnti: 0xa1
+2023-09-01T19:55:07.964616 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:55:07.964756 [RRC    ] [W] Ignoring rnti=0xa1 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T19:55:08.224830 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=1
+2023-09-01T19:55:08.704843 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:55:08.704854 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:55:08.885755 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T19:55:12.888971 [GTPU   ] [W] The rnti=0xb2, eps-BearerID=5 does not have any pdcp_active tunnel
+2023-09-01T19:55:12.897029 [GTPU   ] [W] The rnti=0xb2, eps-BearerID=5 does not have any pdcp_active tunnel
+2023-09-01T19:55:12.905889 [GTPU   ] [W] The rnti=0xb2, eps-BearerID=5 does not have any pdcp_active tunnel
+2023-09-01T19:55:12.905895 [GTPU   ] [W] The rnti=0xb2, eps-BearerID=5 does not have any pdcp_active tunnel
+2023-09-01T19:55:12.907019 [GTPU   ] [W] The rnti=0xb2, eps-BearerID=5 does not have any pdcp_active tunnel
+2023-09-01T19:55:12.907024 [GTPU   ] [W] The rnti=0xb2, eps-BearerID=5 does not have any pdcp_active tunnel
+2023-09-01T19:55:12.907029 [GTPU   ] [W] The rnti=0xb2, eps-BearerID=5 does not have any pdcp_active tunnel
+2023-09-01T19:55:12.941878 [MAC    ] [W] [ 9290] UE buffers: Removing old buffer tti=9285, interval=13
+2023-09-01T19:55:12.943879 [MAC    ] [W] [ 9292] UE buffers: Removing old buffer tti=9287, interval=13
+2023-09-01T19:55:14.003465 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:55:14.072114 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:56:12.765834 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=3
+2023-09-01T19:56:14.774083 [MAC    ] [W] [ 9682] Updating user C-RNTI: rnti=0xeb already released.
+2023-09-01T19:56:14.852027 [MAC    ] [W] [ 9760] UE buffers: Removing old buffer tti=9755, interval=13
+2023-09-01T19:56:14.853978 [MAC    ] [W] [ 9762] Updating user C-RNTI: rnti=0xeb already released.
+2023-09-01T19:56:14.931934 [MAC    ] [W] [ 9840] UE buffers: Removing old buffer tti=9835, interval=13
+2023-09-01T19:56:14.934093 [MAC    ] [W] [ 9842] Updating user C-RNTI: rnti=0xeb already released.
+2023-09-01T19:56:15.012025 [MAC    ] [W] [ 9920] UE buffers: Removing old buffer tti=9915, interval=13
+2023-09-01T19:56:15.013992 [MAC    ] [W] [ 9922] Updating user C-RNTI: rnti=0xeb already released.
+2023-09-01T19:56:15.093985 [MAC    ] [W] [10002] Updating user C-RNTI: rnti=0xeb already released.
+2023-09-01T19:56:15.172017 [MAC    ] [W] [10080] UE buffers: Removing old buffer tti=10075, interval=13
+2023-09-01T19:56:15.174046 [MAC    ] [W] [10082] Updating user C-RNTI: rnti=0xeb already released.
+2023-09-01T19:56:15.251936 [MAC    ] [W] [10160] UE buffers: Removing old buffer tti=10155, interval=13
+2023-09-01T19:56:15.294074 [MAC    ] [W] [10202] Updating user C-RNTI: rnti=0xeb already released.
+2023-09-01T19:56:15.372027 [MAC    ] [W] [   40] UE buffers: Removing old buffer tti=35, interval=13
+2023-09-01T19:56:15.374020 [MAC    ] [W] [   42] Updating user C-RNTI: rnti=0xeb already released.
+2023-09-01T19:56:15.451966 [MAC    ] [W] [  120] UE buffers: Removing old buffer tti=115, interval=13
+2023-09-01T19:56:15.454088 [MAC    ] [W] [  122] Updating user C-RNTI: rnti=0xeb already released.
+2023-09-01T19:56:15.532029 [MAC    ] [W] [  200] UE buffers: Removing old buffer tti=195, interval=13
+2023-09-01T19:56:15.534012 [MAC    ] [W] [  202] Updating user C-RNTI: rnti=0xeb already released.
+2023-09-01T19:56:15.614095 [MAC    ] [W] [  282] Updating user C-RNTI: rnti=0xeb already released.
+2023-09-01T19:56:15.694028 [MAC    ] [W] [  362] Updating user C-RNTI: rnti=0xeb already released.
+2023-09-01T19:56:15.771948 [MAC    ] [W] [  440] UE buffers: Removing old buffer tti=435, interval=13
+2023-09-01T19:56:15.774039 [MAC    ] [W] [  442] Updating user C-RNTI: rnti=0xeb already released.
+2023-09-01T19:56:15.851968 [MAC    ] [W] [  520] UE buffers: Removing old buffer tti=515, interval=13
+2023-09-01T19:56:15.854014 [MAC    ] [W] [  522] Updating user C-RNTI: rnti=0xeb already released.
+2023-09-01T19:56:15.931923 [MAC    ] [W] [  600] UE buffers: Removing old buffer tti=595, interval=13
+2023-09-01T19:56:15.933963 [MAC    ] [W] [  602] Updating user C-RNTI: rnti=0xeb already released.
+2023-09-01T19:56:16.011963 [MAC    ] [W] [  680] UE buffers: Removing old buffer tti=675, interval=13
+2023-09-01T19:56:17.902529 [RRC    ] [W] Unrecognised rnti: 0xeb
+2023-09-01T19:56:17.902810 [RRC    ] [W] Ignoring rnti=0xeb command -65534 arg 0. Cause: unknown rnti
+2023-09-01T19:56:19.670722 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:56:19.851778 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T19:56:20.270876 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:56:20.270885 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:56:20.491877 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=1
+2023-09-01T19:56:22.353942 [MAC    ] [W] [ 7022] Updating user C-RNTI: rnti=0x103 already released.
+2023-09-01T19:56:22.431879 [MAC    ] [W] [ 7100] UE buffers: Removing old buffer tti=7095, interval=13
+2023-09-01T19:56:22.434077 [MAC    ] [W] [ 7102] Updating user C-RNTI: rnti=0x103 already released.
+2023-09-01T19:56:22.511991 [MAC    ] [W] [ 7180] UE buffers: Removing old buffer tti=7175, interval=13
+2023-09-01T19:56:22.514010 [MAC    ] [W] [ 7182] Updating user C-RNTI: rnti=0x103 already released.
+2023-09-01T19:56:22.591843 [MAC    ] [W] [ 7260] UE buffers: Removing old buffer tti=7255, interval=13
+2023-09-01T19:56:22.593949 [MAC    ] [W] [ 7262] Updating user C-RNTI: rnti=0x103 already released.
+2023-09-01T19:56:22.671918 [MAC    ] [W] [ 7340] UE buffers: Removing old buffer tti=7335, interval=13
+2023-09-01T19:56:22.673928 [MAC    ] [W] [ 7342] Updating user C-RNTI: rnti=0x103 already released.
+2023-09-01T19:56:22.751902 [MAC    ] [W] [ 7420] UE buffers: Removing old buffer tti=7415, interval=13
+2023-09-01T19:56:22.753995 [MAC    ] [W] [ 7422] Updating user C-RNTI: rnti=0x103 already released.
+2023-09-01T19:56:22.831938 [MAC    ] [W] [ 7500] UE buffers: Removing old buffer tti=7495, interval=13
+2023-09-01T19:56:22.833984 [MAC    ] [W] [ 7502] Updating user C-RNTI: rnti=0x103 already released.
+2023-09-01T19:56:22.911896 [MAC    ] [W] [ 7580] UE buffers: Removing old buffer tti=7575, interval=13
+2023-09-01T19:56:22.914035 [MAC    ] [W] [ 7582] Updating user C-RNTI: rnti=0x103 already released.
+2023-09-01T19:56:22.991935 [MAC    ] [W] [ 7660] UE buffers: Removing old buffer tti=7655, interval=13
+2023-09-01T19:56:22.993992 [MAC    ] [W] [ 7662] Updating user C-RNTI: rnti=0x103 already released.
+2023-09-01T19:56:23.074018 [MAC    ] [W] [ 7742] Updating user C-RNTI: rnti=0x103 already released.
+2023-09-01T19:56:23.151837 [MAC    ] [W] [ 7820] UE buffers: Removing old buffer tti=7815, interval=13
+2023-09-01T19:56:24.017663 [RRC    ] [W] Unrecognised rnti: 0x103
+2023-09-01T19:56:24.017715 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:56:24.017856 [RRC    ] [W] Ignoring rnti=0x103 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T19:56:24.198800 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T19:56:27.174004 [MAC    ] [W] [ 1602] Updating user C-RNTI: rnti=0x112 already released.
+2023-09-01T19:56:27.253893 [MAC    ] [W] [ 1682] Updating user C-RNTI: rnti=0x112 already released.
+2023-09-01T19:56:27.333948 [MAC    ] [W] [ 1762] Updating user C-RNTI: rnti=0x112 already released.
+2023-09-01T19:56:27.411917 [MAC    ] [W] [ 1840] UE buffers: Removing old buffer tti=1835, interval=13
+2023-09-01T19:56:27.413973 [MAC    ] [W] [ 1842] Updating user C-RNTI: rnti=0x112 already released.
+2023-09-01T19:56:27.491884 [MAC    ] [W] [ 1920] UE buffers: Removing old buffer tti=1915, interval=13
+2023-09-01T19:56:27.493982 [MAC    ] [W] [ 1922] Updating user C-RNTI: rnti=0x112 already released.
+2023-09-01T19:56:27.573985 [MAC    ] [W] [ 2002] Updating user C-RNTI: rnti=0x112 already released.
+2023-09-01T19:56:27.651865 [MAC    ] [W] [ 2080] UE buffers: Removing old buffer tti=2075, interval=13
+2023-09-01T19:56:27.653977 [MAC    ] [W] [ 2082] Updating user C-RNTI: rnti=0x112 already released.
+2023-09-01T19:56:27.731899 [MAC    ] [W] [ 2160] UE buffers: Removing old buffer tti=2155, interval=13
+2023-09-01T19:56:27.734021 [MAC    ] [W] [ 2162] Updating user C-RNTI: rnti=0x112 already released.
+2023-09-01T19:56:27.811869 [MAC    ] [W] [ 2240] UE buffers: Removing old buffer tti=2235, interval=13
+2023-09-01T19:56:27.813911 [MAC    ] [W] [ 2242] Updating user C-RNTI: rnti=0x112 already released.
+2023-09-01T19:56:27.891893 [MAC    ] [W] [ 2320] UE buffers: Removing old buffer tti=2315, interval=13
+2023-09-01T19:56:27.894067 [MAC    ] [W] [ 2322] Updating user C-RNTI: rnti=0x112 already released.
+2023-09-01T19:56:27.971952 [MAC    ] [W] [ 2400] UE buffers: Removing old buffer tti=2395, interval=13
+2023-09-01T19:56:30.034813 [S1AP   ] [W] Released UE with rnti=0x11e not found
+2023-09-01T19:56:31.408620 [RRC    ] [W] Unrecognised rnti: 0x112
+2023-09-01T19:56:31.408662 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:56:31.408696 [RRC    ] [W] Ignoring rnti=0x112 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T19:56:31.607086 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:56:31.788743 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=2
+2023-09-01T19:56:35.973920 [MAC    ] [W] [  162] Updating user C-RNTI: rnti=0x127 already released.
+2023-09-01T19:56:36.051858 [MAC    ] [W] [  240] UE buffers: Removing old buffer tti=235, interval=13
+2023-09-01T19:56:36.053983 [MAC    ] [W] [  242] Updating user C-RNTI: rnti=0x127 already released.
+2023-09-01T19:56:36.131925 [MAC    ] [W] [  320] UE buffers: Removing old buffer tti=315, interval=13
+2023-09-01T19:56:36.133952 [MAC    ] [W] [  322] Updating user C-RNTI: rnti=0x127 already released.
+2023-09-01T19:56:36.211850 [MAC    ] [W] [  400] UE buffers: Removing old buffer tti=395, interval=13
+2023-09-01T19:56:36.213900 [MAC    ] [W] [  402] Updating user C-RNTI: rnti=0x127 already released.
+2023-09-01T19:56:36.291937 [MAC    ] [W] [  480] UE buffers: Removing old buffer tti=475, interval=13
+2023-09-01T19:56:36.293964 [MAC    ] [W] [  482] Updating user C-RNTI: rnti=0x127 already released.
+2023-09-01T19:56:36.373997 [MAC    ] [W] [  562] Updating user C-RNTI: rnti=0x127 already released.
+2023-09-01T19:56:36.453890 [MAC    ] [W] [  642] Updating user C-RNTI: rnti=0x127 already released.
+2023-09-01T19:56:36.531841 [MAC    ] [W] [  720] UE buffers: Removing old buffer tti=715, interval=13
+2023-09-01T19:56:38.594757 [S1AP   ] [W] Released UE with rnti=0x130 not found
+2023-09-01T19:56:38.603895 [MAC    ] [W] [ 2792] UE buffers: Removing old buffer tti=2787, interval=13
+2023-09-01T19:56:40.384753 [S1AP   ] [W] Released UE with rnti=0x132 not found
+2023-09-01T19:56:42.204821 [S1AP   ] [W] Released UE with rnti=0x134 not found
+2023-09-01T19:56:43.984732 [S1AP   ] [W] Released UE with rnti=0x136 not found
+2023-09-01T19:56:45.486598 [RRC    ] [W] Unrecognised rnti: 0x127
+2023-09-01T19:56:45.486654 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:56:45.486686 [RRC    ] [W] Ignoring rnti=0x127 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T19:56:45.667665 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T19:56:46.122856 [MAC    ] [W] [   71] UE buffers: Removing old buffer tti=66, interval=13
+2023-09-01T19:56:47.493867 [MAC    ] [W] [ 1442] Updating user C-RNTI: rnti=0x13b already released.
+2023-09-01T19:56:47.571782 [MAC    ] [W] [ 1520] UE buffers: Removing old buffer tti=1515, interval=13
+2023-09-01T19:56:47.573868 [MAC    ] [W] [ 1522] Updating user C-RNTI: rnti=0x13b already released.
+2023-09-01T19:56:47.651870 [MAC    ] [W] [ 1600] UE buffers: Removing old buffer tti=1595, interval=13
+2023-09-01T19:56:47.653848 [MAC    ] [W] [ 1602] Updating user C-RNTI: rnti=0x13b already released.
+2023-09-01T19:56:47.731775 [MAC    ] [W] [ 1680] UE buffers: Removing old buffer tti=1675, interval=13
+2023-09-01T19:56:47.733776 [MAC    ] [W] [ 1682] Updating user C-RNTI: rnti=0x13b already released.
+2023-09-01T19:56:47.811820 [MAC    ] [W] [ 1760] UE buffers: Removing old buffer tti=1755, interval=13
+2023-09-01T19:56:47.813825 [MAC    ] [W] [ 1762] Updating user C-RNTI: rnti=0x13b already released.
+2023-09-01T19:56:47.891800 [MAC    ] [W] [ 1840] UE buffers: Removing old buffer tti=1835, interval=13
+2023-09-01T19:56:47.893800 [MAC    ] [W] [ 1842] Updating user C-RNTI: rnti=0x13b already released.
+2023-09-01T19:56:47.971825 [MAC    ] [W] [ 1920] UE buffers: Removing old buffer tti=1915, interval=13
+2023-09-01T19:56:47.973826 [MAC    ] [W] [ 1922] Updating user C-RNTI: rnti=0x13b already released.
+2023-09-01T19:56:48.053809 [MAC    ] [W] [ 2002] Updating user C-RNTI: rnti=0x13b already released.
+2023-09-01T19:56:48.131744 [MAC    ] [W] [ 2080] UE buffers: Removing old buffer tti=2075, interval=13
+2023-09-01T19:56:49.830508 [RRC    ] [W] Unrecognised rnti: 0x13b
+2023-09-01T19:56:49.830558 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:56:49.830796 [RRC    ] [W] Ignoring rnti=0x13b command -65534 arg 0. Cause: unknown rnti
+2023-09-01T19:56:50.091688 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=1
+2023-09-01T19:56:50.663887 [MAC    ] [W] [ 4612] UE buffers: Removing old buffer tti=4607, interval=13
+2023-09-01T19:56:50.664730 [MAC    ] [W] [ 4613] UE buffers: Removing old buffer tti=4608, interval=13
+2023-09-01T19:56:50.682750 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:56:50.682757 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:57:06.133852 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T19:57:08.223807 [MAC    ] [W] [ 1692] Updating user C-RNTI: rnti=0x154 already released.
+2023-09-01T19:57:08.301697 [MAC    ] [W] [ 1770] UE buffers: Removing old buffer tti=1765, interval=13
+2023-09-01T19:57:08.303827 [MAC    ] [W] [ 1772] Updating user C-RNTI: rnti=0x154 already released.
+2023-09-01T19:57:08.381726 [MAC    ] [W] [ 1850] UE buffers: Removing old buffer tti=1845, interval=13
+2023-09-01T19:57:08.383774 [MAC    ] [W] [ 1852] Updating user C-RNTI: rnti=0x154 already released.
+2023-09-01T19:57:08.461695 [MAC    ] [W] [ 1930] UE buffers: Removing old buffer tti=1925, interval=13
+2023-09-01T19:57:08.463807 [MAC    ] [W] [ 1932] Updating user C-RNTI: rnti=0x154 already released.
+2023-09-01T19:57:08.541652 [MAC    ] [W] [ 2010] UE buffers: Removing old buffer tti=2005, interval=13
+2023-09-01T19:57:08.543681 [MAC    ] [W] [ 2012] Updating user C-RNTI: rnti=0x154 already released.
+2023-09-01T19:57:08.621700 [MAC    ] [W] [ 2090] UE buffers: Removing old buffer tti=2085, interval=13
+2023-09-01T19:57:08.623742 [MAC    ] [W] [ 2092] Updating user C-RNTI: rnti=0x154 already released.
+2023-09-01T19:57:08.701707 [MAC    ] [W] [ 2170] UE buffers: Removing old buffer tti=2165, interval=13
+2023-09-01T19:57:08.703845 [MAC    ] [W] [ 2172] Updating user C-RNTI: rnti=0x154 already released.
+2023-09-01T19:57:08.781697 [MAC    ] [W] [ 2250] UE buffers: Removing old buffer tti=2245, interval=13
+2023-09-01T19:57:11.163686 [MAC    ] [W] [ 4632] UE buffers: Removing old buffer tti=4627, interval=13
+2023-09-01T19:57:11.263757 [MAC    ] [W] [ 4732] Updating user C-RNTI: rnti=0x15d already released.
+2023-09-01T19:57:11.341688 [MAC    ] [W] [ 4810] UE buffers: Removing old buffer tti=4805, interval=13
+2023-09-01T19:57:11.343794 [MAC    ] [W] [ 4812] Updating user C-RNTI: rnti=0x15d already released.
+2023-09-01T19:57:11.421699 [MAC    ] [W] [ 4890] UE buffers: Removing old buffer tti=4885, interval=13
+2023-09-01T19:57:11.423811 [MAC    ] [W] [ 4892] Updating user C-RNTI: rnti=0x15d already released.
+2023-09-01T19:57:11.503744 [MAC    ] [W] [ 4972] Updating user C-RNTI: rnti=0x15d already released.
+2023-09-01T19:57:11.581703 [MAC    ] [W] [ 5050] UE buffers: Removing old buffer tti=5045, interval=13
+2023-09-01T19:57:11.583851 [MAC    ] [W] [ 5052] Updating user C-RNTI: rnti=0x15d already released.
+2023-09-01T19:57:11.661763 [MAC    ] [W] [ 5130] UE buffers: Removing old buffer tti=5125, interval=13
+2023-09-01T19:57:11.663784 [MAC    ] [W] [ 5132] Updating user C-RNTI: rnti=0x15d already released.
+2023-09-01T19:57:11.741703 [MAC    ] [W] [ 5210] UE buffers: Removing old buffer tti=5205, interval=13
+2023-09-01T19:57:11.743861 [MAC    ] [W] [ 5212] Updating user C-RNTI: rnti=0x15d already released.
+2023-09-01T19:57:11.821754 [MAC    ] [W] [ 5290] UE buffers: Removing old buffer tti=5285, interval=13
+2023-09-01T19:57:13.764550 [S1AP   ] [W] Released UE with rnti=0x166 not found
+2023-09-01T19:57:13.773824 [MAC    ] [W] [ 7242] UE buffers: Removing old buffer tti=7237, interval=13
+2023-09-01T19:57:15.574580 [S1AP   ] [W] Released UE with rnti=0x169 not found
+2023-09-01T19:57:15.583743 [MAC    ] [W] [ 9052] UE buffers: Removing old buffer tti=9047, interval=13
+2023-09-01T19:57:17.314613 [S1AP   ] [W] Released UE with rnti=0x16b not found
+2023-09-01T19:57:17.321664 [MAC    ] [W] [  550] UE buffers: Removing old buffer tti=545, interval=13
+2023-09-01T19:57:18.686328 [RRC    ] [W] Unrecognised rnti: 0x154
+2023-09-01T19:57:18.686383 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:57:18.686618 [RRC    ] [W] Ignoring rnti=0x154 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T19:57:30.395614 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=4
+2023-09-01T19:57:31.040481 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:57:31.222572 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T19:57:35.278681 [MAC    ] [W] [ 8267] UE buffers: Removing old buffer tti=8262, interval=13
+2023-09-01T19:57:35.843576 [MAC    ] [W] [ 8832] Updating user C-RNTI: rnti=0x17c already released.
+2023-09-01T19:57:35.923648 [MAC    ] [W] [ 8912] Updating user C-RNTI: rnti=0x17c already released.
+2023-09-01T19:57:36.003708 [MAC    ] [W] [ 8992] Updating user C-RNTI: rnti=0x17c already released.
+2023-09-01T19:57:36.083614 [MAC    ] [W] [ 9072] Updating user C-RNTI: rnti=0x17c already released.
+2023-09-01T19:57:36.163680 [MAC    ] [W] [ 9152] Updating user C-RNTI: rnti=0x17c already released.
+2023-09-01T19:57:36.243653 [MAC    ] [W] [ 9232] Updating user C-RNTI: rnti=0x17c already released.
+2023-09-01T19:57:36.323694 [MAC    ] [W] [ 9312] Updating user C-RNTI: rnti=0x17c already released.
+2023-09-01T19:57:36.403684 [MAC    ] [W] [ 9392] Updating user C-RNTI: rnti=0x17c already released.
+2023-09-01T19:57:36.483627 [MAC    ] [W] [ 9472] Updating user C-RNTI: rnti=0x17c already released.
+2023-09-01T19:57:38.654550 [S1AP   ] [W] Released UE with rnti=0x18c not found
+2023-09-01T19:57:40.173464 [RLC    ] [W] LCID 1 doesn't exist. Dropping PDU.
+2023-09-01T19:57:52.093591 [MAC    ] [W] [ 4602] Updating user C-RNTI: rnti=0x191 already released.
+2023-09-01T19:57:53.994358 [S1AP   ] [W] Released UE with rnti=0x195 not found
+2023-09-01T19:57:54.003553 [MAC    ] [W] [ 6512] UE buffers: Removing old buffer tti=6507, interval=13
+2023-09-01T19:57:55.804543 [S1AP   ] [W] Released UE with rnti=0x197 not found
+2023-09-01T19:57:55.811524 [MAC    ] [W] [ 8320] UE buffers: Removing old buffer tti=8315, interval=13
+2023-09-01T19:57:57.629515 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:57:57.810482 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T19:57:59.821434 [MAC    ] [W] [ 2090] UE buffers: Removing old buffer tti=2085, interval=13
+2023-09-01T19:58:01.754487 [S1AP   ] [W] Released UE with rnti=0x19c not found
+2023-09-01T19:58:03.228377 [RRC    ] [W] Unrecognised rnti: 0x19b
+2023-09-01T19:58:03.228410 [RRC    ] [W] Ignoring rnti=0x19b command -65534 arg 0. Cause: unknown rnti
+2023-09-01T19:58:03.228436 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:58:03.409417 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T19:58:05.143610 [MAC    ] [W] [ 7412] Updating user C-RNTI: rnti=0x1a3 already released.
+2023-09-01T19:58:05.221432 [MAC    ] [W] [ 7490] UE buffers: Removing old buffer tti=7485, interval=13
+2023-09-01T19:58:05.223594 [MAC    ] [W] [ 7492] Updating user C-RNTI: rnti=0x1a3 already released.
+2023-09-01T19:58:05.323512 [MAC    ] [W] [ 7592] Updating user C-RNTI: rnti=0x1a3 already released.
+2023-09-01T19:58:05.401355 [MAC    ] [W] [ 7670] UE buffers: Removing old buffer tti=7665, interval=13
+2023-09-01T19:58:05.403518 [MAC    ] [W] [ 7672] Updating user C-RNTI: rnti=0x1a3 already released.
+2023-09-01T19:58:05.481443 [MAC    ] [W] [ 7750] UE buffers: Removing old buffer tti=7745, interval=13
+2023-09-01T19:58:05.483598 [MAC    ] [W] [ 7752] Updating user C-RNTI: rnti=0x1a3 already released.
+2023-09-01T19:58:05.563623 [MAC    ] [W] [ 7832] Updating user C-RNTI: rnti=0x1a3 already released.
+2023-09-01T19:58:05.643582 [MAC    ] [W] [ 7912] Updating user C-RNTI: rnti=0x1a3 already released.
+2023-09-01T19:58:05.721532 [MAC    ] [W] [ 7990] UE buffers: Removing old buffer tti=7985, interval=13
+2023-09-01T19:58:05.723196 [MAC    ] [W] [ 7991] Updating user C-RNTI: rnti=0x1a3 already released.
+2023-09-01T19:58:05.800551 [MAC    ] [W] [ 8069] UE buffers: Removing old buffer tti=8064, interval=13
+2023-09-01T19:58:05.803616 [MAC    ] [W] [ 8072] Updating user C-RNTI: rnti=0x1a3 already released.
+2023-09-01T19:58:05.881544 [MAC    ] [W] [ 8150] UE buffers: Removing old buffer tti=8145, interval=13
+2023-09-01T19:58:07.602136 [RRC    ] [W] Unrecognised rnti: 0x1a3
+2023-09-01T19:58:07.602189 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:58:07.602428 [RRC    ] [W] Ignoring rnti=0x1a3 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T19:58:07.879582 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:59:12.861997 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:59:12.998369 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:59:16.025058 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=3
+2023-09-01T19:59:16.686223 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:59:16.868118 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T19:59:18.067292 [RLC    ] [E] DRB1: Generated empty RLC PDU.
+2023-09-01T19:59:18.067294 [RLC    ] [E] DRB1: Generated empty RLC PDU.
+2023-09-01T19:59:18.257236 [RRC    ] [E] Expected RRCReconfigurationComplete with transaction ID: 0, got 1
+2023-09-01T19:59:21.901012 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:59:21.961260 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:59:22.143165 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=2
+2023-09-01T19:59:23.910133 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T19:59:24.131080 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=1
+2023-09-01T19:59:28.263308 [MAC    ] [W] [ 8612] Updating user C-RNTI: rnti=0x1c9 already released.
+2023-09-01T19:59:28.341221 [MAC    ] [W] [ 8690] UE buffers: Removing old buffer tti=8685, interval=13
+2023-09-01T19:59:28.343236 [MAC    ] [W] [ 8692] Updating user C-RNTI: rnti=0x1c9 already released.
+2023-09-01T19:59:28.421184 [MAC    ] [W] [ 8770] UE buffers: Removing old buffer tti=8765, interval=13
+2023-09-01T19:59:28.423294 [MAC    ] [W] [ 8772] Updating user C-RNTI: rnti=0x1c9 already released.
+2023-09-01T19:59:28.501232 [MAC    ] [W] [ 8850] UE buffers: Removing old buffer tti=8845, interval=13
+2023-09-01T19:59:28.503225 [MAC    ] [W] [ 8852] Updating user C-RNTI: rnti=0x1c9 already released.
+2023-09-01T19:59:28.581170 [MAC    ] [W] [ 8930] UE buffers: Removing old buffer tti=8925, interval=13
+2023-09-01T19:59:28.583308 [MAC    ] [W] [ 8932] Updating user C-RNTI: rnti=0x1c9 already released.
+2023-09-01T19:59:28.661207 [MAC    ] [W] [ 9010] UE buffers: Removing old buffer tti=9005, interval=13
+2023-09-01T19:59:28.663213 [MAC    ] [W] [ 9012] Updating user C-RNTI: rnti=0x1c9 already released.
+2023-09-01T19:59:28.741165 [MAC    ] [W] [ 9090] UE buffers: Removing old buffer tti=9085, interval=13
+2023-09-01T19:59:28.743266 [MAC    ] [W] [ 9092] Updating user C-RNTI: rnti=0x1c9 already released.
+2023-09-01T19:59:28.821231 [MAC    ] [W] [ 9170] UE buffers: Removing old buffer tti=9165, interval=13
+2023-09-01T19:59:28.823211 [MAC    ] [W] [ 9172] Updating user C-RNTI: rnti=0x1c9 already released.
+2023-09-01T19:59:28.901170 [MAC    ] [W] [ 9250] UE buffers: Removing old buffer tti=9245, interval=13
+2023-09-01T19:59:28.903243 [MAC    ] [W] [ 9252] Updating user C-RNTI: rnti=0x1c9 already released.
+2023-09-01T19:59:28.981247 [MAC    ] [W] [ 9330] UE buffers: Removing old buffer tti=9325, interval=13
+2023-09-01T19:59:31.194109 [S1AP   ] [W] Released UE with rnti=0x1d4 not found
+2023-09-01T19:59:32.699791 [RRC    ] [W] Unrecognised rnti: 0x1c9
+2023-09-01T19:59:32.700084 [RRC    ] [W] Ignoring rnti=0x1c9 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T19:59:32.763211 [MAC    ] [W] [ 2872] Updating user C-RNTI: rnti=0x1d6 already released.
+2023-09-01T19:59:32.841177 [MAC    ] [W] [ 2950] UE buffers: Removing old buffer tti=2945, interval=13
+2023-09-01T19:59:34.610027 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:59:45.145029 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=4
+2023-09-01T19:59:47.133177 [MAC    ] [W] [ 7002] Updating user C-RNTI: rnti=0x1e6 already released.
+2023-09-01T19:59:47.211102 [MAC    ] [W] [ 7080] UE buffers: Removing old buffer tti=7075, interval=13
+2023-09-01T19:59:47.213011 [MAC    ] [W] [ 7082] Updating user C-RNTI: rnti=0x1e6 already released.
+2023-09-01T19:59:47.290995 [MAC    ] [W] [ 7160] UE buffers: Removing old buffer tti=7155, interval=13
+2023-09-01T19:59:47.293197 [MAC    ] [W] [ 7162] Updating user C-RNTI: rnti=0x1e6 already released.
+2023-09-01T19:59:47.371065 [MAC    ] [W] [ 7240] UE buffers: Removing old buffer tti=7235, interval=13
+2023-09-01T19:59:47.373041 [MAC    ] [W] [ 7242] Updating user C-RNTI: rnti=0x1e6 already released.
+2023-09-01T19:59:47.453130 [MAC    ] [W] [ 7322] Updating user C-RNTI: rnti=0x1e6 already released.
+2023-09-01T19:59:47.531037 [MAC    ] [W] [ 7400] UE buffers: Removing old buffer tti=7395, interval=13
+2023-09-01T19:59:47.533013 [MAC    ] [W] [ 7402] Updating user C-RNTI: rnti=0x1e6 already released.
+2023-09-01T19:59:47.610987 [MAC    ] [W] [ 7480] UE buffers: Removing old buffer tti=7475, interval=13
+2023-09-01T19:59:51.438077 [RRC    ] [W] Unrecognised rnti: 0x1e6
+2023-09-01T19:59:51.438114 [RRC    ] [W] Ignoring rnti=0x1e6 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T19:59:51.438143 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:59:51.503238 [RLC    ] [W] LCID 1 doesn't exist. Dropping PDU.
+2023-09-01T19:59:51.618033 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T19:59:53.373200 [MAC    ] [W] [ 3002] Updating user C-RNTI: rnti=0x1f8 already released.
+2023-09-01T19:59:53.451135 [MAC    ] [W] [ 3080] UE buffers: Removing old buffer tti=3075, interval=13
+2023-09-01T19:59:53.453124 [MAC    ] [W] [ 3082] Updating user C-RNTI: rnti=0x1f8 already released.
+2023-09-01T19:59:53.531077 [MAC    ] [W] [ 3160] UE buffers: Removing old buffer tti=3155, interval=13
+2023-09-01T19:59:53.533135 [MAC    ] [W] [ 3162] Updating user C-RNTI: rnti=0x1f8 already released.
+2023-09-01T19:59:53.611103 [MAC    ] [W] [ 3240] UE buffers: Removing old buffer tti=3235, interval=13
+2023-09-01T19:59:53.613096 [MAC    ] [W] [ 3242] Updating user C-RNTI: rnti=0x1f8 already released.
+2023-09-01T19:59:53.691117 [MAC    ] [W] [ 3320] UE buffers: Removing old buffer tti=3315, interval=13
+2023-09-01T19:59:53.693199 [MAC    ] [W] [ 3322] Updating user C-RNTI: rnti=0x1f8 already released.
+2023-09-01T19:59:53.771104 [MAC    ] [W] [ 3400] UE buffers: Removing old buffer tti=3395, interval=13
+2023-09-01T19:59:53.773299 [MAC    ] [W] [ 3402] Updating user C-RNTI: rnti=0x1f8 already released.
+2023-09-01T19:59:53.853256 [MAC    ] [W] [ 3482] Updating user C-RNTI: rnti=0x1f8 already released.
+2023-09-01T19:59:55.887918 [RRC    ] [W] Unrecognised rnti: 0x1f8
+2023-09-01T19:59:55.887969 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:59:55.888005 [RRC    ] [W] Ignoring rnti=0x1f8 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T19:59:56.068010 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T19:59:57.973203 [MAC    ] [W] [ 7602] Updating user C-RNTI: rnti=0x206 already released.
+2023-09-01T19:59:58.051172 [MAC    ] [W] [ 7680] UE buffers: Removing old buffer tti=7675, interval=13
+2023-09-01T19:59:58.053185 [MAC    ] [W] [ 7682] Updating user C-RNTI: rnti=0x206 already released.
+2023-09-01T19:59:58.130957 [MAC    ] [W] [ 7760] UE buffers: Removing old buffer tti=7755, interval=13
+2023-09-01T19:59:58.133183 [MAC    ] [W] [ 7762] Updating user C-RNTI: rnti=0x206 already released.
+2023-09-01T19:59:58.211085 [MAC    ] [W] [ 7840] UE buffers: Removing old buffer tti=7835, interval=13
+2023-09-01T19:59:58.213101 [MAC    ] [W] [ 7842] Updating user C-RNTI: rnti=0x206 already released.
+2023-09-01T19:59:58.291047 [MAC    ] [W] [ 7920] UE buffers: Removing old buffer tti=7915, interval=13
+2023-09-01T19:59:58.293156 [MAC    ] [W] [ 7922] Updating user C-RNTI: rnti=0x206 already released.
+2023-09-01T19:59:58.371023 [MAC    ] [W] [ 8000] UE buffers: Removing old buffer tti=7995, interval=13
+2023-09-01T19:59:58.373104 [MAC    ] [W] [ 8002] Updating user C-RNTI: rnti=0x206 already released.
+2023-09-01T19:59:58.451047 [MAC    ] [W] [ 8080] UE buffers: Removing old buffer tti=8075, interval=13
+2023-09-01T19:59:59.500748 [RRC    ] [W] Unrecognised rnti: 0x206
+2023-09-01T19:59:59.500800 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T19:59:59.500949 [RRC    ] [W] Ignoring rnti=0x206 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T19:59:59.680904 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T20:00:01.340946 [MAC    ] [W] [  730] UE buffers: Removing old buffer tti=725, interval=13
+2023-09-01T20:00:02.713200 [MAC    ] [W] [ 2102] Updating user C-RNTI: rnti=0x210 already released.
+2023-09-01T20:00:02.791048 [MAC    ] [W] [ 2180] UE buffers: Removing old buffer tti=2175, interval=13
+2023-09-01T20:00:02.793077 [MAC    ] [W] [ 2182] Updating user C-RNTI: rnti=0x210 already released.
+2023-09-01T20:00:02.871043 [MAC    ] [W] [ 2260] UE buffers: Removing old buffer tti=2255, interval=13
+2023-09-01T20:00:02.873148 [MAC    ] [W] [ 2262] Updating user C-RNTI: rnti=0x210 already released.
+2023-09-01T20:00:02.951064 [MAC    ] [W] [ 2340] UE buffers: Removing old buffer tti=2335, interval=13
+2023-09-01T20:00:02.953231 [MAC    ] [W] [ 2342] Updating user C-RNTI: rnti=0x210 already released.
+2023-09-01T20:00:03.033129 [MAC    ] [W] [ 2422] Updating user C-RNTI: rnti=0x210 already released.
+2023-09-01T20:00:03.111063 [MAC    ] [W] [ 2500] UE buffers: Removing old buffer tti=2495, interval=13
+2023-09-01T20:00:03.113265 [MAC    ] [W] [ 2502] Updating user C-RNTI: rnti=0x210 already released.
+2023-09-01T20:00:03.191121 [MAC    ] [W] [ 2580] UE buffers: Removing old buffer tti=2575, interval=13
+2023-09-01T20:00:03.193082 [MAC    ] [W] [ 2582] Updating user C-RNTI: rnti=0x210 already released.
+2023-09-01T20:00:03.271075 [MAC    ] [W] [ 2660] UE buffers: Removing old buffer tti=2655, interval=13
+2023-09-01T20:00:06.413955 [S1AP   ] [W] Released UE with rnti=0x21c not found
+2023-09-01T20:00:08.099781 [RRC    ] [W] Unrecognised rnti: 0x210
+2023-09-01T20:00:08.099839 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T20:00:08.099880 [RRC    ] [W] Ignoring rnti=0x210 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T20:00:08.428976 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=1
+2023-09-01T20:00:10.243232 [MAC    ] [W] [ 9632] Updating user C-RNTI: rnti=0x223 already released.
+2023-09-01T20:00:10.323063 [MAC    ] [W] [ 9712] Updating user C-RNTI: rnti=0x223 already released.
+2023-09-01T20:00:10.401080 [MAC    ] [W] [ 9790] UE buffers: Removing old buffer tti=9785, interval=13
+2023-09-01T20:00:10.403167 [MAC    ] [W] [ 9792] Updating user C-RNTI: rnti=0x223 already released.
+2023-09-01T20:00:10.481115 [MAC    ] [W] [ 9870] UE buffers: Removing old buffer tti=9865, interval=13
+2023-09-01T20:00:10.483081 [MAC    ] [W] [ 9872] Updating user C-RNTI: rnti=0x223 already released.
+2023-09-01T20:00:10.561019 [MAC    ] [W] [ 9950] UE buffers: Removing old buffer tti=9945, interval=13
+2023-09-01T20:00:10.563158 [MAC    ] [W] [ 9952] Updating user C-RNTI: rnti=0x223 already released.
+2023-09-01T20:00:10.641113 [MAC    ] [W] [10030] UE buffers: Removing old buffer tti=10025, interval=13
+2023-09-01T20:00:10.663053 [MAC    ] [W] [10052] Updating user C-RNTI: rnti=0x223 already released.
+2023-09-01T20:00:10.741047 [MAC    ] [W] [10130] UE buffers: Removing old buffer tti=10125, interval=13
+2023-09-01T20:00:11.228768 [RRC    ] [W] Unrecognised rnti: 0x223
+2023-09-01T20:00:11.228839 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T20:00:11.228985 [RRC    ] [W] Ignoring rnti=0x223 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T20:00:11.540087 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T20:00:14.384900 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=4
+2023-09-01T20:00:14.909879 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T20:02:33.900379 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T20:02:34.082606 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T20:02:36.449560 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T20:02:36.449569 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T20:02:36.630454 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T20:02:38.712664 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T20:02:38.894535 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=2
+2023-09-01T20:02:40.692735 [MAC    ] [W] [ 6482] Updating user C-RNTI: rnti=0x23f already released.
+2023-09-01T20:02:40.770647 [MAC    ] [W] [ 6560] UE buffers: Removing old buffer tti=6555, interval=13
+2023-09-01T20:02:40.832661 [MAC    ] [W] [ 6622] Updating user C-RNTI: rnti=0x23f already released.
+2023-09-01T20:02:40.912591 [MAC    ] [W] [ 6702] Updating user C-RNTI: rnti=0x23f already released.
+2023-09-01T20:02:40.990504 [MAC    ] [W] [ 6780] UE buffers: Removing old buffer tti=6775, interval=13
+2023-09-01T20:02:40.992723 [MAC    ] [W] [ 6782] Updating user C-RNTI: rnti=0x23f already released.
+2023-09-01T20:02:41.070609 [MAC    ] [W] [ 6860] UE buffers: Removing old buffer tti=6855, interval=13
+2023-09-01T20:02:41.072608 [MAC    ] [W] [ 6862] Updating user C-RNTI: rnti=0x23f already released.
+2023-09-01T20:02:41.150558 [MAC    ] [W] [ 6940] UE buffers: Removing old buffer tti=6935, interval=13
+2023-09-01T20:02:41.152637 [MAC    ] [W] [ 6942] Updating user C-RNTI: rnti=0x23f already released.
+2023-09-01T20:02:41.230585 [MAC    ] [W] [ 7020] UE buffers: Removing old buffer tti=7015, interval=13
+2023-09-01T20:02:42.233451 [S1AP   ] [W] Released UE with rnti=0x247 not found
+2023-09-01T20:02:43.787174 [RRC    ] [W] Unrecognised rnti: 0x23f
+2023-09-01T20:02:43.787447 [RRC    ] [W] Ignoring rnti=0x23f command -65534 arg 0. Cause: unknown rnti
+2023-09-01T20:02:43.989757 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T20:02:44.060690 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T20:02:57.284531 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=4
+2023-09-01T20:02:59.272661 [MAC    ] [W] [ 4582] Updating user C-RNTI: rnti=0x253 already released.
+2023-09-01T20:02:59.352626 [MAC    ] [W] [ 4662] Updating user C-RNTI: rnti=0x253 already released.
+2023-09-01T20:02:59.432605 [MAC    ] [W] [ 4742] Updating user C-RNTI: rnti=0x253 already released.
+2023-09-01T20:02:59.510542 [MAC    ] [W] [ 4820] UE buffers: Removing old buffer tti=4815, interval=13
+2023-09-01T20:02:59.512658 [MAC    ] [W] [ 4822] Updating user C-RNTI: rnti=0x253 already released.
+2023-09-01T20:02:59.592510 [MAC    ] [W] [ 4902] Updating user C-RNTI: rnti=0x253 already released.
+2023-09-01T20:02:59.670402 [MAC    ] [W] [ 4980] UE buffers: Removing old buffer tti=4975, interval=13
+2023-09-01T20:02:59.672491 [MAC    ] [W] [ 4982] Updating user C-RNTI: rnti=0x253 already released.
+2023-09-01T20:02:59.750453 [MAC    ] [W] [ 5060] UE buffers: Removing old buffer tti=5055, interval=13
+2023-09-01T20:02:59.752519 [MAC    ] [W] [ 5062] Updating user C-RNTI: rnti=0x253 already released.
+2023-09-01T20:02:59.830420 [MAC    ] [W] [ 5140] UE buffers: Removing old buffer tti=5135, interval=13
+2023-09-01T20:02:59.832581 [MAC    ] [W] [ 5142] Updating user C-RNTI: rnti=0x253 already released.
+2023-09-01T20:02:59.910423 [MAC    ] [W] [ 5220] UE buffers: Removing old buffer tti=5215, interval=13
+2023-09-01T20:03:01.669046 [RRC    ] [W] Unrecognised rnti: 0x253
+2023-09-01T20:03:01.669399 [RRC    ] [W] Ignoring rnti=0x253 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T20:03:01.732613 [MAC    ] [W] [ 7042] Updating user C-RNTI: rnti=0x25d already released.
+2023-09-01T20:03:01.810556 [MAC    ] [W] [ 7120] UE buffers: Removing old buffer tti=7115, interval=13
+2023-09-01T20:03:03.297331 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T20:03:03.477427 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T20:03:03.821477 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T20:03:03.821486 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T20:03:13.632606 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T20:03:13.814347 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=2
+2023-09-01T20:03:14.636101 [RRC    ] [W] Unrecognised rnti: 0x26b
+2023-09-01T20:03:14.636377 [RRC    ] [W] Ignoring rnti=0x26b command -65534 arg 0. Cause: unknown rnti
+2023-09-01T20:03:21.620166 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T20:03:21.800329 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T20:03:23.572518 [MAC    ] [W] [ 8402] Updating user C-RNTI: rnti=0x26e already released.
+2023-09-01T20:03:23.650458 [MAC    ] [W] [ 8480] UE buffers: Removing old buffer tti=8475, interval=13
+2023-09-01T20:03:23.672523 [MAC    ] [W] [ 8502] Updating user C-RNTI: rnti=0x26e already released.
+2023-09-01T20:03:23.750558 [MAC    ] [W] [ 8580] UE buffers: Removing old buffer tti=8575, interval=13
+2023-09-01T20:03:23.752576 [MAC    ] [W] [ 8582] Updating user C-RNTI: rnti=0x26e already released.
+2023-09-01T20:03:23.830478 [MAC    ] [W] [ 8660] UE buffers: Removing old buffer tti=8655, interval=13
+2023-09-01T20:03:23.832517 [MAC    ] [W] [ 8662] Updating user C-RNTI: rnti=0x26e already released.
+2023-09-01T20:03:23.910498 [MAC    ] [W] [ 8740] UE buffers: Removing old buffer tti=8735, interval=13
+2023-09-01T20:03:23.912527 [MAC    ] [W] [ 8742] Updating user C-RNTI: rnti=0x26e already released.
+2023-09-01T20:03:23.990454 [MAC    ] [W] [ 8820] UE buffers: Removing old buffer tti=8815, interval=13
+2023-09-01T20:03:23.992521 [MAC    ] [W] [ 8822] Updating user C-RNTI: rnti=0x26e already released.
+2023-09-01T20:03:24.070497 [MAC    ] [W] [ 8900] UE buffers: Removing old buffer tti=8895, interval=13
+2023-09-01T20:03:24.072556 [MAC    ] [W] [ 8902] Updating user C-RNTI: rnti=0x26e already released.
+2023-09-01T20:03:24.150357 [MAC    ] [W] [ 8980] UE buffers: Removing old buffer tti=8975, interval=13
+2023-09-01T20:03:24.152610 [MAC    ] [W] [ 8982] Updating user C-RNTI: rnti=0x26e already released.
+2023-09-01T20:03:24.230489 [MAC    ] [W] [ 9060] UE buffers: Removing old buffer tti=9055, interval=13
+2023-09-01T20:03:24.232630 [MAC    ] [W] [ 9062] Updating user C-RNTI: rnti=0x26e already released.
+2023-09-01T20:03:24.310456 [MAC    ] [W] [ 9140] UE buffers: Removing old buffer tti=9135, interval=13
+2023-09-01T20:03:26.393407 [S1AP   ] [W] Released UE with rnti=0x27a not found
+2023-09-01T20:03:27.859323 [RRC    ] [W] Unrecognised rnti: 0x26e
+2023-09-01T20:03:27.859349 [RRC    ] [W] Ignoring rnti=0x26e command -65534 arg 0. Cause: unknown rnti
+2023-09-01T20:03:27.859374 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T20:03:28.077321 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=1
+2023-09-01T20:03:28.441410 [MAC    ] [W] [ 3031] UE buffers: Removing old buffer tti=3026, interval=13
+2023-09-01T20:03:28.442579 [MAC    ] [W] [ 3032] UE buffers: Removing old buffer tti=3027, interval=13
+2023-09-01T20:03:29.852484 [MAC    ] [W] [ 4442] Updating user C-RNTI: rnti=0x284 already released.
+2023-09-01T20:03:29.930440 [MAC    ] [W] [ 4520] UE buffers: Removing old buffer tti=4515, interval=13
+2023-09-01T20:03:29.932559 [MAC    ] [W] [ 4522] Updating user C-RNTI: rnti=0x284 already released.
+2023-09-01T20:03:30.010509 [MAC    ] [W] [ 4600] UE buffers: Removing old buffer tti=4595, interval=13
+2023-09-01T20:03:30.012566 [MAC    ] [W] [ 4602] Updating user C-RNTI: rnti=0x284 already released.
+2023-09-01T20:03:30.090453 [MAC    ] [W] [ 4680] UE buffers: Removing old buffer tti=4675, interval=13
+2023-09-01T20:03:30.092560 [MAC    ] [W] [ 4682] Updating user C-RNTI: rnti=0x284 already released.
+2023-09-01T20:03:30.170475 [MAC    ] [W] [ 4760] UE buffers: Removing old buffer tti=4755, interval=13
+2023-09-01T20:03:30.172576 [MAC    ] [W] [ 4762] Updating user C-RNTI: rnti=0x284 already released.
+2023-09-01T20:03:30.250456 [MAC    ] [W] [ 4840] UE buffers: Removing old buffer tti=4835, interval=13
+2023-09-01T20:03:30.252427 [MAC    ] [W] [ 4842] Updating user C-RNTI: rnti=0x284 already released.
+2023-09-01T20:03:30.330451 [MAC    ] [W] [ 4920] UE buffers: Removing old buffer tti=4915, interval=13
+2023-09-01T20:03:30.332609 [MAC    ] [W] [ 4922] Updating user C-RNTI: rnti=0x284 already released.
+2023-09-01T20:03:30.410525 [MAC    ] [W] [ 5000] UE buffers: Removing old buffer tti=4995, interval=13
+2023-09-01T20:03:30.412493 [MAC    ] [W] [ 5002] Updating user C-RNTI: rnti=0x284 already released.
+2023-09-01T20:03:30.864178 [RRC    ] [W] Unrecognised rnti: 0x284
+2023-09-01T20:03:30.864227 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T20:03:30.864366 [RRC    ] [W] Ignoring rnti=0x284 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T20:03:31.087392 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=1
+2023-09-01T20:03:33.608538 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T20:03:35.252491 [MAC    ] [W] [ 9842] Updating user C-RNTI: rnti=0x294 already released.
+2023-09-01T20:03:35.330513 [MAC    ] [W] [ 9920] UE buffers: Removing old buffer tti=9915, interval=13
+2023-09-01T20:03:35.332462 [MAC    ] [W] [ 9922] Updating user C-RNTI: rnti=0x294 already released.
+2023-09-01T20:03:35.412624 [MAC    ] [W] [10002] Updating user C-RNTI: rnti=0x294 already released.
+2023-09-01T20:03:35.490452 [MAC    ] [W] [10080] UE buffers: Removing old buffer tti=10075, interval=13
+2023-09-01T20:03:35.492532 [MAC    ] [W] [10082] Updating user C-RNTI: rnti=0x294 already released.
+2023-09-01T20:03:35.570436 [MAC    ] [W] [10160] UE buffers: Removing old buffer tti=10155, interval=13
+2023-09-01T20:03:35.572460 [MAC    ] [W] [10162] Updating user C-RNTI: rnti=0x294 already released.
+2023-09-01T20:03:35.650446 [MAC    ] [W] [    0] UE buffers: Removing old buffer tti=10235, interval=13
+2023-09-01T20:03:35.652461 [MAC    ] [W] [    2] Updating user C-RNTI: rnti=0x294 already released.
+2023-09-01T20:03:35.730425 [MAC    ] [W] [   80] UE buffers: Removing old buffer tti=75, interval=13
+2023-09-01T20:03:35.732564 [MAC    ] [W] [   82] Updating user C-RNTI: rnti=0x294 already released.
+2023-09-01T20:03:35.810501 [MAC    ] [W] [  160] UE buffers: Removing old buffer tti=155, interval=13
+2023-09-01T20:03:35.812384 [MAC    ] [W] [  162] Updating user C-RNTI: rnti=0x294 already released.
+2023-09-01T20:03:37.429342 [RRC    ] [W] Unrecognised rnti: 0x294
+2023-09-01T20:03:37.429368 [RRC    ] [W] Ignoring rnti=0x294 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T20:03:37.429391 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T20:03:37.542513 [RLC    ] [W] LCID 1 doesn't exist. Dropping PDU.
+2023-09-01T20:03:37.622656 [RLC    ] [W] LCID 1 doesn't exist. Dropping PDU.
+2023-09-01T20:03:37.685312 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=1
+2023-09-01T20:03:37.702533 [RLC    ] [W] LCID 1 doesn't exist. Dropping PDU.
+2023-09-01T20:03:37.782522 [RLC    ] [W] LCID 1 doesn't exist. Dropping PDU.
+2023-09-01T20:03:37.862547 [RLC    ] [W] LCID 1 doesn't exist. Dropping PDU.
+2023-09-01T20:03:37.942513 [RLC    ] [W] LCID 1 doesn't exist. Dropping PDU.
+2023-09-01T20:03:38.022500 [RLC    ] [W] LCID 1 doesn't exist. Dropping PDU.
+2023-09-01T20:03:38.102514 [RLC    ] [W] LCID 1 doesn't exist. Dropping PDU.
+2023-09-01T20:03:38.182462 [RLC    ] [W] LCID 1 doesn't exist. Dropping PDU.
+2023-09-01T20:03:39.772395 [MAC    ] [W] [ 4122] Updating user C-RNTI: rnti=0x2a9 already released.
+2023-09-01T20:03:39.850395 [MAC    ] [W] [ 4200] UE buffers: Removing old buffer tti=4195, interval=13
+2023-09-01T20:03:39.872535 [MAC    ] [W] [ 4222] Updating user C-RNTI: rnti=0x2a9 already released.
+2023-09-01T20:03:39.950436 [MAC    ] [W] [ 4300] UE buffers: Removing old buffer tti=4295, interval=13
+2023-09-01T20:03:39.952541 [MAC    ] [W] [ 4302] Updating user C-RNTI: rnti=0x2a9 already released.
+2023-09-01T20:03:40.030438 [MAC    ] [W] [ 4380] UE buffers: Removing old buffer tti=4375, interval=13
+2023-09-01T20:03:40.032614 [MAC    ] [W] [ 4382] Updating user C-RNTI: rnti=0x2a9 already released.
+2023-09-01T20:03:40.110510 [MAC    ] [W] [ 4460] UE buffers: Removing old buffer tti=4455, interval=13
+2023-09-01T20:03:40.112489 [MAC    ] [W] [ 4462] Updating user C-RNTI: rnti=0x2a9 already released.
+2023-09-01T20:03:40.190372 [MAC    ] [W] [ 4540] UE buffers: Removing old buffer tti=4535, interval=13
+2023-09-01T20:03:40.192565 [MAC    ] [W] [ 4542] Updating user C-RNTI: rnti=0x2a9 already released.
+2023-09-01T20:03:40.270519 [MAC    ] [W] [ 4620] UE buffers: Removing old buffer tti=4615, interval=13
+2023-09-01T20:03:40.272492 [MAC    ] [W] [ 4622] Updating user C-RNTI: rnti=0x2a9 already released.
+2023-09-01T20:03:40.350386 [MAC    ] [W] [ 4700] UE buffers: Removing old buffer tti=4695, interval=13
+2023-09-01T20:03:40.352609 [MAC    ] [W] [ 4702] Updating user C-RNTI: rnti=0x2a9 already released.
+2023-09-01T20:03:40.430520 [MAC    ] [W] [ 4780] UE buffers: Removing old buffer tti=4775, interval=13
+2023-09-01T20:03:42.329277 [RRC    ] [W] Unrecognised rnti: 0x2a9
+2023-09-01T20:03:42.329308 [RRC    ] [W] Ignoring rnti=0x2a9 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T20:03:42.329347 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T20:03:43.282542 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T20:03:49.155351 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=4
+2023-09-01T20:03:51.106473 [MAC    ] [W] [ 5216] UE buffers: Removing old buffer tti=5211, interval=13
+2023-09-01T20:03:51.192527 [MAC    ] [W] [ 5302] Updating user C-RNTI: rnti=0x2c6 already released.
+2023-09-01T20:03:51.270433 [MAC    ] [W] [ 5380] UE buffers: Removing old buffer tti=5375, interval=13
+2023-09-01T20:03:51.272389 [MAC    ] [W] [ 5382] Updating user C-RNTI: rnti=0x2c6 already released.
+2023-09-01T20:03:51.350407 [MAC    ] [W] [ 5460] UE buffers: Removing old buffer tti=5455, interval=13
+2023-09-01T20:03:51.352429 [MAC    ] [W] [ 5462] Updating user C-RNTI: rnti=0x2c6 already released.
+2023-09-01T20:03:51.430414 [MAC    ] [W] [ 5540] UE buffers: Removing old buffer tti=5535, interval=13
+2023-09-01T20:03:51.432562 [MAC    ] [W] [ 5542] Updating user C-RNTI: rnti=0x2c6 already released.
+2023-09-01T20:03:51.510348 [MAC    ] [W] [ 5620] UE buffers: Removing old buffer tti=5615, interval=13
+2023-09-01T20:03:51.512530 [MAC    ] [W] [ 5622] Updating user C-RNTI: rnti=0x2c6 already released.
+2023-09-01T20:03:51.590409 [MAC    ] [W] [ 5700] UE buffers: Removing old buffer tti=5695, interval=13
+2023-09-01T20:03:51.592559 [MAC    ] [W] [ 5702] Updating user C-RNTI: rnti=0x2c6 already released.
+2023-09-01T20:03:51.672503 [MAC    ] [W] [ 5782] Updating user C-RNTI: rnti=0x2c6 already released.
+2023-09-01T20:03:51.752491 [MAC    ] [W] [ 5862] Updating user C-RNTI: rnti=0x2c6 already released.
+2023-09-01T20:03:51.830469 [MAC    ] [W] [ 5940] UE buffers: Removing old buffer tti=5935, interval=13
+2023-09-01T20:03:51.832364 [MAC    ] [W] [ 5942] Updating user C-RNTI: rnti=0x2c6 already released.
+2023-09-01T20:03:51.910402 [MAC    ] [W] [ 6020] UE buffers: Removing old buffer tti=6015, interval=13
+2023-09-01T20:03:51.912593 [MAC    ] [W] [ 6022] Updating user C-RNTI: rnti=0x2c6 already released.
+2023-09-01T20:03:51.990482 [MAC    ] [W] [ 6100] UE buffers: Removing old buffer tti=6095, interval=13
+2023-09-01T20:03:52.368134 [RRC    ] [W] Unrecognised rnti: 0x2c6
+2023-09-01T20:03:52.368190 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T20:03:52.368327 [RRC    ] [W] Ignoring rnti=0x2c6 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T20:03:52.548331 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T20:03:54.700362 [MAC    ] [W] [ 8810] UE buffers: Removing old buffer tti=8805, interval=13
+2023-09-01T20:03:56.032336 [MAC    ] [W] [10142] Updating user C-RNTI: rnti=0x2d5 already released.
+2023-09-01T20:03:56.110256 [MAC    ] [W] [10220] UE buffers: Removing old buffer tti=10215, interval=13
+2023-09-01T20:03:56.112317 [MAC    ] [W] [10222] Updating user C-RNTI: rnti=0x2d5 already released.
+2023-09-01T20:03:56.190309 [MAC    ] [W] [   60] UE buffers: Removing old buffer tti=55, interval=13
+2023-09-01T20:03:56.192497 [MAC    ] [W] [   62] Updating user C-RNTI: rnti=0x2d5 already released.
+2023-09-01T20:03:56.270314 [MAC    ] [W] [  140] UE buffers: Removing old buffer tti=135, interval=13
+2023-09-01T20:03:56.272387 [MAC    ] [W] [  142] Updating user C-RNTI: rnti=0x2d5 already released.
+2023-09-01T20:03:56.350284 [MAC    ] [W] [  220] UE buffers: Removing old buffer tti=215, interval=13
+2023-09-01T20:03:56.352397 [MAC    ] [W] [  222] Updating user C-RNTI: rnti=0x2d5 already released.
+2023-09-01T20:03:56.430386 [MAC    ] [W] [  300] UE buffers: Removing old buffer tti=295, interval=13
+2023-09-01T20:03:56.432409 [MAC    ] [W] [  302] Updating user C-RNTI: rnti=0x2d5 already released.
+2023-09-01T20:03:56.512386 [MAC    ] [W] [  382] Updating user C-RNTI: rnti=0x2d5 already released.
+2023-09-01T20:03:56.590363 [MAC    ] [W] [  460] UE buffers: Removing old buffer tti=455, interval=13
+2023-09-01T20:03:56.592378 [MAC    ] [W] [  462] Updating user C-RNTI: rnti=0x2d5 already released.
+2023-09-01T20:03:56.670277 [MAC    ] [W] [  540] UE buffers: Removing old buffer tti=535, interval=13
+2023-09-01T20:03:56.672429 [MAC    ] [W] [  542] Updating user C-RNTI: rnti=0x2d5 already released.
+2023-09-01T20:03:56.750347 [MAC    ] [W] [  620] UE buffers: Removing old buffer tti=615, interval=13
+2023-09-01T20:03:57.080050 [RRC    ] [W] Unrecognised rnti: 0x2d5
+2023-09-01T20:03:57.080108 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T20:03:57.080369 [RRC    ] [W] Ignoring rnti=0x2d5 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T20:03:57.262274 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T20:03:59.041306 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T20:03:59.041315 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T20:04:05.832508 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T20:04:06.014275 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=2
+2023-09-01T20:04:06.799361 [MAC    ] [W] [  429] UE buffers: Removing old buffer tti=424, interval=13
+2023-09-01T20:04:08.142410 [MAC    ] [W] [ 1772] Updating user C-RNTI: rnti=0x2ee already released.
+2023-09-01T20:04:08.222516 [MAC    ] [W] [ 1852] Updating user C-RNTI: rnti=0x2ee already released.
+2023-09-01T20:04:08.300440 [MAC    ] [W] [ 1930] UE buffers: Removing old buffer tti=1925, interval=13
+2023-09-01T20:04:08.302473 [MAC    ] [W] [ 1932] Updating user C-RNTI: rnti=0x2ee already released.
+2023-09-01T20:04:08.382403 [MAC    ] [W] [ 2012] Updating user C-RNTI: rnti=0x2ee already released.
+2023-09-01T20:04:08.460427 [MAC    ] [W] [ 2090] UE buffers: Removing old buffer tti=2085, interval=13
+2023-09-01T20:04:08.462444 [MAC    ] [W] [ 2092] Updating user C-RNTI: rnti=0x2ee already released.
+2023-09-01T20:04:08.540362 [MAC    ] [W] [ 2170] UE buffers: Removing old buffer tti=2165, interval=13
+2023-09-01T20:04:08.542409 [MAC    ] [W] [ 2172] Updating user C-RNTI: rnti=0x2ee already released.
+2023-09-01T20:04:08.620318 [MAC    ] [W] [ 2250] UE buffers: Removing old buffer tti=2245, interval=13
+2023-09-01T20:04:08.622403 [MAC    ] [W] [ 2252] Updating user C-RNTI: rnti=0x2ee already released.
+2023-09-01T20:04:08.700343 [MAC    ] [W] [ 2330] UE buffers: Removing old buffer tti=2325, interval=13
+2023-09-01T20:04:08.702413 [MAC    ] [W] [ 2332] Updating user C-RNTI: rnti=0x2ee already released.
+2023-09-01T20:04:08.780392 [MAC    ] [W] [ 2410] UE buffers: Removing old buffer tti=2405, interval=13
+2023-09-01T20:04:08.782407 [MAC    ] [W] [ 2412] Updating user C-RNTI: rnti=0x2ee already released.
+2023-09-01T20:04:08.860291 [MAC    ] [W] [ 2490] UE buffers: Removing old buffer tti=2485, interval=13
+2023-09-01T20:04:10.239815 [RRC    ] [W] Unrecognised rnti: 0x2ee
+2023-09-01T20:04:10.240281 [RRC    ] [W] Ignoring rnti=0x2ee command -65534 arg 0. Cause: unknown rnti
+2023-09-01T20:04:12.163321 [S1AP   ] [W] Released UE with rnti=0x2fa not found
+2023-09-01T20:04:12.172448 [MAC    ] [W] [ 5802] UE buffers: Removing old buffer tti=5797, interval=13
+2023-09-01T20:04:12.226021 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T20:04:12.407274 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T20:04:15.502445 [MAC    ] [W] [ 9132] Updating user C-RNTI: rnti=0x303 already released.
+2023-09-01T20:04:15.580376 [MAC    ] [W] [ 9210] UE buffers: Removing old buffer tti=9205, interval=13
+2023-09-01T20:04:15.662438 [MAC    ] [W] [ 9292] Updating user C-RNTI: rnti=0x303 already released.
+2023-09-01T20:04:15.742461 [MAC    ] [W] [ 9372] Updating user C-RNTI: rnti=0x303 already released.
+2023-09-01T20:04:15.842439 [MAC    ] [W] [ 9472] Updating user C-RNTI: rnti=0x303 already released.
+2023-09-01T20:04:15.920341 [MAC    ] [W] [ 9550] UE buffers: Removing old buffer tti=9545, interval=13
+2023-09-01T20:04:15.922347 [MAC    ] [W] [ 9552] Updating user C-RNTI: rnti=0x303 already released.
+2023-09-01T20:04:16.000271 [MAC    ] [W] [ 9630] UE buffers: Removing old buffer tti=9625, interval=13
+2023-09-01T20:04:16.375991 [RRC    ] [W] Unrecognised rnti: 0x303
+2023-09-01T20:04:16.376052 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T20:04:16.376294 [RRC    ] [W] Ignoring rnti=0x303 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T20:04:16.557191 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T20:04:19.021356 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T20:04:19.021369 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T20:04:20.512399 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T20:04:20.695170 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=2
+2023-09-01T20:04:22.572441 [MAC    ] [W] [ 5962] Updating user C-RNTI: rnti=0x313 already released.
+2023-09-01T20:04:22.652445 [MAC    ] [W] [ 6042] Updating user C-RNTI: rnti=0x313 already released.
+2023-09-01T20:04:22.730355 [MAC    ] [W] [ 6120] UE buffers: Removing old buffer tti=6115, interval=13
+2023-09-01T20:04:22.732371 [MAC    ] [W] [ 6122] Updating user C-RNTI: rnti=0x313 already released.
+2023-09-01T20:04:22.810319 [MAC    ] [W] [ 6200] UE buffers: Removing old buffer tti=6195, interval=13
+2023-09-01T20:04:22.812434 [MAC    ] [W] [ 6202] Updating user C-RNTI: rnti=0x313 already released.
+2023-09-01T20:04:22.890342 [MAC    ] [W] [ 6280] UE buffers: Removing old buffer tti=6275, interval=13
+2023-09-01T20:04:22.892392 [MAC    ] [W] [ 6282] Updating user C-RNTI: rnti=0x313 already released.
+2023-09-01T20:04:22.972434 [MAC    ] [W] [ 6362] Updating user C-RNTI: rnti=0x313 already released.
+2023-09-01T20:04:23.050347 [MAC    ] [W] [ 6440] UE buffers: Removing old buffer tti=6435, interval=13
+2023-09-01T20:04:23.052029 [MAC    ] [W] [ 6441] Updating user C-RNTI: rnti=0x313 already released.
+2023-09-01T20:04:23.129321 [MAC    ] [W] [ 6519] UE buffers: Removing old buffer tti=6514, interval=13
+2023-09-01T20:04:23.132390 [MAC    ] [W] [ 6522] Updating user C-RNTI: rnti=0x313 already released.
+2023-09-01T20:04:23.210343 [MAC    ] [W] [ 6600] UE buffers: Removing old buffer tti=6595, interval=13
+2023-09-01T20:04:23.212436 [MAC    ] [W] [ 6602] Updating user C-RNTI: rnti=0x313 already released.
+2023-09-01T20:04:23.290403 [MAC    ] [W] [ 6680] UE buffers: Removing old buffer tti=6675, interval=13
+2023-09-01T20:04:23.292367 [MAC    ] [W] [ 6682] Updating user C-RNTI: rnti=0x313 already released.
+2023-09-01T20:04:23.370338 [MAC    ] [W] [ 6760] UE buffers: Removing old buffer tti=6755, interval=13
+2023-09-01T20:04:25.463250 [S1AP   ] [W] Released UE with rnti=0x31f not found
+2023-09-01T20:04:25.502217 [RRC    ] [W] Unrecognised rnti: 0x313
+2023-09-01T20:04:25.502242 [RRC    ] [W] Ignoring rnti=0x313 command -65534 arg 0. Cause: unknown rnti
+2023-09-01T20:04:25.502272 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T20:04:29.094261 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=4
+2023-09-01T20:04:31.052336 [MAC    ] [W] [ 4202] Updating user C-RNTI: rnti=0x32b already released.
+2023-09-01T20:04:31.130304 [MAC    ] [W] [ 4280] UE buffers: Removing old buffer tti=4275, interval=13
+2023-09-01T20:04:31.132437 [MAC    ] [W] [ 4282] Updating user C-RNTI: rnti=0x32b already released.
+2023-09-01T20:04:31.210327 [MAC    ] [W] [ 4360] UE buffers: Removing old buffer tti=4355, interval=13
+2023-09-01T20:04:31.212444 [MAC    ] [W] [ 4362] Updating user C-RNTI: rnti=0x32b already released.
+2023-09-01T20:04:31.290297 [MAC    ] [W] [ 4440] UE buffers: Removing old buffer tti=4435, interval=13
+2023-09-01T20:04:31.292387 [MAC    ] [W] [ 4442] Updating user C-RNTI: rnti=0x32b already released.
+2023-09-01T20:04:31.372465 [MAC    ] [W] [ 4522] Updating user C-RNTI: rnti=0x32b already released.
+2023-09-01T20:04:31.450373 [MAC    ] [W] [ 4600] UE buffers: Removing old buffer tti=4595, interval=13
+2023-09-01T20:04:31.452349 [MAC    ] [W] [ 4602] Updating user C-RNTI: rnti=0x32b already released.
+2023-09-01T20:04:31.530320 [MAC    ] [W] [ 4680] UE buffers: Removing old buffer tti=4675, interval=13
+2023-09-01T20:04:31.532389 [MAC    ] [W] [ 4682] Updating user C-RNTI: rnti=0x32b already released.
+2023-09-01T20:04:31.610378 [MAC    ] [W] [ 4760] UE buffers: Removing old buffer tti=4755, interval=13
+2023-09-01T20:04:31.612345 [MAC    ] [W] [ 4762] Updating user C-RNTI: rnti=0x32b already released.
+2023-09-01T20:04:31.690301 [MAC    ] [W] [ 4840] UE buffers: Removing old buffer tti=4835, interval=13
+2023-09-01T20:04:31.692414 [MAC    ] [W] [ 4842] Updating user C-RNTI: rnti=0x32b already released.
+2023-09-01T20:04:31.770385 [MAC    ] [W] [ 4920] UE buffers: Removing old buffer tti=4915, interval=13
+2023-09-01T20:04:32.099528 [RRC    ] [W] Unrecognised rnti: 0x32b
+2023-09-01T20:04:32.100314 [RRC    ] [W] Ignoring rnti=0x32b command -65534 arg 0. Cause: unknown rnti
+2023-09-01T20:04:32.305736 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-09-01T20:04:32.487309 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=0
+2023-09-01T20:04:35.380253 [MAC    ] [W] [ 8530] UE buffers: Removing old buffer tti=8525, interval=13
+2023-09-01T20:04:35.461175 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T20:04:35.461186 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-09-01T20:04:38.412375 [ASN1   ] [E] [    0] The enum of type access_stratum_release_e is not initialized.
+2023-09-01T20:04:38.595168 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=2
+2023-09-01T20:04:38.943372 [COMN   ] [D] [    0] RxSockets: Closing rx socket handler thread
+2023-09-01T20:04:38.943842 [COMN   ] [D] [    0] RxSockets: closed.
+2023-09-01T20:04:38.943892 [COMN   ] [D] [    0] Socket=7 was closed.
+2023-09-01T20:04:38.946094 [COMN   ] [D] [    0] Socket=-1 could not be closed.
+2023-09-01T20:04:38.947502 [COMN   ] [D] [    0] Socket=-1 could not be closed.

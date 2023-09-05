@@ -60,6 +60,7 @@ set -a
 source .env
 sudo ufw disable
 docker-compose -f 4g-volte-deploy.yaml build
+docker-compose -f 4g-volte-deploy-handover.yaml build
 docker-compose -f sa-deploy.yaml build
 sudo sysctl -w net.ipv4.ip_forward=1
 echo "performance" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
@@ -110,6 +111,72 @@ docker-compose -f nr-gnb.yaml up -d && docker container attach nr_gnb
 # UERANSIM NR-UE (RF simulated)
 docker-compose -f nr-ue.yaml up -d && docker container attach nr_ue
 ``` -->
+
+## Configuring S1 Interface Across Networked PCs
+
+This describes the following setting example.
+```
+     eNodeB                Docker host - 172.22.0.0/24
+   +---------+           +-------------+
+   |         |           |             |
+   |         |           |             |
+   +---------+           +-------------+
+        |                       |
+-------------------------------------------------------
+       .53                     .57      10.11.0.0/24
+```
+
+
+###### Configuration (eNB side)
+In the `enb.conf`
+```diff
+      [enb]
+      enb_id = 0x19B
++     mcc = 001                   # Core MCC
++     mnc = 01                    # Core MNC
+-     mme_addr = 127.0.1.100
++     mme_addr =10.11.0.57        # Core Host PC IP 
+-     gtp_bind_addr = 127.0.1.1
++     gtp_bind_addr=10.11.0.53    # eNB PC IP
+-     s1c_bind_addr = 127.0.1.1
++     s1c_bind_addr =10.11.0.53   # eNB PC IP
+      s1c_bind_port = 0
+      n_prb = 100 
+      # tm =  2
+      # nof_ports = 2
+```
+In the `rr.conf` we need to make sure to have the right TAC (tac:1 like the core)
+```diff
+cell_list =
+(
+  {
+    // rf_port = 0;
+    cell_id = 0x01;
++   tac = 0x0001;
+    pci = 1;
+    ...
+  }
+)
+```
+And for having the internet access in he UE side, just run in the terminal
+```
+ip route add 172.22.0.0/24 via 10.11.0.53
+```
+To set static routing to eNodeB for packets going from eNodeB (10.11.0.53) to the Docker host network (172.22.0.0/24)
+###### 4G deployment (SDR)
+
+- Host PC:
+```
+# 4G Core Network + IMS + SMS over SGs
+docker-compose -f 4g-volte-deploy-handover.yaml up
+```
+
+- eNB External PC:
+```
+# srsRAN eNB using SDR (OTA)
+sudo srsenb
+```
+
 
 
 ## Provisioning of SIM information

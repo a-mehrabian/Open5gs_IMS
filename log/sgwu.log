@@ -687,3 +687,806 @@ Open5GS daemon v2.6.4-78-g7f08873
 08/31 15:06:19.191: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 0 (../src/sgwu/context.c:200)
 08/31 15:06:19.331: [sgwu] INFO: UE F-SEID[UP:0x137 CP:0x9a8] (../src/sgwu/context.c:169)
 08/31 15:06:19.331: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/31 16:34:45.025: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/sgwu.yaml' (../lib/app/ogs-init.c:126)
+08/31 16:34:45.025: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/sgwu.log' (../lib/app/ogs-init.c:129)
+08/31 16:34:45.051: [pfcp] INFO: pfcp_server() [172.22.0.6]:8805 (../lib/pfcp/path.c:30)
+08/31 16:34:45.051: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.5]:8805 (../lib/pfcp/path.c:61)
+08/31 16:34:45.051: [gtp] INFO: gtp_server() [172.22.0.6]:2152 (../lib/gtp/path.c:30)
+08/31 16:34:45.051: [app] INFO: SGW-U initialize...done (../src/sgwu/app.c:31)
+08/31 16:34:45.051: [sgwu] INFO: PFCP associated [172.22.0.5]:8805 (../src/sgwu/pfcp-sm.c:179)
+08/31 16:34:45.052: [sgwu] WARNING: PFCP[RSP] has already been associated [172.22.0.5]:8805 (../src/sgwu/pfcp-sm.c:273)
+08/31 16:36:58.539: [sgwu] INFO: UE F-SEID[UP:0x51e CP:0x48b] (../src/sgwu/context.c:169)
+08/31 16:36:58.539: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+08/31 16:36:58.541: [gtp] INFO: gtp_connect() [172.22.0.8]:2152 (../lib/gtp/path.c:60)
+08/31 16:36:58.842: [gtp] INFO: gtp_connect() [172.22.0.22]:2152 (../lib/gtp/path.c:60)
+08/31 16:44:56.620: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 0 (../src/sgwu/context.c:200)
+08/31 16:44:56.778: [sgwu] INFO: UE F-SEID[UP:0xaad CP:0x57] (../src/sgwu/context.c:169)
+08/31 16:44:56.778: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+08/31 16:46:43.342: [sgwu] INFO: UE F-SEID[UP:0x7eb CP:0x9a3] (../src/sgwu/context.c:169)
+08/31 16:46:43.342: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 2 (../src/sgwu/context.c:174)
+08/31 16:49:32.860: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 1 (../src/sgwu/context.c:200)
+08/31 16:49:43.360: [sgwu] INFO: UE F-SEID[UP:0xa01 CP:0x783] (../src/sgwu/context.c:169)
+08/31 16:49:43.360: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 2 (../src/sgwu/context.c:174)
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/31 17:04:28.666: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/sgwu.yaml' (../lib/app/ogs-init.c:126)
+08/31 17:04:28.666: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/sgwu.log' (../lib/app/ogs-init.c:129)
+08/31 17:04:28.690: [pfcp] INFO: pfcp_server() [172.22.0.6]:8805 (../lib/pfcp/path.c:30)
+08/31 17:04:28.690: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.5]:8805 (../lib/pfcp/path.c:61)
+08/31 17:04:28.690: [gtp] INFO: gtp_server() [172.22.0.6]:2152 (../lib/gtp/path.c:30)
+08/31 17:04:28.690: [app] INFO: SGW-U initialize...done (../src/sgwu/app.c:31)
+08/31 17:04:28.690: [sgwu] INFO: PFCP associated [172.22.0.5]:8805 (../src/sgwu/pfcp-sm.c:179)
+08/31 17:04:28.691: [sgwu] WARNING: PFCP[RSP] has already been associated [172.22.0.5]:8805 (../src/sgwu/pfcp-sm.c:273)
+08/31 17:06:49.661: [sgwu] INFO: UE F-SEID[UP:0xe95 CP:0x178] (../src/sgwu/context.c:169)
+08/31 17:06:49.661: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+08/31 17:06:49.664: [gtp] INFO: gtp_connect() [172.22.0.8]:2152 (../lib/gtp/path.c:60)
+08/31 17:06:49.962: [gtp] INFO: gtp_connect() [172.22.0.22]:2152 (../lib/gtp/path.c:60)
+08/31 17:06:50.444: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 0 (../src/sgwu/context.c:200)
+08/31 17:06:57.681: [sgwu] INFO: UE F-SEID[UP:0x997 CP:0xf26] (../src/sgwu/context.c:169)
+08/31 17:06:57.681: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+08/31 17:49:00.211: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 0 (../src/sgwu/context.c:200)
+08/31 19:25:14.677: [sgwu] INFO: UE F-SEID[UP:0x38e CP:0x4ec] (../src/sgwu/context.c:169)
+08/31 19:25:14.677: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+Open5GS daemon v2.6.4-78-g7f08873
+
+09/01 08:55:41.146: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/sgwu.yaml' (../lib/app/ogs-init.c:126)
+09/01 08:55:41.146: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/sgwu.log' (../lib/app/ogs-init.c:129)
+09/01 08:55:41.175: [pfcp] INFO: pfcp_server() [172.22.0.6]:8805 (../lib/pfcp/path.c:30)
+09/01 08:55:41.175: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.5]:8805 (../lib/pfcp/path.c:61)
+09/01 08:55:41.175: [gtp] INFO: gtp_server() [172.22.0.6]:2152 (../lib/gtp/path.c:30)
+09/01 08:55:41.175: [app] INFO: SGW-U initialize...done (../src/sgwu/app.c:31)
+09/01 08:55:41.175: [sgwu] INFO: PFCP associated [172.22.0.5]:8805 (../src/sgwu/pfcp-sm.c:179)
+09/01 08:55:43.678: [sgwu] WARNING: PFCP[REQ] has already been associated [172.22.0.5]:8805 (../src/sgwu/pfcp-sm.c:266)
+09/01 08:56:53.620: [sgwu] INFO: UE F-SEID[UP:0xfe7 CP:0xa7b] (../src/sgwu/context.c:169)
+09/01 08:56:53.620: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+09/01 08:56:53.623: [gtp] INFO: gtp_connect() [172.22.0.8]:2152 (../lib/gtp/path.c:60)
+09/01 08:56:53.922: [gtp] INFO: gtp_connect() [172.22.0.22]:2152 (../lib/gtp/path.c:60)
+09/01 09:39:49.763: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 0 (../src/sgwu/context.c:200)
+09/01 09:39:49.920: [sgwu] INFO: UE F-SEID[UP:0x1b1 CP:0x129] (../src/sgwu/context.c:169)
+09/01 09:39:49.920: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+09/01 12:47:22.568: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 0 (../src/sgwu/context.c:200)
+09/01 13:38:19.218: [sgwu] INFO: UE F-SEID[UP:0x1f5 CP:0x187] (../src/sgwu/context.c:169)
+09/01 13:38:19.218: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+09/01 13:55:52.939: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000002d 00000000            2......-....
+09/01 13:55:53.235: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000002d 00010000            2......-....
+Open5GS daemon v2.6.4-78-g7f08873
+
+09/01 14:15:18.656: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/sgwu.yaml' (../lib/app/ogs-init.c:126)
+09/01 14:15:18.656: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/sgwu.log' (../lib/app/ogs-init.c:129)
+09/01 14:15:18.678: [pfcp] INFO: pfcp_server() [172.22.0.6]:8805 (../lib/pfcp/path.c:30)
+09/01 14:15:18.678: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.5]:8805 (../lib/pfcp/path.c:61)
+09/01 14:15:18.678: [gtp] INFO: gtp_server() [172.22.0.6]:2152 (../lib/gtp/path.c:30)
+09/01 14:15:18.678: [app] INFO: SGW-U initialize...done (../src/sgwu/app.c:31)
+09/01 14:15:18.709: [sgwu] INFO: PFCP associated [172.22.0.5]:8805 (../src/sgwu/pfcp-sm.c:179)
+09/01 14:15:21.181: [sgwu] WARNING: PFCP[RSP] has already been associated [172.22.0.5]:8805 (../src/sgwu/pfcp-sm.c:273)
+09/01 14:22:19.687: [sgwu] INFO: UE F-SEID[UP:0xd4c CP:0x4be] (../src/sgwu/context.c:169)
+09/01 14:22:19.687: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+09/01 14:22:19.690: [gtp] INFO: gtp_connect() [172.22.0.8]:2152 (../lib/gtp/path.c:60)
+09/01 14:22:19.989: [gtp] INFO: gtp_connect() [172.22.0.22]:2152 (../lib/gtp/path.c:60)
+09/01 14:31:40.479: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 0 (../src/sgwu/context.c:200)
+09/01 14:31:40.637: [sgwu] INFO: UE F-SEID[UP:0x72b CP:0xff7] (../src/sgwu/context.c:169)
+09/01 14:31:40.637: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+09/01 14:44:15.564: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000009 00000000            2...........
+09/01 14:47:11.827: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 0 (../src/sgwu/context.c:200)
+09/01 14:47:11.844: [sgwu] INFO: UE F-SEID[UP:0xb32 CP:0x128] (../src/sgwu/context.c:169)
+09/01 14:47:11.844: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+09/01 14:57:39.160: [sgwu] INFO: UE F-SEID[UP:0xfd6 CP:0x5c] (../src/sgwu/context.c:169)
+09/01 14:57:39.160: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 2 (../src/sgwu/context.c:174)
+09/01 14:58:33.585: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 1 (../src/sgwu/context.c:200)
+09/01 14:58:33.782: [sgwu] INFO: UE F-SEID[UP:0x4d CP:0xc21] (../src/sgwu/context.c:169)
+09/01 14:58:33.782: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 2 (../src/sgwu/context.c:174)
+09/01 14:58:43.489: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 00010000            2...........
+09/01 14:58:43.493: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 00020000            2...........
+09/01 14:58:43.498: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 00030000            2...........
+09/01 14:58:43.502: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 00040000            2...........
+09/01 14:58:43.507: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 00050000            2...........
+09/01 14:58:43.507: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 00060000            2...........
+09/01 14:58:43.510: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 00070000            2...........
+09/01 14:58:43.513: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 00080000            2...........
+09/01 14:58:43.515: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 00090000            2...........
+09/01 14:58:43.515: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 000a0000            2...........
+09/01 14:58:43.515: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 000b0000            2...........
+09/01 14:58:43.516: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 000c0000            2...........
+09/01 14:58:43.518: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 000d0000            2...........
+09/01 14:58:43.518: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 000e0000            2...........
+09/01 14:58:43.520: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 000f0000            2...........
+09/01 14:58:43.521: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 00100000            2...........
+09/01 15:25:24.380: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 1 (../src/sgwu/context.c:200)
+09/01 15:38:21.702: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 0 (../src/sgwu/context.c:200)
+09/01 15:39:33.732: [sgwu] INFO: UE F-SEID[UP:0x604 CP:0xcd7] (../src/sgwu/context.c:169)
+09/01 15:39:33.732: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+09/01 15:39:38.296: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 00000000            2...........
+09/01 15:39:42.072: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000c 00010000            2...........
+09/01 15:39:45.087: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000d 00020000            2...........
+09/01 15:39:45.462: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000d 00030000            2...........
+09/01 15:39:45.558: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000d 00040000            2...........
+09/01 15:39:46.244: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000d 00050000            2...........
+09/01 15:39:46.536: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000d 00060000            2...........
+09/01 15:39:48.455: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000d 00070000            2...........
+09/01 15:39:49.494: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000d 00080000            2...........
+09/01 15:39:49.880: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000d 00090000            2...........
+09/01 15:39:50.404: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000d 000a0000            2...........
+09/01 15:39:52.231: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000d 000b0000            2...........
+09/01 15:42:31.930: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000010 000c0000            2...........
+09/01 15:42:41.602: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 000d0000            2...........
+09/01 15:42:41.602: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 000e0000            2...........
+09/01 15:42:41.602: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 000f0000            2...........
+09/01 15:42:41.602: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00100000            2...........
+09/01 15:42:41.602: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00110000            2...........
+09/01 15:42:41.602: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00120000            2...........
+09/01 15:42:41.602: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00130000            2...........
+09/01 15:42:41.602: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00140000            2...........
+09/01 15:42:41.602: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00150000            2...........
+09/01 15:42:41.602: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00160000            2...........
+09/01 15:42:41.606: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00170000            2...........
+09/01 15:42:41.607: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00180000            2...........
+09/01 15:42:41.608: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00190000            2...........
+09/01 15:42:41.608: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 001a0000            2...........
+09/01 15:42:41.610: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 001b0000            2...........
+09/01 15:42:41.610: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 001c0000            2...........
+09/01 15:42:41.613: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 001d0000            2...........
+09/01 15:42:41.613: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 001e0000            2...........
+09/01 15:42:41.614: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 001f0000            2...........
+09/01 15:42:41.726: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00200000            2........ ..
+09/01 15:42:41.727: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00210000            2........!..
+09/01 15:42:47.960: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000012 00220000            2........"..
+09/01 15:43:56.678: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00230000            2........#..
+09/01 15:43:56.892: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00240000            2........$..
+09/01 15:43:56.950: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00250000            2........%..
+09/01 15:43:56.967: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00260000            2........&..
+09/01 15:43:57.067: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00270000            2........'..
+09/01 15:43:57.281: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00280000            2........(..
+09/01 15:43:57.412: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00290000            2........)..
+09/01 15:43:57.542: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 002a0000            2........*..
+09/01 15:43:57.571: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 002b0000            2........+..
+09/01 15:43:57.727: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 002c0000            2........,..
+09/01 15:43:57.756: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 002d0000            2........-..
+09/01 15:43:57.798: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 002e0000            2...........
+09/01 15:43:57.865: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 002f0000            2......../..
+09/01 15:43:57.992: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00300000            2........0..
+09/01 15:43:58.023: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00310000            2........1..
+09/01 15:43:58.130: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00320000            2........2..
+09/01 15:43:58.168: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00330000            2........3..
+09/01 15:43:58.179: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00340000            2........4..
+09/01 15:43:58.195: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00350000            2........5..
+09/01 15:43:58.264: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00360000            2........6..
+09/01 15:43:58.342: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00370000            2........7..
+09/01 15:43:58.394: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00380000            2........8..
+09/01 15:43:58.411: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00390000            2........9..
+09/01 15:43:58.418: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 003a0000            2........:..
+09/01 15:43:58.452: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 003b0000            2........;..
+09/01 15:43:58.460: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 003c0000            2........<..
+09/01 15:43:58.658: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 003d0000            2........=..
+09/01 15:43:58.659: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 003e0000            2........>..
+09/01 15:43:58.673: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 003f0000            2........?..
+09/01 15:43:58.732: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00400000            2........@..
+09/01 15:43:58.840: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00410000            2........A..
+09/01 15:43:58.876: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00420000            2........B..
+09/01 15:43:58.914: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00430000            2........C..
+09/01 15:43:58.920: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00440000            2........D..
+09/01 15:43:58.934: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001a 00450000            2........E..
+09/01 15:44:10.652: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001b 00460000            2........F..
+09/01 15:44:10.902: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001b 00470000            2........G..
+09/01 15:44:12.674: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001b 00480000            2........H..
+09/01 15:44:23.194: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 0 (../src/sgwu/context.c:200)
+09/01 15:44:29.900: [sgwu] INFO: UE F-SEID[UP:0x795 CP:0x4e1] (../src/sgwu/context.c:169)
+09/01 15:44:29.900: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+09/01 15:44:37.788: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 0 (../src/sgwu/context.c:200)
+09/01 15:45:17.526: [sgwu] INFO: UE F-SEID[UP:0x5aa CP:0x7fb] (../src/sgwu/context.c:169)
+09/01 15:45:17.526: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+09/01 15:49:33.560: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 0 (../src/sgwu/context.c:200)
+09/01 15:49:44.273: [sgwu] INFO: UE F-SEID[UP:0x93b CP:0x9b4] (../src/sgwu/context.c:169)
+09/01 15:49:44.273: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+09/01 15:49:53.406: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 0 (../src/sgwu/context.c:200)
+09/01 15:50:07.469: [sgwu] INFO: UE F-SEID[UP:0xa9 CP:0xcb3] (../src/sgwu/context.c:169)
+09/01 15:50:07.469: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+09/01 15:50:19.706: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 0 (../src/sgwu/context.c:200)
+09/01 15:50:20.044: [sgwu] INFO: UE F-SEID[UP:0x166 CP:0xb6d] (../src/sgwu/context.c:169)
+09/01 15:50:20.044: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+09/01 15:52:36.756: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00000000            2...........
+09/01 15:52:36.794: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00010000            2...........
+09/01 15:52:36.865: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00020000            2...........
+09/01 15:52:37.780: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00030000            2...........
+09/01 15:52:37.819: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00040000            2...........
+09/01 15:52:37.980: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00050000            2...........
+09/01 15:52:38.134: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00060000            2...........
+09/01 15:52:38.149: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00070000            2...........
+09/01 15:52:38.149: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00080000            2...........
+09/01 15:52:38.149: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00090000            2...........
+09/01 15:52:38.149: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 000a0000            2...........
+09/01 15:52:38.149: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 000b0000            2...........
+09/01 15:52:38.149: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 000c0000            2...........
+09/01 15:52:38.183: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 000d0000            2...........
+09/01 15:52:38.185: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 000e0000            2...........
+09/01 15:52:38.185: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 000f0000            2...........
+09/01 15:52:39.801: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00100000            2...........
+09/01 15:52:39.828: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00110000            2...........
+09/01 15:52:40.204: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00120000            2...........
+09/01 15:52:42.165: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00130000            2...........
+09/01 15:52:42.181: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00140000            2...........
+09/01 15:52:42.181: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00150000            2...........
+09/01 15:52:42.181: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00160000            2...........
+09/01 15:52:42.181: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00170000            2...........
+09/01 15:52:42.181: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00180000            2...........
+09/01 15:52:42.181: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00190000            2...........
+09/01 15:52:42.215: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 001a0000            2...........
+09/01 15:52:42.217: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 001b0000            2...........
+09/01 15:52:42.217: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 001c0000            2...........
+09/01 15:52:42.333: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 001d0000            2...........
+09/01 15:52:43.707: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 001e0000            2...........
+09/01 15:52:43.925: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 001f0000            2...........
+09/01 15:52:50.245: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00200000            2........ ..
+09/01 15:52:50.245: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00210000            2........!..
+09/01 15:52:50.245: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00220000            2........"..
+09/01 15:52:50.245: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00230000            2........#..
+09/01 15:52:50.245: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00240000            2........$..
+09/01 15:52:50.411: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00250000            2........%..
+09/01 15:52:50.550: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00260000            2........&..
+09/01 15:52:50.629: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00270000            2........'..
+09/01 15:52:50.663: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00280000            2........(..
+09/01 15:52:50.665: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 00290000            2........)..
+09/01 15:52:51.566: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 002a0000            2........*..
+09/01 15:52:51.706: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 002b0000            2........+..
+09/01 15:52:52.116: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000002 002c0000            2........,..
+09/01 15:52:59.301: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000005 002d0000            2........-..
+09/01 15:52:59.388: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000005 002e0000            2...........
+09/01 15:52:59.420: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000005 002f0000            2......../..
+09/01 15:52:59.458: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000005 00300000            2........0..
+09/01 15:52:59.530: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000005 00310000            2........1..
+09/01 15:52:59.604: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000005 00320000            2........2..
+09/01 15:53:01.457: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000005 00330000            2........3..
+09/01 15:53:01.457: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000005 00340000            2........4..
+09/01 15:53:01.462: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000005 00350000            2........5..
+09/01 15:53:01.466: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000005 00360000            2........6..
+09/01 15:53:01.484: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000005 00370000            2........7..
+09/01 15:53:01.484: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000005 00380000            2........8..
+09/01 15:53:01.514: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000005 00390000            2........9..
+09/01 15:53:03.645: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000005 003a0000            2........:..
+09/01 15:53:11.110: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 003b0000            2........;..
+09/01 15:53:11.238: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 003c0000            2........<..
+09/01 15:53:11.238: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 003d0000            2........=..
+09/01 15:53:11.238: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 003e0000            2........>..
+09/01 15:53:11.402: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 003f0000            2........?..
+09/01 15:53:11.541: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 00400000            2........@..
+09/01 15:53:11.739: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 00410000            2........A..
+09/01 15:53:12.349: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 00420000            2........B..
+09/01 15:53:12.515: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 00430000            2........C..
+09/01 15:53:12.549: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 00440000            2........D..
+09/01 15:53:12.572: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 00450000            2........E..
+09/01 15:53:12.714: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 00460000            2........F..
+09/01 15:53:13.300: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 00470000            2........G..
+09/01 15:53:14.059: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 00480000            2........H..
+09/01 15:53:14.215: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 00490000            2........I..
+09/01 15:53:14.217: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 004a0000            2........J..
+09/01 15:53:14.259: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 004b0000            2........K..
+09/01 15:53:14.262: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 004c0000            2........L..
+09/01 15:53:14.279: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 004d0000            2........M..
+09/01 15:53:14.576: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000006 004e0000            2........N..
+09/01 15:53:21.724: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 004f0000            2........O..
+09/01 15:53:21.735: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00500000            2........P..
+09/01 15:53:21.744: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00510000            2........Q..
+09/01 15:53:21.757: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00520000            2........R..
+09/01 15:53:21.774: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00530000            2........S..
+09/01 15:53:22.764: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00540000            2........T..
+09/01 15:53:22.874: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00550000            2........U..
+09/01 15:53:22.904: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00560000            2........V..
+09/01 15:53:22.904: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00570000            2........W..
+09/01 15:53:22.919: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00580000            2........X..
+09/01 15:53:22.933: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00590000            2........Y..
+09/01 15:53:22.963: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 005a0000            2........Z..
+09/01 15:53:22.982: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 005b0000            2........[..
+09/01 15:53:23.430: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 005c0000            2........\..
+09/01 15:53:23.433: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 005d0000            2........]..
+09/01 15:53:23.478: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 005e0000            2........^..
+09/01 15:53:23.792: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 005f0000            2........_..
+09/01 15:53:25.342: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00600000            2........`..
+09/01 15:53:25.360: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00610000            2........a..
+09/01 15:53:25.374: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00620000            2........b..
+09/01 15:53:25.374: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00630000            2........c..
+09/01 15:53:25.910: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00640000            2........d..
+09/01 15:53:25.932: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00650000            2........e..
+09/01 15:53:25.932: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00660000            2........f..
+09/01 15:53:26.154: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00670000            2........g..
+09/01 15:53:26.234: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00680000            2........h..
+09/01 15:53:26.353: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00690000            2........i..
+09/01 15:53:26.353: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 006a0000            2........j..
+09/01 15:53:29.245: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 006b0000            2........k..
+09/01 15:53:29.410: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 006c0000            2........l..
+09/01 15:53:29.446: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 006d0000            2........m..
+09/01 15:53:29.980: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 006e0000            2........n..
+09/01 15:53:29.980: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 006f0000            2........o..
+09/01 15:53:30.055: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00700000            2........p..
+09/01 15:53:30.122: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00710000            2........q..
+09/01 15:53:30.191: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00720000            2........r..
+09/01 15:53:30.269: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00730000            2........s..
+09/01 15:53:30.618: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00740000            2........t..
+09/01 15:53:30.648: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00750000            2........u..
+09/01 15:53:30.648: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00760000            2........v..
+09/01 15:53:30.919: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00770000            2........w..
+09/01 15:53:30.996: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00780000            2........x..
+09/01 15:53:31.220: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00790000            2........y..
+09/01 15:53:38.709: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 007a0000            2........z..
+09/01 15:53:40.173: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 007b0000            2........{..
+09/01 15:53:40.372: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 007c0000            2........|..
+09/01 15:53:40.390: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 007d0000            2........}..
+09/01 15:53:41.352: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 007e0000            2........~..
+09/01 15:53:41.353: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 007f0000            2...........
+09/01 15:53:41.398: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00800000            2...........
+09/01 15:53:41.712: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00810000            2...........
+09/01 15:53:45.978: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00820000            2...........
+09/01 15:53:46.007: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00830000            2...........
+09/01 15:53:46.008: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00840000            2...........
+09/01 15:53:46.279: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00850000            2...........
+09/01 15:53:46.356: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00860000            2...........
+09/01 15:53:46.365: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00870000            2...........
+09/01 15:53:46.438: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00880000            2...........
+09/01 15:53:46.575: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 00890000            2...........
+09/01 15:53:46.653: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000007 008a0000            2...........
+09/01 15:53:51.982: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000d 008b0000            2...........
+09/01 15:54:13.224: [sgwu] INFO: [Removed] Number of SGWU-sessions is now 0 (../src/sgwu/context.c:200)
+09/01 15:54:13.328: [sgwu] INFO: UE F-SEID[UP:0x7ba CP:0xfcc] (../src/sgwu/context.c:169)
+09/01 15:54:13.328: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+09/01 15:54:35.207: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00000000            2...........
+09/01 15:54:35.225: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00010000            2...........
+09/01 15:54:35.235: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00020000            2...........
+09/01 15:54:35.240: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00030000            2...........
+09/01 15:54:35.242: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00040000            2...........
+09/01 15:54:35.248: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00050000            2...........
+09/01 15:54:35.257: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00060000            2...........
+09/01 15:54:35.259: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00070000            2...........
+09/01 15:54:35.268: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00080000            2...........
+09/01 15:54:39.125: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00090000            2...........
+09/01 15:54:39.238: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 000a0000            2...........
+09/01 15:54:39.256: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 000b0000            2...........
+09/01 15:54:39.267: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 000c0000            2...........
+09/01 15:54:39.272: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 000d0000            2...........
+09/01 15:54:39.273: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 000e0000            2...........
+09/01 15:54:39.280: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 000f0000            2...........
+09/01 15:54:39.289: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00100000            2...........
+09/01 15:54:39.291: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00110000            2...........
+09/01 15:54:39.301: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00120000            2...........
+09/01 15:54:42.640: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00130000            2...........
+09/01 15:54:42.911: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00140000            2...........
+09/01 15:54:47.354: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00150000            2...........
+09/01 15:54:47.365: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00160000            2...........
+09/01 15:54:47.395: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00170000            2...........
+09/01 15:54:47.402: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00180000            2...........
+09/01 15:54:47.450: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00190000            2...........
+09/01 15:54:47.484: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 001a0000            2...........
+09/01 15:54:47.685: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 001b0000            2...........
+09/01 15:54:47.720: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 001c0000            2...........
+09/01 15:54:47.792: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 001d0000            2...........
+09/01 15:54:47.940: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 001e0000            2...........
+09/01 15:54:48.448: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 001f0000            2...........
+09/01 15:54:59.024: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00200000            2........ ..
+09/01 15:55:03.737: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00210000            2........!..
+09/01 15:55:03.749: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00220000            2........"..
+09/01 15:55:03.779: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00230000            2........#..
+09/01 15:55:03.786: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00240000            2........$..
+09/01 15:55:03.833: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00250000            2........%..
+09/01 15:55:03.868: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00260000            2........&..
+09/01 15:55:04.069: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00270000            2........'..
+09/01 15:55:04.104: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00280000            2........(..
+09/01 15:55:04.176: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 00290000            2........)..
+09/01 15:55:04.320: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000001 002a0000            2........*..
+09/01 15:57:07.346: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000a 002b0000            2........+..
+09/01 15:57:07.610: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000a 002c0000            2........,..
+09/01 15:57:08.098: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000a 002d0000            2........-..
+09/01 15:57:10.020: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000a 002e0000            2...........
+09/01 15:57:10.386: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000a 002f0000            2......../..
+09/01 15:57:10.408: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000a 00300000            2........0..
+09/01 15:57:10.800: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000a 00310000            2........1..
+09/01 15:57:10.946: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000a 00320000            2........2..
+09/01 15:57:11.624: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000a 00330000            2........3..
+09/01 15:57:12.250: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000a 00340000            2........4..
+09/01 15:57:13.224: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000a 00350000            2........5..
+09/01 15:57:16.360: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000a 00360000            2........6..
+09/01 15:57:16.458: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000a 00370000            2........7..
+09/01 15:57:17.626: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000a 00380000            2........8..
+09/01 15:59:27.318: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000010 00390000            2........9..
+09/01 15:59:29.178: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000010 003a0000            2........:..
+09/01 15:59:29.302: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000010 003b0000            2........;..
+09/01 15:59:30.278: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000010 003c0000            2........<..
+09/01 15:59:32.401: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000010 003d0000            2........=..
+09/01 16:00:04.939: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 003e0000            2........>..
+09/01 16:00:05.183: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 003f0000            2........?..
+09/01 16:00:05.431: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00400000            2........@..
+09/01 16:00:05.919: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00410000            2........A..
+09/01 16:00:06.941: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00420000            2........B..
+09/01 16:00:08.912: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00430000            2........C..
+09/01 16:00:09.941: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000011 00440000            2........D..
+09/01 16:02:58.381: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000018 00450000            2........E..
+09/01 16:03:00.431: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000018 00460000            2........F..
+09/01 16:03:01.378: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000018 00470000            2........G..
+09/01 16:03:55.331: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000001e 00480000            2........H..
+09/01 16:04:21.467: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000022 00490000            2......".I..
+09/01 16:04:22.423: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000022 004a0000            2......".J..
+09/01 16:04:22.995: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000022 004b0000            2......".K..
+09/01 16:04:22.995: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000022 004c0000            2......".L..
+09/01 16:04:23.032: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000022 004d0000            2......".M..
+09/01 16:04:25.666: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000022 004e0000            2......".N..
+09/01 16:04:25.667: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000022 004f0000            2......".O..
+09/01 16:04:25.668: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000022 00500000            2......".P..
+09/01 16:04:25.675: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000022 00510000            2......".Q..
+09/01 16:04:25.676: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000022 00520000            2......".R..
+09/01 16:04:29.944: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000023 00530000            2......#.S..
+09/01 16:04:29.945: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000023 00540000            2......#.T..
+09/01 16:04:30.355: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000023 00550000            2......#.U..
+09/01 16:04:30.803: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000023 00560000            2......#.V..
+09/01 16:04:30.840: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000023 00570000            2......#.W..
+09/01 16:04:31.890: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000023 00580000            2......#.X..
+09/01 16:04:32.015: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000023 00590000            2......#.Y..
+09/01 16:04:32.024: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000023 005a0000            2......#.Z..
+09/01 16:04:32.042: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 00000023 005b0000            2......#.[..
+Open5GS daemon v2.6.4-78-g7f08873
+
+09/05 14:16:20.678: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/sgwu.yaml' (../lib/app/ogs-init.c:126)
+09/05 14:16:20.678: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/sgwu.log' (../lib/app/ogs-init.c:129)
+09/05 14:16:20.703: [pfcp] INFO: pfcp_server() [172.22.0.6]:8805 (../lib/pfcp/path.c:30)
+09/05 14:16:20.703: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.5]:8805 (../lib/pfcp/path.c:61)
+09/05 14:16:20.704: [gtp] INFO: gtp_server() [172.22.0.6]:2152 (../lib/gtp/path.c:30)
+09/05 14:16:20.704: [app] INFO: SGW-U initialize...done (../src/sgwu/app.c:31)
+09/05 14:16:20.732: [sgwu] INFO: PFCP associated [172.22.0.5]:8805 (../src/sgwu/pfcp-sm.c:179)
+09/05 14:16:23.207: [sgwu] WARNING: PFCP[RSP] has already been associated [172.22.0.5]:8805 (../src/sgwu/pfcp-sm.c:273)
+Open5GS daemon v2.6.4-78-g7f08873
+
+09/05 15:16:57.937: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/sgwu.yaml' (../lib/app/ogs-init.c:126)
+09/05 15:16:57.937: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/sgwu.log' (../lib/app/ogs-init.c:129)
+09/05 15:16:57.964: [pfcp] INFO: pfcp_server() [172.22.0.6]:8805 (../lib/pfcp/path.c:30)
+09/05 15:16:57.964: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.5]:8805 (../lib/pfcp/path.c:61)
+09/05 15:16:57.964: [gtp] INFO: gtp_server() [172.22.0.6]:2152 (../lib/gtp/path.c:30)
+09/05 15:16:57.964: [app] INFO: SGW-U initialize...done (../src/sgwu/app.c:31)
+09/05 15:16:57.965: [sgwu] INFO: PFCP associated [172.22.0.5]:8805 (../src/sgwu/pfcp-sm.c:179)
+09/05 15:16:57.965: [sgwu] WARNING: PFCP[RSP] has already been associated [172.22.0.5]:8805 (../src/sgwu/pfcp-sm.c:273)
+09/05 15:24:28.312: [sgwu] INFO: UE F-SEID[UP:0x4b2 CP:0x699] (../src/sgwu/context.c:169)
+09/05 15:24:28.312: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+09/05 15:24:28.319: [gtp] INFO: gtp_connect() [172.22.0.8]:2152 (../lib/gtp/path.c:60)
+09/05 15:24:28.646: [gtp] INFO: gtp_connect() [10.11.0.53]:2152 (../lib/gtp/path.c:60)
+Open5GS daemon v2.6.4-78-g7f08873
+
+09/05 15:34:28.727: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/sgwu.yaml' (../lib/app/ogs-init.c:126)
+09/05 15:34:28.727: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/sgwu.log' (../lib/app/ogs-init.c:129)
+09/05 15:34:28.751: [pfcp] INFO: pfcp_server() [172.22.0.6]:8805 (../lib/pfcp/path.c:30)
+09/05 15:34:28.751: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.5]:8805 (../lib/pfcp/path.c:61)
+09/05 15:34:28.752: [gtp] INFO: gtp_server() [172.22.0.6]:2152 (../lib/gtp/path.c:30)
+09/05 15:34:28.752: [app] INFO: SGW-U initialize...done (../src/sgwu/app.c:31)
+09/05 15:34:28.752: [sgwu] INFO: PFCP associated [172.22.0.5]:8805 (../src/sgwu/pfcp-sm.c:179)
+09/05 15:34:31.234: [sgwu] WARNING: PFCP[REQ] has already been associated [172.22.0.5]:8805 (../src/sgwu/pfcp-sm.c:266)
+09/05 15:46:51.443: [sgwu] INFO: UE F-SEID[UP:0x904 CP:0xc80] (../src/sgwu/context.c:169)
+09/05 15:46:51.443: [sgwu] INFO: [Added] Number of SGWU-Sessions is now 1 (../src/sgwu/context.c:174)
+09/05 15:46:51.447: [gtp] INFO: gtp_connect() [172.22.0.8]:2152 (../lib/gtp/path.c:60)
+09/05 15:46:51.758: [gtp] INFO: gtp_connect() [10.11.0.53]:2152 (../lib/gtp/path.c:60)
+09/05 16:31:38.992: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000d 00000000            2...........
+09/05 16:31:39.161: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000d 00010000            2...........
+09/05 16:31:42.512: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000d 00020000            2...........
+09/05 16:31:43.260: [sgwu] ERROR: [DROP] Small GTPU packet(type:26 len:12) (../src/sgwu/gtp-path.c:133)
+0000: 321a0008 0000000d 00030000            2...........

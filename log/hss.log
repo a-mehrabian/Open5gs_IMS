@@ -214,3 +214,64 @@ Open5GS daemon v2.6.4-78-g7f08873
 08/31 14:56:00.798: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
 08/31 15:17:54.466: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
  ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/31 16:34:54.094: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+08/31 16:34:54.094: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+08/31 16:34:54.095: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+08/31 16:34:54.119: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+08/31 16:34:54.121: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+08/31 17:02:21.856: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+08/31 17:04:38.280: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+08/31 17:04:38.280: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+08/31 17:04:38.281: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+08/31 17:04:38.311: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+08/31 17:04:38.312: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+09/01 08:54:29.022: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+09/01 08:55:50.433: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+09/01 08:55:50.433: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+09/01 08:55:50.434: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+09/01 08:55:50.458: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+09/01 08:55:50.459: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+09/01 14:00:46.543: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+09/01 14:15:27.963: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+09/01 14:15:27.963: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+09/01 14:15:27.964: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+09/01 14:15:27.996: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+09/01 14:15:27.998: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+09/01 16:05:41.717: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+09/05 14:16:30.575: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+09/05 14:16:30.575: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+09/05 14:16:30.577: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+09/05 14:16:30.653: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+09/05 14:16:30.655: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+09/05 15:11:40.340: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+09/05 15:17:07.604: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+09/05 15:17:07.604: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+09/05 15:17:07.605: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+09/05 15:17:07.635: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+09/05 15:17:07.637: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+09/05 15:33:53.014: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+09/05 15:34:38.402: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+09/05 15:34:38.402: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+09/05 15:34:38.403: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+09/05 15:34:38.423: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+09/05 15:34:38.424: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
