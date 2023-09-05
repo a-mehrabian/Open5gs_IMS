@@ -56,6 +56,8 @@ docker build --no-cache --force-rm -t docker_ueransim .
 
 ```
 cd ..
+```
+```
 set -a
 source .env
 sudo ufw disable
