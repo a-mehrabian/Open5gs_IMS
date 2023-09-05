@@ -275,3 +275,5 @@ Open5GS daemon v2.6.4-78-g7f08873
 09/05 15:34:38.403: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
 09/05 15:34:38.423: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
 09/05 15:34:38.424: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+09/05 17:26:57.808: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)

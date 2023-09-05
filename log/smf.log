@@ -1607,3 +1607,5 @@ Open5GS daemon v2.6.4-78-g7f08873
 09/05 15:46:51.444: [smf] INFO: UE IMSI[001010000000002] APN[internet] IPv4[192.168.100.2] IPv6[] (../src/smf/s5c-handler.c:255)
 09/05 15:46:51.446: [gtp] INFO: gtp_connect() [172.22.0.8]:2152 (../lib/gtp/path.c:60)
 09/05 15:46:51.446: [smf] WARNING: Unknown PCO ID:(0x1a) (../src/smf/context.c:2993)
+09/05 17:26:57.804: [diam] ERROR: pid:PSM/pcrf.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'pcrf.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
