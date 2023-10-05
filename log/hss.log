@@ -277,3 +277,155 @@ Open5GS daemon v2.6.4-78-g7f08873
 09/05 15:34:38.424: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
 09/05 17:26:57.808: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
  ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/02 12:17:48.465: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+10/02 12:17:48.465: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+10/02 12:17:48.466: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+10/02 12:17:48.490: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+10/02 12:17:48.505: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/02 14:28:17.252: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+10/02 14:28:17.252: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+10/02 14:28:17.254: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+10/02 14:28:17.275: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+10/02 14:28:17.294: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+10/02 14:35:54.069: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/02 17:05:15.186: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+10/02 17:05:15.186: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+10/02 17:05:15.187: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+10/02 17:05:15.206: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+10/02 17:05:15.220: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+10/02 17:05:30.176: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/02 17:06:40.964: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+10/02 17:06:40.964: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+10/02 17:06:40.965: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+10/02 17:06:40.993: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+10/02 17:06:41.010: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+10/03 10:59:32.291: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/03 11:31:58.536: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+10/03 11:31:58.536: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+10/03 11:31:58.537: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+10/03 11:31:58.552: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+10/03 11:31:58.570: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+10/03 14:24:15.272: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/03 14:29:01.728: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+10/03 14:29:01.728: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+10/03 14:29:01.729: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+10/03 14:29:01.778: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+10/03 14:29:01.812: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+10/03 15:09:19.372: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/04 15:02:16.704: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+10/04 15:02:16.704: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+10/04 15:02:16.706: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+10/04 15:02:16.737: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+10/04 15:02:16.762: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+10/04 15:38:03.976: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/04 16:53:33.354: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+10/04 16:53:33.354: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+10/04 16:53:33.356: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+10/04 16:53:33.402: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+10/04 16:53:33.422: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+10/04 17:54:36.330: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/05 10:13:24.164: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+10/05 10:13:24.164: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+10/05 10:13:24.166: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+10/05 10:13:24.201: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+10/05 10:13:24.228: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/05 10:58:27.429: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+10/05 10:58:27.429: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+10/05 10:58:27.431: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+10/05 10:58:27.527: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+10/05 10:58:27.548: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+10/05 11:06:26.362: [dbi] INFO: [imsi-302610032272714] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 11:10:00.562: [dbi] INFO: [imsi-302500404080027] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 11:10:10.802: [dbi] INFO: [imsi-302500404080027] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/05 11:33:02.499: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+10/05 11:33:02.499: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+10/05 11:33:02.502: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+10/05 11:33:02.537: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+10/05 11:33:02.560: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+10/05 11:38:03.933: [dbi] INFO: [imsi-302500403473931] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 11:44:32.271: [dbi] INFO: [imsi-302500404058422] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 11:44:42.531: [dbi] INFO: [imsi-302500404058422] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 11:44:52.730: [dbi] INFO: [imsi-302500404058422] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 11:45:02.910: [dbi] INFO: [imsi-302500404058422] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 11:45:13.110: [dbi] INFO: [imsi-302500404058422] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 11:48:07.554: [dbi] INFO: [imsi-302500404080027] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:03:06.180: [dbi] INFO: [imsi-302500403177732] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:05:15.253: [dbi] INFO: [imsi-302500404058422] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:05:25.433: [dbi] INFO: [imsi-302500404058422] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:05:35.613: [dbi] INFO: [imsi-302500404058422] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:05:45.801: [dbi] INFO: [imsi-302500404058422] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:05:56.009: [dbi] INFO: [imsi-302500404058422] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:16:08.676: [dbi] INFO: [imsi-302500402678260] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:19:24.900: [dbi] INFO: [imsi-302500400933991] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:19:35.035: [dbi] INFO: [imsi-302500400933991] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:19:45.175: [dbi] INFO: [imsi-302500400933991] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:19:54.335: [dbi] INFO: [imsi-302500910390186] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:20:04.495: [dbi] INFO: [imsi-302500910390186] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:20:10.343: [dbi] INFO: [imsi-302370302928510] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:20:14.734: [dbi] INFO: [imsi-302500910390186] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:20:20.483: [dbi] INFO: [imsi-302370302928510] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:20:30.614: [dbi] INFO: [imsi-302370302928510] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:20:40.743: [dbi] INFO: [imsi-302370302928510] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:21:28.294: [dbi] INFO: [imsi-302500404058422] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:21:38.490: [dbi] INFO: [imsi-302500404058422] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:21:52.995: [dbi] INFO: [imsi-302500403882690] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:22:03.192: [dbi] INFO: [imsi-302500403882690] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:22:13.414: [dbi] INFO: [imsi-302500403882690] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:25:16.151: [dbi] INFO: [imsi-302500400645707] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:25:26.311: [dbi] INFO: [imsi-302500400645707] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:26:07.931: [dbi] INFO: [imsi-302500403888399] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:26:18.133: [dbi] INFO: [imsi-302500403888399] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:26:28.293: [dbi] INFO: [imsi-302500403888399] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:26:38.473: [dbi] INFO: [imsi-302500403888399] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:26:48.653: [dbi] INFO: [imsi-302500403888399] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:27:55.316: [dbi] INFO: [imsi-302500301271342] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:28:05.492: [dbi] INFO: [imsi-302500301271342] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:28:15.632: [dbi] INFO: [imsi-302500301271342] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:28:25.772: [dbi] INFO: [imsi-302500301271342] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 12:29:39.700: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/05 13:07:45.227: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/hss.yaml' (../lib/app/ogs-init.c:126)
+10/05 13:07:45.227: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/hss.log' (../lib/app/ogs-init.c:129)
+10/05 13:07:45.229: [dbi] INFO: MongoDB URI: 'mongodb://172.22.0.2/open5gs' (../lib/dbi/ogs-mongoc.c:130)
+10/05 13:07:45.432: [app] INFO: HSS initialize...done (../src/hss/app-init.c:31)
+10/05 13:07:45.458: [diam] INFO: CONNECTED TO 'mme.epc.mnc001.mcc001.3gppnetwork.org' (SCTP,soc#15): (../lib/diameter/common/logger.c:108)
+10/05 13:11:12.133: [dbi] INFO: [imsi-302500404086477] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 13:15:33.799: [dbi] INFO: [imsi-302500404086477] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 13:15:44.120: [dbi] INFO: [imsi-302500404086477] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 13:15:54.460: [dbi] INFO: [imsi-302500404086477] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 13:16:04.799: [dbi] INFO: [imsi-302500404086477] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 13:21:35.498: [dbi] INFO: [imsi-302500910100765] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 13:21:45.678: [dbi] INFO: [imsi-302500910100765] Cannot find IMSI in DB (../lib/dbi/subscription.c:56)
+10/05 13:28:31.222: [diam] ERROR: pid:PSM/mme.epc.mnc001.mcc001.3gppnetwork.org in fd_psm_change_state@p_psm.c:284: 'STATE_OPEN'	-> 'STATE_CLOSED'	'mme.epc.mnc001.mcc001.3gppnetwork.org'
+ ((null):0)

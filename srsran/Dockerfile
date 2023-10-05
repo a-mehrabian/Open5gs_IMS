@@ -33,10 +33,37 @@ RUN apt-get update && \
     apt-get -y install cmake make gcc g++ pkg-config libfftw3-dev libmbedtls-dev libsctp-dev libyaml-cpp-dev libgtest-dev \
     libzmq3-dev software-properties-common pkg-config net-tools iputils-ping git
 
-# UHD drivers for USRP
-RUN add-apt-repository ppa:ettusresearch/uhd && \
-    apt update && apt -y install libuhd-dev uhd-host && \
-    uhd_images_downloader
+# # UHD drivers for USRP
+# RUN add-apt-repository ppa:ettusresearch/uhd && \
+#     apt update && apt -y install libuhd-dev uhd-host && \
+#     uhd_images_downloader
+# Microphase drivers for AntSDR U220
+# Build Dependencies
+RUN apt-get update && apt-get install -y \
+    autoconf automake build-essential ccache cmake cpufrequtils doxygen ethtool \
+    g++ git inetutils-tools libboost-all-dev libncurses5 libncurses5-dev libusb-1.0-0 libusb-1.0-0-dev \
+    libusb-dev python3-dev python3-mako python3-numpy python3-requests python3-scipy python3-setuptools \
+    python3-ruamel.yaml
+
+# Generate Makefile with CMake
+RUN git clone  https://github.com/MicroPhase/antsdr_uhd.git  && \
+    cd antsdr_uhd/host/ && \
+    mkdir build && \
+    cd build && \
+    cmake -DENABLE_X400=OFF -DENABLE_N320=OFF -DENABLE_X300=OFF -DENABLE_USRP2=OFF -DENABLE_USRP1=OFF  -DENABLE_N300=OFF -DENABLE_E320=OFF -DENABLE_E300=OFF ../ && \
+    make && \
+    make install && \
+    ldconfig && \
+    uhd_images_downloader && \
+    uhd_config_info --images-dir
+
+
+# Install UHD image and antsdru_u220_ad9361.bin
+RUN apt-get update && apt-get install -y wget && \
+    cd /usr/local/share/uhd/images/ && \
+    wget https://github.com/MicroPhase/antsdr_uhd/releases/download/v1.0/antsdr_u220_ad9361.bin
+
+
 
 # Get srsRAN_Project, compile and install
 RUN git clone https://github.com/srsran/srsRAN_Project.git && \

@@ -42,16 +42,24 @@ docker build --no-cache --force-rm -t docker_open5gs .
 cd ../ims_base
 docker build --no-cache --force-rm -t docker_kamailio .
 
+# srsRAN eNB/gNB
 cd ../srslte
 docker build --no-cache --force-rm -t docker_srslte .
-
 cd ../srsran
 docker build --no-cache --force-rm -t docker_srsran .
 
 cd ../ueransim
 docker build --no-cache --force-rm -t docker_ueransim .
-```
 
+<!-- # OAI eNB/gNB
+cd ../oai 
+docker build -f enb_dockerfile --no-cache --force-rm -t docker_oai_enb .
+docker build -f gnb_dockerfile --no-cache --force-rm -t docker_oai_gnb . -->
+```
+> Do not forget to remove the temporary image:
+> ```
+> docker image prune --force
+> ```
 #### Build and Run using docker-compose
 
 ```
@@ -81,6 +89,13 @@ docker-compose -f 4g-volte-deploy.yaml up
 # srsRAN eNB using SDR (OTA)
 docker-compose -f srsenb.yaml up -d && docker container attach srsenb
 ```
+OR
+```
+# OAI eNB using SDR (OTA)
+docker-compose -f oaienb.yaml build
+docker-compose -f oaienb.yaml up -d && docker container attach oaienb
+```
+
 **Simulation:**
 ```
 # srsRAN ZMQ eNB (RF simulated)
@@ -91,16 +106,25 @@ docker-compose -f srsue_zmq.yaml up -d && docker container attach srsue_zmq
 ```
 
 ###### 5G SA deployment
-
-> not tested yet 
-
-<!-- ```
+ 
+**SDR:**
+- Teminal 1:
+```
 # 5G Core Network
 docker-compose -f sa-deploy.yaml up
-
+```
+- Teminal 2:
+```
 # srsRAN gNB using SDR (OTA)
 docker-compose -f srsgnb.yaml up -d && docker container attach srsgnb
-
+```
+OR
+```
+# OAI eNB using SDR (OTA)
+docker-compose -f oaignb.yaml up -d && docker container attach oaignb
+```
+**Simulation:**
+```
 # srsRAN ZMQ gNB (RF simulated)
 docker-compose -f srsgnb_zmq.yaml up -d && docker container attach srsgnb_zmq
 
@@ -112,7 +136,7 @@ docker-compose -f nr-gnb.yaml up -d && docker container attach nr_gnb
 
 # UERANSIM NR-UE (RF simulated)
 docker-compose -f nr-ue.yaml up -d && docker container attach nr_ue
-``` -->
+```
 
 ## Configuring S1 Interface Across Networked PCs
 
