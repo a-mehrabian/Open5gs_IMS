@@ -76,3 +76,23 @@ Open5GS daemon v2.6.4-78-g7f08873
 10/05 17:07:10.925: [sbi] INFO: [2668e0ec-63c3-41ee-a77f-31e44354127c] Subscription created until 2023-10-06T17:07:10.924448-04:00 [duration:86400,validity:86399.999443,patch:43199.999721] (../lib/sbi/nnrf-handler.c:509)
 10/05 17:07:10.944: [sbi] INFO: [266b6466-63c3-41ee-8c7b-d91532ebcdee] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:725)
 10/05 17:07:10.944: [sbi] INFO: [266b6466-63c3-41ee-8c7b-d91532ebcdee] (NRF-notify) NF Profile updated (../lib/sbi/nnrf-handler.c:735)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/10 09:15:56.208: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/ausf.yaml' (../lib/app/ogs-init.c:126)
+10/10 09:15:56.208: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/ausf.log' (../lib/app/ogs-init.c:129)
+10/10 09:15:56.210: [sbi] INFO: NF Service [nausf-auth] (../lib/sbi/context.c:1438)
+10/10 09:15:56.210: [sbi] INFO: nghttp2_server() [http://172.22.0.11]:7777 (../lib/sbi/nghttp2-server.c:395)
+10/10 09:15:56.210: [app] INFO: AUSF initialize...done (../src/ausf/app.c:31)
+10/10 09:15:56.212: [sbi] INFO: [256ea8ac-676f-41ee-885b-67ce611685c1] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:214)
+10/10 09:15:56.213: [sbi] INFO: [256f1e22-676f-41ee-be8a-e1b8fe1edc57] Subscription created until 2023-10-11T09:15:56.213448-04:00 [duration:86400,validity:86399.999623,patch:43199.999811] (../lib/sbi/nnrf-handler.c:509)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/10 09:17:42.181: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/ausf.yaml' (../lib/app/ogs-init.c:126)
+10/10 09:17:42.181: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/ausf.log' (../lib/app/ogs-init.c:129)
+10/10 09:17:42.183: [sbi] INFO: NF Service [nausf-auth] (../lib/sbi/context.c:1438)
+10/10 09:17:42.183: [sbi] INFO: nghttp2_server() [http://172.22.0.11]:7777 (../lib/sbi/nghttp2-server.c:395)
+10/10 09:17:42.184: [app] INFO: AUSF initialize...done (../src/ausf/app.c:31)
+10/10 09:17:42.186: [sbi] INFO: [6498e25e-676f-41ee-9c6f-1f520bca9362] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:214)
+10/10 09:17:42.187: [sbi] INFO: [64995c5c-676f-41ee-a7c3-71c96f886c99] Subscription created until 2023-10-11T09:17:42.186743-04:00 [duration:86400,validity:86399.999105,patch:43199.999552] (../lib/sbi/nnrf-handler.c:509)
+10/10 09:17:42.188: [sbi] INFO: [649940c8-676f-41ee-b45b-312fd33f9344] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:725)
+10/10 09:17:42.188: [sbi] INFO: [649940c8-676f-41ee-b45b-312fd33f9344] (NRF-notify) NF Profile updated (../lib/sbi/nnrf-handler.c:735)

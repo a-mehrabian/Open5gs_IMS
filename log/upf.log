@@ -1434,3 +1434,27 @@ Open5GS daemon v2.6.4-78-g7f08873
 10/05 17:07:12.577: [upf] INFO: PFCP associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:184)
 10/05 17:07:14.933: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.1]:8805 (../lib/pfcp/path.c:61)
 10/05 17:07:14.933: [upf] INFO: PFCP associated [172.22.0.1]:8805 (../src/upf/pfcp-sm.c:184)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/10 09:15:57.541: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:126)
+10/10 09:15:57.541: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:129)
+10/10 09:15:57.577: [metrics] INFO: metrics_server() [http://172.22.0.8]:9091 (../lib/metrics/prometheus/context.c:299)
+10/10 09:15:57.577: [pfcp] INFO: pfcp_server() [172.22.0.8]:8805 (../lib/pfcp/path.c:30)
+10/10 09:15:57.577: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.7]:8805 (../lib/pfcp/path.c:61)
+10/10 09:15:57.577: [gtp] INFO: gtp_server() [172.22.0.8]:2152 (../lib/gtp/path.c:30)
+10/10 09:15:57.578: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
+10/10 09:15:57.578: [upf] INFO: PFCP associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:184)
+10/10 09:15:59.941: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.1]:8805 (../lib/pfcp/path.c:61)
+10/10 09:15:59.941: [upf] INFO: PFCP associated [172.22.0.1]:8805 (../src/upf/pfcp-sm.c:184)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/10 09:17:43.692: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:126)
+10/10 09:17:43.692: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:129)
+10/10 09:17:43.728: [metrics] INFO: metrics_server() [http://172.22.0.8]:9091 (../lib/metrics/prometheus/context.c:299)
+10/10 09:17:43.728: [pfcp] INFO: pfcp_server() [172.22.0.8]:8805 (../lib/pfcp/path.c:30)
+10/10 09:17:43.728: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.7]:8805 (../lib/pfcp/path.c:61)
+10/10 09:17:43.728: [gtp] INFO: gtp_server() [172.22.0.8]:2152 (../lib/gtp/path.c:30)
+10/10 09:17:43.728: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
+10/10 09:17:43.729: [upf] INFO: PFCP associated [172.22.0.7]:8805 (../src/upf/pfcp-sm.c:184)
+10/10 09:17:46.019: [pfcp] INFO: ogs_pfcp_connect() [172.22.0.1]:8805 (../lib/pfcp/path.c:61)
+10/10 09:17:46.020: [upf] INFO: PFCP associated [172.22.0.1]:8805 (../src/upf/pfcp-sm.c:184)
