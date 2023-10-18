@@ -96,3 +96,34 @@ Open5GS daemon v2.6.4-78-g7f08873
 10/10 09:17:42.187: [sbi] INFO: [64995c5c-676f-41ee-a7c3-71c96f886c99] Subscription created until 2023-10-11T09:17:42.186743-04:00 [duration:86400,validity:86399.999105,patch:43199.999552] (../lib/sbi/nnrf-handler.c:509)
 10/10 09:17:42.188: [sbi] INFO: [649940c8-676f-41ee-b45b-312fd33f9344] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:725)
 10/10 09:17:42.188: [sbi] INFO: [649940c8-676f-41ee-b45b-312fd33f9344] (NRF-notify) NF Profile updated (../lib/sbi/nnrf-handler.c:735)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/10 09:45:02.179: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/ausf.yaml' (../lib/app/ogs-init.c:126)
+10/10 09:45:02.179: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/ausf.log' (../lib/app/ogs-init.c:129)
+10/10 09:45:02.181: [sbi] INFO: NF Service [nausf-auth] (../lib/sbi/context.c:1438)
+10/10 09:45:02.181: [sbi] INFO: nghttp2_server() [http://172.22.0.11]:7777 (../lib/sbi/nghttp2-server.c:395)
+10/10 09:45:02.182: [app] INFO: AUSF initialize...done (../src/ausf/app.c:31)
+10/10 09:45:02.183: [sbi] INFO: [361cb7d0-6773-41ee-8210-9b8804b173dd] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:214)
+10/10 09:45:02.184: [sbi] INFO: [361d187e-6773-41ee-a1f9-d32b035c347e] Subscription created until 2023-10-11T09:45:02.184082-04:00 [duration:86400,validity:86399.999747,patch:43199.999873] (../lib/sbi/nnrf-handler.c:509)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/10 12:45:03.535: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/ausf.yaml' (../lib/app/ogs-init.c:126)
+10/10 12:45:03.535: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/ausf.log' (../lib/app/ogs-init.c:129)
+10/10 12:45:03.537: [sbi] INFO: NF Service [nausf-auth] (../lib/sbi/context.c:1438)
+10/10 12:45:03.537: [sbi] INFO: nghttp2_server() [http://172.22.0.11]:7777 (../lib/sbi/nghttp2-server.c:395)
+10/10 12:45:03.538: [app] INFO: AUSF initialize...done (../src/ausf/app.c:31)
+10/10 12:45:03.539: [sbi] INFO: [5c38d53e-678c-41ee-a788-17c3b771b1e5] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:214)
+10/10 12:45:03.540: [sbi] INFO: [5c394492-678c-41ee-ac84-1d4da7c08aff] Subscription created until 2023-10-11T12:45:03.540375-04:00 [duration:86400,validity:86399.999428,patch:43199.999714] (../lib/sbi/nnrf-handler.c:509)
+10/10 12:45:03.859: [sbi] INFO: [5c699340-678c-41ee-aac8-7fe8105188dc] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:725)
+10/10 12:45:03.859: [sbi] INFO: [5c699340-678c-41ee-aac8-7fe8105188dc] (NRF-notify) NF Profile updated (../lib/sbi/nnrf-handler.c:735)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/10 14:53:49.854: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/ausf.yaml' (../lib/app/ogs-init.c:126)
+10/10 14:53:49.854: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/ausf.log' (../lib/app/ogs-init.c:129)
+10/10 14:53:49.856: [sbi] INFO: NF Service [nausf-auth] (../lib/sbi/context.c:1438)
+10/10 14:53:49.856: [sbi] INFO: nghttp2_server() [http://172.22.0.11]:7777 (../lib/sbi/nghttp2-server.c:395)
+10/10 14:53:49.856: [app] INFO: AUSF initialize...done (../src/ausf/app.c:31)
+10/10 14:53:50.266: [sbi] INFO: [59778108-679e-41ee-97ac-db1527f21cb0] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:214)
+10/10 14:53:50.268: [sbi] INFO: [59b6455a-679e-41ee-81bd-4ba801666037] Subscription created until 2023-10-11T14:53:50.267569-04:00 [duration:86400,validity:86399.999149,patch:43199.999574] (../lib/sbi/nnrf-handler.c:509)
+10/10 14:53:50.675: [sbi] INFO: [59f3ed1a-679e-41ee-9224-7fd0916d7988] (NRF-notify) NF registered (../lib/sbi/nnrf-handler.c:725)
+10/10 14:53:50.675: [sbi] INFO: [59f3ed1a-679e-41ee-9224-7fd0916d7988] (NRF-notify) NF Profile updated (../lib/sbi/nnrf-handler.c:735)

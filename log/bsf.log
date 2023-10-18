@@ -78,3 +78,27 @@ Open5GS daemon v2.6.4-78-g7f08873
 10/10 09:17:52.549: [sbi] INFO: nghttp2_server() [http://172.22.0.29]:7777 (../lib/sbi/nghttp2-server.c:395)
 10/10 09:17:52.549: [app] INFO: BSF initialize...done (../src/bsf/app.c:31)
 10/10 09:17:52.551: [sbi] INFO: [6ac67efc-676f-41ee-9be1-69cfdca94c8d] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:214)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/10 09:45:12.259: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/bsf.yaml' (../lib/app/ogs-init.c:126)
+10/10 09:45:12.259: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/bsf.log' (../lib/app/ogs-init.c:129)
+10/10 09:45:12.260: [sbi] INFO: NF Service [nbsf-management] (../lib/sbi/context.c:1438)
+10/10 09:45:12.261: [sbi] INFO: nghttp2_server() [http://172.22.0.29]:7777 (../lib/sbi/nghttp2-server.c:395)
+10/10 09:45:12.261: [app] INFO: BSF initialize...done (../src/bsf/app.c:31)
+10/10 09:45:12.263: [sbi] INFO: [3c1eaeae-6773-41ee-96f7-4b723483de95] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:214)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/10 12:45:13.951: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/bsf.yaml' (../lib/app/ogs-init.c:126)
+10/10 12:45:13.951: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/bsf.log' (../lib/app/ogs-init.c:129)
+10/10 12:45:13.953: [sbi] INFO: NF Service [nbsf-management] (../lib/sbi/context.c:1438)
+10/10 12:45:13.953: [sbi] INFO: nghttp2_server() [http://172.22.0.29]:7777 (../lib/sbi/nghttp2-server.c:395)
+10/10 12:45:13.953: [app] INFO: BSF initialize...done (../src/bsf/app.c:31)
+10/10 12:45:13.955: [sbi] INFO: [626e1914-678c-41ee-9ae3-cbc960f684fb] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:214)
+Open5GS daemon v2.6.4-78-g7f08873
+
+10/10 14:53:59.694: [app] INFO: Configuration: '/open5gs/install/etc/open5gs/bsf.yaml' (../lib/app/ogs-init.c:126)
+10/10 14:53:59.694: [app] INFO: File Logging: '/open5gs/install/var/log/open5gs/bsf.log' (../lib/app/ogs-init.c:129)
+10/10 14:53:59.696: [sbi] INFO: NF Service [nbsf-management] (../lib/sbi/context.c:1438)
+10/10 14:53:59.696: [sbi] INFO: nghttp2_server() [http://172.22.0.29]:7777 (../lib/sbi/nghttp2-server.c:395)
+10/10 14:53:59.696: [app] INFO: BSF initialize...done (../src/bsf/app.c:31)
+10/10 14:53:59.698: [sbi] INFO: [5f54f66e-679e-41ee-b1bb-4bec1b270f72] NF registered [Heartbeat:10s] (../lib/sbi/nf-sm.c:214)
