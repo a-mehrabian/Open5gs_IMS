@@ -1,35 +1,19 @@
-2023-10-18T20:48:05.477871 [ENB    ] [I] Using binary /usr/local/bin/srsenb with arguments: 
-2023-10-18T20:48:05.560662 [ENB    ] [I] Built in Release mode using commit fa56836b1 on branch HEAD.
-2023-10-18T20:48:05.594066 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:2152
-2023-10-18T20:48:05.594072 [COMN   ] [D] [    0] RxSockets: socket fd=6 has been registered.
-2023-10-18T20:48:05.594158 [COMN   ] [D] [    0] Opened SCTP socket=7
-2023-10-18T20:48:05.594163 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
-2023-10-18T20:48:05.594164 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
-2023-10-18T20:48:05.594170 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
-2023-10-18T20:48:05.595374 [COMN   ] [D] [    0] RxSockets: socket fd=7 has been registered.
-2023-10-18T20:49:03.583719 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
-2023-10-18T20:49:56.305094 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
-2023-10-18T20:50:11.299487 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-10-18T20:50:11.377895 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-10-18T20:50:11.377895 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
-2023-10-18T20:50:11.379388 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
-2023-10-18T20:50:50.732240 [RLC    ] [W] SRB1: Signaling max number of reTx=4 for SN=3
-2023-10-18T20:50:51.922306 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-10-18T20:50:51.922307 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
-2023-10-18T20:50:51.922852 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
-2023-10-18T20:51:12.020283 [S1AP   ] [W] UE context for RNTI:0x47 is in zombie state. Releasing...
-2023-10-18T20:51:20.212258 [S1AP   ] [E] Cannot send UE context release request without a MME-UE-S1AP-Id allocated.
-2023-10-18T20:51:26.292185 [S1AP   ] [E] Cannot send UE context release request without a MME-UE-S1AP-Id allocated.
-2023-10-18T20:51:27.258195 [S1AP   ] [E] Cannot send UE context release request without a MME-UE-S1AP-Id allocated.
-2023-10-18T20:51:32.372155 [S1AP   ] [E] Cannot send UE context release request without a MME-UE-S1AP-Id allocated.
-2023-10-18T20:51:33.371179 [S1AP   ] [W] UE context for RNTI:0x53 is in zombie state. Releasing...
-2023-10-18T20:51:38.452238 [S1AP   ] [E] Cannot send UE context release request without a MME-UE-S1AP-Id allocated.
-2023-10-18T20:51:52.260138 [S1AP   ] [E] Cannot send UE context release request without a MME-UE-S1AP-Id allocated.
-2023-10-18T20:52:08.482123 [S1AP   ] [E] Cannot send UE context release request without a MME-UE-S1AP-Id allocated.
-2023-10-18T20:52:17.278196 [S1AP   ] [E] Cannot send UE context release request without a MME-UE-S1AP-Id allocated.
-2023-10-18T20:52:42.300276 [S1AP   ] [E] Cannot send UE context release request without a MME-UE-S1AP-Id allocated.
-2023-10-18T20:52:47.224464 [COMN   ] [D] [    0] RxSockets: Closing rx socket handler thread
-2023-10-18T20:52:47.224842 [COMN   ] [D] [    0] RxSockets: closed.
-2023-10-18T20:52:47.224890 [COMN   ] [D] [    0] Socket=7 was closed.
-2023-10-18T20:52:47.227422 [COMN   ] [D] [    0] Socket=-1 could not be closed.
-2023-10-18T20:52:47.228669 [COMN   ] [D] [    0] Socket=-1 could not be closed.
+2023-10-24T21:06:39.511475 [ENB    ] [I] Using binary /usr/local/bin/srsenb with arguments: 
+2023-10-24T21:06:39.572595 [ENB    ] [I] Built in Release mode using commit fa56836b1 on branch HEAD.
+2023-10-24T21:06:39.606662 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:2152
+2023-10-24T21:06:39.606668 [COMN   ] [D] [    0] RxSockets: socket fd=6 has been registered.
+2023-10-24T21:06:39.606723 [COMN   ] [D] [    0] Opened SCTP socket=7
+2023-10-24T21:06:39.606728 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2023-10-24T21:06:39.606729 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2023-10-24T21:06:39.606735 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2023-10-24T21:06:39.608069 [COMN   ] [D] [    0] RxSockets: socket fd=7 has been registered.
+2023-10-24T21:07:24.937912 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-10-24T21:08:03.434263 [S1AP   ] [W] Not handling feature - UERadioCapability
+2023-10-24T21:08:03.522864 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
+2023-10-24T21:08:03.522865 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
+2023-10-24T21:08:03.523877 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
+2023-10-24T21:10:08.722068 [COMN   ] [D] [    0] RxSockets: Closing rx socket handler thread
+2023-10-24T21:10:08.722461 [COMN   ] [D] [    0] RxSockets: closed.
+2023-10-24T21:10:08.722514 [COMN   ] [D] [    0] Socket=7 was closed.
+2023-10-24T21:10:08.723616 [COMN   ] [D] [    0] Socket=-1 could not be closed.
+2023-10-24T21:10:08.724767 [COMN   ] [D] [    0] Socket=-1 could not be closed.
