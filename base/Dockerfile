@@ -60,6 +60,7 @@ RUN apt-get update && \
         libidn11-dev \
         libtalloc-dev
 
+
 ##
 
 # Update the package list and install required packages
@@ -83,12 +84,12 @@ RUN apt-get update && apt-get install nodejs -y
 
 # Get open5gs code and install
 RUN git clone --recursive https://github.com/open5gs/open5gs && cd open5gs && \
-    git checkout 7f088730ed4bedc12f562e53de44697d5e1f5c6e && meson build --prefix=`pwd`/install && \
+    git checkout tags/v2.6.6 && meson build --prefix=`pwd`/install && \
     ninja -C build && cd build && ninja install && \
     mkdir -p /open5gs/install/include
 
 # Building WebUI of open5gs
-RUN cd open5gs/webui && npm clean-install && npm run build
+RUN cd open5gs/webui && npm ci
 
 # Build final image
 FROM ubuntu:focal
@@ -116,10 +117,12 @@ RUN apt-get update && \
         python3-wheel \
         python3-pip \
         iptables \
-        iperf && \
+        iperf \
+        gnupg && \
     apt-get autoremove -y && apt-get autoclean
 
 RUN pip3 install click
+
 
 # RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && apt-get install -y nodejs && \
 #     apt-get remove -y curl && apt-get autoremove -y && apt-get autoclean
@@ -140,6 +143,7 @@ RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesourc
 
 # Update the package list and install Node.js
 RUN apt-get update && apt-get install nodejs -y
+
 
 RUN update-ca-certificates
 

@@ -1,0 +1,16 @@
+2023-10-23 13:41:30,428 	 ERROR 	 {hss.py:216} 	 Received an invalid packet with length <= 32
+Received an invalid packet with length <= 32
+2023-10-23 13:41:30,429 	 ERROR 	 {hss.py:759} 	 manage_client: Socket error for client ('172.22.0.1', 57060): [Errno 9] Bad file descriptor
+manage_client: Socket error for client ('172.22.0.1', 57060): [Errno 9] Bad file descriptor
+2023-10-23 13:41:31,480 	 ERROR 	 {hss.py:216} 	 Received an invalid packet with length <= 32
+Received an invalid packet with length <= 32
+2023-10-23 13:41:31,480 	 ERROR 	 {hss.py:759} 	 manage_client: Socket error for client ('172.22.0.1', 57076): [Errno 9] Bad file descriptor
+manage_client: Socket error for client ('172.22.0.1', 57076): [Errno 9] Bad file descriptor
+2023-10-23 13:41:31,482 	 ERROR 	 {hss.py:216} 	 Received an invalid packet with length <= 32
+Received an invalid packet with length <= 32
+2023-10-23 13:41:31,482 	 ERROR 	 {hss.py:759} 	 manage_client: Socket error for client ('172.22.0.1', 57082): [Errno 9] Bad file descriptor
+manage_client: Socket error for client ('172.22.0.1', 57082): [Errno 9] Bad file descriptor
+2023-10-23 13:41:31,797 	 ERROR 	 {hss.py:216} 	 Received an invalid packet with length <= 32
+Received an invalid packet with length <= 32
+2023-10-23 13:41:31,797 	 ERROR 	 {hss.py:759} 	 manage_client: Socket error for client ('172.22.0.1', 57096): [Errno 9] Bad file descriptor
+manage_client: Socket error for client ('172.22.0.1', 57096): [Errno 9] Bad file descriptor

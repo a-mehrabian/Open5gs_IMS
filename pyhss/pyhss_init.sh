@@ -62,6 +62,6 @@ sed -i 's|MYSQL_IP|'$MYSQL_IP'|g' ./config.yaml
 #ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 export FLASK_APP=PyHSS_API.py
-flask run --host=$PYHSS_IP --port=8080 &
+flask run --host=$PYHSS_IP --port=8082 &
 
 python3 hss.py
