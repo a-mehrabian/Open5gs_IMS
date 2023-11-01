@@ -60,7 +60,26 @@ RUN apt-get update && \
         libidn11-dev \
         libtalloc-dev
 
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && apt-get install -y nodejs
+##
+
+# Update the package list and install required packages
+RUN apt-get update && apt-get install -y ca-certificates curl gnupg
+
+# Create the /etc/apt/keyrings directory
+RUN mkdir -p /etc/apt/keyrings
+
+# Add the Node.js GPG key to /etc/apt/keyrings/nodesource.gpg
+RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+
+# Set the Node.js major version you want (replace with the desired version)
+ENV NODE_MAJOR=20
+
+# Add the Node.js repository to sources.list.d
+RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
+
+# Update the package list and install Node.js
+RUN apt-get update && apt-get install nodejs -y
+#
 
 # Get open5gs code and install
 RUN git clone --recursive https://github.com/open5gs/open5gs && cd open5gs && \
@@ -102,8 +121,25 @@ RUN apt-get update && \
 
 RUN pip3 install click
 
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && apt-get install -y nodejs && \
-    apt-get remove -y curl && apt-get autoremove -y && apt-get autoclean
+# RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && apt-get install -y nodejs && \
+#     apt-get remove -y curl && apt-get autoremove -y && apt-get autoclean
+# Update the package list and install required packages
+RUN apt-get update && apt-get install -y ca-certificates curl gnupg
+
+# Create the /etc/apt/keyrings directory
+RUN mkdir -p /etc/apt/keyrings
+
+# Add the Node.js GPG key to /etc/apt/keyrings/nodesource.gpg
+RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+
+# Set the Node.js major version you want (replace with the desired version)
+ENV NODE_MAJOR=20
+
+# Add the Node.js repository to sources.list.d
+RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
+
+# Update the package list and install Node.js
+RUN apt-get update && apt-get install nodejs -y
 
 RUN update-ca-certificates
 
