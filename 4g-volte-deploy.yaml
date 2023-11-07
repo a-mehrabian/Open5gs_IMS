@@ -17,6 +17,7 @@ services:
     networks:
       default:
         ipv4_address: ${MONGO_IP}
+    #restart: always
   webui:
     image: docker_open5gs
     container_name: webui
@@ -37,6 +38,7 @@ services:
     networks:
       default:
         ipv4_address: ${WEBUI_IP}
+    #restart: always
   hss:
     image: docker_open5gs
     container_name: hss
@@ -61,6 +63,7 @@ services:
     networks:
       default:
         ipv4_address: ${HSS_IP}
+    #restart: always
   sgwc:
     image: docker_open5gs
     depends_on:
@@ -82,6 +85,7 @@ services:
     networks:
       default:
         ipv4_address: ${SGWC_IP}
+    #restart: always
   sgwu:
     image: docker_open5gs
     depends_on:
@@ -105,6 +109,7 @@ services:
     networks:
       default:
         ipv4_address: ${SGWU_IP}
+    #restart: always
   smf:
     image: docker_open5gs
     container_name: smf
@@ -132,6 +137,7 @@ services:
     networks:
       default:
         ipv4_address: ${SMF_IP}
+    #restart: always
   upf:
     image: docker_open5gs
     depends_on:
@@ -158,6 +164,7 @@ services:
     networks:
       default:
         ipv4_address: ${UPF_IP}
+    #restart: always
   mme:
     image: docker_open5gs
     depends_on:
@@ -192,6 +199,7 @@ services:
     networks:
       default:
         ipv4_address: ${MME_IP}
+    #restart: always
   pcrf:
     image: docker_open5gs
     container_name: pcrf
@@ -216,6 +224,7 @@ services:
     networks:
       default:
         ipv4_address: ${PCRF_IP}
+    #restart: always
   dns:
     build: ./dns
     image: docker_dns
@@ -231,6 +240,7 @@ services:
     networks:
       default:
         ipv4_address: ${DNS_IP}
+    #restart: always
   rtpengine:
     build: ./rtpengine
     image: docker_rtpengine
@@ -259,6 +269,7 @@ services:
     networks:
       default:
         ipv4_address: ${RTPENGINE_IP}
+    #restart: always
   mysql:
     build: ./mysql
     image: docker_mysql
@@ -274,6 +285,7 @@ services:
     networks:
       default:
         ipv4_address: ${MYSQL_IP}
+    #restart: always
   pyhss:
     build: ./pyhss
     image: docker_pyhss
@@ -297,6 +309,7 @@ services:
     networks:
       default:
         ipv4_address: ${PYHSS_IP}
+    #restart: always
   icscf:
     image: docker_kamailio
     container_name: icscf
@@ -321,6 +334,7 @@ services:
     networks:
       default:
         ipv4_address: ${ICSCF_IP}
+    #restart: always
   scscf:
     image: docker_kamailio
     container_name: scscf
@@ -345,6 +359,7 @@ services:
     networks:
       default:
         ipv4_address: ${SCSCF_IP}
+    #restart: always
   pcscf:
     image: docker_kamailio
     container_name: pcscf
@@ -378,6 +393,7 @@ services:
     networks:
       default:
         ipv4_address: ${PCSCF_IP}
+    #restart: always
   smsc:
     image: docker_kamailio
     container_name: smsc
@@ -399,6 +415,7 @@ services:
     networks:
       default:
         ipv4_address: ${SMSC_IP}
+    #restart: always
   osmomsc:
     build: ./osmomsc
     image: docker_osmomsc
@@ -419,6 +436,7 @@ services:
     networks:
       default:
         ipv4_address: ${OSMOMSC_IP}
+    #restart: always
   osmohlr:
     build: ./osmohlr
     image: docker_osmohlr
@@ -436,6 +454,7 @@ services:
     networks:
       default:
         ipv4_address: ${OSMOHLR_IP}
+    #restart: always
   metrics:
     build: ./metrics
     image: docker_metrics
@@ -453,6 +472,7 @@ services:
     networks:
       default:
         ipv4_address: ${METRICS_IP}
+    #restart: always
 networks:
   default:
     ipam:

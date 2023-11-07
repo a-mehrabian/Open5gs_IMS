@@ -96,6 +96,17 @@ docker-compose -f oaienb.yaml build
 docker-compose -f oaienb.yaml up -d && docker container attach oaienb
 ```
 
+> If the USRP return this error:
+```
+uhd_init faile, freeing...
+[UHD RF] EnvironmentError: IOEroor: usb rx6 transfer status: LIBUSB_TRANSFER_EROOR
+```
+Just run this code:
+```
+docker run -it --privileged docker_srslte /bin/bash
+./usr/local/lib/uhd/utils/b2xx_fx3_utils --reset-device
+```
+
 **Simulation:**
 ```
 # srsRAN ZMQ eNB (RF simulated)

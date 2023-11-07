@@ -21,6 +21,8 @@ services:
     expose:
       - "36412/sctp"
       - "2152/udp"
+    # restart: always
+    # command: ./usr/local/lib/uhd/utils/b2xx_fx3_utils --reset-device
     networks:
       default:
         ipv4_address: ${SRS_ENB_IP}

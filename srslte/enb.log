@@ -1,19 +1,16 @@
-2023-10-24T21:06:39.511475 [ENB    ] [I] Using binary /usr/local/bin/srsenb with arguments: 
-2023-10-24T21:06:39.572595 [ENB    ] [I] Built in Release mode using commit fa56836b1 on branch HEAD.
-2023-10-24T21:06:39.606662 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:2152
-2023-10-24T21:06:39.606668 [COMN   ] [D] [    0] RxSockets: socket fd=6 has been registered.
-2023-10-24T21:06:39.606723 [COMN   ] [D] [    0] Opened SCTP socket=7
-2023-10-24T21:06:39.606728 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
-2023-10-24T21:06:39.606729 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
-2023-10-24T21:06:39.606735 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
-2023-10-24T21:06:39.608069 [COMN   ] [D] [    0] RxSockets: socket fd=7 has been registered.
-2023-10-24T21:07:24.937912 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
-2023-10-24T21:08:03.434263 [S1AP   ] [W] Not handling feature - UERadioCapability
-2023-10-24T21:08:03.522864 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 5
-2023-10-24T21:08:03.522865 [RRC    ] [W] Not adding NAS message to connection reconfiguration. E-RAB id 6
-2023-10-24T21:08:03.523877 [PDCP   ] [W] Setting discard timer to 1500ms, to avoid issues with lingering SDUs in the Unacknowledged SDUs map. LCID=4
-2023-10-24T21:10:08.722068 [COMN   ] [D] [    0] RxSockets: Closing rx socket handler thread
-2023-10-24T21:10:08.722461 [COMN   ] [D] [    0] RxSockets: closed.
-2023-10-24T21:10:08.722514 [COMN   ] [D] [    0] Socket=7 was closed.
-2023-10-24T21:10:08.723616 [COMN   ] [D] [    0] Socket=-1 could not be closed.
-2023-10-24T21:10:08.724767 [COMN   ] [D] [    0] Socket=-1 could not be closed.
+2023-11-07T19:53:18.870826 [ENB    ] [I] Using binary /usr/local/bin/srsenb with arguments: 
+2023-11-07T19:53:18.944197 [ENB    ] [I] Built in Release mode using commit fa56836b1 on branch HEAD.
+2023-11-07T19:53:18.977327 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:2152
+2023-11-07T19:53:18.977332 [COMN   ] [D] [    0] RxSockets: socket fd=6 has been registered.
+2023-11-07T19:53:18.977369 [COMN   ] [D] [    0] Opened SCTP socket=7
+2023-11-07T19:53:18.977372 [COMN   ] [D] [    0] Setting RTO_INFO options on SCTP socket. Association 0, Initial RTO 3000, Minimum RTO 1000, Maximum RTO 6000
+2023-11-07T19:53:18.977373 [COMN   ] [D] [    0] Setting SCTP_INITMSG options on SCTP socket. Max attempts 3, Max init attempts timeout 5000
+2023-11-07T19:53:18.977380 [COMN   ] [D] [    0] Successfully bound to address 172.22.0.22:0
+2023-11-07T19:53:18.978498 [COMN   ] [D] [    0] RxSockets: socket fd=7 has been registered.
+2023-11-07T19:53:22.763663 [RF     ] [E] Error opening RF device
+2023-11-07T19:53:22.763664 [RF     ] [E] Error opening RF device 0
+2023-11-07T19:53:22.765631 [COMN   ] [D] [    0] RxSockets: Closing rx socket handler thread
+2023-11-07T19:53:22.766050 [COMN   ] [D] [    0] RxSockets: closed.
+2023-11-07T19:53:22.766100 [COMN   ] [D] [    0] Socket=7 was closed.
+2023-11-07T19:53:22.767198 [COMN   ] [D] [    0] Socket=-1 could not be closed.
+2023-11-07T19:53:22.767569 [COMN   ] [D] [    0] Socket=-1 could not be closed.
