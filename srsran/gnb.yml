@@ -7,17 +7,17 @@ ru_sdr:
   device_args: num_recv_frames=64,num_send_frames=64,fpga=antsdr_u220_ad9361.bin  # Optionally pass arguments to the selected RF driver.
   clock:                                                        # Specify the clock source used by the RF.
   sync:                                                         # Specify the sync source used by the RF.
-  srate: 42.24 #46.08                                                  # RF sample rate might need to be adjusted according to selected bandwidth.
+  srate: 23.04 #42.24 #46.08                                                  # RF sample rate might need to be adjusted according to selected bandwidth.
   otw_format: sc12
   tx_gain: 89.75                                                  # Transmit gain of the RF might need to adjusted to the given situation.
   rx_gain: 40                                                   # Receive gain of the RF might need to adjusted to the given situation.
 
 cell_cfg:
-  dl_arfcn: 640608 #641280                                                # ARFCN of the downlink carrier (center frequency).
+  dl_arfcn: 640608 #641280 #632628                                               # ARFCN of the downlink carrier (center frequency).
   band: 78    
   # dl_arfcn: 663264                                                # ARFCN of the downlink carrier (center frequency).
   # band: 77                                                     # The NR band.
-  channel_bandwidth_MHz: 40                                       # Bandwith in MHz. Number of PRBs will be automatically derived.
+  channel_bandwidth_MHz: 20 #40                                       # Bandwith in MHz. Number of PRBs will be automatically derived.
   common_scs: 30                                                  # Subcarrier spacing in kHz used for data.
   plmn: "PLMN"                                                    # PLMN broadcasted by the gNB.
   tac: 1                                                          # Tracking area code (needs to match the core configuration).
@@ -32,3 +32,11 @@ pcap:
   mac_filename: /mnt/srsran/gnb_mac.pcap                          # Path where the MAC PCAP is stored.
   ngap_enable: false                                              # Set to true to enable NGAP PCAPs.
   ngap_filename: /mnt/srsran/gnb_ngap.pcap                        # Path where the NGAP PCAP is stored.
+  f1ap_enable: false                                              # Set to true to enable F1AP PCAPs.
+  f1ap_filename: /mnt/srsran/gnb_f1ap.pcap                        # Path where the F1AP PCAP is stored.
+  e1ap_enable: false                                              # Set to true to enable E1AP PCAPs.
+  e1ap_filename: /mnt/srsran/gnb_e1ap.pcap                        # Path where the E1AP PCAP is stored.
+  e2ap_enable: false                                              # Set to true to enable E2AP PCAPs.
+  e2ap_filename: /mnt/srsran/gnb_e2ap.pcap                        # Path where the E2AP PCAP is stored.
+  gtpu_enable: false                                              # Set to true to enable GTP-U PCAPs.
+  gtpu_filename: /mnt/srsran/gnb_gtpu.pcap                        # Path where the GTP-U PCAP is stored.

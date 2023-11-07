@@ -67,7 +67,7 @@ RUN apt-get update && apt-get install -y wget && \
 
 # Get srsRAN_Project, compile and install
 RUN git clone https://github.com/srsran/srsRAN_Project.git && \
-    cd srsRAN_Project && \
+    cd srsRAN_Project && git checkout tags/release_23_10 && \
     mkdir build && cd build && \
     cmake ../ -DENABLE_EXPORT=ON -DENABLE_ZEROMQ=ON && make -j`nproc` && make install && \
     ldconfig
