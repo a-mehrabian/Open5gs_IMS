@@ -74,11 +74,13 @@ RUN git clone https://github.com/MicroPhase/antsdr_uhd.git \
     
 
 # Cloning RAN repository (eNB RAN + UE RAN)
-RUN git clone https://gitlab.eurecom.fr/oai/openairinterface5g.git && \
-    cd openairinterface5g/ && git checkout develop
+#RUN git clone https://gitlab.eurecom.fr/oai/openairinterface5g.git && \
+#    cd openairinterface5g/ && git checkout develop
 
 # Set the working directory to openairinterface5g
 WORKDIR openairinterface5g
+
+COPY ./OAI/ .
 
 RUN . ./oaienv && cd cmake_targets && \
     # ./build_oai -I -w USRP --install-optional-packages --eNB --build-lib "telnetsrv enbscope"

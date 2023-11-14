@@ -20,6 +20,7 @@ services:
       - ./log:/openairinterface5g/cmake_targets/log/
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
+      - ./localization_stats.log:/openairinterface5g/cmake_targets/ran_build/build/localization_stats.log
     env_file:
       - .env
     expose:
