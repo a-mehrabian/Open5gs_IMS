@@ -64,14 +64,15 @@ docker build -f gnb_dockerfile --no-cache --force-rm -t docker_oai_gnb . -->
 
 ```
 cd ..
+docker-compose -f 4g-volte-deploy.yaml build
+docker-compose -f 4g-volte-deploy-handover.yaml build
+docker-compose -f sa-deploy.yaml build
+docker-compose -f sa-vonr-deploy.yaml build
 ```
 ```
 set -a
 source .env
 sudo ufw disable
-docker-compose -f 4g-volte-deploy.yaml build
-docker-compose -f 4g-volte-deploy-handover.yaml build
-docker-compose -f sa-deploy.yaml build
 sudo sysctl -w net.ipv4.ip_forward=1
 echo "performance" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 ```
@@ -123,6 +124,8 @@ docker-compose -f srsue_zmq.yaml up -d && docker container attach srsue_zmq
 ```
 # 5G Core Network
 docker-compose -f sa-deploy.yaml up
+#or 
+docker-compose -f sa-vonr-deploy.yaml up
 ```
 - Teminal 2:
 ```

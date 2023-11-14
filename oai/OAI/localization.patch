@@ -1,0 +1,1603 @@
+diff --git a/ci-scripts/conf_files/enb-7.conf b/ci-scripts/conf_files/enb-7.conf
+new file mode 100644
+index 0000000000..3bff546cd1
+--- /dev/null
++++ b/ci-scripts/conf_files/enb-7.conf
+@@ -0,0 +1,336 @@
++Active_eNBs = ( "eNB-Eurecom-LTEBot");
++# Asn1_verbosity, choice in: none, info, annoying
++Asn1_verbosity = "none";
++
++eNBs =
++(
++ {
++    ////////// Identification parameters:
++    eNB_ID    =  0xe02;
++    cell_type =  "CELL_MACRO_ENB";
++    eNB_name  =  "eNB-Eurecom-LTEBot";
++    
++    // Tracking area code, 0x0000 and 0xfffe are reserved values
++    tracking_area_code = 1;
++    plmn_list = ( { mcc = 208; mnc = 96; mnc_length = 2; } );
++    
++    tr_s_preference     = "local_mac"
++
++    // In seconds
++    rrc_inactivity_threshold = 0;
++
++    ////////// Physical parameters:
++  
++    component_carriers = (
++      {
++      node_function             = "3GPP_eNODEB";
++      node_timing               = "synch_to_ext_device";
++      node_synch_ref            = 0;
++      frame_type                = "FDD";
++      tdd_config                = 3;
++      tdd_config_s              = 0;
++      prefix_type               = "NORMAL";
++      eutra_band                = 7;
++      downlink_frequency        = 2680000000L;
++      uplink_frequency_offset   = -120000000;
++      Nid_cell                  = 10;
++      N_RB_DL                   = 25;
++      Nid_cell_mbsfn            = 0;
++      nb_antenna_ports          = 1;
++      nb_antennas_tx            = 1;
++      nb_antennas_rx            = 1;
++      tx_gain                   = 90;
++      rx_gain                   = 115;
++      pbch_repetition           = "FALSE";
++      prach_root                = 0;
++      prach_config_index        = 0;
++      prach_high_speed          = "DISABLE";
++      prach_zero_correlation    = 1;
++      prach_freq_offset         = 2;
++      pucch_delta_shift         = 1;
++      pucch_nRB_CQI             = 0;
++      pucch_nCS_AN              = 0;
++      pucch_n1_AN               = 0;
++      pdsch_referenceSignalPower= -29;
++      pdsch_p_b                 = 0;
++      pusch_n_SB                = 1;
++      pusch_enable64QAM         = "DISABLE";
++      pusch_hoppingMode         = "interSubFrame";
++      pusch_hoppingOffset       = 0;
++      pusch_groupHoppingEnabled = "ENABLE";
++      pusch_groupAssignment     = 0;
++      pusch_sequenceHoppingEnabled = "DISABLE";
++      pusch_nDMRS1              = 1;
++      phich_duration            = "NORMAL";
++      phich_resource            = "ONESIXTH";
++      srs_enable                = "DISABLE";
++/*
++      srs_BandwidthConfig       =;
++      srs_SubframeConfig        =;
++      srs_ackNackST             =;
++      srs_MaxUpPts              =;
++*/
++
++      pusch_p0_Nominal          = -96;
++      pusch_alpha               = "AL1";
++      pucch_p0_Nominal          = -96;
++      msg3_delta_Preamble       = 6;
++      pucch_deltaF_Format1      = "deltaF2";
++      pucch_deltaF_Format1b     = "deltaF3";
++      pucch_deltaF_Format2      = "deltaF0";
++      pucch_deltaF_Format2a     = "deltaF0";
++      pucch_deltaF_Format2b     = "deltaF0";
++ 
++      rach_numberOfRA_Preambles                = 64;
++      rach_preamblesGroupAConfig               = "DISABLE";
++/*
++      rach_sizeOfRA_PreamblesGroupA            = ;
++      rach_messageSizeGroupA                   = ;
++      rach_messagePowerOffsetGroupB            = ;
++*/
++      rach_powerRampingStep                    = 4;
++      rach_preambleInitialReceivedTargetPower  = -108;
++      rach_preambleTransMax                    = 10;
++      rach_raResponseWindowSize                = 10;
++      rach_macContentionResolutionTimer        = 48;
++      rach_maxHARQ_Msg3Tx                      = 4;
++
++      pcch_default_PagingCycle                 = 128;
++      pcch_nB                                  = "oneT";
++      bcch_modificationPeriodCoeff             = 2;
++      ue_TimersAndConstants_t300               = 1000;
++      ue_TimersAndConstants_t301               = 1000;
++      ue_TimersAndConstants_t310               = 1000;
++      ue_TimersAndConstants_t311               = 10000;
++      ue_TimersAndConstants_n310               = 20;
++      ue_TimersAndConstants_n311               = 1;
++      ue_TransmissionMode                      = 1;
++
++      //Parameters for SIB18
++      rxPool_sc_CP_Len                                       = "normal"; 
++      rxPool_sc_Period                                       = "sf40";  
++      rxPool_data_CP_Len                                     = "normal";  
++      rxPool_ResourceConfig_prb_Num                          = 20;
++      rxPool_ResourceConfig_prb_Start                        = 5;
++      rxPool_ResourceConfig_prb_End                          = 44;
++      rxPool_ResourceConfig_offsetIndicator_present          = "prSmall";
++      rxPool_ResourceConfig_offsetIndicator_choice           = 0;      
++      rxPool_ResourceConfig_subframeBitmap_present           = "prBs40";
++      rxPool_ResourceConfig_subframeBitmap_choice_bs_buf     = "00000000000000000000";
++      rxPool_ResourceConfig_subframeBitmap_choice_bs_size    = 5;
++      rxPool_ResourceConfig_subframeBitmap_choice_bs_bits_unused = 0;
++/*
++      rxPool_dataHoppingConfig_hoppingParameter              = 0;
++      rxPool_dataHoppingConfig_numSubbands                   = "ns1";
++      rxPool_dataHoppingConfig_rbOffset                      = 0;
++      rxPool_commTxResourceUC-ReqAllowed                     = "TRUE";
++*/    
++      // Parameters for SIB19
++      discRxPool_cp_Len                                               = "normal"
++      discRxPool_discPeriod                                           = "rf32"
++      discRxPool_numRetx                                              = 1;
++      discRxPool_numRepetition                                        = 2;
++      discRxPool_ResourceConfig_prb_Num                               = 5;
++      discRxPool_ResourceConfig_prb_Start                             = 3;
++      discRxPool_ResourceConfig_prb_End                               = 21;
++      discRxPool_ResourceConfig_offsetIndicator_present               = "prSmall";
++      discRxPool_ResourceConfig_offsetIndicator_choice                = 0;
++      discRxPool_ResourceConfig_subframeBitmap_present                = "prBs40";
++      discRxPool_ResourceConfig_subframeBitmap_choice_bs_buf          = "f0ffffffff";
++      discRxPool_ResourceConfig_subframeBitmap_choice_bs_size         = 5;
++      discRxPool_ResourceConfig_subframeBitmap_choice_bs_bits_unused  = 0;
++
++      //SSB central frequency of NR secondary cell group (for ENDC NSA)
++      nr_scg_ssb_freq = 641272;
++    }
++  );
++
++    srb1_parameters :
++    {
++        # timer_poll_retransmit = (ms) [5, 10, 15, 20,... 250, 300, 350, ... 500]
++        timer_poll_retransmit    = 80;
++
++        # timer_reordering = (ms) [0,5, ... 100, 110, 120, ... ,200]
++        timer_reordering         = 35;
++
++        # timer_reordering = (ms) [0,5, ... 250, 300, 350, ... ,500]
++        timer_status_prohibit    = 0;
++
++        # poll_pdu = [4, 8, 16, 32 , 64, 128, 256, infinity(>10000)]
++        poll_pdu                 =  4;
++
++        # poll_byte = (kB) [25,50,75,100,125,250,375,500,750,1000,1250,1500,2000,3000,infinity(>10000)]
++        poll_byte                =  99999;
++
++        # max_retx_threshold = [1, 2, 3, 4 , 6, 8, 16, 32]
++        max_retx_threshold       =  4;
++    }
++
++    # ------- SCTP definitions
++    SCTP :
++    {
++        # Number of streams to use in input/output
++        SCTP_INSTREAMS  = 2;
++        SCTP_OUTSTREAMS = 2;
++    };
++
++    enable_measurement_reports = "yes";
++
++    ////////// MME parameters:
++    mme_ip_address      = ( { ipv4       = "192.168.61.3";
++                              ipv6       = "192:168:30::17";
++                              port       = 36412 ;
++                              active     = "yes";
++                              preference = "ipv4";
++                            }
++                          );
++
++    ///X2
++    enable_x2 = "yes";
++    t_reloc_prep      = 1000;      /* unit: millisecond */
++    tx2_reloc_overall = 2000;      /* unit: millisecond */
++    t_dc_prep         = 1000;      /* unit: millisecond */
++    t_dc_overall      = 2000;      /* unit: millisecond */
++    target_enb_x2_ip_address      = (
++                                     { ipv4       = "192.168.61.20";
++                                       ipv6       = "192:168:30::17";
++                                       preference = "ipv4";
++                                     }
++                                    ); 
++
++    NETWORK_INTERFACES : 
++    {
++        ENB_INTERFACE_NAME_FOR_S1_MME            = "eth0";
++        ENB_IPV4_ADDRESS_FOR_S1_MME              = "192.168.61.21";
++        ENB_INTERFACE_NAME_FOR_S1U               = "eth0";
++        ENB_IPV4_ADDRESS_FOR_S1U                 = "192.168.61.21";
++        ENB_PORT_FOR_S1U                         = 2152; # Spec 2152
++        ENB_IPV4_ADDRESS_FOR_X2C                 = "192.168.61.21";
++        ENB_PORT_FOR_X2C                         = 36422; # Spec 36422
++    };
++  }
++);
++
++MACRLCs =
++(
++  {
++    num_cc          = 1;
++    tr_s_preference = "local_L1";
++    tr_n_preference = "local_RRC";
++    phy_test_mode   = 0;
++    puSch10xSnr     =  160;
++    puCch10xSnr     =  160;
++  }
++);
++
++L1s =
++(
++  {
++    num_cc = 1;
++    tr_n_preference = "local_mac";
++  }
++);
++
++RUs =
++(
++  {
++    local_rf                      = "yes"
++    nb_tx                         = 1
++    nb_rx                         = 1
++    att_tx                        = 3
++    att_rx                        = 0;
++    bands                         = [7];
++    max_pdschReferenceSignalPower = -27;
++    max_rxgain                    = 115;
++    eNB_instances                 = [0];
++#    clock_src                     = "external";
++  }
++);
++
++#rfsimulator: {
++#    serveraddr = "server";
++#};
++
++THREAD_STRUCT =
++(
++  {
++    #three config for level of parallelism "PARALLEL_SINGLE_THREAD", "PARALLEL_RU_L1_SPLIT", or "PARALLEL_RU_L1_TRX_SPLIT"
++    parallel_config    = "PARALLEL_SINGLE_THREAD";
++    #two option for worker "WORKER_DISABLE" or "WORKER_ENABLE"
++    worker_config      = "WORKER_ENABLE";
++  }
++);
++
++log_config : 
++  {
++     global_log_level                      ="info"; 
++     hw_log_level                          ="info"; 
++     phy_log_level                         ="info"; 
++     mac_log_level                         ="info"; 
++     rlc_log_level                         ="info"; 
++     pdcp_log_level                        ="info"; 
++     rrc_log_level                         ="info"; 
++};
++
++rfsimulator: {
++    serveraddr = "server";
++    #serverport = "4043";
++    options = "chanmod"; #("saviq or ali"); or/and "chanmod"
++    modelname = "AWGN";
++    #IQfile = "rfsimulator.iqs"
++};
++
++
++channelmod = { 
++  max_chan=10;
++  modellist="modellist_rfsimu_1";
++  modellist_rfsimu_1 = (
++    {
++        model_name                       = "rfsimu_channel_enB0"
++        type                             = "AWGN";        
++        ploss_dB                         = 0;
++        noise_power_dB                   = -20; 
++        forgetfact                       = 0;  
++        offset                           = 0;      
++        ds_tdl                           = 0;      
++    },
++    {
++        model_name                       = "rfsimu_channel_ue0"
++        type                             = "AWGN";        
++        ploss_dB                         = 0;
++        noise_power_dB                   = -20; 
++        forgetfact                       = 0;  
++        offset                           = 0;      
++        ds_tdl                           = 0;      
++    }    
++  );
++  modellist_rfsimu_2 = (
++    {
++        model_name                       = "rfsimu_channel_ue0"
++        type                             = "AWGN";        
++        ploss_dB                         = 0;
++        noise_power_dB                   = 0; 
++        forgetfact                       = 0;  
++        offset                           = 0;      
++        ds_tdl                           = 0;      
++    },
++    {
++        model_name                       = "rfsimu_channel_ue1"
++        type                             = "AWGN";        
++        ploss_dB                         = 0;
++        noise_power_dB                   = 0; 
++        forgetfact                       = 0;  
++        offset                           = 0;      
++        ds_tdl                           = 0;      
++    },
++    {
++        model_name                       = "rfsimu_channel_ue2"
++        type                             = "AWGN";        
++        ploss_dB                         = 0;
++        noise_power_dB                   = 0; 
++        forgetfact                       = 0;  
++        offset                           = 0;      
++        ds_tdl                           = 0;      
++    }    
++  );  
++};
+\ No newline at end of file
+diff --git a/ci-scripts/conf_files/enb.band7.25prb.rfsim.conf b/ci-scripts/conf_files/enb.band7.25prb.rfsim.conf
+index c5d8383860..7ba0bb2723 100644
+--- a/ci-scripts/conf_files/enb.band7.25prb.rfsim.conf
++++ b/ci-scripts/conf_files/enb.band7.25prb.rfsim.conf
+@@ -174,7 +174,7 @@ eNBs =
+         SCTP_OUTSTREAMS = 2;
+     };
+ 
+-    enable_measurement_reports = "no";
++    enable_measurement_reports = "yes";
+ 
+     ////////// MME parameters:
+     mme_ip_address      = ( { ipv4       = "192.168.61.3";
+@@ -186,7 +186,7 @@ eNBs =
+                           );
+ 
+     ///X2
+-    enable_x2         = "no";
++    enable_x2         = "yes";
+     t_reloc_prep      = 1000;      /* unit: millisecond */
+     tx2_reloc_overall = 2000;      /* unit: millisecond */
+     t_dc_prep         = 1000;      /* unit: millisecond */
+@@ -241,9 +241,9 @@ RUs =
+   }
+ );
+ 
+-rfsimulator: {
+-    serveraddr = "server";
+-};
++#rfsimulator: {
++#    serveraddr = "server";
++#};
+ 
+ THREAD_STRUCT =
+ (
+@@ -265,3 +265,66 @@ log_config :
+      pdcp_log_level                        ="info"; 
+      rrc_log_level                         ="info"; 
+ };
++
++rfsimulator: {
++    serveraddr = "server";
++    #serverport = "4043";
++    options = "chanmod"; #("saviq or ali"); or/and "chanmod"
++    modelname = "AWGN";
++    #IQfile = "rfsimulator.iqs"
++};
++
++
++channelmod = { 
++  max_chan=10;
++  modellist="modellist_rfsimu_1";
++  modellist_rfsimu_1 = (
++    {
++        model_name                       = "rfsimu_channel_enB0"
++        type                             = "AWGN";        
++        ploss_dB                         = 0;
++        noise_power_dB                   = -20; 
++        forgetfact                       = 0;  
++        offset                           = 0;      
++        ds_tdl                           = 0;      
++    },
++    {
++        model_name                       = "rfsimu_channel_ue0"
++        type                             = "AWGN";        
++        ploss_dB                         = 0;
++        noise_power_dB                   = -20; 
++        forgetfact                       = 0;  
++        offset                           = 0;      
++        ds_tdl                           = 0;      
++    }    
++  );
++  modellist_rfsimu_2 = (
++    {
++        model_name                       = "rfsimu_channel_ue0"
++        type                             = "AWGN";        
++        ploss_dB                         = 0;
++        noise_power_dB                   = 0; 
++        forgetfact                       = 0;  
++        offset                           = 0;      
++        ds_tdl                           = 0;      
++    },
++    {
++        model_name                       = "rfsimu_channel_ue1"
++        type                             = "AWGN";        
++        ploss_dB                         = 0;
++        noise_power_dB                   = 0; 
++        forgetfact                       = 0;  
++        offset                           = 0;      
++        ds_tdl                           = 0;      
++    },
++    {
++        model_name                       = "rfsimu_channel_ue2"
++        type                             = "AWGN";        
++        ploss_dB                         = 0;
++        noise_power_dB                   = 0; 
++        forgetfact                       = 0;  
++        offset                           = 0;      
++        ds_tdl                           = 0;      
++    }    
++  );  
++};
+diff --git a/ci-scripts/conf_files/gnb.conf b/ci-scripts/conf_files/gnb.conf
+new file mode 100644
+index 0000000000..3c97c6815e
+--- /dev/null
++++ b/ci-scripts/conf_files/gnb.conf
+@@ -0,0 +1,265 @@
++Active_gNBs = ( "gNB-Eurecom-5GNRBox");
++# Asn1_verbosity, choice in: none, info, annoying
++Asn1_verbosity = "none";
++
++gNBs =
++(
++ {
++    ////////// Identification parameters:
++    gNB_ID    =  0xe02;
++
++    cell_type =  "CELL_MACRO_GNB";
++
++    gNB_name  =  "gNB-Eurecom-5GNRBox";
++
++    // Tracking area code, 0x0000 and 0xfffe are reserved values
++    tracking_area_code  =  1;
++
++    plmn_list = ({mcc = 208; mnc = 96; mnc_length = 2;});	 
++
++    tr_s_preference     = "local_mac"
++
++    ////////// Physical parameters:
++	
++    servingCellConfigCommon = (
++    {
++ #spCellConfigCommon
++
++      physCellId                                                    = 0;
++
++#  downlinkConfigCommon
++    #frequencyInfoDL
++      # this is 3600 MHz + 84 PRBs@30kHz SCS (same as initial BWP)
++      absoluteFrequencySSB                                          = 642016;
++      dl_frequencyBand                                                 = 78;
++      # this is 3600 MHz
++      dl_absoluteFrequencyPointA                                       = 640000;
++      #scs-SpecificCarrierList
++        dl_offstToCarrier                                              = 0;
++# subcarrierSpacing
++# 0=kHz15, 1=kHz30, 2=kHz60, 3=kHz120  
++        dl_subcarrierSpacing                                           = 1;
++        dl_carrierBandwidth                                            = 217;
++     #initialDownlinkBWP
++      #genericParameters
++        # this is RBstart=84,L=50 (275*(L-1))+RBstart
++        initialDLBWPlocationAndBandwidth                                        = 13559;
++# subcarrierSpacing
++# 0=kHz15, 1=kHz30, 2=kHz60, 3=kHz120  
++        initialDLBWPsubcarrierSpacing                                           = 1;
++      #pdcch-ConfigCommon
++        initialDLBWPcontrolResourceSetZero                                      = 12;
++        initialDLBWPsearchSpaceZero                                             = 0;
++
++  #uplinkConfigCommon 
++     #frequencyInfoUL
++      ul_frequencyBand                                                 = 78;
++      #scs-SpecificCarrierList
++      ul_offstToCarrier                                              = 0;
++# subcarrierSpacing
++# 0=kHz15, 1=kHz30, 2=kHz60, 3=kHz120  
++      ul_subcarrierSpacing                                           = 1;
++      ul_carrierBandwidth                                            = 217;
++      pMax                                                          = 20;
++     #initialUplinkBWP
++      #genericParameters
++        initialULBWPlocationAndBandwidth                                        = 13559;
++# subcarrierSpacing
++# 0=kHz15, 1=kHz30, 2=kHz60, 3=kHz120  
++        initialULBWPsubcarrierSpacing                                           = 1;
++      #rach-ConfigCommon
++        #rach-ConfigGeneric
++          prach_ConfigurationIndex                                  = 98;
++#prach_msg1_FDM
++#0 = one, 1=two, 2=four, 3=eight
++          prach_msg1_FDM                                            = 0;
++          prach_msg1_FrequencyStart                                 = 0;
++          zeroCorrelationZoneConfig                                 = 13;
++          preambleReceivedTargetPower                               = -118;
++#preamblTransMax (0...10) = (3,4,5,6,7,8,10,20,50,100,200)
++          preambleTransMax                                          = 6;
++#powerRampingStep
++# 0=dB0,1=dB2,2=dB4,3=dB6
++        powerRampingStep                                            = 1;
++#ra_ReponseWindow
++#1,2,4,8,10,20,40,80
++        ra_ResponseWindow                                           = 4;
++#ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR
++#0=oneeighth,1=onefourth,2=half,3=one,4=two,5=four,6=eight,7=sixteen
++        ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR                = 3;
++#oneHalf (0..15) 4,8,12,16,...60,64
++        ssb_perRACH_OccasionAndCB_PreamblesPerSSB                   = 15;
++#ra_ContentionResolutionTimer
++#(0..7) 8,16,24,32,40,48,56,64
++        ra_ContentionResolutionTimer                                = 7;
++        rsrp_ThresholdSSB                                           = 19;
++#prach-RootSequenceIndex_PR
++#0 = 839, 1 = 139
++        prach_RootSequenceIndex_PR                                  = 1;
++        prach_RootSequenceIndex                                     = 1;
++        # SCS for msg1, can only be 15 for 30 kHz < 6 GHz, takes precendence over the one derived from prach-ConfigIndex
++        #  
++        msg1_SubcarrierSpacing                                      = 1,
++
++# restrictedSetConfig
++# 0=unrestricted, 1=restricted type A, 2=restricted type B
++        restrictedSetConfig                                         = 0,
++
++        msg3_DeltaPreamble                                          = 1;
++        p0_NominalWithGrant                                         =-90;
++
++# pucch-ConfigCommon setup :
++# pucchGroupHopping
++# 0 = neither, 1= group hopping, 2=sequence hopping
++        pucchGroupHopping                                           = 0;
++        hoppingId                                                   = 40;
++        p0_nominal                                                  = -90;
++# ssb_PositionsInBurs_BitmapPR
++# 1=short, 2=medium, 3=long
++      ssb_PositionsInBurst_PR                                       = 2;
++      ssb_PositionsInBurst_Bitmap                                   = 15;
++
++# ssb_periodicityServingCell
++# 0 = ms5, 1=ms10, 2=ms20, 3=ms40, 4=ms80, 5=ms160, 6=spare2, 7=spare1 
++      ssb_periodicityServingCell                                    = 2;
++
++# dmrs_TypeA_position
++# 0 = pos2, 1 = pos3
++      dmrs_TypeA_Position                                           = 0;
++
++# subcarrierSpacing
++# 0=kHz15, 1=kHz30, 2=kHz60, 3=kHz120  
++      subcarrierSpacing                                             = 1;
++
++
++  #tdd-UL-DL-ConfigurationCommon
++# subcarrierSpacing
++# 0=kHz15, 1=kHz30, 2=kHz60, 3=kHz120  
++      referenceSubcarrierSpacing                                    = 1;
++      # pattern1 
++      # dl_UL_TransmissionPeriodicity
++      # 0=ms0p5, 1=ms0p625, 2=ms1, 3=ms1p25, 4=ms2, 5=ms2p5, 6=ms5, 7=ms10
++      dl_UL_TransmissionPeriodicity                                 = 6;
++      nrofDownlinkSlots                                             = 2;
++      nrofDownlinkSymbols                                           = 1;
++      nrofUplinkSlots                                               = 7;
++      nrofUplinkSymbols                                             = 7;
++
++  ssPBCH_BlockPower                                             = 10;
++  }
++
++  );
++
++
++    # ------- SCTP definitions
++    SCTP :
++    {
++        # Number of streams to use in input/output
++        SCTP_INSTREAMS  = 2;
++        SCTP_OUTSTREAMS = 2;
++    };
++
++
++    ////////// MME parameters:
++    mme_ip_address      = ( { ipv4       = "192.168.61.3";
++                              ipv6       = "192:168:30::17";
++                              active     = "yes";
++                              preference = "ipv4";
++                            }
++                          );
++                          
++    ///X2
++    enable_x2 = "yes";
++    t_reloc_prep      = 1000;      /* unit: millisecond */
++    tx2_reloc_overall = 2000;      /* unit: millisecond */
++    t_dc_prep         = 1000;      /* unit: millisecond */
++    t_dc_overall      = 2000;      /* unit: millisecond */
++    target_enb_x2_ip_address      = (
++                                     { ipv4       = "192.168.61.20";
++                                       ipv6       = "192:168:30::17";
++                                       preference = "ipv4";
++                                     }
++                                    );                       
++
++    NETWORK_INTERFACES :
++    {
++
++        GNB_INTERFACE_NAME_FOR_S1_MME            = "eth0";
++        GNB_IPV4_ADDRESS_FOR_S1_MME              = "192.168.61.21";
++        GNB_INTERFACE_NAME_FOR_S1U               = "eth0";
++        GNB_IPV4_ADDRESS_FOR_S1U                 = "192.168.61.21";
++        GNB_PORT_FOR_S1U                         = 2152; # Spec 2152
++        
++        GNB_IPV4_ADDRESS_FOR_X2C                 = "192.168.61.21";
++        GNB_PORT_FOR_X2C                         = 36422; # Spec 36422
++    };
++  }
++);
++
++MACRLCs = (
++	{
++	num_cc = 1;
++	tr_s_preference = "local_L1";
++	tr_n_preference = "local_RRC";
++        }  
++);
++
++L1s = (
++    	{
++	num_cc = 1;
++	tr_n_preference = "local_mac";
++        }  
++);
++
++RUs = (
++    {		  
++       local_rf       = "yes"
++         nb_tx          = 1
++         nb_rx          = 1
++         att_tx         = 0
++         att_rx         = 0;
++         bands          = [7];
++         max_pdschReferenceSignalPower = -27;
++         max_rxgain                    = 114;
++         eNB_instances  = [0];
++	 sdr_addrs = "addr=192.168.20.2,mgmt_addr=192.168.20.2";
++         clock_src = "internal";
++    }
++);  
++
++THREAD_STRUCT = (
++  {
++    #three config for level of parallelism "PARALLEL_SINGLE_THREAD", "PARALLEL_RU_L1_SPLIT", or "PARALLEL_RU_L1_TRX_SPLIT"
++    parallel_config    = "PARALLEL_RU_L1_TRX_SPLIT";
++    #two option for worker "WORKER_DISABLE" or "WORKER_ENABLE"
++    worker_config      = "WORKER_ENABLE";
++  }
++);
++
++security = {
++  # preferred ciphering algorithms
++  # the first one of the list that an UE supports in chosen
++  # valid values: nea0, nea1, nea2, nea3
++  ciphering_algorithms = ( "nea0" );
++
++  # preferred integrity algorithms
++  # the first one of the list that an UE supports in chosen
++  # valid values: nia0, nia1, nia2, nia3
++  integrity_algorithms = ( "nia2", "nia0" );
++
++  # setting 'drb_ciphering' to "no" disables ciphering for DRBs, no matter
++  # what 'ciphering_algorithms' configures; same thing for 'drb_integrity'
++  drb_ciphering = "yes";
++  drb_integrity = "no";
++};
++
++     log_config :
++     {
++       global_log_level                      ="info";
++       hw_log_level                          ="info";
++       phy_log_level                         ="info";
++       mac_log_level                         ="info";
++       rlc_log_level                         ="info";
++       pdcp_log_level                        ="info";
++       rrc_log_level                         ="info";
++    };
+\ No newline at end of file
+diff --git a/ci-scripts/conf_files/lteue.usim-ci1.conf b/ci-scripts/conf_files/lteue.usim-ci1.conf
+new file mode 100644
+index 0000000000..cc159de360
+--- /dev/null
++++ b/ci-scripts/conf_files/lteue.usim-ci1.conf
+@@ -0,0 +1,153 @@
++# List of known PLMNS
++PLMN: {
++    PLMN0: {
++           FULLNAME="OpenAirInterface";
++           SHORTNAME="OAICN";
++           MNC="96";
++           MCC="208";
++    };
++};
++
++UE0:
++{
++    USER: {
++        IMEI="356113022094149";
++        MANUFACTURER="OAI";
++        MODEL="LTE SoftModem";
++        PIN="0000";
++    };
++
++    SIM: {
++        MSIN="0100000002";
++        USIM_API_K="fec86ba6eb707ed08905757b1bb44b8f";
++        OPC="c42449363bbad02b66d16bc975d77cc1";
++        MSISDN="001011234561010";
++    };
++
++    # Home PLMN Selector with Access Technology
++    HPLMN= "20896";
++
++    # User controlled PLMN Selector with Access Technology
++    UCPLMN_LIST = ();
++
++    # Operator PLMN List
++    OPLMN_LIST = ("20896");
++
++    # Operator controlled PLMN Selector with Access Technology
++    OCPLMN_LIST = ();
++
++    # Forbidden plmns
++    FPLMN_LIST = ();
++
++    # Equivalent home plmns
++    EHPLMN_LIST = ();
++
++};
++
++UE1:
++{
++    USER: {
++        IMEI="356113022094149";
++        MANUFACTURER="OAI";
++        MODEL="LTE SoftModem";
++        PIN="0000";
++    };
++
++    SIM: {
++        MSIN="0100000002";
++        USIM_API_K="fec86ba6eb707ed08905757b1bb44b8f";
++        OPC="c42449363bbad02b66d16bc975d77cc1";
++        MSISDN="001011234561010";
++    };
++
++    # Home PLMN Selector with Access Technology
++    HPLMN= "20896";
++
++    # User controlled PLMN Selector with Access Technology
++    UCPLMN_LIST = ();
++
++    # Operator PLMN List
++    OPLMN_LIST = ("20896");
++
++    # Operator controlled PLMN Selector with Access Technology
++    OCPLMN_LIST = ();
++
++    # Forbidden plmns
++    FPLMN_LIST = ();
++
++    # Equivalent home plmns
++    EHPLMN_LIST = ();
++
++};
++
++UE2:
++{
++    USER: {
++        IMEI="356113022094149";
++        MANUFACTURER="OAI";
++        MODEL="LTE SoftModem";
++        PIN="0000";
++    };
++
++    SIM: {
++        MSIN="0100000002";
++        USIM_API_K="fec86ba6eb707ed08905757b1bb44b8f";
++        OPC="c42449363bbad02b66d16bc975d77cc1";
++        MSISDN="001011234561010";
++    };
++
++    # Home PLMN Selector with Access Technology
++    HPLMN= "20896";
++
++    # User controlled PLMN Selector with Access Technology
++    UCPLMN_LIST = ();
++
++    # Operator PLMN List
++    OPLMN_LIST = ("20896");
++
++    # Operator controlled PLMN Selector with Access Technology
++    OCPLMN_LIST = ();
++
++    # Forbidden plmns
++    FPLMN_LIST = ();
++
++    # Equivalent home plmns
++    EHPLMN_LIST = ();
++
++};
++
++UE3:
++{
++    USER: {
++        IMEI="356113022094149";
++        MANUFACTURER="OAI";
++        MODEL="LTE SoftModem";
++        PIN="0000";
++    };
++
++    SIM: {
++        MSIN="0100000002";
++        USIM_API_K="fec86ba6eb707ed08905757b1bb44b8f";
++        OPC="c42449363bbad02b66d16bc975d77cc1";
++        MSISDN="001011234561010";
++    };
++
++    # Home PLMN Selector with Access Technology
++    HPLMN= "20896";
++
++    # User controlled PLMN Selector with Access Technology
++    UCPLMN_LIST = ();
++
++    # Operator PLMN List
++    OPLMN_LIST = ("20896");
++
++    # Operator controlled PLMN Selector with Access Technology
++    OCPLMN_LIST = ();
++
++    # Forbidden plmns
++    FPLMN_LIST = ();
++
++    # Equivalent home plmns
++    EHPLMN_LIST = ();
++
++};
+diff --git a/ci-scripts/yaml_files/4g_rfsimulator_fdd_05MHz/README.md b/ci-scripts/yaml_files/4g_rfsimulator_fdd_05MHz/README.md
+index 3ac4962321..4dcae55889 100644
+--- a/ci-scripts/yaml_files/4g_rfsimulator_fdd_05MHz/README.md
++++ b/ci-scripts/yaml_files/4g_rfsimulator_fdd_05MHz/README.md
+@@ -115,7 +115,7 @@ $ sudo tshark -i rfsim4g-public -f 'port 3868 or port 2123 or port 36412 or port
+ ## 2.2. Deploy OAI CN4G containers ##
+ 
+ ```bash
+-$ docker-compose up -d magma_mme oai_spgwu trf_gen
++$ docker-compose up -d magma_mme oai_spgwu
+ rfsim4g-cassandra is up-to-date
+ Creating rfsim4g-trf-gen ... done
+ Creating rfsim4g-redis   ... done
+diff --git a/ci-scripts/yaml_files/4g_rfsimulator_fdd_05MHz/docker-compose.yml b/ci-scripts/yaml_files/4g_rfsimulator_fdd_05MHz/docker-compose.yml
+index 7acbc62bd7..9de39de9e9 100644
+--- a/ci-scripts/yaml_files/4g_rfsimulator_fdd_05MHz/docker-compose.yml
++++ b/ci-scripts/yaml_files/4g_rfsimulator_fdd_05MHz/docker-compose.yml
+@@ -165,40 +165,62 @@ services:
+             timeout: 5s
+             retries: 5
+ 
+-    trf_gen:
+-        image: oaisoftwarealliance/trf-gen-cn5g:focal
++    oai_enb:
++        image: oai-enb:latest
+         privileged: true
+-        container_name: rfsim4g-trf-gen
++        container_name: rfsim4g-oai-enb
+         networks:
+             public_net:
+-                ipv4_address: 192.168.61.11
+-        entrypoint: /bin/bash -c "ip route add 12.0.0.0/24 via 192.168.61.5 dev eth0; sleep infinity"
++                ipv4_address: 192.168.61.20
++        environment:
++            TZ: Europe/Paris
++            USE_ADDITIONAL_OPTIONS: --rfsim --log_config.global_log_options level,nocolor,time
++        volumes:
++            - ../../conf_files/enb.band7.25prb.rfsim.conf:/opt/oai-enb/etc/enb.conf
++            - ./localization/localization_stats.log:/opt/oai-enb/localization_stats.log
+         healthcheck:
+-            test: /bin/bash -c "ping -c 2 192.168.61.5"
++            test: /bin/bash -c "pgrep lte-softmodem"
+             interval: 10s
+             timeout: 5s
+             retries: 5
+-
+-    oai_enb0:
+-        image: oaisoftwarealliance/oai-enb:develop
++    
++    oai_enb1:
++        image: oai-enb:latest
+         privileged: true
+-        container_name: rfsim4g-oai-enb
++        container_name: rfsim4g-oai-enb1
+         networks:
+             public_net:
+-                ipv4_address: 192.168.61.20
++                ipv4_address: 192.168.61.21
+         environment:
+             TZ: Europe/Paris
+             USE_ADDITIONAL_OPTIONS: --rfsim --log_config.global_log_options level,nocolor,time
+         volumes:
+-            - ../../conf_files/enb.band7.25prb.rfsim.conf:/opt/oai-enb/etc/enb.conf
++            - ../../conf_files/enb-7.conf:/opt/oai-enb/etc/enb.conf
+         healthcheck:
+             test: /bin/bash -c "pgrep lte-softmodem"
+             interval: 10s
+             timeout: 5s
+             retries: 5
+ 
++    #oai-gnb:
++    #    image: oai-gnb:latest
++    #    privileged: true
++    #    container_name: rfsim4g-oai-gnb
++    #    environment:
++    #        USE_ADDITIONAL_OPTIONS: --nsa --rfsim --log_config.global_log_options level,nocolor,time
++    #    networks:
++    #        public_net:
++    #            ipv4_address: 192.168.61.21
++    #    volumes:
++    #        - ../../conf_files/gnb.conf:/opt/oai-gnb/etc/gnb.conf
++    #    healthcheck:
++    #        test: /bin/bash -c "pgrep nr-softmodem"
++    #        interval: 10s
++    #        timeout: 5s
++    #        retries: 5
++
+     oai_ue0:
+-        image: oaisoftwarealliance/oai-lte-ue:develop
++        image: oai-lte-ue:latest
+         privileged: true
+         container_name: rfsim4g-oai-lte-ue0
+         networks:
+@@ -217,6 +239,26 @@ services:
+             timeout: 5s
+             retries: 5
+ 
++    oai_ue1:
++        image: oai-lte-ue:latest
++        privileged: true
++        container_name: rfsim4g-oai-lte-ue1
++        networks:
++            public_net:
++                ipv4_address: 192.168.61.31
++        expose:
++            - "10000"
++        environment:
++            TZ: Europe/Paris
++            USE_ADDITIONAL_OPTIONS: --rfsim -C 2680000000 -r 25 --ue-rxgain 140 --ue-txgain 120 --rfsimulator.serveraddr 192.168.61.20 --log_config.global_log_options level,nocolor,time
++        volumes:
++            - ../../conf_files/lteue.usim-ci1.conf:/opt/oai-lte-ue/etc/ue_usim.conf
++        healthcheck:
++            test: /bin/bash -c "pgrep lte-uesoftmodem"
++            interval: 10s
++            timeout: 5s
++            retries: 5
++
+ networks:
+     private_net:
+         name: rfsim4g-oai-private-net
+diff --git a/common/localization.h b/common/localization.h
+new file mode 100644
+index 0000000000..df85c063cf
+--- /dev/null
++++ b/common/localization.h
+@@ -0,0 +1,158 @@
++#define MAX_LOCALIZATION_UE 9
++#define NFAPI_CC_MAX_L 1
++#define MAX_NUM_RU_PER_eNB_L 1
++#define NUMBER_OF_SRS_MAX_L 16
++#define NUMBER_OF_ULSCH_MAX_L 8
++#define MAXIMUM_NEIGHBOR_CELL_L 2
++
++
++/**
++   * "CQI" stands for "Channel Quality Indicator." It's a metric used by the User Equipment (UE) to report back to the base station (eNodeB or gNodeB) a
++   * bout the perceived quality of the downlink channel. 
++   * The base station uses this feedback to adapt the modulation and coding scheme (MCS) for the downlink data transmission to the UE, 
++   * ensuring efficient use of the available spectrum and maintaining a target block error rate.
++      The CQI value is an integer in the range of 0 to 15, with higher values indicating better channel quality. 
++      The mapping of CQI values to modulation and coding schemes is defined in the LTE standards.
++  */
++typedef struct {
++  int pucch2_snr[NFAPI_CC_MAX_L];
++  int pusch_snr[NFAPI_CC_MAX_L];
++  int pusch_snr_avg[NFAPI_CC_MAX_L];
++  
++  int ul_cqi;
++  int dl_cqi;
++
++  /** the timing_advance_r9 (as well as the standard timing_advance) can be used to estimate the distance between the UE (User Equipment) and the eNodeB
++  Each unit of the TA value corresponds to a specific distance. In LTE, one TA unit is equivalent to 
++16xTs seconds, where Tsis the sampling time, which is approximately 32 * 10^-8 seconds
++  **/
++  int timing_advance;
++  int timing_advance_r9;
++} localization_csi_t;
++
++typedef struct {
++  
++  int ul_cqi;
++  int dl_cqi;
++
++  int timing_advance;
++
++  int pusch_snr[NFAPI_CC_MAX_L];
++  int pusch_snr_avg[NFAPI_CC_MAX_L];
++
++  // It essentially indicates how much more power the UE can use for transmission if required
++  int ue_power_headroom;
++  // ue trx powert
++  int estimated_ue_power;
++
++} localization_ul_sdu_t;
++
++typedef struct {
++  /// preassigned mcs after rate adaptation
++  int ulsch_mcs1[NFAPI_CC_MAX_L];
++  /// adjusted mcs
++  int ulsch_mcs2[NFAPI_CC_MAX_L];
++  /// Uplink measured RSSI
++  int UL_rssi[NFAPI_CC_MAX_L];
++
++  /// PUCCH1a/b power (dBm)
++  int Po_PUCCH_dBm[NFAPI_CC_MAX_L];
++  /// Indicator that Po_PUCCH has been updated by PHY
++  int Po_PUCCH_update[NFAPI_CC_MAX_L];
++
++  /// snr
++  int snr[NFAPI_CC_MAX_L];
++  /// target snr
++  int target_snr[NFAPI_CC_MAX_L];
++
++} localization_ueStat_t;
++
++typedef struct { 
++  
++  int timing_advance;
++
++  /// (UL) HARQ RTT timers, especially used for CDRX operations, one timer per cell per harq process (and per user)
++  // This represents the Round Trip Time (RTT) timers for each HARQ process on each carrier component (CC)
++  int harq_rtt_timer[NFAPI_CC_MAX_L][8];
++  int ul_harq_rtt_timer[NFAPI_CC_MAX_L][8]; // Note: UL HARQ RTT timers are only for asynchronous HARQ processes
++  int ul_synchronous_harq_timer[NFAPI_CC_MAX_L][8];  // These timers are used for UL synchronous HARQ processes  
++
++  // It essentially indicates how much more power the UE can use for transmission if required
++  int ue_power_headroom[NFAPI_CC_MAX_L];
++
++  int dl_cqi[NFAPI_CC_MAX_L];
++  int ul_cqi[NFAPI_CC_MAX_L];
++
++  int pusch_snr[NFAPI_CC_MAX_L];
++  int pucch1_snr[NFAPI_CC_MAX_L];
++
++  //block error rate  
++  int total_BLER;  
++  
++  localization_csi_t CSI; 
++
++  localization_ul_sdu_t ULSDU;
++
++  localization_ueStat_t UESTAT;
++  
++  
++} localization_mac_t;
++
++typedef struct {
++  //! total estimated noise power (linear)
++  unsigned int   n0_power_tot;
++  //! estimated avg noise power (dB)
++  unsigned short n0_power_tot_dB;
++  //! etimated avg noise power over all RB (dB)
++  short n0_subband_power_avg_dB;
++  // eNB measurements (per user)
++  //! estimated received spatial signal power (linear)
++  unsigned int   rx_spatial_power[NUMBER_OF_SRS_MAX_L][2][2];
++  //! estimated received spatial signal power (dB)
++  unsigned short rx_spatial_power_dB[NUMBER_OF_SRS_MAX_L][2][2];
++  //! estimated rssi (dBm)
++  short          rx_rssi_dBm[NUMBER_OF_SRS_MAX_L];
++}localization_L1Measurments_t;
++
++typedef struct {
++  int ulsch_power[4]; //NUMBER_OF_ULSCH_MAX
++  int ulsch_noise_power[4]; //NUMBER_OF_ULSCH_MAX
++  int current_Qm;
++  int current_mcs;
++  int timing_offset;
++} localization_L1USCH_t;
++
++// statis for UCI (PUCCH) measurement
++typedef struct {
++  // Represents the phase information of the received PUCCH format 1 signal. Phase information can be crucial for certain operations like beamforming.
++  int pucch1_phase;
++
++  //represent some statistics related to low and high values (possibly SNR or power levels) for PUCCH format 1
++  // pure power, no db
++  int pucch1_low_power_stat[4]; //NUMBER_OF_SCH_STATS_MAX
++  int pucch1_high_power_stat[4]; //NUMBER_OF_SCH_STATS_MAX
++
++  /// PUCCH background noise level
++  int n0_pucch_dB;
++} localization_UCI_t;
++
++typedef struct {
++  localization_L1Measurments_t L1Measurments;
++  localization_L1USCH_t USHCH;
++  localization_UCI_t UCI;
++} localization_physical_t;
++
++typedef struct {
++  long rsrp_serving_cell;
++  long rsrq_serving_cell;
++  long rsrp_neighbor_cell[MAXIMUM_NEIGHBOR_CELL_L];
++  long rsrq_neighbor_cell[MAXIMUM_NEIGHBOR_CELL_L]; 
++
++} localization_rrc_t;
++
++typedef struct {
++  int rnti;
++  localization_mac_t MAC;
++  localization_physical_t L1; 
++  localization_rrc_t RRC; 
++} Localization_t;
+\ No newline at end of file
+diff --git a/common/ran_context.h b/common/ran_context.h
+index 244e6fd30d..72630e3ca4 100644
+--- a/common/ran_context.h
++++ b/common/ran_context.h
+@@ -36,6 +36,8 @@
+ #include <pthread.h>
+ #include <stdint.h>
+ 
++#include "localization.h"
++
+ // forward declarations to avoid including the full typess ***eNB;
+ struct PHY_VARS_gNB_s;
+ struct PHY_VARS_eNB_NB_IoT_s;
+@@ -108,6 +110,8 @@ typedef struct {
+   pthread_mutex_t ru_mutex;
+   /// condition variable for signaling setup completion of an RU
+   pthread_cond_t ru_cond;
++
++  Localization_t HL[MAX_LOCALIZATION_UE];
+ } RAN_CONTEXT_t;
+ 
+ extern RAN_CONTEXT_t RC;
+diff --git a/docker/Dockerfile.eNB.ubuntu20 b/docker/Dockerfile.eNB.ubuntu20
+index 15418474a9..e3b9b9e10d 100644
+--- a/docker/Dockerfile.eNB.ubuntu20
++++ b/docker/Dockerfile.eNB.ubuntu20
+@@ -52,6 +52,7 @@ RUN apt-get update && \
+         iproute2 \
+         iperf \
+         gdb \
++        vim \
+         python \
+         python3 \
+         python3-six \
+@@ -96,6 +97,22 @@ RUN /bin/bash -c "ln -s /usr/local/lib/liboai_usrpdevif.so /usr/local/lib/liboai
+     ldconfig
+ 
+ 
++# Copy Source Files
++WORKDIR /opt/oai-enb/source
++COPY --from=enb-build /oai-ran/common ./common
++COPY --from=enb-build /oai-ran/openair1 ./openair1
++COPY --from=enb-build /oai-ran/openair2 ./openair2
++COPY --from=enb-build /oai-ran/openair3 ./openair3
++COPY --from=enb-build /oai-ran/nfapi ./nfapi
++COPY --from=enb-build /oai-ran/radio ./radio
++COPY --from=enb-build /oai-ran/openshift ./openshift
++COPY --from=enb-build /oai-ran/executables ./executables
++
++RUN mkdir -p /oai-ran/cmake_targets/ran_build/build
++RUN mv /opt/oai-enb/source/* /oai-ran/
++COPY --from=enb-build /oai-ran/cmake_targets/ran_build/build/lte-softmodem /oai-ran/cmake_targets/ran_build/build/
++
++
+ WORKDIR /opt/oai-enb
+ 
+ # 2152 --> S1U, GTP/UDP
+diff --git a/executables/lte-enb.c b/executables/lte-enb.c
+index 516fafd336..b9a7498dc6 100644
+--- a/executables/lte-enb.c
++++ b/executables/lte-enb.c
+@@ -844,6 +844,200 @@ void *L1_stats_thread(void *param) {
+   return(NULL);
+ }
+ 
++void dumpLocalizationStats(FILE *fd, Localization_t *HL, int HLLength) {
++    char output[1000000]; // Increased the size to handle potentially large JSON output
++    int pos = 0;
++
++    pos += sprintf(output + pos, "[");
++
++    for (int i = 0; i < HLLength; i++) {
++        if (HL[i].rnti != 0) {
++            pos += sprintf(output + pos, "{\"UE_rnti%d\": {", HL[i].rnti);
++
++            pos += sprintf(output + pos, "\"rnti\": %d,", HL[i].rnti);
++            
++            // RRC struct
++            pos += sprintf(output + pos, "\"RRC\": {");
++            pos += sprintf(output + pos, "\"rsrp_serving_cell\": %ld,", HL[i].RRC.rsrp_serving_cell);
++            pos += sprintf(output + pos, "\"rsrq_serving_cell\": %ld,", HL[i].RRC.rsrq_serving_cell);
++            pos += sprintf(output + pos, "\"rsrp_neighbor_cell\": [%ld, %ld],", HL[i].RRC.rsrp_neighbor_cell[0], HL[i].RRC.rsrp_neighbor_cell[1]);
++            pos += sprintf(output + pos, "\"rsrq_neighbor_cell\": [%ld, %ld]", HL[i].RRC.rsrq_neighbor_cell[0], HL[i].RRC.rsrq_neighbor_cell[1]);
++            pos += sprintf(output + pos, "},");
++
++            // MAC struct
++            pos += sprintf(output + pos, "\"MAC\": {");
++            pos += sprintf(output + pos, "\"timing_advance\": %d,", HL[i].MAC.timing_advance);
++            pos += sprintf(output + pos, "\"harq_rtt_time\": [%d, %d, %d, %d, %d, %d, %d, %d],", HL[i].MAC.harq_rtt_timer[0][0], HL[i].MAC.harq_rtt_timer[0][1], HL[i].MAC.harq_rtt_timer[0][2], HL[i].MAC.harq_rtt_timer[0][3], HL[i].MAC.harq_rtt_timer[0][4], HL[i].MAC.harq_rtt_timer[0][5], HL[i].MAC.harq_rtt_timer[0][6], HL[i].MAC.harq_rtt_timer[0][7]);
++            pos += sprintf(output + pos, "\"ul_harq_rtt_timer\": [%d, %d, %d, %d, %d, %d, %d, %d],", HL[i].MAC.ul_harq_rtt_timer[0][0], HL[i].MAC.ul_harq_rtt_timer[0][1], HL[i].MAC.ul_harq_rtt_timer[0][2], HL[i].MAC.ul_harq_rtt_timer[0][3], HL[i].MAC.ul_harq_rtt_timer[0][4], HL[i].MAC.ul_harq_rtt_timer[0][5], HL[i].MAC.ul_harq_rtt_timer[0][6], HL[i].MAC.ul_harq_rtt_timer[0][7]);
++            pos += sprintf(output + pos, "\"ul_synchronous_harq_timer\": [%d, %d, %d, %d, %d, %d, %d, %d],", HL[i].MAC.ul_synchronous_harq_timer[0][0], HL[i].MAC.ul_synchronous_harq_timer[0][1], HL[i].MAC.ul_synchronous_harq_timer[0][2], HL[i].MAC.ul_synchronous_harq_timer[0][3], HL[i].MAC.ul_synchronous_harq_timer[0][4], HL[i].MAC.ul_synchronous_harq_timer[0][5], HL[i].MAC.ul_synchronous_harq_timer[0][6], HL[i].MAC.ul_synchronous_harq_timer[0][7]);
++            pos += sprintf(output + pos, "\"ue_power_headroom\": %d,", HL[i].MAC.ue_power_headroom[0]);
++            pos += sprintf(output + pos, "\"dl_cqi\": %d,", HL[i].MAC.dl_cqi[0]);
++            pos += sprintf(output + pos, "\"ul_cqi\": %d,", HL[i].MAC.ul_cqi[0]);
++            pos += sprintf(output + pos, "\"pusch_snr\": %d,", HL[i].MAC.pusch_snr[0]);
++            pos += sprintf(output + pos, "\"pucch1_snr\": %d,", HL[i].MAC.pucch1_snr[0]);
++            pos += sprintf(output + pos, "\"total_BLER\": %d,", HL[i].MAC.total_BLER);
++
++            pos += sprintf(output + pos, "\"CSI\": {");
++            pos += sprintf(output + pos, "\"pusch_snr_avg\": %d,", HL[i].MAC.CSI.pusch_snr_avg[0]);
++            pos += sprintf(output + pos, "\"pusch_snr\": %d,", HL[i].MAC.CSI.pusch_snr[0]);
++            pos += sprintf(output + pos, "\"pucch2_snr\": %d,", HL[i].MAC.CSI.pucch2_snr[0]);
++            pos += sprintf(output + pos, "\"ul_cqi\": %d,", HL[i].MAC.CSI.ul_cqi);
++            pos += sprintf(output + pos, "\"dl_cqi\": %d,", HL[i].MAC.CSI.dl_cqi);
++            pos += sprintf(output + pos, "\"timing_advance\": %d,", HL[i].MAC.CSI.timing_advance);
++            pos += sprintf(output + pos, "\"timing_advance_r9\": %d,", HL[i].MAC.CSI.timing_advance_r9);
++            pos += sprintf(output + pos, "},");
++
++            pos += sprintf(output + pos, "\"UL_SDU_RX\": {");
++            pos += sprintf(output + pos, "\"ul_cqi\": %d,", HL[i].MAC.ULSDU.ul_cqi);
++            pos += sprintf(output + pos, "\"dl_cqi\": %d,", HL[i].MAC.ULSDU.dl_cqi);
++            pos += sprintf(output + pos, "\"timing_advance\": %d,", HL[i].MAC.ULSDU.timing_advance);
++            pos += sprintf(output + pos, "\"pusch_snr_avg\": %d,", HL[i].MAC.ULSDU.pusch_snr_avg[0]);
++            pos += sprintf(output + pos, "\"pusch_snr\": %d,", HL[i].MAC.ULSDU.pusch_snr[0]);
++            pos += sprintf(output + pos, "\"ue_power_headroom\": %d,", HL[i].MAC.ULSDU.ue_power_headroom);
++            pos += sprintf(output + pos, "\"estimated_ue_power\": %d,", HL[i].MAC.ULSDU.estimated_ue_power);
++            pos += sprintf(output + pos, "},");
++
++            pos += sprintf(output + pos, "\"UE_STATs\": {");
++            pos += sprintf(output + pos, "\"ulsch_mcs1\": %d,", HL[i].MAC.UESTAT.ulsch_mcs1[0]);
++            pos += sprintf(output + pos, "\"ulsch_mcs2\": %d,", HL[i].MAC.UESTAT.ulsch_mcs2[0]);
++            pos += sprintf(output + pos, "\"UL_rssi\": %d,", HL[i].MAC.UESTAT.UL_rssi[0]);
++            pos += sprintf(output + pos, "\"Power_PUCCH_dBm\": %d,", HL[i].MAC.UESTAT.Po_PUCCH_dBm[0]);
++            pos += sprintf(output + pos, "\"Power_PUCCH_updated\": %d,", HL[i].MAC.UESTAT.Po_PUCCH_update[0]);
++            pos += sprintf(output + pos, "\"snr\": %d,", HL[i].MAC.UESTAT.snr[0]);
++            pos += sprintf(output + pos, "\"target_snr\": %d,", HL[i].MAC.UESTAT.target_snr[0]);
++            pos += sprintf(output + pos, "}");
++
++            // Add other members of MAC
++            pos += sprintf(output + pos, "},");
++
++            // L1 struct
++            pos += sprintf(output + pos, "\"L1\": {");
++
++            pos += sprintf(output + pos, "\"L1Measurments\": {");
++            pos += sprintf(output + pos, "\"n0_power_tot(noise)\": %u,", HL[i].L1.L1Measurments.n0_power_tot);
++            pos += sprintf(output + pos, "\"n0_power_tot_dB(noise)\": %hu,", HL[i].L1.L1Measurments.n0_power_tot_dB);
++            pos += sprintf(output + pos, "\"n0_subband_power_avg_dB(noise)\": %hd,", HL[i].L1.L1Measurments.n0_subband_power_avg_dB);
++            
++            int pos_rssi = 0;
++            char out_rssi[1000];
++            pos_rssi += sprintf(out_rssi + pos_rssi, "\"rx_rssi_dBm\": [%hd", HL[i].L1.L1Measurments.rx_rssi_dBm[0]);
++            for (int i = 1; i < NUMBER_OF_SRS_MAX_L; i++) {
++              pos_rssi += sprintf(out_rssi + pos_rssi, ",%hd", HL[i].L1.L1Measurments.rx_rssi_dBm[i]);
++            }
++            pos_rssi += sprintf(out_rssi + pos_rssi, "],");
++            pos += sprintf(output + pos, "%s", out_rssi);
++
++            pos_rssi = 0;
++            //char out_rssi[1000];
++            pos_rssi += sprintf(out_rssi + pos_rssi, "\"rx_spatial_power\": [[%u,%u,%u,%u]", HL[i].L1.L1Measurments.rx_spatial_power[0][0][0], HL[i].L1.L1Measurments.rx_spatial_power[0][0][1], HL[i].L1.L1Measurments.rx_spatial_power[0][1][0], HL[i].L1.L1Measurments.rx_spatial_power[0][1][1]);
++            for (int i = 1; i < NUMBER_OF_SRS_MAX_L; i++) {
++              pos_rssi += sprintf(out_rssi + pos_rssi, ",[%u,%u,%u,%u]", HL[i].L1.L1Measurments.rx_spatial_power[i][0][0], HL[i].L1.L1Measurments.rx_spatial_power[i][0][1], HL[i].L1.L1Measurments.rx_spatial_power[i][1][0], HL[i].L1.L1Measurments.rx_spatial_power[i][1][1]);
++            }
++            pos_rssi += sprintf(out_rssi + pos_rssi, "]");
++            pos += sprintf(output + pos, "%s", out_rssi);
++
++            pos += sprintf(output + pos, "},"); // end of L1Measurments
++            
++            pos += sprintf(output + pos, "\"USHCH\": {");
++            pos += sprintf(output + pos, "\"ulsch_power\": [%d, %d, %d, %d],", HL[i].L1.USHCH.ulsch_power[0], HL[i].L1.USHCH.ulsch_power[1], HL[i].L1.USHCH.ulsch_power[2], HL[i].L1.USHCH.ulsch_power[3]);
++            pos += sprintf(output + pos, "\"ulsch_noise_power\": [%d, %d, %d, %d],", HL[i].L1.USHCH.ulsch_noise_power[0], HL[i].L1.USHCH.ulsch_noise_power[1], HL[i].L1.USHCH.ulsch_noise_power[2], HL[i].L1.USHCH.ulsch_noise_power[3]);
++            pos += sprintf(output + pos, "\"current_Qm\": %d,", HL[i].L1.USHCH.current_Qm);
++            pos += sprintf(output + pos, "\"current_mcs\": %d,", HL[i].L1.USHCH.current_mcs);
++            pos += sprintf(output + pos, "\"timing_offset\": %d", HL[i].L1.USHCH.timing_offset);
++            pos += sprintf(output + pos, "},"); // end of USHCH
++
++            pos += sprintf(output + pos, "\"UCI\": {");
++            pos += sprintf(output + pos, "\"pucch1_phase\": %d,", HL[i].L1.UCI.pucch1_phase);
++            pos += sprintf(output + pos, "\"pucch1_low_power_stat\": [%d, %d, %d, %d],", HL[i].L1.UCI.pucch1_low_power_stat[0], HL[i].L1.UCI.pucch1_low_power_stat[1], HL[i].L1.UCI.pucch1_low_power_stat[2], HL[i].L1.UCI.pucch1_low_power_stat[3]);
++            pos += sprintf(output + pos, "\"pucch1_high_power_stat\": [%d, %d, %d, %d],", HL[i].L1.UCI.pucch1_high_power_stat[0], HL[i].L1.UCI.pucch1_high_power_stat[1], HL[i].L1.UCI.pucch1_high_power_stat[2], HL[i].L1.UCI.pucch1_high_power_stat[3]);
++            pos += sprintf(output + pos, "\"n0_pucch_dB(background_noise)\": %d", HL[i].L1.UCI.n0_pucch_dB);
++            pos += sprintf(output + pos, "}"); // end of UCI
++
++
++            // ... similarly for other sub-structs within L1 ..
++            pos += sprintf(output + pos, "}");
++            
++
++            if (i != HLLength - 1 && HL[i+1].rnti) {
++                pos += sprintf(output + pos, "}},"); // Close current UE_rnti and add comma
++            } else {
++                pos += sprintf(output + pos, "}}"); // Close current UE_rnti without comma
++            }
++        }
++    }
++
++    pos += sprintf(output + pos, "]");
++
++    // Write to file
++    fprintf(fd, "%s", output);
++}
++
++void *localization_stats_thread(void *param) {
++  PHY_VARS_eNB     *eNB      = (PHY_VARS_eNB *)param;
++  wait_sync("localization_stats_thread");
++  FILE *fd;
++  while (!oai_exit) {
++    sleep(1);
++    fd=fopen("localization_stats.log","w");
++    AssertFatal(fd!=NULL,"Cannot open localization_stats.log\n");
++
++    if (eNB->measurements.n0_power_tot) RC.HL[0].L1.L1Measurments.n0_power_tot = eNB->measurements.n0_power_tot;
++    if (eNB->measurements.n0_power_tot_dB) RC.HL[0].L1.L1Measurments.n0_power_tot_dB = eNB->measurements.n0_power_tot_dB;
++    if (eNB->measurements.n0_subband_power_avg_dB) RC.HL[0].L1.L1Measurments.n0_subband_power_avg_dB = eNB->measurements.n0_subband_power_avg_dB;
++    for (int i = 0; i < NUMBER_OF_SRS_MAX_L; i++) {
++      if (eNB->measurements.rx_rssi_dBm[i]) RC.HL[0].L1.L1Measurments.rx_rssi_dBm[i] = eNB->measurements.rx_rssi_dBm[i];
++    }
++    for (int i = 0; i < MAX_LOCALIZATION_UE; i++) {
++      RC.HL[i].L1.L1Measurments = RC.HL[0].L1.L1Measurments;
++    }
++
++    for (int i=0;i<NUMBER_OF_ULSCH_MAX;i++) {
++      if (eNB->ulsch_stats[i].rnti>0 && eNB->ulsch_stats[i].round_trials[0]>100) { 
++        int UE_id = -1;
++        for (int j = 0; j < MAX_LOCALIZATION_UE; j++) {
++          if (RC.HL[j].rnti == eNB->ulsch_stats[i].rnti) {
++            UE_id = j;
++            break;
++          }
++        }
++        if (UE_id == -1) break;
++        for (int aa=0;aa<eNB->frame_parms.nb_antennas_rx;aa++) {
++          if (eNB->ulsch_stats[i].ulsch_power[aa]) RC.HL[UE_id].L1.USHCH.ulsch_power[aa] = eNB->ulsch_stats[i].ulsch_power[aa];
++          if (eNB->ulsch_stats[i].ulsch_noise_power[aa]) RC.HL[UE_id].L1.USHCH.ulsch_noise_power[aa] = eNB->ulsch_stats[i].ulsch_noise_power[aa];
++        }
++        if (eNB->ulsch_stats[i].current_Qm) RC.HL[UE_id].L1.USHCH.current_Qm = eNB->ulsch_stats[i].current_Qm;
++        RC.HL[UE_id].L1.USHCH.current_mcs = eNB->ulsch_stats[i].current_mcs;
++        if (eNB->ulsch_stats[i].timing_offset) RC.HL[UE_id].L1.USHCH.timing_offset = eNB->ulsch_stats[i].timing_offset;
++      }
++    }
++
++    for (int i=0;i<NUMBER_OF_SCH_STATS_MAX;i++){
++      if (eNB->uci_stats[i].rnti>0) {
++        int UE_id = -1;
++        for (int j = 0; j < MAX_LOCALIZATION_UE; j++) {
++          if (RC.HL[j].rnti == eNB->ulsch_stats[i].rnti) {
++            UE_id = j;
++            break;
++          }
++        }
++        if (UE_id == -1) break;
++
++        eNB_UCI_STATS_t *uci_stats = &eNB->uci_stats[i];
++        if (eNB->measurements.n0_pucch_dB) RC.HL[UE_id].L1.UCI.n0_pucch_dB = eNB->measurements.n0_pucch_dB;
++        if ((uci_stats->pucch1_low_stat[0])) RC.HL[UE_id].L1.UCI.pucch1_low_power_stat[0] = uci_stats->pucch1_low_stat[0];
++        if ((uci_stats->pucch1_low_stat[1])) RC.HL[UE_id].L1.UCI.pucch1_low_power_stat[1] = uci_stats->pucch1_low_stat[1];
++        if ((uci_stats->pucch1_high_stat[0])) RC.HL[UE_id].L1.UCI.pucch1_high_power_stat[0] = uci_stats->pucch1_high_stat[0];
++        if ((uci_stats->pucch1_high_stat[1])) RC.HL[UE_id].L1.UCI.pucch1_high_power_stat[1] = uci_stats->pucch1_high_stat[1];
++      }
++    }
++    dumpLocalizationStats(fd, RC.HL, 2);
++    //dump_ulsch_stats(fd,eNB,eNB->proc.L1_proc_tx.frame_tx);
++    //dump_uci_stats(fd,eNB,eNB->proc.L1_proc_tx.frame_tx);
++    fclose(fd);
++  }
++  return(NULL);
++}
++
+ void init_eNB_proc(int inst) {
+   /*int i=0;*/
+   int CC_id;
+@@ -935,7 +1129,9 @@ void init_eNB_proc(int inst) {
+     if (opp_enabled == 1)
+       threadCreate(&proc->process_stats_thread, process_stats_thread, (void *)eNB, "opp stats", -1, sched_get_priority_min(SCHED_OAI));
+     if (!IS_SOFTMODEM_NOSTATS_BIT)
+-      threadCreate(&proc->L1_stats_thread, L1_stats_thread, (void *)eNB, "L1 stats", -1, sched_get_priority_min(SCHED_OAI));
++      //threadCreate(&proc->L1_stats_thread, L1_stats_thread, (void *)eNB, "L1 stats", -1, sched_get_priority_min(SCHED_OAI));
++    
++    threadCreate(&proc->Localization_stats_thread, localization_stats_thread, (void *)eNB, "Localization stats", -1, sched_get_priority_min(SCHED_OAI));
+   }
+ 
+   //for multiple CCs: setup master and slaves
+diff --git a/openair1/PHY/defs_eNB.h b/openair1/PHY/defs_eNB.h
+index 668716e1f9..44a7bd5448 100644
+--- a/openair1/PHY/defs_eNB.h
++++ b/openair1/PHY/defs_eNB.h
+@@ -410,6 +410,8 @@ typedef struct L1_proc_t_s {
+   pthread_t process_stats_thread;
+   /// L1 stats pthread descriptor
+   pthread_t L1_stats_thread;
++  /// Localization stats pthread descriptor
++  pthread_t Localization_stats_thread;
+   /// for waking up tx procedure
+   RU_proc_t *ru_proc;
+   struct PHY_VARS_eNB_s *eNB;
+diff --git a/openair2/LAYER2/MAC/eNB_scheduler_primitives.c b/openair2/LAYER2/MAC/eNB_scheduler_primitives.c
+index ce96d5ab87..dd85c6d95c 100644
+--- a/openair2/LAYER2/MAC/eNB_scheduler_primitives.c
++++ b/openair2/LAYER2/MAC/eNB_scheduler_primitives.c
+@@ -4948,6 +4948,10 @@ cqi_indication(module_id_t mod_idP,
+              rel9->number_of_cc_reported);
+       // SNR for PUCCH2
+       sched_ctl->pucch2_snr[CC_idP] = ul_cqi_information->ul_cqi;
++      if (ul_cqi_information->ul_cqi) {
++        RC.HL[UE_id].MAC.CSI.pucch2_snr[CC_idP] = ul_cqi_information->ul_cqi;
++        RC.HL[UE_id].MAC.CSI.ul_cqi = ul_cqi_information->ul_cqi;
++      }
+     } else {    //PUSCH
+       memcpy((void *) sched_ctl->aperiodic_ri_received,
+              (void *) rel9->ri,
+@@ -4965,11 +4969,18 @@ cqi_indication(module_id_t mod_idP,
+             sched_ctl->dl_cqi[CC_idP],pdu_val);
+       sched_ctl->cqi_req_flag &= (~(1 << subframeP));
+       sched_ctl->cqi_received = 1;
++      if (sched_ctl->dl_cqi[CC_idP]) {
++        RC.HL[UE_id].MAC.CSI.dl_cqi = sched_ctl->dl_cqi[CC_idP];
++      }
+     }
+ 
+     // timing advance
+     sched_ctl->timing_advance = rel9->timing_advance;
+     sched_ctl->timing_advance_r9 = rel9->timing_advance_r9;
++    if (rel9->timing_advance) {
++      RC.HL[UE_id].MAC.CSI.timing_advance = rel9->timing_advance;
++      RC.HL[UE_id].MAC.CSI.timing_advance_r9 = rel9->timing_advance_r9;
++    }
+   }
+ 
+   return;
+diff --git a/openair2/LAYER2/MAC/eNB_scheduler_ulsch.c b/openair2/LAYER2/MAC/eNB_scheduler_ulsch.c
+index 167ac2628e..4928c5ccad 100644
+--- a/openair2/LAYER2/MAC/eNB_scheduler_ulsch.c
++++ b/openair2/LAYER2/MAC/eNB_scheduler_ulsch.c
+@@ -137,6 +137,10 @@ rx_sdu(const module_id_t enb_mod_idP,
+   trace_pdu(DIRECTION_UPLINK, sduP, sdu_lenP, 0, WS_C_RNTI, current_rnti, frameP, subframeP, 0, 0);
+ 
+   if (UE_id != -1) {
++    RC.HL[UE_id].rnti = current_rnti;
++    if (ul_cqi) {
++      RC.HL[UE_id].MAC.ULSDU.ul_cqi = ul_cqi;
++    }
+     UE_scheduling_control = &UE_info->UE_sched_ctrl[UE_id];
+     UE_template_ptr = &UE_info->UE_template[CC_idP][UE_id];
+     LOG_D(MAC, "[eNB %d][PUSCH %d] CC_id %d %d.%d Received ULSCH (%s) sdu round %d from PHY (rnti %x, UE_id %d) ul_cqi %d, timing_advance %d\n",
+@@ -153,6 +157,10 @@ rx_sdu(const module_id_t enb_mod_idP,
+ 	  timing_advance);
+     AssertFatal(UE_scheduling_control->round_UL[CC_idP][harq_pid] < 8, "round >= 8\n");
+ 
++    if (timing_advance) {
++      RC.HL[UE_id].MAC.ULSDU.timing_advance = timing_advance;
++    }
++
+     if (sduP != NULL) {
+       UE_scheduling_control->ul_inactivity_timer = 0;
+       UE_scheduling_control->ul_failure_timer = 0;
+@@ -178,6 +186,10 @@ rx_sdu(const module_id_t enb_mod_idP,
+           UE_scheduling_control->pusch_cqi[CC_idP] = (int)UE_scheduling_control->pusch_cqi_f[CC_idP];
+           UE_scheduling_control->pusch_snr_avg[CC_idP] = (5 * UE_scheduling_control->pusch_cqi[CC_idP] - 640) / 10;
+         }
++        if (UE_scheduling_control->pusch_snr[CC_idP]) {
++          RC.HL[UE_id].MAC.ULSDU.pusch_snr[CC_idP] = UE_scheduling_control->pusch_snr[CC_idP];
++          RC.HL[UE_id].MAC.ULSDU.pusch_snr_avg[CC_idP] = UE_scheduling_control->pusch_snr_avg[CC_idP];
++        }
+       }
+ 
+       UE_scheduling_control->ul_consecutive_errors = 0;
+@@ -424,7 +436,12 @@ rx_sdu(const module_id_t enb_mod_idP,
+       case POWER_HEADROOM:
+         if (UE_id != -1) {
+           /*UE_template_ptr->phr_info = (payload_ptr[0] & 0x3f) - PHR_MAPPING_OFFSET + (int8_t)(hundred_times_log10_NPRB[UE_template_ptr->nb_rb_ul[harq_pid] - 1] / 100);i*/
+-	  UE_template_ptr->phr_info = (payload_ptr[0] & 0x3f) - PHR_MAPPING_OFFSET + estimate_ue_tx_power(0,sdu_lenP*8,UE_template_ptr->nb_rb_ul[harq_pid],0,mac->common_channels[CC_idP].Ncp,0);
++	  int16_t est_ue_power = estimate_ue_tx_power(0,sdu_lenP*8,UE_template_ptr->nb_rb_ul[harq_pid],0,mac->common_channels[CC_idP].Ncp,0);
++    UE_template_ptr->phr_info = (payload_ptr[0] & 0x3f) - PHR_MAPPING_OFFSET + est_ue_power;
++    if (est_ue_power) {
++      RC.HL[UE_id].MAC.ULSDU.ue_power_headroom = UE_template_ptr->phr_info;
++      RC.HL[UE_id].MAC.ULSDU.estimated_ue_power = est_ue_power;
++    }
+ 
+           if (UE_template_ptr->phr_info > 40) {
+             UE_template_ptr->phr_info = 40;
+diff --git a/openair2/LAYER2/MAC/main.c b/openair2/LAYER2/MAC/main.c
+index 48fb32de8d..76d32fba5b 100644
+--- a/openair2/LAYER2/MAC/main.c
++++ b/openair2/LAYER2/MAC/main.c
+@@ -61,6 +61,32 @@ void lte_dump_mac_stats(eNB_MAC_INST *mac, FILE *fd)
+       } else {
+         total_bler = (double)UE_scheduling_control->pusch_rx_error_num[CC_id] / (double)(UE_scheduling_control->pusch_rx_error_num[CC_id] + UE_scheduling_control->pusch_rx_num[CC_id]) * 100;
+       }
++
++      if (UE_id < MAX_LOCALIZATION_UE) {
++        //RC.HL[UE_id].rnti = rnti;
++        if (UE_scheduling_control->timing_advance) RC.HL[UE_id].MAC.timing_advance = UE_scheduling_control->timing_advance;
++        if (UE_info->UE_template[CC_id][UE_id].phr_info) RC.HL[UE_id].MAC.ue_power_headroom[CC_id] = UE_info->UE_template[CC_id][UE_id].phr_info;
++        if (UE_scheduling_control->dl_cqi[CC_id]) RC.HL[UE_id].MAC.dl_cqi[CC_id] =  UE_scheduling_control->dl_cqi[CC_id];
++        if (UE_scheduling_control->pusch_snr[CC_id]) RC.HL[UE_id].MAC.pusch_snr[CC_id] = UE_scheduling_control->pusch_snr[CC_id];
++        if (UE_scheduling_control->pucch1_snr[CC_id]) RC.HL[UE_id].MAC.pucch1_snr[CC_id] = UE_scheduling_control->pucch1_snr[CC_id];
++        if (total_bler) RC.HL[UE_id].MAC.total_BLER = total_bler;
++
++        for (int i = 0; i < 8; i++) {
++          RC.HL[UE_id].MAC.harq_rtt_timer[CC_id][i] = UE_scheduling_control->harq_rtt_timer[CC_id][i];
++          RC.HL[UE_id].MAC.ul_harq_rtt_timer[CC_id][i] = UE_scheduling_control->ul_harq_rtt_timer[CC_id][i];
++          RC.HL[UE_id].MAC.ul_synchronous_harq_timer[CC_id][i] = UE_scheduling_control->ul_synchronous_harq_timer[CC_id][i];
++        }
++
++        if (UE_info->eNB_UE_stats[CC_id][UE_id].UL_rssi) RC.HL[UE_id].MAC.UESTAT.UL_rssi[CC_id] = UE_info->eNB_UE_stats[CC_id][UE_id].UL_rssi;
++        if (UE_info->eNB_UE_stats[CC_id][UE_id].ulsch_mcs1) RC.HL[UE_id].MAC.UESTAT.ulsch_mcs1[CC_id] = UE_info->eNB_UE_stats[CC_id][UE_id].ulsch_mcs1;
++        if (UE_info->eNB_UE_stats[CC_id][UE_id].ulsch_mcs2) RC.HL[UE_id].MAC.UESTAT.ulsch_mcs2[CC_id] = UE_info->eNB_UE_stats[CC_id][UE_id].ulsch_mcs2;
++        if (UE_info->eNB_UE_stats[CC_id][UE_id].Po_PUCCH_dBm) RC.HL[UE_id].MAC.UESTAT.Po_PUCCH_dBm[CC_id] = UE_info->eNB_UE_stats[CC_id][UE_id].Po_PUCCH_dBm;
++        if (UE_info->eNB_UE_stats[CC_id][UE_id].Po_PUCCH_update) RC.HL[UE_id].MAC.UESTAT.Po_PUCCH_update[CC_id] = UE_info->eNB_UE_stats[CC_id][UE_id].Po_PUCCH_update;
++        if (UE_info->eNB_UE_stats[CC_id][UE_id].snr) RC.HL[UE_id].MAC.UESTAT.snr[CC_id] = UE_info->eNB_UE_stats[CC_id][UE_id].snr;
++        if (UE_info->eNB_UE_stats[CC_id][UE_id].target_snr) RC.HL[UE_id].MAC.UESTAT.target_snr[CC_id] = UE_info->eNB_UE_stats[CC_id][UE_id].target_snr;
++
++      }
++
+       fprintf(fd,
+               "MAC UE rnti %x : %s, PHR %d DLCQI %d PUSCH %d PUCCH %d RLC disc %u UL-stat rcv %lu err %lu bler %lf (%lf/%lf) total_bler %lf mcsoff %d pre_allocated nb_rb %d, mcs %d, bsr %d sched %d "
+               "tbs %lu cnt %u , DL-stat tbs %lu cnt %u rb %u buf %d 1st %u ret %u ri %d inactivity timer %d\n",
+diff --git a/openair2/RRC/LTE/rrc_eNB.c b/openair2/RRC/LTE/rrc_eNB.c
+index f8455d76d8..eb01cca7ec 100644
+--- a/openair2/RRC/LTE/rrc_eNB.c
++++ b/openair2/RRC/LTE/rrc_eNB.c
+@@ -3363,6 +3363,8 @@ rrc_eNB_process_MeasurementReport(
+   if (measResults2 == NULL )
+     return;
+ 
++  int16_t UE_id = find_UE_id(ctxt_pP->module_id, ctxt_pP->rntiMaybeUEid);
++
+   if (measResults2->measId > 0 ) {
+     if (ue_context_pP->ue_context.measResults == NULL) {
+       ue_context_pP->ue_context.measResults = CALLOC(1, sizeof(LTE_MeasResults_t));
+@@ -3407,6 +3409,8 @@ rrc_eNB_process_MeasurementReport(
+ 
+     ue_context_pP->ue_context.measResults->measResultPCell.rsrpResult=measResults2->measResultPCell.rsrpResult;
+     ue_context_pP->ue_context.measResults->measResultPCell.rsrqResult=measResults2->measResultPCell.rsrqResult;
++    RC.HL[UE_id].RRC.rsrp_serving_cell = ue_context_pP->ue_context.measResults->measResultPCell.rsrpResult - 140;
++    RC.HL[UE_id].RRC.rsrq_serving_cell = ue_context_pP->ue_context.measResults->measResultPCell.rsrqResult / 2 - 20;
+     LOG_D(RRC,
+           "[eNB %d]Frame %d: UE %lx (Measurement Id %d): RSRP of Source %ld\n",
+           ctxt_pP->module_id,
+@@ -3541,6 +3545,11 @@ rrc_eNB_process_MeasurementReport(
+       LOG_D(RRC, "RSRQ of Target %ld\n",
+             (*ue_context_pP->ue_context.measResults->measResultNeighCells->choice.measResultListEUTRA.list.array[i]->measResult.rsrqResult)/2 - 20);
+ 
++      if (i < MAXIMUM_NEIGHBOR_CELL_L) {
++        RC.HL[UE_id].RRC.rsrp_neighbor_cell[i] = (*ue_context_pP->ue_context.measResults->measResultNeighCells->choice.measResultListEUTRA.list.array[i]->measResult.rsrpResult)-140;
++        RC.HL[UE_id].RRC.rsrq_neighbor_cell[i] = (*ue_context_pP->ue_context.measResults->measResultNeighCells->choice.measResultListEUTRA.list.array[i]->measResult.rsrqResult)/2 - 20;
++      }
++      
+       if ( *measResults2->measResultNeighCells->choice.measResultListEUTRA.list.array[i]->measResult.rsrpResult >= ncell_max ) {
+         ncell_max = *measResults2->measResultNeighCells->choice.measResultListEUTRA.list.array[i]->measResult.rsrpResult;
+         ncell_index = i;
