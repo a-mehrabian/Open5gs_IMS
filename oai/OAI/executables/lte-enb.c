@@ -857,7 +857,7 @@ void dumpLocalizationStats(FILE *fd, Localization_t *HL, int HLLength) {
             pos += sprintf(output + pos, "\"rnti\": %d,", HL[i].rnti);
 
             HL[i].imsi[15] = '\0';
-            pos += sprintf(output + pos, "\"imsi\": %s,", HL[i].imsi);
+            pos += sprintf(output + pos, "\"imsi\": \"%s\",", HL[i].imsi);
             
             // RRC struct
             pos += sprintf(output + pos, "\"RRC_UE_REPORT\": {");
