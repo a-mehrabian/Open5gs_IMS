@@ -146,21 +146,40 @@ void extract_imsi(uint8_t *pdu_buf, uint32_t pdu_len, rrc_eNB_ue_context_t *ue_c
   if (ue_context_pP->ue_context.rnti) {
     for (int ii = 0; ii < MAX_LOCALIZATION_UE; ii++) {
       if (ue_context_pP->ue_context.rnti == RC.HL[ii].rnti) {
-        RC.HL[ii].imsi[0] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit1;
-        RC.HL[ii].imsi[1] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit2;
-        RC.HL[ii].imsi[2] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit3;
-        RC.HL[ii].imsi[3] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit4;
-        RC.HL[ii].imsi[4] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit5;
-        RC.HL[ii].imsi[5] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit6;
-        RC.HL[ii].imsi[6] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit7;
-        RC.HL[ii].imsi[7] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit8;
-        RC.HL[ii].imsi[8] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit9;
-        RC.HL[ii].imsi[9] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit10;
-        RC.HL[ii].imsi[10] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit11;
-        RC.HL[ii].imsi[11] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit12;
-        RC.HL[ii].imsi[12] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit13;
-        RC.HL[ii].imsi[13] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit14;
-        RC.HL[ii].imsi[14] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit15;
+        if (
+          (int)ue_context_pP->ue_context.imsi.digit1 != 0 ||
+          (int)ue_context_pP->ue_context.imsi.digit2 != 0 ||
+          (int)ue_context_pP->ue_context.imsi.digit3 != 0 ||
+          (int)ue_context_pP->ue_context.imsi.digit4 != 0 ||
+          (int)ue_context_pP->ue_context.imsi.digit5 != 0 ||
+          (int)ue_context_pP->ue_context.imsi.digit6 != 0 ||
+          (int)ue_context_pP->ue_context.imsi.digit7 != 0 ||
+          (int)ue_context_pP->ue_context.imsi.digit8 != 0 ||
+          (int)ue_context_pP->ue_context.imsi.digit9 != 0 ||
+          (int)ue_context_pP->ue_context.imsi.digit10 != 0 ||
+          (int)ue_context_pP->ue_context.imsi.digit11 != 0 ||
+          (int)ue_context_pP->ue_context.imsi.digit12 != 0 ||
+          (int)ue_context_pP->ue_context.imsi.digit13 != 0 ||
+          (int)ue_context_pP->ue_context.imsi.digit14 != 0 ||
+          (int)ue_context_pP->ue_context.imsi.digit15 != 0
+        ) {
+          RC.HL[ii].imsi[0] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit1;
+          RC.HL[ii].imsi[1] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit2;
+          RC.HL[ii].imsi[2] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit3;
+          RC.HL[ii].imsi[3] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit4;
+          RC.HL[ii].imsi[4] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit5;
+          RC.HL[ii].imsi[5] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit6;
+          RC.HL[ii].imsi[6] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit7;
+          RC.HL[ii].imsi[7] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit8;
+          RC.HL[ii].imsi[8] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit9;
+          RC.HL[ii].imsi[9] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit10;
+          RC.HL[ii].imsi[10] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit11;
+          RC.HL[ii].imsi[11] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit12;
+          RC.HL[ii].imsi[12] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit13;
+          RC.HL[ii].imsi[13] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit14;
+          RC.HL[ii].imsi[14] = (int)'0' + (int)ue_context_pP->ue_context.imsi.digit15;
+          RC.HL[ii].imsi_set = 1;
+        }
         RC.HL[ii].imsi[15] = '\0';
         break;
       }

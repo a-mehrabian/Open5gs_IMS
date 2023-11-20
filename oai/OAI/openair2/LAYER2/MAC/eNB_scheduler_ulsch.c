@@ -142,6 +142,35 @@ rx_sdu(const module_id_t enb_mod_idP,
     for (int i = 0; i < MAX_LOCALIZATION_UE; i++) {
       if (RC.HL[i].rnti == current_rnti) {
         UE_id_HL = i;
+        if (RC.HL[UE_id_HL].imsi_set == 0) {
+          ue_contextP = rrc_eNB_get_ue_context(RC.rrc[enb_mod_idP], current_rnti);
+          if (
+            (int) ue_contextP->ue_context.imsi.digit1 != 0 ||
+            (int) ue_contextP->ue_context.imsi.digit2 != 0 ||
+            (int) ue_contextP->ue_context.imsi.digit3 != 0 ||
+            (int) ue_contextP->ue_context.imsi.digit4 != 0 ||
+            (int) ue_contextP->ue_context.imsi.digit5 != 0 ||
+            (int) ue_contextP->ue_context.imsi.digit6 != 0 
+          ) {
+            RC.HL[UE_id_HL].imsi[0] = (int)'0' + (int)ue_contextP->ue_context.imsi.digit1;
+            RC.HL[UE_id_HL].imsi[1] = (int)'0' + (int)ue_contextP->ue_context.imsi.digit2;
+            RC.HL[UE_id_HL].imsi[2] = (int)'0' + (int)ue_contextP->ue_context.imsi.digit3;
+            RC.HL[UE_id_HL].imsi[3] = (int)'0' + (int)ue_contextP->ue_context.imsi.digit4;
+            RC.HL[UE_id_HL].imsi[4] = (int)'0' + (int)ue_contextP->ue_context.imsi.digit5;
+            RC.HL[UE_id_HL].imsi[5] = (int)'0' + (int)ue_contextP->ue_context.imsi.digit6;
+            RC.HL[UE_id_HL].imsi[6] = (int)'0' + (int)ue_contextP->ue_context.imsi.digit7;
+            RC.HL[UE_id_HL].imsi[7] = (int)'0' + (int)ue_contextP->ue_context.imsi.digit8;
+            RC.HL[UE_id_HL].imsi[8] = (int)'0' + (int)ue_contextP->ue_context.imsi.digit9;
+            RC.HL[UE_id_HL].imsi[9] = (int)'0' + (int)ue_contextP->ue_context.imsi.digit10;
+            RC.HL[UE_id_HL].imsi[10] = (int)'0' + (int)ue_contextP->ue_context.imsi.digit11;
+            RC.HL[UE_id_HL].imsi[11] = (int)'0' + (int)ue_contextP->ue_context.imsi.digit12;
+            RC.HL[UE_id_HL].imsi[12] = (int)'0' + (int)ue_contextP->ue_context.imsi.digit13;
+            RC.HL[UE_id_HL].imsi[13] = (int)'0' + (int)ue_contextP->ue_context.imsi.digit14;
+            RC.HL[UE_id_HL].imsi[14] = (int)'0' + (int)ue_contextP->ue_context.imsi.digit15;
+            RC.HL[UE_id_HL].imsi[15] = '\0';
+            RC.HL[UE_id_HL].imsi_set = 1;
+          }
+        }
         break;
       }
     }

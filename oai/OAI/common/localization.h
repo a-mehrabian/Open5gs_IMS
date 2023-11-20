@@ -171,6 +171,7 @@ typedef struct {
 typedef struct {
   int rnti;
   char imsi[16];
+  int imsi_set;
   localization_mac_t MAC;
   localization_physical_t L1; 
   localization_rrc_t RRC; 

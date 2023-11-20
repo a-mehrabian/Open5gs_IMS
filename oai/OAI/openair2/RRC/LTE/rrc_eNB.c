@@ -915,6 +915,9 @@ void release_UE_in_freeList(module_id_t mod_id) {
     for (int i = 0; i < MAX_LOCALIZATION_UE; i++) {
       if (rnti == RC.HL[i].rnti) {
         RC.HL[i].rnti = 0;
+        RC.HL[i].imsi[0] = '-';
+        RC.HL[i].imsi[1] = '\0';
+        RC.HL[i].imsi_set = 0;
         break;
       }
     }
