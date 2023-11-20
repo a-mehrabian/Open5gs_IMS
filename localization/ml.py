@@ -61,7 +61,7 @@ def train_mlp_model():
 
 
     # Split data into training and testing sets
-    X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.2, random_state=88)
+    X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.2, random_state=62)
 
     # Standardize the features (important for neural networks)
     scaler = StandardScaler()
@@ -81,6 +81,8 @@ def train_mlp_model():
 
     # # Compile the model
     mlp.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+    #mlp.compile(optimizer='adam', loss='mse', metrics=[tf.keras.metrics.MeanSquaredError()])
+
 
 
     # Train the MLP model
@@ -94,7 +96,7 @@ def train_mlp_model():
     # print("Mean Squared Error:", mse)
 
     # print(f'ML Accuracy: {accuracy*100:.2f} %')
-    model_filename = os.path.join(script_dir, "mlp_model.h5")
+    model_filename = os.path.join(script_dir, "data/mlp_model.h5")
     # joblib.dump(mlp, model_filename)
     mlp.save(model_filename)
     return scaler
@@ -106,7 +108,7 @@ def process_entry(entry, scaler, mqtt_client,update_time):
     refresh_time = 1  # The time interval (in seconds) for calculating the average room name
 
     # Load the trained MLP model
-    model_filename = os.path.join(script_dir, "mlp_model.h5")
+    model_filename = os.path.join(script_dir, "data/mlp_model.h5")
     # mlp = joblib.load(model_filename)
     mlp = tf.keras.models.load_model(model_filename)
     all_data=[]
@@ -179,7 +181,7 @@ def process_entry(entry, scaler, mqtt_client,update_time):
             print(f"No room name predictions made in the last {refresh_time} seconds", end='\r')
         
         #cahnge the average_prediction to the room_names = ['CONFERENCE', 'WAITING', 'OFFICE','WORKSHOP','KITCHEN']
-        room_names = ['CONFERENCE', 'WAITING', 'OFFICE','WORKSHOP','KITCHEN']
+        room_names = ['CONFERENCE', 'WAITING','WORKSHOP','KITCHEN']
         average_prediction = room_names[average_prediction]
         
         # real_time_result = average_prediction
@@ -204,7 +206,7 @@ def process_entry(entry, scaler, mqtt_client,update_time):
 def realtime_prediction(scaler, mqtt_client):
 
     # input_file = os.path.join(script_dir, "../localization_stats.log")
-    input_file = os.path.join(script_dir, "../test.log")
+    input_file = os.path.join(script_dir, "../localization_stats.log")
     update_time = time.time()
 
 

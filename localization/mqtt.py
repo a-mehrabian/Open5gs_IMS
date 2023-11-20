@@ -1,8 +1,8 @@
 from paho.mqtt import client as mqtt_client
 import time
  
-# broker = '192.168.21.10' # change this to your broker's address
-broker = '127.0.0.1'
+broker = '192.168.21.10' # change this to your broker's address
+# broker = '127.0.0.1'
 port = 1883 # change this to your broker's port
 client_id = 'client_id' # change this to your client id
 username = 'username' # change this to your username

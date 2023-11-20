@@ -1,0 +1,1 @@
+Room_Name,UE_RNTI,RSRP_Serving_Cell,RSRQ_Serving_Cell,UE_Power_Headroom,Pusch_SNR,Total_BLER,USR_UE_Power_Headroom,Estimated UE power,SNR,timing offset,dl cqi,ul cqi,spatial power 1,spatial power 2,channel est ofdm 1,channel est ofdm 2,UCI low,UCI high
