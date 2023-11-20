@@ -64,7 +64,7 @@ RUN git clone https://github.com/MicroPhase/antsdr_uhd.git \
     && cmake -DENABLE_X400=OFF -DENABLE_N320=OFF -DENABLE_X300=OFF \
        -DENABLE_USRP2=OFF -DENABLE_USRP1=OFF -DENABLE_N300=OFF \
        -DENABLE_E320=OFF -DENABLE_E300=OFF ../ \
-    && make \
+    && make -j$(nproc)\
     && make install \
     && ldconfig \
     && uhd_images_downloader \
@@ -84,7 +84,7 @@ COPY ./OAI/ .
 
 RUN . ./oaienv && cd cmake_targets && \
     # ./build_oai -I -w USRP --install-optional-packages --eNB --build-lib "telnetsrv enbscope"
-    ./build_oai -I -w USRP --install-optional-packages --eNB --build-lib "telnetsrv"
+    ./build_oai -I --install-optional-packages --eNB --build-lib "telnetsrv"
     
 RUN apt-get update \
     && apt-get install -y iproute2 net-tools
