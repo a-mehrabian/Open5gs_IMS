@@ -27,6 +27,8 @@
 FROM ubuntu:focal
 
 ENV DEBIAN_FRONTEND=noninteractive
+ENV BUILD_UHD_FROM_SOURCE=False
+ENV UHD_VERSION=4.1.0.0
 
 # Install updates and dependencies
 RUN apt-get update && \
@@ -84,7 +86,7 @@ COPY ./OAI/ .
 
 RUN . ./oaienv && cd cmake_targets && \
     # ./build_oai -I -w USRP --install-optional-packages --eNB --build-lib "telnetsrv enbscope"
-    ./build_oai -I --install-optional-packages --eNB --build-lib "telnetsrv"
+    ./build_oai -I -w USRP --install-optional-packages --eNB --build-lib "telnetsrv"
     
 RUN apt-get update \
     && apt-get install -y iproute2 net-tools
