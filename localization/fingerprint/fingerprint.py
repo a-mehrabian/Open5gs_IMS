@@ -130,7 +130,7 @@ def filter_data():
     # Write the data to a CSV file
     #exportfile = os.path.join(os.path.dirname(__file__), '../data/Filter.csv')
     #exportfile =  '../data/Filter.csv'
-    folder_data_path = os.path.join(os.path.dirname(__file__), '../data')  
+    folder_data_path = os.path.join(os.path.dirname(__file__), 'data')  
     print(folder_data_path)
     # Set the file path in folder B for Filter.csv
     exportfile = os.path.join(folder_data_path, 'Filter.csv')

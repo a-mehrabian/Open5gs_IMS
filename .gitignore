@@ -1,2 +1,4 @@
 **/log/
 /log/
+localization_stats.log
+**/json/
