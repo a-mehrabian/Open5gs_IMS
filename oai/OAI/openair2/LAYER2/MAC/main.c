@@ -65,6 +65,53 @@ void lte_dump_mac_stats(eNB_MAC_INST *mac, FILE *fd)
         total_bler = (double)UE_scheduling_control->pusch_rx_error_num[CC_id] / (double)(UE_scheduling_control->pusch_rx_error_num[CC_id] + UE_scheduling_control->pusch_rx_num[CC_id]) * 100;
       }
 
+      fprintf(fd,
+              "MAC UE rnti %x : %s, PHR %d DLCQI %d PUSCH %d PUCCH %d RLC disc %u UL-stat rcv %lu err %lu bler %lf (%lf/%lf) total_bler %lf mcsoff %d pre_allocated nb_rb %d, mcs %d, bsr %d sched %d "
+              "tbs %lu cnt %u , DL-stat tbs %lu cnt %u rb %u buf %d 1st %u ret %u ri %d inactivity timer %d\n",
+              rnti,
+              UE_scheduling_control->ul_out_of_sync == 0 ? "in synch" : "out of sync",
+              UE_info->UE_template[CC_id][UE_id].phr_info,
+              UE_scheduling_control->dl_cqi[CC_id],
+              UE_scheduling_control->pusch_snr /*_avg*/[CC_id],
+              UE_scheduling_control->pucch1_snr[CC_id],
+              UE_scheduling_control->rlc_out_of_resources_cnt,
+              UE_scheduling_control->pusch_rx_num[CC_id],
+              UE_scheduling_control->pusch_rx_error_num[CC_id],
+              UE_scheduling_control->pusch_bler[CC_id],
+              mac->bler_lower,
+              mac->bler_upper,
+              total_bler,
+              UE_scheduling_control->mcs_offset[CC_id],
+              UE_info->UE_template[CC_id][UE_id].pre_allocated_nb_rb_ul,
+              UE_info->UE_template[CC_id][UE_id].pre_assigned_mcs_ul,
+              UE_info->UE_template[CC_id][UE_id].estimated_ul_buffer,
+              UE_info->UE_template[CC_id][UE_id].scheduled_ul_bytes,
+              UE_info->eNB_UE_stats[CC_id][UE_id].total_pdu_bytes_rx,
+              UE_info->eNB_UE_stats[CC_id][UE_id].total_num_pdus_rx,
+              UE_info->eNB_UE_stats[CC_id][UE_id].total_pdu_bytes,
+              UE_info->eNB_UE_stats[CC_id][UE_id].total_num_pdus,
+              UE_info->eNB_UE_stats[CC_id][UE_id].total_rbs_used,
+#if defined(PRE_SCD_THREAD)
+              UE_info->UE_template[CC_id][UE_id].dl_buffer_total,
+#else
+              0,
+#endif
+              UE_scheduling_control->first_cnt[CC_id],
+              UE_scheduling_control->ret_cnt[CC_id],
+              UE_scheduling_control->aperiodic_ri_received[CC_id],
+              UE_scheduling_control->ul_inactivity_timer);
+        fprintf(fd,"              ULSCH rounds %d/%d/%d/%d, DLSCH rounds %d/%d/%d/%d, ULSCH errors %d, DLSCH errors %d\n",
+              UE_info->eNB_UE_stats[CC_id][UE_id].ulsch_rounds[0],
+              UE_info->eNB_UE_stats[CC_id][UE_id].ulsch_rounds[1],
+              UE_info->eNB_UE_stats[CC_id][UE_id].ulsch_rounds[2],
+              UE_info->eNB_UE_stats[CC_id][UE_id].ulsch_rounds[3],
+              UE_info->eNB_UE_stats[CC_id][UE_id].dlsch_rounds[0],
+              UE_info->eNB_UE_stats[CC_id][UE_id].dlsch_rounds[1],
+              UE_info->eNB_UE_stats[CC_id][UE_id].dlsch_rounds[2],
+              UE_info->eNB_UE_stats[CC_id][UE_id].dlsch_rounds[3],
+              UE_info->eNB_UE_stats[CC_id][UE_id].ulsch_errors,
+              UE_info->eNB_UE_stats[CC_id][UE_id].dlsch_errors);
+
       if (UE_id < MAX_LOCALIZATION_UE) {
         RC.HL[UE_id].rnti = rnti;
         if (UE_scheduling_control->timing_advance) RC.HL[UE_id].MAC.timing_advance = UE_scheduling_control->timing_advance;
