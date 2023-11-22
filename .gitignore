@@ -2,3 +2,7 @@
 /log/
 localization_stats.log
 **/json/
+localization/fingerprint/data/*.h5
+localization/fingerprint/data/*.csv
+**/*.log
+**/*.txt

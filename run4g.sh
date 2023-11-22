@@ -22,17 +22,19 @@ echo "Resetting USRP FPGA"
 # docker run -it --privileged docker_srslte ./usr/local/lib/uhd/utils/b2xx_fx3_utils --reset-device
 docker run -it --privileged --rm --name fpga_reset docker_srslte ./usr/local/lib/uhd/utils/b2xx_fx3_utils --reset-device
 # Down 4G Core Network
-docker-compose -f 4g-volte-deploy.yaml down
+# docker-compose -f 4g-volte-deploy.yaml down
+docker-compose -f 4g-volte-deploy-handover.yaml down
 
 
 echo "Starting containers"
 
 # Start 4G Core Network + IMS + SMS over SGs
 echo "Starting 4G Core Network"
-docker-compose -f 4g-volte-deploy.yaml up -d
+# docker-compose -f 4g-volte-deploy.yaml up -d
+docker-compose -f 4g-volte-deploy-handover.yaml up -d
 
 # Start 4G eNB
-echo "Starting 4G eNB"
+# echo "Starting 4G eNB"
 # docker-compose -f srsenb.yaml up -d
-docker-compose -f oaienb.yaml up -d
+# docker-compose -f oaienb.yaml up -d
 #docker-compose -f srsenb.yaml up -d && docker container attach srsenb
