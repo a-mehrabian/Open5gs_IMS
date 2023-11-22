@@ -293,7 +293,7 @@ services:
       - "3868/udp"
       - "3868/tcp"
     ports:
-      - "8080:8080/tcp"
+      - "8082:8082/tcp"
     networks:
       default:
         ipv4_address: ${PYHSS_IP}
