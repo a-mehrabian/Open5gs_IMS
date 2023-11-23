@@ -185,6 +185,8 @@ In the `enb.conf`
       # tm =  2
       # nof_ports = 2
 ```
+> If you are on the same Host just cahnge the mme_addr to the host address and leave the gtp and s1c bind addr
+
 In the `rr.conf` we need to make sure to have the right TAC (tac:1 like the core)
 ```diff
 cell_list =
@@ -198,11 +200,49 @@ cell_list =
   }
 )
 ```
+and;
+```diff
+    // Cells available for handover
+    meas_cell_list =
+    (
++      {
++       eci = 0x19C01;
++        dl_earfcn = 2850;
++        pci = 2; 
++      }
+    );
+```
+where the `eci` is the `eNB_ID`(0x19C) and `cell_id` (0x01); for other eNBs
+> Check the '/srslte/enb_external.conf' and '/srslte/rr_external.conf'
+
 And for having the internet access in he UE side, just run in the terminal
+in the both side;
 ```
-ip route add 172.22.0.0/24 via 10.11.0.53
+sudo iptables -P FORWARD ACCEPT
 ```
-To set static routing to eNodeB for packets going from eNodeB (10.11.0.53) to the Docker host network (172.22.0.0/24)
+and make sure the eNB externeal side make the docker network mode as `"host"`
+and add:
+```
+sudo ip route add 172.22.0.0/24 via $Core_Host_PC_IP 
+```
+where 172.22.x.x is the docker host network
+
+###### NOTE
+If you want to use the same node as core and eNB while having an external one should change the internal eNB configuation like this: 
+
+```diff
+  [enb]
+  enb_id = 0x19B
+  mcc = MCC
+  mnc = MNC
+- mme_addr = MME_IP
++ mme_addr = 192.168.21.203 #The eNB/CN IP address that gonna use for connect with external eNB
+  gtp_bind_addr = SRS_ENB_IP
+  s1c_bind_addr = SRS_ENB_IP
+  s1c_bind_port = 0
+  n_prb = 100
+```
+
 ###### 4G deployment (SDR)
 
 - Host PC:

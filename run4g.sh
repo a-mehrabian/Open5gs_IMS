@@ -15,7 +15,7 @@ echo "PWD: $PWD"
 # ????
 echo "Downing containers"
 # Down 4G eNB
-# docker-compose -f srsenb.yaml down
+docker-compose -f srsenb.yaml down
 docker-compose -f oaienb.yaml down
 # USRP reset FPGA
 echo "Resetting USRP FPGA"
@@ -35,6 +35,6 @@ docker-compose -f 4g-volte-deploy-handover.yaml up -d
 
 # Start 4G eNB
 # echo "Starting 4G eNB"
-# docker-compose -f srsenb.yaml up -d
+docker-compose -f srsenb.yaml up -d
 # docker-compose -f oaienb.yaml up -d
 #docker-compose -f srsenb.yaml up -d && docker container attach srsenb

@@ -1,8 +1,10 @@
 **/log/
 /log/
-localization_stats.log
-**/json/
+**/*.json
 localization/fingerprint/data/*.h5
 localization/fingerprint/data/*.csv
 **/*.log
 **/*.txt
+osmohlr/hlr.db-shm
+osmohlr/hlr.db-wal
+osmomsc/sms.db-wal
