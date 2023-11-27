@@ -79,14 +79,14 @@ def main(config_file, result_file):
         time.sleep(2)
 
 if __name__ == "__main__":
-    #if len(sys.argv) != 3:
-    #    print("Usage: python script.py <path_to_mergerConfig.json> <path_to_merged_result.json>")
-    #    sys.exit(1)
+    if len(sys.argv) != 3:
+        print("Usage: python script.py <path_to_mergerConfig.json> <path_to_merged_result.json>")
+        sys.exit(1)
 
-    #config_file_path = sys.argv[1]
-    #result_file_path = sys.argv[2]
+    config_file_path = sys.argv[1]
+    result_file_path = sys.argv[2]
 
-    config_file_path = "/home/ali/dev/Humanitas/open5gs_ims/srslte/scripts/mergerConfig.json"
-    result_file_path = "/home/ali/dev/Humanitas/open5gs_ims/srslte/scripts/merged_result.json"
+    #config_file_path = "/home/ali/dev/Humanitas/open5gs_ims/srslte/scripts/mergerConfig.json"
+    #result_file_path = "/home/ali/dev/Humanitas/open5gs_ims/srslte/scripts/merged_result.json"
 
     main(config_file_path, result_file_path)
