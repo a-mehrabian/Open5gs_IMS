@@ -1,6 +1,11 @@
 **/log/
 /log/
+
 **/*.json
+!mergerConfig.json
+!parserConfig.json
+
+
 localization/fingerprint/data/*.h5
 localization/fingerprint/data/*.csv
 **/*.log

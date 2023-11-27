@@ -1,0 +1,14 @@
+{
+    "server1" : {
+      "host": "10.11.0.203",
+      "user": "humanitas",
+      "pass": "Humanitas2020",
+      "inputFile":"/home/humanitas/open5gs_ims/srslte/output.json"
+    },
+      "server2": {
+      "host": "10.11.0.205",
+      "user": "humanitas",
+      "pass": "Humanitas2020",
+      "inputFile":"/home/humanitas/Documents/open5gs_ims/srslte/output.json"
+    } 
+  }
