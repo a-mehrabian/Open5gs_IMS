@@ -1,5 +1,8 @@
 **/log/
 /log/
+*.log
+*.csv
+
 
 **/*.json
 !mergerConfig.json

@@ -71,7 +71,7 @@ RUN git clone  https://github.com/MicroPhase/antsdr_uhd.git  && \
     mkdir build && \
     cd build && \
     cmake -DENABLE_X400=OFF -DENABLE_N320=OFF -DENABLE_X300=OFF -DENABLE_USRP2=OFF -DENABLE_USRP1=OFF  -DENABLE_N300=OFF -DENABLE_E320=OFF -DENABLE_E300=OFF ../ && \
-    make && \
+    make -j`nproc` && \
     make install && \
     ldconfig && \
     uhd_images_downloader && \
@@ -93,9 +93,9 @@ RUN git clone https://github.com/srsran/srsGUI && \
 #RUN apt-get update && apt-get install -y gdb libdw-dev
 
 # Get srsLTE, compile and install
-RUN git clone https://github.com/srsran/srsRAN_4G.git && \
+RUN git clone https://github.com/aoweis/srsRAN_4G.git && \
     cd srsRAN_4G && \
-    git checkout release_23_04_1 && \
+    git checkout prev-code-parameters && \
     mkdir build && cd build && \
     cmake ../ && make -j`nproc` && make install && \
     ldconfig
