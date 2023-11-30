@@ -14,7 +14,7 @@ services:
       - ./srslte:/mnt/srslte
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
-      - ./srslte/logs/rnti_to_tmsi.csv:/tmp/rnti_to_tmsi.csv
+      - ./srslte/logs:/tmp
     env_file:
       - .env
     environment:
