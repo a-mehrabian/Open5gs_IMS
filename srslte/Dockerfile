@@ -93,12 +93,22 @@ RUN git clone https://github.com/srsran/srsGUI && \
 #RUN apt-get update && apt-get install -y gdb libdw-dev
 
 # Get srsLTE, compile and install
+#RUN git clone https://github.com/aoweis/srsRAN_4G.git && \
+#    cd srsRAN_4G && \
+#    git checkout prev-code-parameters && \
+#    mkdir build && cd build && \
+#    cmake ../ && make -j`nproc` && make install && \
+#    ldconfig
+
+# Get srsLTE, compile and install
 RUN git clone https://github.com/aoweis/srsRAN_4G.git && \
     cd srsRAN_4G && \
     git checkout prev-code-parameters && \
+    sed -i 's/srslog::fetch_file_sink(args.general.report_json_filename, 0, false, srslog::create_json_formatter());/srslog::fetch_file_sink(args.general.report_json_filename, 100 * 1024, false, srslog::create_json_formatter());/' srsenb/src/main.cc && \
     mkdir build && cd build && \
     cmake ../ && make -j`nproc` && make install && \
     ldconfig
+
 
 RUN cd srsRAN_4G/build && srsran_install_configs.sh service
 
