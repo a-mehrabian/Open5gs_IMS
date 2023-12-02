@@ -2,6 +2,12 @@ import time
 import json
 import os
 
+# Global variables
+input_file = 'enb_report.json'
+output_file = 'output.json'
+max_file_size = 99 # in kilobytes
+file_counter = 0
+
 def read_last_n_lines(file, n=120):
     with open(file, 'rb') as f:
         f.seek(0, os.SEEK_END)
@@ -56,8 +62,30 @@ def write_output(data, output_file, append=False):
     with open(output_file, 'a' if append else 'w') as file:
         file.write(data)
 
-def main(input_file, output_file, config_file='parserConfig.json'):
+def cleanup():
+    global input_file, file_counter
+
+    try:
+        if os.path.getsize(input_file) > max_file_size * 1024:
+            parts = input_file.split('.', 1)
+            file_to_remove = f"{parts[0]}.{file_counter-1}.json"
+
+            if os.path.exists(file_to_remove):
+                os.remove(file_to_remove)
+                print(f"Removed file: {file_to_remove}")
+
+            file_counter += 1
+
+            input_file = f"{parts[0]}.{file_counter}.json"
+            print(f"New input_file name: {input_file}")
+    except Exception as e:
+        pass
+
+def main(config_file='parserConfig.json'):
+    global input_file, output_file
+
     while True:
+        cleanup()
         if not os.path.exists(input_file):
             print(f"Error: {input_file} not found.")
             time.sleep(1)
@@ -67,12 +95,12 @@ def main(input_file, output_file, config_file='parserConfig.json'):
         json_content = extract_json_content(lines)
 
         if json_content:
-            try:
+            try:                
                 content = json.loads(json_content)  # Validate JSON
                 try:
                     if len(content['cell_list']) > 0 and \
                         len(content['cell_list'][0]['cell_container']['ue_list']) > 0 and \
-                            (content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pusch_rssi'] != 0.0 or \
+                            (content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pusch_rssi'] != 0.0 and \
                                 content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pucch_rssi'] != 0.0):
                         if os.path.exists(config_file):
                             with open(config_file, 'r') as file:
@@ -85,8 +113,6 @@ def main(input_file, output_file, config_file='parserConfig.json'):
             except json.JSONDecodeError:
                 pass
 
-        time.sleep(1)
-
 if __name__ == "__main__":
     import sys
     if len(sys.argv) != 3:
@@ -94,7 +120,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     input_file, output_file = sys.argv[1], sys.argv[2]
-    #input_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/enb_report1.json"
-    #output_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/output.json"
+    #input_file = "/home/ali/dev/Humanitas/srsRAN_tmsi/srsenb/enb_report.json"
+    #output_file = "/home/ali/dev/Humanitas/srsRAN_tmsi/srsenb/output.json"
     #config_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/parserConfig.json"
-    main(input_file, output_file)
+    main()
