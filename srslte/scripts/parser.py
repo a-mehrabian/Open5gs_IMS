@@ -8,7 +8,7 @@ output_file = 'output.json'
 max_file_size = 99 # in kilobytes
 file_counter = 0
 
-def read_last_n_lines(file, n=120):
+def read_last_n_lines(file, n=100):
     with open(file, 'rb') as f:
         f.seek(0, os.SEEK_END)
         filesize = f.tell()
@@ -67,8 +67,10 @@ def cleanup():
 
     try:
         if os.path.getsize(input_file) > max_file_size * 1024:
-            parts = input_file.split('.', 1)
-            file_to_remove = f"{parts[0]}.{file_counter-1}.json"
+            directory, filename = os.path.split(input_file)
+
+            parts = filename.split('.', 1)
+            file_to_remove = os.path.join(directory, f"{parts[0]}.{file_counter}.json")
 
             if os.path.exists(file_to_remove):
                 os.remove(file_to_remove)
@@ -76,7 +78,7 @@ def cleanup():
 
             file_counter += 1
 
-            input_file = f"{parts[0]}.{file_counter}.json"
+            input_file = os.path.join(directory, f"{parts[0]}.{file_counter}.json")
             print(f"New input_file name: {input_file}")
     except Exception as e:
         pass
@@ -102,11 +104,11 @@ def main(config_file='parserConfig.json'):
                         len(content['cell_list'][0]['cell_container']['ue_list']) > 0 and \
                             (content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pusch_rssi'] != 0.0 and \
                                 content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pucch_rssi'] != 0.0):
-                        if os.path.exists(config_file):
-                            with open(config_file, 'r') as file:
-                                config = json.load(file)
-                                if config.get("classification", "") != "off":
-                                    write_output(json_content, config.get("outPutFileName", output_file), append=True)
+                        #if os.path.exists(config_file):
+                        #    with open(config_file, 'r') as file:
+                        #        config = json.load(file)
+                        #        if config.get("classification", "") != "off":
+                        #            write_output(json_content, config.get("outPutFileName", output_file), append=True)
                         write_output(json_content, output_file, append=False)
                 except Exception as e:
                     pass
