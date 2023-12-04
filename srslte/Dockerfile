@@ -109,6 +109,8 @@ RUN git clone https://github.com/aoweis/srsRAN_4G.git && \
     cmake ../ && make -j`nproc` && make install && \
     ldconfig
 
+RUN apt-get update && apt-get install -y \
+    python3 pip && pip3 install paramiko
 
 RUN cd srsRAN_4G/build && srsran_install_configs.sh service
 

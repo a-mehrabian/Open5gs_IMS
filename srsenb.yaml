@@ -12,6 +12,7 @@ services:
       - /dev/serial:/dev/serial:ro
       - /dev/bus/usb:/dev/bus/usb:ro
       - ./srslte:/mnt/srslte
+      - ./mme:/mnt/mme
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
       - ./srslte/logs:/tmp

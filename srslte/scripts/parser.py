@@ -152,7 +152,7 @@ def cleanup():
             directory, filename = os.path.split(input_file)
 
             parts = filename.split('.', 1)
-            file_to_remove = os.path.join(directory, f"{parts[0]}.{file_counter}.json")
+            file_to_remove = os.path.join(directory, f"{parts[0]}.{file_counter - 1}.json")
 
             if os.path.exists(file_to_remove):
                 os.remove(file_to_remove)
@@ -170,7 +170,13 @@ def cleanup():
                         print(f"Error: {input_file} not found. going for a new file")
                     continue
                 else:
-                    break            
+                    break
+        else:
+            temp_file = os.path.join(directory, f"{parts[0]}.{file_counter + 1}.json")
+            if os.path.exists(temp_file):
+                file_counter += 1
+                input_file = temp_file
+
     except Exception as e:
         pass
 
@@ -189,13 +195,17 @@ def main(config_file='parserConfig.json'):
     except Exception as e:
         print("error, setting up config from parserConfig.json!")
         sys.exit(1)
-
+    
     while True:
-        cleanup()
         if not os.path.exists(input_file):
             print(f"Error: {input_file} not found.")
             time.sleep(1)
             continue
+        else:
+            break
+
+    while True:
+        cleanup()
 
         lines = read_last_n_lines(input_file)
         json_content = extract_json_content(lines)
