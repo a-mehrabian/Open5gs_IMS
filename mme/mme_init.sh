@@ -50,7 +50,7 @@ sed -i 's|EPC_DOMAIN|'$EPC_DOMAIN'|g' install/etc/freeDiameter/make_certs.sh
 
 # Monitor the mme log and Generate imsi
 rm /open5gs/install/var/log/open5gs/mme.log
-/mnt/mme/scripts/imsi-generator.sh /open5gs/install/var/log/open5gs/mme.log /mnt/mme/logs/tmsi-to-imsi.csv &
+/mnt/mme/scripts/imsi-generator.sh /open5gs/install/var/log/open5gs/mme.log /mnt/mme/logs/tmsi_to_imsi.csv &
 
 # Generate TLS certificates
 ./install/etc/freeDiameter/make_certs.sh install/etc/freeDiameter
