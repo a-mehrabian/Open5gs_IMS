@@ -9,7 +9,6 @@ import re
 config = None
 input_file = ''
 output_file = ''
-max_file_size = 99 # in kilobytes
 file_counter = 0
 rnti_to_imsi = {}
 ssh_client = None
@@ -148,36 +147,21 @@ def cleanup():
     global input_file, file_counter
 
     try:
-        if os.path.getsize(input_file) > max_file_size * 1024:
-            directory, filename = os.path.split(input_file)
+        directory, filename = os.path.split(input_file)
+        parts = filename.split('.', 1)
+        temp_file = os.path.join(directory, f"{parts[0]}.{file_counter + 1}.json")
 
-            parts = filename.split('.', 1)
+        if os.path.exists(temp_file):            
             file_to_remove = os.path.join(directory, f"{parts[0]}.{file_counter - 1}.json")
-
             if os.path.exists(file_to_remove):
                 os.remove(file_to_remove)
                 print(f"Removed file: {file_to_remove}")
-                        
-            while True:
-                file_counter += 1
-                input_file = os.path.join(directory, f"{parts[0]}.{file_counter}.json")
-                print(f"New input_file name: {input_file}")
-                if not os.path.exists(input_file):
-                    print(f"Error: {input_file} not found, waiting")
-                    time.sleep(1)
-                    input_file = os.path.join(directory, f"{parts[0]}.{file_counter}.json")
-                    if not os.path.exists(input_file):
-                        print(f"Error: {input_file} not found. going for a new file")
-                    continue
-                else:
-                    break
-        else:
-            temp_file = os.path.join(directory, f"{parts[0]}.{file_counter + 1}.json")
-            if os.path.exists(temp_file):
-                file_counter += 1
-                input_file = temp_file
+            
+            file_counter += 1
+            input_file = temp_file
 
     except Exception as e:
+        print(str(e))
         pass
 
 def main(config_file='parserConfig.json'):
