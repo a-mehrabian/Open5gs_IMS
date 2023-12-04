@@ -9,6 +9,7 @@ fi
 input_file=$1
 output_file=$2
 
+rm "$output_file"
 # Create output file with header if it doesn't exist
 if [ ! -f "$output_file" ]; then
     echo "tmsi,imsi" > "$output_file"
