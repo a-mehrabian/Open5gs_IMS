@@ -32,6 +32,7 @@ echo "Starting containers"
 echo "Starting 4G Core Network"
 # docker-compose -f 4g-volte-deploy.yaml up -d
 docker-compose -f 4g-volte-deploy-handover.yaml up -d
+sleep 5
 
 # Start 4G eNB
 # echo "Starting 4G eNB"
