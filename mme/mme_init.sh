@@ -48,6 +48,9 @@ sed -i 's|EPC_DOMAIN|'$EPC_DOMAIN'|g' install/etc/freeDiameter/mme.conf
 sed -i 's|LD_LIBRARY_PATH|'$LD_LIBRARY_PATH'|g' install/etc/freeDiameter/mme.conf
 sed -i 's|EPC_DOMAIN|'$EPC_DOMAIN'|g' install/etc/freeDiameter/make_certs.sh
 
+# Monito the mme log and Generate imsi
+/mnt/mme/scripts/imsi-generator.sh /open5gs/install/var/log/open5gs/mme.log /mnt/mme/logs/tmsi-to-imsi.csv &
+
 # Generate TLS certificates
 ./install/etc/freeDiameter/make_certs.sh install/etc/freeDiameter
 

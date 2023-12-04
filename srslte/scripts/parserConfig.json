@@ -1,4 +1,13 @@
 {
-"classification": "off",
-"outPutFileName": "/home/ali/dev/Humanitas/open5gs_ims/srslte/output_classification.json"
+"appending": false,
+"appended-file-name": "/home/ali/dev/Humanitas/open5gs_ims/srslte/output_classification.json",
+"add-imsi": true,
+"rnti-to-tmsi-file": "/home/ali/dev/Humanitas/open5gs_ims/srslte/scripts/rnti-to-tmsi.csv",
+"output-rnti-to-imsi-file": "/home/ali/dev/Humanitas/open5gs_ims/srslte/scripts/rnti-to-imsi.csv",
+"mme-server": {
+        "server": "localhost",
+        "username": "humanitas",
+        "password": "Humanitas2020",
+        "tmsi-to-imsi-file": "/home/ali/dev/tmsi-to-imsi.csv"
+    }
 }

@@ -1,14 +1,74 @@
 import time
 import json
 import os
+import sys
+import csv
+import paramiko
+import re
 
-# Global variables
-input_file = 'enb_report.json'
-output_file = 'output.json'
+config = None
+input_file = ''
+output_file = ''
 max_file_size = 99 # in kilobytes
 file_counter = 0
+rnti_to_imsi = {}
+ssh_client = None
 
-def read_last_n_lines(file, n=100):
+def populateImsi():
+    global ssh_client, config, rnti_to_imsi
+    rnti_to_imsi = {}
+
+    rnti_to_tmsi_map = {}
+    try:
+        with open(config['rnti-to-tmsi-file'], 'r') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                rnti_to_tmsi_map[row['rnti']] = row['tmsi']
+    except Exception as e:
+        print("error reading rnti-to-tmsi-file")
+        sys.exit(1)
+
+    tmsi_to_imsi_map = {}
+    try:
+        mme_config = config['mme-server']
+        if mme_config['server'] != 'localhost':
+            if not ssh_client:
+                ssh_client = paramiko.SSHClient()
+                ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+                ssh_client.connect(mme_config['server'], username=mme_config['username'], password=mme_config['password'])
+            
+            sftp = ssh_client.open_sftp()
+            remote_file = sftp.file(mme_config['tmsi-to-imsi-file'], 'r')
+            reader = csv.DictReader(remote_file)
+            for row in reader:
+                tmsi_to_imsi_map[row['tmsi']] = row['imsi']
+            remote_file.close()
+        else:
+            with open(mme_config['tmsi-to-imsi-file'], 'r') as csvfile:
+                reader = csv.DictReader(csvfile)
+                for row in reader:
+                    tmsi_to_imsi_map[row['tmsi']] = row['imsi']
+    except Exception as e:
+        print("error reading tmsi-to-imsi-file")
+        sys.exit(1)
+
+    for rnti, tmsi in rnti_to_tmsi_map.items():
+        imsi = tmsi_to_imsi_map.get(tmsi)
+        if imsi:
+            rnti_to_imsi[rnti] = imsi
+
+    try:
+        with open(config['output-rnti-to-imsi-file'], 'w', newline='') as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow(['rnti', 'imsi'])
+            for rnti, imsi in rnti_to_imsi.items():
+                writer.writerow([rnti, imsi])
+    except Exception as e:
+        print ("Error, writing to rnti-to-imsi.csv")
+        sys.exit(1)
+
+
+def read_last_n_lines(file, n=120):
     with open(file, 'rb') as f:
         f.seek(0, os.SEEK_END)
         filesize = f.tell()
@@ -21,18 +81,40 @@ def read_last_n_lines(file, n=100):
             return [line.decode('utf-8') for line in f.readlines()]
 
 def extract_json_content(lines):
-    start, foundMetric = False, False
+    start, foundMetric, rnti = False, False, False
+    ue_id = 0
+    reach_rnti = 0
     json_content = ''
+    do_imsi = config.get("add-imsi", True)
     for line in lines:
         if line.startswith('{'):
             if start:
                 json_content = ''
                 foundMetric = False
+                ue_id = 0
+                rnti = False
+                reach_rnti = 0
             start = True            
         if start:
             json_content += line
-            if '"type": "metrics"' in line:
+            if rnti:
+                reach_rnti += 1
+            if not foundMetric and '"type": "metrics"' in line:
                 foundMetric = True
+                continue
+            elif do_imsi and not rnti and '"ue_rnti":' in line:
+                rnti = True
+                reach_rnti = 0
+                match = re.search(r'":\s*(\w+),', line)
+                if match:
+                    rnti = match.group(1)
+                    if rnti_to_imsi.get(rnti):
+                        json_content += '                "ue_imsi": "' + rnti_to_imsi.get(rnti) + '",\n'
+                    else:
+                        json_content += '                "ue_imsi": "imsi-' + str(ue_id) + '",\n'
+                ue_id += 1            
+            elif do_imsi and reach_rnti > 14 and rnti and '"ue_container"' in line:
+                rnti = False
             elif line.startswith('}'):
                 if foundMetric:
                     return json_content
@@ -84,7 +166,20 @@ def cleanup():
         pass
 
 def main(config_file='parserConfig.json'):
-    global input_file, output_file
+    global input_file, output_file, config, rnti_to_imsi
+
+    lastTimeStamp = 1.1
+
+    try:
+        if os.path.exists(config_file):
+            with open(config_file, 'r') as file:
+                config = json.load(file)
+        else:
+            print("missing parserConfig.json")
+            sys.exit(1)
+    except Exception as e:
+        print("error, setting up config from parserConfig.json!")
+        sys.exit(1)
 
     while True:
         cleanup()
@@ -100,17 +195,32 @@ def main(config_file='parserConfig.json'):
             try:                
                 content = json.loads(json_content)  # Validate JSON
                 try:
-                    if len(content['cell_list']) > 0 and \
-                        len(content['cell_list'][0]['cell_container']['ue_list']) > 0 and \
-                            (content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pusch_rssi'] != 0.0 and \
-                                content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pucch_rssi'] != 0.0):
-                        #if os.path.exists(config_file):
-                        #    with open(config_file, 'r') as file:
-                        #        config = json.load(file)
-                        #        if config.get("classification", "") != "off":
-                        #            write_output(json_content, config.get("outPutFileName", output_file), append=True)
-                        write_output(json_content, output_file, append=False)
+                    if lastTimeStamp != content['timestamp']:
+                        if len(content['cell_list']) > 0 and \
+                            len(content['cell_list'][0]['cell_container']['ue_list']) > 0 and \
+                                (content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pusch_rssi'] != 0.0 and \
+                                    content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pucch_rssi'] != 0.0):
+                            if config.get("add-imsi", True):
+                                ue_id = 0
+                                for ue in content['cell_list'][0]['cell_container']['ue_list']:
+                                    if ue['ue_container']['ue_imsi'] != rnti_to_imsi.get(str(ue['ue_container']['ue_rnti'])):
+                                        imsi = rnti_to_imsi.get(str(ue['ue_container']['ue_rnti']))
+                                        if not imsi:
+                                            populateImsi()
+                                            imsi = rnti_to_imsi.get(str(ue['ue_container']['ue_rnti']))
+                                            if not imsi:
+                                                imsi = 'Unknown'
+                                        json_content = json_content.replace('"ue_imsi": "imsi-' + str(ue_id) + '"', '"ue_imsi": "' + imsi + '"')
+                                    ue_id += 1
+                                            
+                            if config.get("appending", True):
+                                write_output(json_content, config.get("appended-file-name", output_file), append=True)
+                            write_output(json_content, output_file, append=False)
+                    else:
+                        time.sleep(1)
+                    lastTimeStamp = content['timestamp']
                 except Exception as e:
+                    print (str(e))
                     pass
             except json.JSONDecodeError:
                 pass
@@ -122,7 +232,8 @@ if __name__ == "__main__":
         sys.exit(1)
 
     input_file, output_file = sys.argv[1], sys.argv[2]
-    #input_file = "/home/ali/dev/Humanitas/srsRAN_tmsi/srsenb/enb_report.json"
-    #output_file = "/home/ali/dev/Humanitas/srsRAN_tmsi/srsenb/output.json"
-    #config_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/parserConfig.json"
+    
+    #input_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/scripts/enb_report.json"
+    #output_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/scripts/output.json"
+    #config_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/scripts/parserConfig.json"
     main()
