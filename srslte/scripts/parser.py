@@ -95,18 +95,20 @@ def extract_json_content(lines):
                 reach_rnti = 0
             start = True            
         if start:
-            json_content += line
+            #json_content += line
             if rnti:
                 reach_rnti += 1
             if not foundMetric and '"type": "metrics"' in line:
                 foundMetric = True
+                json_content += line
                 continue
             elif do_imsi and not rnti and '"ue_rnti":' in line:
                 rnti = True
                 reach_rnti = 0
                 match = re.search(r'":\s*(\w+),', line)
                 if match:
-                    rnti = match.group(1)
+                    rnti = str(hex(int(match.group(1))))
+                    json_content += '                "ue_rnti": "' + rnti + '",\n'
                     if rnti_to_imsi.get(rnti):
                         json_content += '                "ue_imsi": "' + rnti_to_imsi.get(rnti) + '",\n'
                     else:
@@ -114,13 +116,17 @@ def extract_json_content(lines):
                 ue_id += 1            
             elif do_imsi and reach_rnti > 14 and rnti and '"ue_container"' in line:
                 rnti = False
+                json_content += line
             elif line.startswith('}'):
+                json_content += line
                 if foundMetric:
                     return json_content
                 else:
                     json_content = ''
                     start = False
                     foundMetric = False
+            else:
+                json_content += line
     return None
 
 def write_output(data, output_file, append=False):
@@ -206,11 +212,11 @@ def main(config_file='parserConfig.json'):
                             if config.get("add-imsi", True):
                                 ue_id = 0
                                 for ue in content['cell_list'][0]['cell_container']['ue_list']:
-                                    if ue['ue_container']['ue_imsi'] != rnti_to_imsi.get(str(ue['ue_container']['ue_rnti'])):
-                                        imsi = rnti_to_imsi.get(str(ue['ue_container']['ue_rnti']))
+                                    if ue['ue_container']['ue_imsi'] != rnti_to_imsi.get(ue['ue_container']['ue_rnti']):
+                                        imsi = rnti_to_imsi.get(ue['ue_container']['ue_rnti'])
                                         if not imsi:
                                             populateImsi()
-                                            imsi = rnti_to_imsi.get(str(ue['ue_container']['ue_rnti']))
+                                            imsi = rnti_to_imsi.get(ue['ue_container']['ue_rnti'])
                                             if not imsi:
                                                 imsi = 'Unknown'
                                         json_content = json_content.replace('"ue_imsi": "imsi-' + str(ue_id) + '"', '"ue_imsi": "' + imsi + '"')
@@ -226,6 +232,7 @@ def main(config_file='parserConfig.json'):
                     print (str(e))
                     pass
             except json.JSONDecodeError:
+                print (str(e))
                 pass
 
 if __name__ == "__main__":
@@ -233,7 +240,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 3:
         print("Usage: python script.py <input_file> <output_file>")
         sys.exit(1)
-
+    
     input_file, output_file = sys.argv[1], sys.argv[2]
     
     #input_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/scripts/enb_report.json"
