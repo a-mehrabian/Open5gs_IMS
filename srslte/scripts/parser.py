@@ -157,11 +157,20 @@ def cleanup():
             if os.path.exists(file_to_remove):
                 os.remove(file_to_remove)
                 print(f"Removed file: {file_to_remove}")
-
-            file_counter += 1
-
-            input_file = os.path.join(directory, f"{parts[0]}.{file_counter}.json")
-            print(f"New input_file name: {input_file}")
+                        
+            while True:
+                file_counter += 1
+                input_file = os.path.join(directory, f"{parts[0]}.{file_counter}.json")
+                print(f"New input_file name: {input_file}")
+                if not os.path.exists(input_file):
+                    print(f"Error: {input_file} not found, waiting")
+                    time.sleep(1)
+                    input_file = os.path.join(directory, f"{parts[0]}.{file_counter}.json")
+                    if not os.path.exists(input_file):
+                        print(f"Error: {input_file} not found. going for a new file")
+                    continue
+                else:
+                    break            
     except Exception as e:
         pass
 
