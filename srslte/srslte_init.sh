@@ -86,7 +86,8 @@ elif [[ "$COMPONENT_NAME" =~ ^(gnb$) || "$COMPONENT_NAME" =~ ^(enb$) || "$COMPON
 	rm /mnt/srslte/logs/enb_report.*.* /mnt/srslte/logs/enb_report.*
 	cd /mnt/srslte/scripts
 	python3 /mnt/srslte/scripts/parser.py /mnt/srslte/logs/enb_report.json /mnt/srslte/logs/output.json &
-	/usr/local/bin/srsenb
+	rm /mnt/srslte/logs/rnti_to_rnti.csv
+	/usr/local/bin/srsenb | ./rrc-restablish.sh /mnt/srslte/logs/rnti_to_rnti.csv
 elif [[ "$COMPONENT_NAME" =~ ^(ue_zmq$) || "$COMPONENT_NAME" =~ ^(ue_5g_zmq$) ]]; then
 	echo "Deploying component: '$COMPONENT_NAME'"
 	/usr/local/bin/srsue

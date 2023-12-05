@@ -26,6 +26,16 @@ def populateImsi():
     except Exception as e:
         print("error reading rnti-to-tmsi-file")
         sys.exit(1)
+    
+    rnti_to_rnti_map = {}
+    try:
+        with open(config['rnti-to-rnti-file'], 'r') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                rnti_to_rnti_map[row['new_rnti']] = row['existing_rnti']
+    except Exception as e:
+        print("error reading rnti-to-rnti-file")
+        sys.exit(1)
 
     tmsi_to_imsi_map = {}
     try:
@@ -55,6 +65,10 @@ def populateImsi():
         imsi = tmsi_to_imsi_map.get(tmsi)
         if imsi:
             rnti_to_imsi[rnti] = imsi
+    for newRnti, exsRnti in rnti_to_rnti_map.items():
+        currentImsi = rnti_to_imsi.get(exsRnti)
+        if currentImsi:
+            rnti_to_imsi[newRnti] = currentImsi
 
     try:
         with open(config['output-rnti-to-imsi-file'], 'w', newline='') as csvfile:
@@ -108,13 +122,13 @@ def extract_json_content(lines):
                 match = re.search(r'":\s*(\w+),', line)
                 if match:
                     rnti = str(hex(int(match.group(1))))
-                    json_content += '                "ue_rnti": "' + rnti + '",\n'
+                    json_content += '              "ue_rnti": "' + rnti + '",\n'
                     if rnti_to_imsi.get(rnti):
-                        json_content += '                "ue_imsi": "' + rnti_to_imsi.get(rnti) + '",\n'
+                        json_content += '              "ue_imsi": "' + rnti_to_imsi.get(rnti) + '",\n'
                     else:
-                        json_content += '                "ue_imsi": "imsi-' + str(ue_id) + '",\n'
+                        json_content += '              "ue_imsi": "imsi-' + str(ue_id) + '",\n'
                 ue_id += 1            
-            elif do_imsi and reach_rnti > 14 and rnti and '"ue_container"' in line:
+            elif do_imsi and rnti and reach_rnti > 20 and '"ue_container"' in line:
                 rnti = False
                 json_content += line
             elif line.startswith('}'):
