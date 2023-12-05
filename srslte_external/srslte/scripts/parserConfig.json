@@ -1,0 +1,15 @@
+{
+    "appending": false,
+    "appended-file-name": "if you want to see the resutl as a big file (if appending=true) appended by output records, e.g.: ~/home/kitchen.json",
+    "add-imsi": true,
+    "rnti-to-tmsi-file": "/mnt/srslte/logs/rnti_to_tmsi.csv",
+    "rnti-to-rnti-file": "/mnt/srslte/logs/rnti_to_rnti.csv",
+    "generate-rnti-to-imsi": true,
+    "output-rnti-to-imsi-file": "/mnt/srslte/logs/rnti_to_imsi.csv",
+    "mme-server": {
+            "server": "$CORE_IP",
+            "username": "humanitas",
+            "password": "Humanitas2020",
+            "tmsi-to-imsi-file": "/home/humanitas/open5gs_ims/mme/logs/tmsi_to_imsi.csv"
+        }
+}

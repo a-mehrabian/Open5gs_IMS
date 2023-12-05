@@ -1,0 +1,46 @@
+version: '3'
+services:
+  srsenb:
+    image: docker_srslte:external
+    build: ./srslte
+    container_name: srsenb
+    stdin_open: true
+    tty: true
+    privileged: true
+    network_mode: "host"
+    devices:
+      - "/dev/bus"
+    volumes:
+      - /dev/serial:/dev/serial:ro
+      - /dev/bus/usb:/dev/bus/usb:ro
+      - ./srslte:/mnt/srslte
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - ./srslte/logs:/tmp
+    env_file:
+      - .env
+    environment:
+      - COMPONENT_NAME=enb
+      # USRP_TYPE: U220 or B210
+      - USRP_TYPE=${USRP_TYPE}
+    expose:
+      - "36412/sctp"
+      - "2152/udp"
+    healthcheck:
+      test: /bin/bash -c "pgrep srsenb && ping -c 1 $${CORE_IP}"
+      interval: 10s
+      timeout: 5s
+      retries: 5   
+  # parser:
+  #   image: enb_parser:external
+  #   build: ./srslte/scripts
+  #   container_name: parser
+  #   env_file:
+  #     - .env
+  #   volumes:
+  #     - ./srslte/logs:/tmp
+  #     # - ./srslte/scripts:/app
+  #   depends_on:
+  #     - srsenb
+  
+
