@@ -12,72 +12,110 @@ output_file = ''
 file_counter = 0
 rnti_to_imsi = {}
 ssh_client = None
+rnti_to_tmsi_line_counter = 0
+rnti_to_rnti_line_counter = 0
+tmsi_to_imsi_line_counter = 0
 
 def populateImsi():
-    global ssh_client, config, rnti_to_imsi
-    rnti_to_imsi = {}
+    global ssh_client, config, rnti_to_imsi, rnti_to_tmsi_line_counter, rnti_to_rnti_line_counter, tmsi_to_imsi_line_counter
 
+    writeIt = False
+    newRnti = False
+    
     rnti_to_tmsi_map = {}
     try:
         with open(config['rnti-to-tmsi-file'], 'r') as csvfile:
+            
             reader = csv.DictReader(csvfile)
+            _ = reader.fieldnames 
+            for _ in range(rnti_to_tmsi_line_counter):
+                next(reader, None)
+            
             for row in reader:
+                newRnti = True
                 rnti_to_tmsi_map[row['rnti']] = row['tmsi']
+                rnti_to_tmsi_line_counter += 1
     except Exception as e:
         print("error reading rnti-to-tmsi-file")
+        print(str(e))
         sys.exit(1)
     
     rnti_to_rnti_map = {}
     try:
         with open(config['rnti-to-rnti-file'], 'r') as csvfile:
+            
             reader = csv.DictReader(csvfile)
+            _ = reader.fieldnames 
+            for _ in range(rnti_to_rnti_line_counter):
+                next(reader, None)            
+            
             for row in reader:
                 rnti_to_rnti_map[row['new_rnti']] = row['existing_rnti']
+                rnti_to_rnti_line_counter += 1
     except Exception as e:
         print("error reading rnti-to-rnti-file")
+        print(str(e))
         sys.exit(1)
 
     tmsi_to_imsi_map = {}
     try:
-        mme_config = config['mme-server']
-        if mme_config['server'] != 'localhost':
-            if not ssh_client:
-                ssh_client = paramiko.SSHClient()
-                ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-                ssh_client.connect(mme_config['server'], username=mme_config['username'], password=mme_config['password'])
-            
-            sftp = ssh_client.open_sftp()
-            remote_file = sftp.file(mme_config['tmsi-to-imsi-file'], 'r')
-            reader = csv.DictReader(remote_file)
-            for row in reader:
-                tmsi_to_imsi_map[row['tmsi']] = row['imsi']
-            remote_file.close()
-        else:
-            with open(mme_config['tmsi-to-imsi-file'], 'r') as csvfile:
-                reader = csv.DictReader(csvfile)
+        if newRnti:
+            mme_config = config['mme-server']
+            if mme_config['server'] != 'localhost':
+                if not ssh_client:
+                    ssh_client = paramiko.SSHClient()
+                    ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+                    ssh_client.connect(mme_config['server'], username=mme_config['username'], password=mme_config['password'])
+                
+                sftp = ssh_client.open_sftp()
+                remote_file = sftp.file(mme_config['tmsi-to-imsi-file'], 'r')
+                
+                reader = csv.DictReader(remote_file)
+                _ = reader.fieldnames
+                for _ in range(tmsi_to_imsi_line_counter):
+                    next(reader, None)
+                
                 for row in reader:
                     tmsi_to_imsi_map[row['tmsi']] = row['imsi']
+                    tmsi_to_imsi_line_counter += 1
+                remote_file.close()
+            else:
+                with open(mme_config['tmsi-to-imsi-file'], 'r') as csvfile:
+                    
+                    reader = csv.DictReader(csvfile)
+                    _ = reader.fieldnames
+                    for _ in range(tmsi_to_imsi_line_counter):
+                        next(reader, None)
+                    
+                    for row in reader:
+                        tmsi_to_imsi_map[row['tmsi']] = row['imsi']
+                        tmsi_to_imsi_line_counter += 1
     except Exception as e:
         print("error reading tmsi-to-imsi-file")
+        print(str(e))
         sys.exit(1)
-
+    
     for rnti, tmsi in rnti_to_tmsi_map.items():
         imsi = tmsi_to_imsi_map.get(tmsi)
         if imsi:
+            writeIt = True
             rnti_to_imsi[rnti] = imsi
     for newRnti, exsRnti in rnti_to_rnti_map.items():
         currentImsi = rnti_to_imsi.get(exsRnti)
         if currentImsi:
+            writeIt = True
             rnti_to_imsi[newRnti] = currentImsi
 
     try:
-        with open(config['output-rnti-to-imsi-file'], 'w', newline='') as csvfile:
-            writer = csv.writer(csvfile)
-            writer.writerow(['rnti', 'imsi'])
-            for rnti, imsi in rnti_to_imsi.items():
-                writer.writerow([rnti, imsi])
+        if writeIt:
+            with open(config['output-rnti-to-imsi-file'], 'w', newline='') as csvfile:
+                writer = csv.writer(csvfile)
+                writer.writerow(['rnti', 'imsi'])
+                for rnti, imsi in rnti_to_imsi.items():
+                    writer.writerow([rnti, imsi])
     except Exception as e:
         print ("Error, writing to rnti-to-imsi.csv")
+        print(str(e))
         sys.exit(1)
 
 
@@ -226,8 +264,8 @@ def main(config_file='parserConfig.json'):
                             if config.get("add-imsi", True):
                                 ue_id = 0
                                 for ue in content['cell_list'][0]['cell_container']['ue_list']:
-                                    if ue['ue_container']['ue_imsi'] != rnti_to_imsi.get(ue['ue_container']['ue_rnti']):
-                                        imsi = rnti_to_imsi.get(ue['ue_container']['ue_rnti'])
+                                    imsi = rnti_to_imsi.get(ue['ue_container']['ue_rnti'])
+                                    if ue['ue_container']['ue_imsi'] != imsi:                                        
                                         if not imsi:
                                             populateImsi()
                                             imsi = rnti_to_imsi.get(ue['ue_container']['ue_rnti'])
@@ -257,7 +295,7 @@ if __name__ == "__main__":
     
     input_file, output_file = sys.argv[1], sys.argv[2]
     
-    #input_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/scripts/enb_report.json"
-    #output_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/scripts/output.json"
+    #input_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/logs/enb_report5.json"
+    #output_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/logs/output.json"
     #config_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/scripts/parserConfig.json"
     main()
