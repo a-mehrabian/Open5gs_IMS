@@ -11,13 +11,14 @@ input_file = ''
 output_file = ''
 file_counter = 0
 rnti_to_imsi = {}
+tmsi_to_imsi_map = {}
 ssh_client = None
 rnti_to_tmsi_line_counter = 0
 rnti_to_rnti_line_counter = 0
 tmsi_to_imsi_line_counter = 0
 
 def populateImsi():
-    global ssh_client, config, rnti_to_imsi, rnti_to_tmsi_line_counter, rnti_to_rnti_line_counter, tmsi_to_imsi_line_counter
+    global ssh_client, config, rnti_to_imsi, rnti_to_tmsi_line_counter, rnti_to_rnti_line_counter, tmsi_to_imsi_line_counter, tmsi_to_imsi_map
 
     writeIt = False
     newRnti = False
@@ -57,7 +58,6 @@ def populateImsi():
         print(str(e))
         sys.exit(1)
 
-    tmsi_to_imsi_map = {}
     try:
         if newRnti:
             mme_config = config['mme-server']
@@ -107,7 +107,7 @@ def populateImsi():
             rnti_to_imsi[newRnti] = currentImsi
 
     try:
-        if writeIt:
+        if writeIt and config.get("generate-rnti-to-imsi", True):
             with open(config['output-rnti-to-imsi-file'], 'w', newline='') as csvfile:
                 writer = csv.writer(csvfile)
                 writer.writerow(['rnti', 'imsi'])
