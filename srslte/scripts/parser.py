@@ -16,6 +16,7 @@ ssh_client = None
 rnti_to_tmsi_line_counter = 0
 rnti_to_rnti_line_counter = 0
 tmsi_to_imsi_line_counter = 0
+tmsi_last_digit_count = 5
 
 def populateImsi():
     global ssh_client, config, rnti_to_imsi, rnti_to_tmsi_line_counter, rnti_to_rnti_line_counter, tmsi_to_imsi_line_counter, tmsi_to_imsi_map
@@ -34,7 +35,7 @@ def populateImsi():
             
             for row in reader:
                 newRnti = True
-                rnti_to_tmsi_map[row['rnti']] = row['tmsi']
+                rnti_to_tmsi_map[row['rnti']] = row['tmsi'][-tmsi_last_digit_count:]
                 rnti_to_tmsi_line_counter += 1
     except Exception as e:
         print("error reading rnti-to-tmsi-file")
@@ -76,7 +77,7 @@ def populateImsi():
                     next(reader, None)
                 
                 for row in reader:
-                    tmsi_to_imsi_map[row['tmsi']] = row['imsi']
+                    tmsi_to_imsi_map[row['tmsi'][-tmsi_last_digit_count:]] = row['imsi']
                     tmsi_to_imsi_line_counter += 1
                 remote_file.close()
             else:
@@ -88,7 +89,7 @@ def populateImsi():
                         next(reader, None)
                     
                     for row in reader:
-                        tmsi_to_imsi_map[row['tmsi']] = row['imsi']
+                        tmsi_to_imsi_map[row['tmsi'][-tmsi_last_digit_count:]] = row['imsi']
                         tmsi_to_imsi_line_counter += 1
     except Exception as e:
         print("error reading tmsi-to-imsi-file")
