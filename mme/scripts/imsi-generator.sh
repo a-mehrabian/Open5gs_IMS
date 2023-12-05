@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Check if two arguments are provided
+
 if [ "$#" -ne 2 ]; then
     echo "Usage: $0 input_file output_file"
     exit 1
@@ -10,7 +10,7 @@ input_file=$1
 output_file=$2
 
 rm "$output_file"
-# Create output file with header if it doesn't exist
+
 if [ ! -f "$output_file" ]; then
     echo "tmsi,imsi" > "$output_file"
 fi
