@@ -3,8 +3,6 @@
 # Apply the environment variables
 echo "Applying environment variables..."
 echo "======================="
-# set a working directory to run all the commands as ./srslte_external
-cd ./srslte_external
 set -a
 source .env
 # Set the variables

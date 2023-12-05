@@ -92,6 +92,7 @@ sed -i 's|CELL_ID|'$CELL_ID'|g' /etc/srsran/rr.conf
 sed -i 's|DL_EARFCN|'$DL_EARFCN'|g' /etc/srsran/rr.conf
 sed -i 's|PCI|'$PCI'|g' /etc/srsran/rr.conf
 sed -i 's|TAC|'$TAC'|g' /etc/srsran/rr.conf
+sed -i 's|$CORE_IP|'$CORE_IP'|g' /mnt/srslte/parserConfig.json
 
 
 # For dbus not started issue when host machine is running Ubuntu 22.04
@@ -103,17 +104,18 @@ elif [[ "$COMPONENT_NAME" =~ ^(gnb$) || "$COMPONENT_NAME" =~ ^(enb$) || "$COMPON
 	echo "Deploying component: '$COMPONENT_NAME'"
 	echo "Core address: '$CORE_IP'"
 	# rm /mnt/srslte/logs/*
-	rm /mnt/srslte/logs/enb_report.*.* /mnt/srslte/logs/enb_report.*
-	cd /mnt/srslte/scripts
-	python3 /mnt/srslte/scripts/parser.py /mnt/srslte/logs/enb_report.json /mnt/srslte/logs/output.json &
-	rm /mnt/srslte/logs/rnti_to_rnti.csv
+	rm /tmp/enb_report.*.* /tmp/enb_report.*
+	cd /mnt/srslte
+	python3 /mnt/srslte/scripts/parser.py /tmp/enb_report.json /tmp/output.json &
+	cd scripts
+	rm /tmp/rnti_to_rnti.csv
 	echo "RR Config"
 	echo "==============="
-	cat /etc/srsran/rr.conf
+	# cat /etc/srsran/rr.conf
 	echo "==============="
-	/usr/local/bin/srsenb | ./rrc-restablish.sh /mnt/srslte/logs/rnti_to_rnti.csv
+	/usr/local/bin/srsenb | ./rrc-restablish.sh /tmp/rnti_to_rnti.csv
 
-	/usr/local/bin/srsenb 2>&1 | tee /mnt/srslte/logs/srsenb.log
+	/usr/local/bin/srsenb 2>&1 | tee /tmp/srsenb.log
 elif [[ "$COMPONENT_NAME" =~ ^(ue_zmq$) || "$COMPONENT_NAME" =~ ^(ue_5g_zmq$) ]]; then
 	echo "Deploying component: '$COMPONENT_NAME'"
 	/usr/local/bin/srsue

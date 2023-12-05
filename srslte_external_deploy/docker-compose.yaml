@@ -13,10 +13,11 @@ services:
     volumes:
       - /dev/serial:/dev/serial:ro
       - /dev/bus/usb:/dev/bus/usb:ro
-      - ./srslte:/mnt/srslte
+      - ./:/mnt/srslte
+      - ../srslte/scripts:/mnt/srslte/scripts
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
-      - ./srslte/logs:/tmp
+      - ./logs:/tmp
     env_file:
       - .env
     environment:

@@ -2,10 +2,10 @@
     "appending": false,
     "appended-file-name": "if you want to see the resutl as a big file (if appending=true) appended by output records, e.g.: ~/home/kitchen.json",
     "add-imsi": true,
-    "rnti-to-tmsi-file": "/home/ranop/Desktop/open5gs_ims/srslte/logs/rnti_to_tmsi.csv",
-    "rnti-to-rnti-file": "/home/ranop/Desktop/open5gs_ims/srslte/logs/rnti_to_rnti.csv",
+    "rnti-to-tmsi-file": "/tmp/rnti_to_tmsi.csv",
+    "rnti-to-rnti-file": "/tmp/rnti_to_rnti.csv",
     "generate-rnti-to-imsi": true,
-    "output-rnti-to-imsi-file": "/home/ranop/Desktop/open5gs_ims/srslte/logs/rnti_to_imsi.csv",
+    "output-rnti-to-imsi-file": "/tmp/rnti_to_imsi.csv",
     "mme-server": {
             "server": "10.11.0.203",
             "username": "humanitas",
