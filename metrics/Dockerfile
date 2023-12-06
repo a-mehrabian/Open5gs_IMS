@@ -28,7 +28,8 @@ FROM ubuntu:focal
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-ENV PROMETHEUS_VERSION=2.40.2
+# ENV PROMETHEUS_VERSION=2.40.2
+ENV PROMETHEUS_VERSION=2.48.0
 
 RUN apt-get update && \
     apt-get install -y wget && \
