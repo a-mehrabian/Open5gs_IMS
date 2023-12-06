@@ -259,9 +259,9 @@ def main(config_file='parserConfig.json'):
                 try:
                     if lastTimeStamp != content['timestamp']:
                         if len(content['cell_list']) > 0 and \
-                            len(content['cell_list'][0]['cell_container']['ue_list']) > 0 and \
-                                (content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pusch_rssi'] != 0.0 and \
-                                    content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pucch_rssi'] != 0.0):
+                            len(content['cell_list'][0]['cell_container']['ue_list']) > 0 : #and \
+                                #(content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pusch_rssi'] != 0.0 and \
+                                #    content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pucch_rssi'] != 0.0):
                             if config.get("add-imsi", True):
                                 ue_id = 0
                                 for ue in content['cell_list'][0]['cell_container']['ue_list']:
