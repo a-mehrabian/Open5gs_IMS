@@ -4,7 +4,7 @@
     "add-imsi": true,
     "rnti-to-tmsi-file": "/tmp/rnti_to_tmsi.csv",
     "rnti-to-rnti-file": "/tmp/rnti_to_rnti.csv",
-    "generate-rnti-to-imsi": true,
+    "generate-rnti-to-imsi": false,
     "output-rnti-to-imsi-file": "/tmp/rnti_to_imsi.csv",
     "mme-server": {
             "server": "10.11.0.203",
