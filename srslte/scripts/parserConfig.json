@@ -4,7 +4,7 @@
     "add-imsi": true,
     "rnti-to-tmsi-file": "/mnt/srslte/logs/rnti_to_tmsi.csv",
     "rnti-to-rnti-file": "/mnt/srslte/logs/rnti_to_rnti.csv",
-    "generate-rnti-to-imsi": true,
+    "generate-rnti-to-imsi": false,
     "output-rnti-to-imsi-file": "/mnt/srslte/logs/rnti_to_imsi.csv",
     "mme-server": {
             "server": "localhost",
