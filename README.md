@@ -390,7 +390,7 @@ OsmoMSC# subscriber msisdn 001002 sms sender msisdn 001001 send TEST MESSAGE
 
 ### Add SIM information in pyHSS is as follows (realated SIP (VoLTE)):
 
-1. Goto http://172.22.0.18:8080/docs/
+1. Goto http://172.22.0.18:8082/docs/ (Check conatiner IP and Port with ```docker inspect pyhss```)
 2. Select **apn** -> **Create new APN** -> Press on **Try it out**. Then, in payload section use the below JSON and then press **Execute**
 
 ```
