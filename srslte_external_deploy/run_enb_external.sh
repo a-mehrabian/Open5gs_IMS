@@ -49,13 +49,22 @@ echo "Freeing up space in docker_srslte:external"
 docker run -it --rm docker_srslte:external bash -c "rm -rf /mnt/srslte/logs/*"
 docker compose up -d
 docker compose logs -f
-# If the user type ctrl+c, ask if he wants to stop the container
+# If the user type ctrl+c, ask if he wants to stop the container or restart the script or skip by 3 option
 echo "======================="
-echo "Do you want to stop the container? (Y/n) Enter to skip"
+echo "Enter your option: "
+echo "======================="
+echo "1. Stop the container"
+echo "2. Restart the script"
+echo "Enter to skip"
 read answer
-if [ "$answer" != "${answer#[Yy]}" ] ;then
+if [ "$answer" == "1" ] ;then
     echo "Stopping the container..."
     docker compose down
+elif [ "$answer" == "2" ] ;then
+    echo "Restarting the script..."
+    $0
 else
     echo "The container is still running"
 fi
+# End of script
+echo "======================="

@@ -104,8 +104,7 @@ uhd_init faile, freeing...
 ```
 Just run this code:
 ```
-docker run -it --privileged docker_srslte /bin/bash
-./usr/local/lib/uhd/utils/b2xx_fx3_utils --reset-device
+docker run -it --privileged --rm --name fpga_reset docker_srslte ./usr/local/lib/uhd/utils/b2xx_fx3_utils --reset-device
 ```
 
 **Simulation:**
