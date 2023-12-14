@@ -3,6 +3,10 @@
 # Apply the environment variables
 echo "Applying environment variables..."
 echo "======================="
+echo "Changing the directory to srslte_external_deploy..."
+cd /home/humanitas/open5gs_ims/srslte_external_deploy
+echo "PWD: $(pwd)"
+echo "======================="
 set -a
 source .env
 # Set the variables
@@ -16,9 +20,15 @@ if ping -c 1 $CORE_IP &> /dev/null
 then
     echo "Connection to the core network is OK"
 else
-    echo "Connection to the core network is not OK"
-    echo "Please check the CORE_IP in the .env file"
-    exit
+    while true; do
+        echo "Connection to the core network is not OK"
+        echo "Please check the CORE_IP in the .env file"
+        sleep 10
+        if ping -c 1 $CORE_IP &> /dev/null; then
+            echo "Connection to the core network is OK"
+            break
+        fi
+    done
 fi
 echo "======================="
 # Apply the network and firewall settings

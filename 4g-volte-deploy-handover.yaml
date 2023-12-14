@@ -17,6 +17,11 @@ services:
     networks:
       default:
         ipv4_address: ${MONGO_IP}
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 30s
+      timeout: 10s
+      retries: 3
   webui:
     image: docker_open5gs
     container_name: webui
@@ -37,6 +42,11 @@ services:
     networks:
       default:
         ipv4_address: ${WEBUI_IP}
+    healthcheck:
+      test: /bin/bash -c "pgrep npm"
+      interval: 10s
+      timeout: 10s
+      retries: 5
   hss:
     image: docker_open5gs
     container_name: hss
@@ -61,6 +71,11 @@ services:
     networks:
       default:
         ipv4_address: ${HSS_IP}
+    healthcheck:
+      test: /bin/bash -c "pgrep open5gs-hssd"
+      interval: 10s
+      timeout: 10s
+      retries: 5
   sgwc:
     image: docker_open5gs
     depends_on:
@@ -82,6 +97,11 @@ services:
     networks:
       default:
         ipv4_address: ${SGWC_IP}
+    healthcheck:
+      test: /bin/bash -c "pgrep open5gs-sgwcd"
+      interval: 10s
+      timeout: 10s
+      retries: 5
   sgwu:
     image: docker_open5gs
     depends_on:
@@ -105,6 +125,11 @@ services:
     networks:
       default:
         ipv4_address: ${SGWU_IP}
+    healthcheck: 
+      test: /bin/bash -c "pgrep open5gs-sgwud"
+      interval: 10s
+      timeout: 10s
+      retries: 5
   smf:
     image: docker_open5gs
     container_name: smf
@@ -132,6 +157,11 @@ services:
     networks:
       default:
         ipv4_address: ${SMF_IP}
+    healthcheck:
+      test: /bin/bash -c "pgrep open5gs-smfd"
+      interval: 10s
+      timeout: 10s
+      retries: 5
   upf:
     image: docker_open5gs
     depends_on:
@@ -158,6 +188,11 @@ services:
     networks:
       default:
         ipv4_address: ${UPF_IP}
+    healthcheck:
+      test: /bin/bash -c "pgrep open5gs-upfd"
+      interval: 10s
+      timeout: 10s
+      retries: 5
   mme:
     image: docker_open5gs
     depends_on:
@@ -192,6 +227,11 @@ services:
     networks:
       default:
         ipv4_address: ${MME_IP}
+    healthcheck:
+      test: /bin/bash -c "pgrep open5gs-mmed"
+      interval: 10s
+      timeout: 10s
+      retries: 5
   pcrf:
     image: docker_open5gs
     container_name: pcrf
@@ -216,6 +256,11 @@ services:
     networks:
       default:
         ipv4_address: ${PCRF_IP}
+    healthcheck:
+      test: /bin/bash -c "pgrep open5gs-pcrfd"
+      interval: 10s
+      timeout: 10s
+      retries: 5
   dns:
     build: ./dns
     image: docker_dns
@@ -231,6 +276,11 @@ services:
     networks:
       default:
         ipv4_address: ${DNS_IP}
+    healthcheck:
+      test: ["CMD", "ping", "-c", "1", "-W", "1", "127.0.0.1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
   rtpengine:
     build: ./rtpengine
     image: docker_rtpengine
@@ -259,6 +309,11 @@ services:
     networks:
       default:
         ipv4_address: ${RTPENGINE_IP}
+    healthcheck:
+      test: /bin/bash -c "pgrep rtpengine"
+      interval: 10s
+      timeout: 10s
+      retries: 5
   mysql:
     build: ./mysql
     image: docker_mysql
@@ -274,6 +329,11 @@ services:
     networks:
       default:
         ipv4_address: ${MYSQL_IP}
+    healthcheck:
+      test: /bin/bash -c "pgrep mysqld"
+      interval: 10s
+      timeout: 10s
+      retries: 5
   pyhss:
     build: ./pyhss
     image: docker_pyhss
@@ -297,6 +357,11 @@ services:
     networks:
       default:
         ipv4_address: ${PYHSS_IP}
+    healthcheck:
+      test: /bin/bash -c "pgrep pyhss && pgrep flask"
+      interval: 10s
+      timeout: 10s
+      retries: 5
   icscf:
     image: docker_kamailio
     container_name: icscf
@@ -321,6 +386,11 @@ services:
     networks:
       default:
         ipv4_address: ${ICSCF_IP}
+    healthcheck:
+      test: /bin/bash -c "pgrep kamailio"
+      interval: 10s
+      timeout: 10s
+      retries: 5
   scscf:
     image: docker_kamailio
     container_name: scscf
@@ -345,6 +415,11 @@ services:
     networks:
       default:
         ipv4_address: ${SCSCF_IP}
+    healthcheck:
+      test: /bin/bash -c "pgrep kamailio"
+      interval: 10s
+      timeout: 10s
+      retries: 5
   pcscf:
     image: docker_kamailio
     container_name: pcscf
@@ -378,6 +453,11 @@ services:
     networks:
       default:
         ipv4_address: ${PCSCF_IP}
+    healthcheck:
+      test: /bin/bash -c "pgrep kamailio"
+      interval: 10s
+      timeout: 10s
+      retries: 5
   smsc:
     image: docker_kamailio
     container_name: smsc
@@ -399,6 +479,11 @@ services:
     networks:
       default:
         ipv4_address: ${SMSC_IP}
+    healthcheck:
+      test: /bin/bash -c "pgrep kamailio"
+      interval: 10s
+      timeout: 10s
+      retries: 5
   osmomsc:
     build: ./osmomsc
     image: docker_osmomsc
@@ -419,6 +504,11 @@ services:
     networks:
       default:
         ipv4_address: ${OSMOMSC_IP}
+    healthcheck:
+      test: ["CMD-SHELL", "echo 'quit' | telnet localhost 4254 2>/dev/null | grep -q 'Escape character is'&& exit 0 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
   osmohlr:
     build: ./osmohlr
     image: docker_osmohlr
@@ -436,6 +526,11 @@ services:
     networks:
       default:
         ipv4_address: ${OSMOHLR_IP}
+    healthcheck:
+      test: ["CMD-SHELL", "echo 'quit' | telnet localhost 4258 2>/dev/null | grep -q 'Escape character is'&& exit 0 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
   metrics:
     build: ./metrics
     image: docker_metrics
@@ -453,6 +548,11 @@ services:
     networks:
       default:
         ipv4_address: ${METRICS_IP}
+    healthcheck:
+      test: /bin/bash -c "pgrep prometheus"
+      interval: 10s
+      timeout: 10s
+      retries: 5
   grafana:
     build: ./grafana
     image: docker_grafana
@@ -470,6 +570,11 @@ services:
     networks:
       default:
         ipv4_address: ${GRAFANA_IP}
+    healthcheck:
+      test: /bin/bash -c "pgrep grafana"
+      interval: 10s
+      timeout: 10s
+      retries: 5
 networks:
   default:
     ipam:
