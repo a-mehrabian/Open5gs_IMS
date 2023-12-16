@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$#" -ne 5 ]; then
+if [ "$#" -ne 6 ]; then
     echo "Usage: $0 SERVER_ADDRESS UE_IMSI UE_KEY UE_OP"
     exit 1
 fi
@@ -12,6 +12,7 @@ SERVER_PORT=$2
 UE_IMSI=$3
 UE_KEY=$4
 UE_OP=$5
+UE_MSISDN=$6
 
 
 COOKIE_JAR="cookie.txt"
@@ -57,10 +58,10 @@ curl -s "http://$SERVER_ADDRESS:$SERVER_PORT/api/db/Subscriber" \
   -b $COOKIE_JAR -c $COOKIE_JAR \
   -H "X-CSRF-TOKEN: $csrfToken" \
   -H "Authorization: Bearer $authToken" \
-  --data-raw "{\"imsi\":\"$UE_IMSI\",\"security\":{\"k\":\"$UE_KEY\",\"amf\":\"8000\",\"op_type\":1,\"op_value\":\"$UE_OP\",\"op\":\"$UE_OP\",\"opc\":null},\"ambr\":{\"downlink\":{\"value\":1,\"unit\":3},\"uplink\":{\"value\":1,\"unit\":3}},\"slice\":[{\"sst\":1,\"default_indicator\":true,\"session\":[{\"name\":\"internet\",\"type\":3,\"ambr\":{\"downlink\":{\"value\":1,\"unit\":3},\"uplink\":{\"value\":1,\"unit\":3}},\"qos\":{\"index\":9,\"arp\":{\"priority_level\":8,\"pre_emption_capability\":1,\"pre_emption_vulnerability\":1}}}]}]}" \
+  --data-raw "{\"imsi\":\"$UE_IMSI\",\"msisdn\":[\"$UE_MSISDN\"],\"security\":{\"k\":\"$UE_KEY\",\"amf\":\"8000\",\"op_type\":0,\"op_value\":\"$UE_OP\",\"op\":null,\"opc\":\"$UE_OP\"},\"ambr\":{\"downlink\":{\"value\":1,\"unit\":3},\"uplink\":{\"value\":1,\"unit\":3}},\"slice\":[{\"sst\":1,\"default_indicator\":true,\"session\":[{\"name\":\"internet\",\"type\":3,\"ambr\":{\"downlink\":{\"value\":1,\"unit\":3},\"uplink\":{\"value\":1,\"unit\":3}},\"qos\":{\"index\":9,\"arp\":{\"priority_level\":8,\"pre_emption_capability\":1,\"pre_emption_vulnerability\":1}},\"pcc_rule\":[]},{\"name\":\"ims\",\"type\":3,\"qos\":{\"index\":5,\"arp\":{\"priority_level\":1,\"pre_emption_capability\":1,\"pre_emption_vulnerability\":1}},\"ambr\":{\"downlink\":{\"value\":3850,\"unit\":0},\"uplink\":{\"value\":1530,\"unit\":0}},\"ue\":{},\"smf\":{}}]}]}" \
   --compressed \
   --insecure
 
 rm -f $COOKIE_JAR
 
-#./mme/scripts/hss_registration.sh 172.22.0.26 3000 551011234567895 8baf473f2f8fd09487cccbd7097c6862 11111111111111111111111111111111
+#./mme/scripts/hss_registration.sh 172.22.0.26 3000 991011234567895 8baf473f2f8fd09487cccbd7097c6862 11111111111111111111111111111111 00202

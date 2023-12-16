@@ -60,7 +60,7 @@ try:
             op = row['op']
             
             try:
-                subprocess.check_call([str(script_path / 'hss_registration.sh'), WEBUI_IP, str(WEBUI_PORT), imsi, key, op])
+                subprocess.check_call([str(script_path / 'hss_registration.sh'), WEBUI_IP, str(WEBUI_PORT), imsi, key, op, msisdn])
                 subprocess.check_call([str(script_path / 'osmohlr_registration.sh'), OSMOHLR_IP, str(OSMOHLR_PORT), imsi])
                 if not is_imsi_registered(imsi):
                     subprocess.check_call([str(script_path / 'pyHss_registration.sh'), PYHSS_IP, str(PYHSS_PORT), imsi, msisdn, key, op])
