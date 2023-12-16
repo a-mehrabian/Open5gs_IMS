@@ -17,6 +17,8 @@ rnti_to_tmsi_line_counter = 0
 rnti_to_rnti_line_counter = 0
 tmsi_to_imsi_line_counter = 0
 tmsi_last_digit_count = 5
+LINE_PER_UE = 110
+current_number_of_ue = 0
 
 def populateImsi():
     global ssh_client, config, rnti_to_imsi, rnti_to_tmsi_line_counter, rnti_to_rnti_line_counter, tmsi_to_imsi_line_counter, tmsi_to_imsi_map
@@ -120,19 +122,22 @@ def populateImsi():
         sys.exit(1)
 
 
-def read_last_n_lines(file, n=120):
+def read_last_n_lines(file):
+    global current_number_of_ue, LINE_PER_UE
+    nOfL = current_number_of_ue * LINE_PER_UE
     with open(file, 'rb') as f:
         f.seek(0, os.SEEK_END)
         filesize = f.tell()
-        f.seek(max(filesize - 1024 * n, 0))
+        f.seek(max(filesize - 1024 * nOfL, 0))
         lines = f.readlines()
-        if len(lines) >= n:
-            return [line.decode('utf-8') for line in lines[-n:]]
+        if len(lines) >= nOfL:
+            return [line.decode('utf-8') for line in lines[-nOfL:]]
         else:
             f.seek(0)
             return [line.decode('utf-8') for line in f.readlines()]
 
 def extract_json_content(lines):
+    global current_number_of_ue
     start, foundMetric, rnti = False, False, False
     ue_id = 0
     reach_rnti = 0
@@ -166,13 +171,14 @@ def extract_json_content(lines):
                         json_content += '              "ue_imsi": "' + rnti_to_imsi.get(rnti) + '",\n'
                     else:
                         json_content += '              "ue_imsi": "imsi-' + str(ue_id) + '",\n'
-                ue_id += 1            
+                ue_id += 1
+                current_number_of_ue = ue_id        
             elif do_imsi and rnti and reach_rnti > 20 and '"ue_container"' in line:
                 rnti = False
                 json_content += line
             elif line.startswith('}'):
                 json_content += line
-                if foundMetric:
+                if foundMetric:                    
                     return json_content
                 else:
                     json_content = ''
@@ -224,7 +230,7 @@ def cleanup():
         pass
 
 def main(config_file='parserConfig.json'):
-    global input_file, output_file, config, rnti_to_imsi
+    global input_file, output_file, config, rnti_to_imsi, current_number_of_ue
 
     lastTimeStamp = 1.1
 
@@ -238,6 +244,11 @@ def main(config_file='parserConfig.json'):
     except Exception as e:
         print("error, setting up config from parserConfig.json!")
         sys.exit(1)
+    
+    if config.get("add-imsi", True):
+        current_number_of_ue = 1
+    else:
+        current_number_of_ue = 2
     
     while True:
         if not os.path.exists(input_file):
@@ -296,7 +307,7 @@ if __name__ == "__main__":
     
     input_file, output_file = sys.argv[1], sys.argv[2]
     
-    #input_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/logs/enb_report5.json"
+    #input_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/scripts/enb_report.json"
     #output_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/logs/output.json"
     #config_file = "/home/ali/dev/Humanitas/open5gs_ims/srslte/scripts/parserConfig.json"
     main()
