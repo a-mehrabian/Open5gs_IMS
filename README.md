@@ -500,6 +500,25 @@ maybe you need to enter some command you can use this as example:
 iperf3 -c 172.22.0.1 -p 5201 -t 10 -i 30
 ```
 
+## Automation of the UE registration:
+
+Alternatively you may create a csv file (ue_list.csv) in the mme/scripts folder as follow:
+```
+imsi,msisdn,key,op
+001010000000001,001001,8baf473f2f8fd09487cccbd7097c6862,111111111111111111111111111111
+001010000000002,001002,8baf473f2f8fd09487cccbd7097c6862,111111111111111111111111111111
+
+```
+and run the user_registration.py script on the core network host (the machine which is running the core) as follow:
+```sh
+python3 {open5gs_ims_folder}/mme/scripts/user_registration.py {open5gs_ims_folder}/.env
+
+```
+please note the the script will receive the .env file as the input parameter (the same .env which was used for the core network docker compose).
+
+The script wont overwrite an already registered UE.
+
+
 ## Configuration (optional for advanced use)
 
 For the quick run (eNB/gNB, CN in same docker network), edit only the following parameters in **.env** as per your setup

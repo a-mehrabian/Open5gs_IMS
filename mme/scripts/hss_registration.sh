@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$#" -ne 6 ]; then
-    echo "Usage: $0 SERVER_ADDRESS UE_IMSI UE_KEY UE_OP"
+    echo "Usage: $0 SERVER_ADDRESS SERVER_PORT UE_IMSI UE_KEY UE_OP UE_MSISDN"
     exit 1
 fi
 

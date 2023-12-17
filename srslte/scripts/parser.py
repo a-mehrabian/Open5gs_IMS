@@ -5,6 +5,8 @@ import sys
 import csv
 import paramiko
 import re
+import queue
+import threading
 
 config = None
 input_file = ''
@@ -19,6 +21,18 @@ tmsi_to_imsi_line_counter = 0
 tmsi_last_digit_count = 5
 LINE_PER_UE = 110
 current_number_of_ue = 0
+doImsiPopulation = False
+lastTimeStamp = '1.2322'
+
+Q = queue.Queue()
+
+
+def process_queue():
+    while True:
+        if not Q.empty():
+            item = Q.get()
+            #print(json.dumps(item))
+            Q.task_done()
 
 def populateImsi():
     global ssh_client, config, rnti_to_imsi, rnti_to_tmsi_line_counter, rnti_to_rnti_line_counter, tmsi_to_imsi_line_counter, tmsi_to_imsi_map
@@ -137,12 +151,18 @@ def read_last_n_lines(file):
             return [line.decode('utf-8') for line in f.readlines()]
 
 def extract_json_content(lines):
-    global current_number_of_ue
+    global current_number_of_ue, doImsiPopulation, lastTimeStamp
     start, foundMetric, rnti = False, False, False
     ue_id = 0
+    undetected_ue = 0
     reach_rnti = 0
     json_content = ''
     do_imsi = config.get("add-imsi", True)
+    current_ue_data = {}
+    ue_detected = False
+    next_is_timestamp = False
+    tsGood = True
+    doImsiPopulation = False
     for line in lines:
         if line.startswith('{'):
             if start:
@@ -151,41 +171,75 @@ def extract_json_content(lines):
                 ue_id = 0
                 rnti = False
                 reach_rnti = 0
+                ue_detected = False
+                current_ue_data = {}
             start = True            
         if start:
-            #json_content += line
             if rnti:
                 reach_rnti += 1
+            elif next_is_timestamp:
+                match = re.search(r'"timestamp":\s*([\d.]+)', line)
+                timeStamp = '0'
+                if match:
+                    timeStamp = match.group(1)
+                if timeStamp == lastTimeStamp:
+                    time.sleep(1)
+                    #return None
+                    tsGood = False
+                lastTimeStamp = timeStamp
+                next_is_timestamp = False
             if not foundMetric and '"type": "metrics"' in line:
                 foundMetric = True
                 json_content += line
+                next_is_timestamp = True
                 continue
-            elif do_imsi and not rnti and '"ue_rnti":' in line:
+            elif do_imsi and not rnti and '"ue_rnti":' in line:                
                 rnti = True
                 reach_rnti = 0
                 match = re.search(r'":\s*(\w+),', line)
                 if match:
-                    rnti = str(hex(int(match.group(1))))
-                    json_content += '              "ue_rnti": "' + rnti + '",\n'
-                    if rnti_to_imsi.get(rnti):
-                        json_content += '              "ue_imsi": "' + rnti_to_imsi.get(rnti) + '",\n'
+                    rntiContent = str(hex(int(match.group(1))))
+                    if ue_detected and tsGood:
+                        Q.put(current_ue_data)
+                    current_ue_data = {'rnti': rntiContent}                    
+                    ue_detected = False
+                    json_content += '                "ue_rnti": "' + rntiContent + '",\n'
+                    imsi = rnti_to_imsi.get(rntiContent)
+                    if imsi:
+                        json_content += '                "ue_imsi": "' + imsi + '",\n'
+                        current_ue_data['imsi'] = imsi
+                        ue_detected = True
                     else:
+                        #lastTimeStamp = '1.1'
+                        doImsiPopulation = True
                         json_content += '              "ue_imsi": "imsi-' + str(ue_id) + '",\n'
                 ue_id += 1
-                current_number_of_ue = ue_id        
+                #current_number_of_ue = ue_id        
             elif do_imsi and rnti and reach_rnti > 20 and '"ue_container"' in line:
                 rnti = False
                 json_content += line
             elif line.startswith('}'):
                 json_content += line
-                if foundMetric:                    
+                if foundMetric:
+                    if ue_detected and tsGood:
+                        Q.put(current_ue_data)
+                    current_number_of_ue = max(ue_id, undetected_ue)                    
                     return json_content
                 else:
                     json_content = ''
                     start = False
                     foundMetric = False
+                    ue_detected = False
+                    ue_id = 0
+                    current_ue_data = {}
             else:
                 json_content += line
+        elif '"ue_rnti":' in line:
+            undetected_ue += 1
+    
+    if ue_detected and tsGood:
+        Q.put(current_ue_data)
+    current_number_of_ue = max(ue_id, undetected_ue)
     return None
 
 def write_output(data, output_file, append=False):
@@ -230,9 +284,7 @@ def cleanup():
         pass
 
 def main(config_file='parserConfig.json'):
-    global input_file, output_file, config, rnti_to_imsi, current_number_of_ue
-
-    lastTimeStamp = 1.1
+    global input_file, output_file, config, rnti_to_imsi, current_number_of_ue, doImsiPopulation, lastTimeStamp
 
     try:
         if os.path.exists(config_file):
@@ -257,41 +309,43 @@ def main(config_file='parserConfig.json'):
             continue
         else:
             break
+    
+    thread = threading.Thread(target=process_queue)
+    thread.daemon = True
+    thread.start()
 
     while True:
         cleanup()
 
         lines = read_last_n_lines(input_file)
         json_content = extract_json_content(lines)
+        if doImsiPopulation:
+            populateImsi()
 
         if json_content:
             try:                
                 content = json.loads(json_content)  # Validate JSON
                 try:
-                    if lastTimeStamp != content['timestamp']:
-                        if len(content['cell_list']) > 0 and \
-                            len(content['cell_list'][0]['cell_container']['ue_list']) > 0 : #and \
-                                #(content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pusch_rssi'] != 0.0 and \
-                                #    content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pucch_rssi'] != 0.0):
-                            if config.get("add-imsi", True):
-                                ue_id = 0
-                                for ue in content['cell_list'][0]['cell_container']['ue_list']:
-                                    imsi = rnti_to_imsi.get(ue['ue_container']['ue_rnti'])
-                                    if ue['ue_container']['ue_imsi'] != imsi:                                        
+                    if len(content['cell_list']) > 0 and \
+                        len(content['cell_list'][0]['cell_container']['ue_list']) > 0 : #and \
+                            #(content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pusch_rssi'] != 0.0 and \
+                            #    content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pucch_rssi'] != 0.0):
+                        if config.get("add-imsi", True):
+                            ue_id = 0
+                            for ue in content['cell_list'][0]['cell_container']['ue_list']:
+                                imsi = rnti_to_imsi.get(ue['ue_container']['ue_rnti'])
+                                if ue['ue_container']['ue_imsi'] != imsi:                                        
+                                    if not imsi:
+                                        populateImsi()
+                                        imsi = rnti_to_imsi.get(ue['ue_container']['ue_rnti'])
                                         if not imsi:
-                                            populateImsi()
-                                            imsi = rnti_to_imsi.get(ue['ue_container']['ue_rnti'])
-                                            if not imsi:
-                                                imsi = 'Unknown'
-                                        json_content = json_content.replace('"ue_imsi": "imsi-' + str(ue_id) + '"', '"ue_imsi": "' + imsi + '"')
-                                    ue_id += 1
-                                            
-                            if config.get("appending", True):
-                                write_output(json_content, config.get("appended-file-name", output_file), append=True)
-                            write_output(json_content, output_file, append=False)
-                    else:
-                        time.sleep(1)
-                    lastTimeStamp = content['timestamp']
+                                            imsi = 'Unknown'
+                                    json_content = json_content.replace('"ue_imsi": "imsi-' + str(ue_id) + '"', '"ue_imsi": "' + imsi + '"')
+                                ue_id += 1
+                                        
+                        if config.get("appending", True):
+                            write_output(json_content, config.get("appended-file-name", output_file), append=True)
+                        write_output(json_content, output_file, append=False)
                 except Exception as e:
                     print (str(e))
                     pass
