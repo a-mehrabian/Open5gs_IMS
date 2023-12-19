@@ -13,6 +13,9 @@ localization/fingerprint/data/*.h5
 localization/fingerprint/data/*.csv
 **/*.log
 **/*.txt
+osmohlr/hlr.db
 osmohlr/hlr.db-shm
 osmohlr/hlr.db-wal
+osmomsc/sms.db
+osmomsc/sms.db-shm
 osmomsc/sms.db-wal
