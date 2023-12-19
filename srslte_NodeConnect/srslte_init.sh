@@ -61,18 +61,23 @@ elif [[ "$COMPONENT_NAME" =~ ^(ue_zmq$) ]]; then
 elif [[ "$COMPONENT_NAME" =~ ^(ue_5g_zmq$) ]]; then
 	echo "Configuring component: '$COMPONENT_NAME'"
 	cp /mnt/srslte/ue_5g_zmq.conf /etc/srsran/ue.conf
+elif [[ "$COMPONENT_NAME" =~ ^(ue$) ]]; then
+	echo "Configuring component: '$COMPONENT_NAME'"
+	cp /mnt/srslte/ue.conf /etc/srsran
 else
 	echo "Error: Invalid component name: '$COMPONENT_NAME'"
 fi
 
 if [[ "$USRP_TYPE" == "U220" ]]; then
 	sed -i 's|device_args.*|device_args = num_recv_frames=64,num_send_frames=64,base_srate=30.72e6,fpga=antsdr_u220_ad9361.bin|g' /etc/srsran/enb.conf
+	sed -i 's|device_args.*|device_args = num_recv_frames=64,num_send_frames=64,fpga=antsdr_u220_ad9361.bin|g' /etc/srsran/ue.conf
 elif [[ "$USRP_TYPE" == "B210" ]]; then
 	sed -i 's|device_args.*|device_args = num_recv_frames=64,num_send_frames=64,base_srate=30.72e6|g' /etc/srsran/enb.conf
+	sed -i 's|device_args.*|device_args = num_recv_frames=64,num_send_frames=64|g' /etc/srsran/ue.conf
 else
 	echo "Error: Invalid USRP type: '$USRP_TYPE'"
 fi
-
+# eNB
 sed -i 's|MNC|'$MNC'|g' /etc/srsran/enb.conf
 sed -i 's|MCC|'$MCC'|g' /etc/srsran/enb.conf
 sed -i 's|SRS_ENB_IP|'$SRS_ENB_IP'|g' /etc/srsran/enb.conf
@@ -80,19 +85,31 @@ sed -i 's|SRS_UE_IP|'$SRS_UE_IP'|g' /etc/srsran/enb.conf
 sed -i 's|LOCAL_IP|'$LOCAL_IP'|g' /etc/srsran/enb.conf
 sed -i 's|CORE_IP|'$CORE_IP'|g' /etc/srsran/enb.conf
 sed -i 's|eNB_ID|'$eNB_ID'|g' /etc/srsran/enb.conf
-sed -i 's|TX_GAIN|'$TX_GAIN'|g' /etc/srsran/enb.conf
-sed -i 's|RX_GAIN|'$RX_GAIN'|g' /etc/srsran/enb.conf
+sed -i 's|ENB_TX_GAIN|'$ENB_TX_GAIN'|g' /etc/srsran/enb.conf
+sed -i 's|ENB_RX_GAIN|'$ENB_RX_GAIN'|g' /etc/srsran/enb.conf
+# UE
 sed -i 's|UE1_KI|'$UE1_KI'|g' /etc/srsran/ue.conf
 sed -i 's|UE1_OP|'$UE1_OP'|g' /etc/srsran/ue.conf
 sed -i 's|UE1_IMSI|'$UE1_IMSI'|g' /etc/srsran/ue.conf
+sed -i 's|UE1_IMEI|'$UE1_IMEI'|g' /etc/srsran/ue.conf
 sed -i 's|SRS_UE_IP|'$SRS_UE_IP'|g' /etc/srsran/ue.conf
 sed -i 's|SRS_ENB_IP|'$SRS_ENB_IP'|g' /etc/srsran/ue.conf
 sed -i 's|SRS_GNB_IP|'$SRS_GNB_IP'|g' /etc/srsran/ue.conf
+sed -i 's|FREQ_OFFSET|'$FREQ_OFFSET'|g' /etc/srsran/ue.conf
+sed -i 's|UE_TX_GAIN|'$UE_TX_GAIN'|g' /etc/srsran/ue.conf
+sed -i 's|UE_RX_GAIN|'$UE_RX_GAIN'|g' /etc/srsran/ue.conf
+sed -i 's|UE_DL_FREQ|'$UE_DL_FREQ'|g' /etc/srsran/ue.conf
+sed -i 's|UE_UL_FREQ|'$UE_UL_FREQ'|g' /etc/srsran/ue.conf
+
+# RR
 sed -i 's|CELL_ID|'$CELL_ID'|g' /etc/srsran/rr.conf
 sed -i 's|DL_EARFCN|'$DL_EARFCN'|g' /etc/srsran/rr.conf
 sed -i 's|PCI|'$PCI'|g' /etc/srsran/rr.conf
 sed -i 's|TAC|'$TAC'|g' /etc/srsran/rr.conf
-sed -i 's|$CORE_IP|'$CORE_IP'|g' /mnt/srslte/parserConfig.json
+sed -i 's|ENB_DL_FREQ|'$ENB_DL_FREQ'|g' /etc/srsran/rr.conf
+sed -i 's|ENB_UL_FREQ|'$ENB_UL_FREQ'|g' /etc/srsran/rr.conf
+# PARSER
+# sed -i 's|$CORE_IP|'$CORE_IP'|g' /mnt/srslte/parserConfig.json
 
 
 # For dbus not started issue when host machine is running Ubuntu 22.04
@@ -104,20 +121,22 @@ elif [[ "$COMPONENT_NAME" =~ ^(gnb$) || "$COMPONENT_NAME" =~ ^(enb$) || "$COMPON
 	echo "Deploying component: '$COMPONENT_NAME'"
 	echo "Core address: '$CORE_IP'"
 	# rm /mnt/srslte/logs/*
-	rm /tmp/enb_report.*.* /tmp/enb_report.*
-	cd /mnt/srslte
-	python3 /mnt/srslte/scripts/parser.py /tmp/enb_report.json /tmp/output.json &
-	cd scripts
-	rm /tmp/rnti_to_rnti.csv
-	echo "RR Config"
-	echo "==============="
+	# rm /tmp/enb_report.*.* /tmp/enb_report.*
+	# cd /mnt/srslte
+	# python3 /mnt/srslte/scripts/parser.py /tmp/enb_report.json /tmp/output.json &
+	# cd scripts
+	# rm /tmp/rnti_to_rnti.csv
+	# echo "RR Config"
+	# echo "==============="
 	# cat /etc/srsran/rr.conf
 	echo "==============="
-	/usr/local/bin/srsenb | ./rrc-restablish.sh /tmp/rnti_to_rnti.csv
+	# /usr/local/bin/srsenb | ./rrc-restablish.sh /tmp/rnti_to_rnti.csv
+	/usr/local/bin/srsenb 
 
 	# /usr/local/bin/srsenb 2>&1 | tee /tmp/srsenb.log
-elif [[ "$COMPONENT_NAME" =~ ^(ue_zmq$) || "$COMPONENT_NAME" =~ ^(ue_5g_zmq$) ]]; then
+elif [[ "$COMPONENT_NAME" =~ ^(ue_zmq$) || "$COMPONENT_NAME" =~ ^(ue_5g_zmq$) || "$COMPONENT_NAME" =~ ^(ue$) ]]; then
 	echo "Deploying component: '$COMPONENT_NAME'"
+	echo "================="
 	/usr/local/bin/srsue
 else
 	echo "Error: Invalid component name: '$COMPONENT_NAME'"

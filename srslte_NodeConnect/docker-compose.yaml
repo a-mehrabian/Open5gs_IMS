@@ -1,0 +1,48 @@
+version: '3'
+services:
+  node_connect:
+    image: docker_srslte:external
+    build: ./srslte
+    container_name: node_connect
+    stdin_open: true
+    tty: true
+    privileged: true
+    network_mode: "host"
+    devices:
+      - "/dev/bus"
+    volumes:
+      - /dev/serial:/dev/serial:ro
+      - /dev/bus/usb:/dev/bus/usb:ro
+      - ./:/mnt/srslte
+      # - ../srslte/scripts:/mnt/srslte/scripts
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - ./logs:/tmp
+    env_file:
+      - .env
+    environment:
+      # COMPONENT_NAME: enb/ue  and /gnb/ue_zmq/enb_zmq/gnb_zmq
+      - COMPONENT_NAME=${COMPONENT_NAME}
+      # USRP_TYPE: U220 or B210
+      - USRP_TYPE=${USRP_TYPE}
+    expose:
+      - "36412/sctp"
+      - "2152/udp"
+    healthcheck:
+      test: /bin/bash -c "if [ '$${COMPONENT_NAME}' == 'enb' ];then pgrep srsenb && ping -c 1 $${CORE_IP}; elif [ '$${COMPONENT_NAME}' == 'ue' ];then pgrep srsue && ping -c 1 $${CORE_IP}; elif [ '$${COMPONENT_NAME}' == 'gnb' ];then pgrep srsenb && ping -c 1 $${CORE_IP}; elif [ '$${COMPONENT_NAME}' == 'ue_zmq' ];then pgrep srsue && ping -c 1 $${CORE_IP}; fi "
+      interval: 10s
+      timeout: 5s
+      retries: 5   
+  # parser:
+  #   image: enb_parser:external
+  #   build: ./srslte/scripts
+  #   container_name: parser
+  #   env_file:
+  #     - .env
+  #   volumes:
+  #     - ./srslte/logs:/tmp
+  #     # - ./srslte/scripts:/app
+  #   depends_on:
+  #     - srsenb
+  
+
