@@ -7,6 +7,8 @@ import paramiko
 import re
 import queue
 import threading
+from datetime import datetime
+import paho.mqtt.client as mqtt
 
 config = None
 input_file = ''
@@ -25,14 +27,45 @@ doImsiPopulation = False
 lastTimeStamp = '1.2322'
 
 Q = queue.Queue()
+brokerConfig = None
+brokerClient = mqtt.Client()
+brokerTopic = None
 
+def process_mqtt_queue():
+    global brokerConfig, brokerClient, brokerTopic
+    if (brokerConfig['active']):
+        brokerTopic = brokerConfig['topic']
+        brokerClient = mqtt.Client(client_id=brokerConfig['client-id'])
+        brokerClient.on_connect = on_connect
+        try:
+            brokerClient.connect(brokerConfig['broker-address'], brokerConfig['broker-port'])
+            brokerClient.loop_start()
+        except Exception as e:
+            print("[Error]: mqtt connection issue: " + str(e))
+            return
+        std_out = brokerConfig['std-output']
+        while True:
+            if not Q.empty():
+                item = Q.get()            
+                real_time_data = {
+                    "ts": datetime.now().strftime('%H:%M:%S.%f')[:-4],
+                    'data': item}
+                if std_out:
+                    print(json.dumps(real_time_data))
+                try:
+                    json_payload = json.dumps(real_time_data).encode('utf-8')
+                    brokerClient.publish(brokerTopic, payload=json_payload)
+                except Exception as e:
+                    print("[Error]: mqtt report issue: " + str(e))
+                Q.task_done()
 
-def process_queue():
-    while True:
-        if not Q.empty():
-            item = Q.get()
-            #print(json.dumps(item))
-            Q.task_done()
+def on_connect(brokerClient, userdata, flags, rc):
+    if rc == 0:
+        print("Connected to MQTT Broker")
+        # Subscribe to a topic upon successful connection (if needed)
+        brokerClient.subscribe(brokerTopic)
+    else:
+        print(f"Failed to connect, return code: {rc}")
 
 def populateImsi():
     global ssh_client, config, rnti_to_imsi, rnti_to_tmsi_line_counter, rnti_to_rnti_line_counter, tmsi_to_imsi_line_counter, tmsi_to_imsi_map
@@ -151,7 +184,7 @@ def read_last_n_lines(file):
             return [line.decode('utf-8') for line in f.readlines()]
 
 def extract_json_content(lines):
-    global current_number_of_ue, doImsiPopulation, lastTimeStamp
+    global current_number_of_ue, doImsiPopulation, lastTimeStamp, brokerConfig
     start, foundMetric, rnti = False, False, False
     ue_id = 0
     undetected_ue = 0
@@ -177,6 +210,13 @@ def extract_json_content(lines):
         if start:
             if rnti:
                 reach_rnti += 1
+                if reach_rnti == 3:
+                    match = re.search(r'"ul_pusch_rssi":\s*([+-]?\d+\.\d+)', line)
+                    if match:
+                        try:
+                            current_ue_data[brokerConfig['fields']['ul_pusch_rssi']] = float(match.group(1))
+                        except Exception:
+                            pass
             elif next_is_timestamp:
                 match = re.search(r'"timestamp":\s*([\d.]+)', line)
                 timeStamp = '0'
@@ -188,6 +228,7 @@ def extract_json_content(lines):
                     tsGood = False
                 lastTimeStamp = timeStamp
                 next_is_timestamp = False
+            
             if not foundMetric and '"type": "metrics"' in line:
                 foundMetric = True
                 json_content += line
@@ -199,15 +240,19 @@ def extract_json_content(lines):
                 match = re.search(r'":\s*(\w+),', line)
                 if match:
                     rntiContent = str(hex(int(match.group(1))))
-                    if ue_detected and tsGood:
+                    if ue_detected and tsGood and brokerConfig['active']:
                         Q.put(current_ue_data)
-                    current_ue_data = {'rnti': rntiContent}                    
+                    #current_ue_data = {'rnti': rntiContent}
+                    current_ue_data = {}
                     ue_detected = False
-                    json_content += '                "ue_rnti": "' + rntiContent + '",\n'
+                    json_content += '              "ue_rnti": "' + rntiContent + '",\n'
                     imsi = rnti_to_imsi.get(rntiContent)
                     if imsi:
-                        json_content += '                "ue_imsi": "' + imsi + '",\n'
-                        current_ue_data['imsi'] = imsi
+                        json_content += '              "ue_imsi": "' + imsi + '",\n'
+                        try:
+                            current_ue_data[brokerConfig['fields']['ue_imsi']] = imsi
+                        except Exception:
+                            pass
                         ue_detected = True
                     else:
                         #lastTimeStamp = '1.1'
@@ -221,7 +266,7 @@ def extract_json_content(lines):
             elif line.startswith('}'):
                 json_content += line
                 if foundMetric:
-                    if ue_detected and tsGood:
+                    if ue_detected and tsGood and brokerConfig['active']:
                         Q.put(current_ue_data)
                     current_number_of_ue = max(ue_id, undetected_ue)                    
                     return json_content
@@ -237,7 +282,7 @@ def extract_json_content(lines):
         elif '"ue_rnti":' in line:
             undetected_ue += 1
     
-    if ue_detected and tsGood:
+    if ue_detected and tsGood and brokerConfig['active']:
         Q.put(current_ue_data)
     current_number_of_ue = max(ue_id, undetected_ue)
     return None
@@ -284,7 +329,7 @@ def cleanup():
         pass
 
 def main(config_file='parserConfig.json'):
-    global input_file, output_file, config, rnti_to_imsi, current_number_of_ue, doImsiPopulation, lastTimeStamp
+    global input_file, output_file, config, brokerConfig, rnti_to_imsi, current_number_of_ue, doImsiPopulation, lastTimeStamp
 
     try:
         if os.path.exists(config_file):
@@ -309,8 +354,9 @@ def main(config_file='parserConfig.json'):
             continue
         else:
             break
-    
-    thread = threading.Thread(target=process_queue)
+
+    brokerConfig = config.get("broker", {'active': False, 'std-output': False})    
+    thread = threading.Thread(target=process_mqtt_queue)
     thread.daemon = True
     thread.start()
 
@@ -322,14 +368,12 @@ def main(config_file='parserConfig.json'):
         if doImsiPopulation:
             populateImsi()
 
-        if json_content:
+        if config.get("generate-output", True) and json_content:
             try:                
                 content = json.loads(json_content)  # Validate JSON
                 try:
                     if len(content['cell_list']) > 0 and \
-                        len(content['cell_list'][0]['cell_container']['ue_list']) > 0 : #and \
-                            #(content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pusch_rssi'] != 0.0 and \
-                            #    content['cell_list'][0]['cell_container']['ue_list'][0]['ue_container']['ul_pucch_rssi'] != 0.0):
+                        len(content['cell_list'][0]['cell_container']['ue_list']) > 0 : 
                         if config.get("add-imsi", True):
                             ue_id = 0
                             for ue in content['cell_list'][0]['cell_container']['ue_list']:
