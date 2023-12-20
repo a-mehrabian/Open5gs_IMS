@@ -85,8 +85,7 @@ if [ "$COMPONENT_NAME" == "ue" ]; then
     sudo ip route add 172.22.0.0/24 via $NODE_CONNECT_IP
     echo "Route added"
     echo "======================="
-fi &
-docker compose logs -f
+fi | docker compose logs -f
 
 wait
 # If the user type ctrl+c, ask if he wants to stop the container or restart the script or skip by 3 option
