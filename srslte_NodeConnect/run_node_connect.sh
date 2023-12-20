@@ -46,7 +46,7 @@ fi
 echo "The network and firewall settings applied"
 echo "Performance Mode: ON " | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 echo "======================="
-if docker ps | grep docker_srslte:external > /dev/null
+if docker ps | grep docker_srslte:connect > /dev/null
 then
     echo "Container is running"
     echo "Stopping the container..."
@@ -57,14 +57,14 @@ fi
 if [ "$USRP_TYPE" == "U220" ] ;then
     echo "Running the U220 script..."
     echo "======================="
-    docker run -it --privileged --rm --name fpga_reset docker_srslte:external ./usr/local/lib/uhd/utils/b2xx_fx3_utils --reset-device
+    docker run -it --privileged --rm --name fpga_reset docker_srslte:connect ./usr/local/lib/uhd/utils/b2xx_fx3_utils --reset-device
     echo "======================="
 fi
 
 echo "Starting $COMPONENT_NAME..."
 echo "======================="
-echo "Freeing up space in docker_srslte:external"
-docker run -it --rm docker_srslte:external bash -c "rm -rf /mnt/srslte/logs/*"
+echo "Freeing up space in docker_srslte:connect"
+docker run -it --rm docker_srslte:connect bash -c "rm -rf /mnt/srslte/logs/*"
 docker compose up -d
 
 # if the component name is ue 

@@ -1,8 +1,8 @@
 version: '3'
 services:
   node_connect:
-    image: docker_srslte:external
-    build: ../srslte
+    image: docker_srslte:connect
+    build: .
     container_name: node_connect
     stdin_open: true
     tty: true
