@@ -19,3 +19,4 @@ osmohlr/hlr.db-wal
 osmomsc/sms.db
 osmomsc/sms.db-shm
 osmomsc/sms.db-wal
+*.ctxt

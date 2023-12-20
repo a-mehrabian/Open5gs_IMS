@@ -2,7 +2,7 @@ version: '3'
 services:
   node_connect:
     image: docker_srslte:external
-    build: ./srslte
+    build: ../srslte
     container_name: node_connect
     stdin_open: true
     tty: true
@@ -29,7 +29,7 @@ services:
       - "36412/sctp"
       - "2152/udp"
     healthcheck:
-      test: /bin/bash -c "if [ '$${COMPONENT_NAME}' == 'enb' ];then pgrep srsenb && ping -c 1 $${CORE_IP}; elif [ '$${COMPONENT_NAME}' == 'ue' ];then pgrep srsue && ping -c 1 $${CORE_IP}; elif [ '$${COMPONENT_NAME}' == 'gnb' ];then pgrep srsenb && ping -c 1 $${CORE_IP}; elif [ '$${COMPONENT_NAME}' == 'ue_zmq' ];then pgrep srsue && ping -c 1 $${CORE_IP}; fi "
+      test: /bin/bash -c "if [ '$${COMPONENT_NAME}' == 'enb' ];then pgrep srsenb && ping -c 1 $${CORE_IP}; elif [ '$${COMPONENT_NAME}' == 'ue' ];then pgrep srsue && ping -c 1 172.22.0.1; fi"
       interval: 10s
       timeout: 5s
       retries: 5   

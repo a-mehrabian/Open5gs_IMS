@@ -89,7 +89,7 @@ sed -i 's|ENB_TX_GAIN|'$ENB_TX_GAIN'|g' /etc/srsran/enb.conf
 sed -i 's|ENB_RX_GAIN|'$ENB_RX_GAIN'|g' /etc/srsran/enb.conf
 # UE
 sed -i 's|UE1_KI|'$UE1_KI'|g' /etc/srsran/ue.conf
-sed -i 's|UE1_OP|'$UE1_OP'|g' /etc/srsran/ue.conf
+sed -i 's|UE1_OPC|'$UE1_OPC'|g' /etc/srsran/ue.conf
 sed -i 's|UE1_IMSI|'$UE1_IMSI'|g' /etc/srsran/ue.conf
 sed -i 's|UE1_IMEI|'$UE1_IMEI'|g' /etc/srsran/ue.conf
 sed -i 's|SRS_UE_IP|'$SRS_UE_IP'|g' /etc/srsran/ue.conf
