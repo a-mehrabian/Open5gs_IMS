@@ -1,5 +1,16 @@
 #! /bin/bash
 echo "======= CHRONOS 4G-VoLTE v1 ======="
+
+# Check Requirements:
+if ! command -v jq &> /dev/null
+then
+    echo "jq is not installed. Installing jq..."
+    sudo apt update
+    sudo apt install -y jq
+else
+    echo "All requirements satisfied."
+fi
+
 # Set environment variables
 echo "Applying environment variables..."
 echo "======================="
