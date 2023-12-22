@@ -110,7 +110,8 @@ RUN git clone https://github.com/aoweis/srsRAN_4G.git && \
     ldconfig
 
 RUN apt-get update && apt-get install -y \
-    python3 pip && pip3 install paramiko
+    python3 pip && pip3 install paramiko \
+    && pip3 install paho-mqtt
 
 RUN cd srsRAN_4G/build && srsran_install_configs.sh service
 
