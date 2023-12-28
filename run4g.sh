@@ -39,7 +39,11 @@ fi
 echo "Starting 4G Core Network"
 echo "======================="
 docker compose up -d
-docker compose logs -f 
+echo "=======================" && 
+sudo ip route add $UE_IPV4_INTERNET via $UPF_IP &&
+sudo ip route add $UE_IPV4_IMS via $UPF_IP &&
+echo "UE traffic routed to the docker interface" &&
+echo "======================="| docker compose logs -f
 
 
 # Route UE traffic to the docker interface
