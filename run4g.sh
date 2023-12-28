@@ -1,7 +1,11 @@
 #! /bin/bash
 echo "======= CHRONOS 4G-VoLTE v1 ======="
-
+UPF_IP=$(grep -oP 'UPF_IP=\K[^ ]+' .env)
+UE_IPV4_INTERNET=$(grep -oP 'UE_IPV4_INTERNET=\K[^ ]+' .env)
+UE_IPV4_IMS=$(grep -oP 'UE_IPV4_IMS=\K[^ ]+' .env)
 # Check Requirements:
+echo "Checking requirements..."
+echo "======================="
 if ! command -v jq &> /dev/null
 then
     echo "jq is not installed. Installing jq..."
@@ -11,6 +15,7 @@ else
     echo "All requirements satisfied."
 fi
 
+echo "======================="
 # Set environment variables
 echo "Applying environment variables..."
 echo "======================="
@@ -27,14 +32,21 @@ if docker ps | grep docker_open5gs > /dev/null
 then
     echo "Container running"
     echo "Stopping the containers..."
-    docker compose -f 4g-volte-deploy-handover.yaml down
+    docker compose down
     echo "======================="
 fi
 # Start 4G Core Network + IMS + SMS over SGs
 echo "Starting 4G Core Network"
 echo "======================="
-docker compose -f 4g-volte-deploy-handover.yaml up -d
-docker compose -f 4g-volte-deploy-handover.yaml logs -f 
+docker compose up -d
+docker compose logs -f 
+
+
+# Route UE traffic to the docker interface
+echo "======================="
+sudo ip route add $UE_IPV4_INTERNET via $UPF_IP
+sudo ip route add $UE_IPV4_IMS via $UPF_IP
+echo "UE traffic routed to the docker interface"
 
 # If the user type ctrl+c, ask if he wants to stop the container or restart the script or skip by 3 option
 echo "======================="
@@ -46,7 +58,7 @@ echo "Enter to skip"
 read answer
 if [ "$answer" == "1" ] ;then
     echo "Stopping the container..."
-    docker compose -f 4g-volte-deploy-handover.yaml down
+    docker compose down
 elif [ "$answer" == "2" ] ;then
     echo "Restarting the script..."
     $0
@@ -55,5 +67,3 @@ else
 fi
 # End of script
 echo "======================="
-
-

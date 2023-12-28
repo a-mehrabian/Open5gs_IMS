@@ -32,5 +32,8 @@ cp /mnt/sgwc/sgwc.yaml install/etc/open5gs
 sed -i 's|SGWC_IP|'$SGWC_IP'|g' install/etc/open5gs/sgwc.yaml
 sed -i 's|SGWU_IP|'$SGWU_IP'|g' install/etc/open5gs/sgwc.yaml
 
+# remove old logs
+rm -rf /open5gs/install/var/log/open5gs/sgwc.log
+
 # Sync docker time
 #ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone

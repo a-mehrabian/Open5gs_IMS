@@ -15,6 +15,8 @@ if len(sys.argv) < 2:
 ENV_PATH = sys.argv[1]
 load_dotenv(ENV_PATH)
 
+MNC = os.getenv('MNC')
+MCC = os.getenv('MCC')
 WEBUI_IP = os.getenv('WEBUI_IP')
 PYHSS_IP = os.getenv('PYHSS_IP')
 OSMOHLR_IP = 'osmohlr'
@@ -63,7 +65,7 @@ try:
                 subprocess.check_call([str(script_path / 'hss_registration.sh'), WEBUI_IP, str(WEBUI_PORT), imsi, key, op, msisdn])
                 subprocess.check_call([str(script_path / 'osmohlr_registration.sh'), OSMOHLR_IP, str(OSMOHLR_PORT), imsi, msisdn])
                 if not is_imsi_registered(imsi):
-                    subprocess.check_call([str(script_path / 'pyHss_registration.sh'), PYHSS_IP, str(PYHSS_PORT), imsi, msisdn, key, op])
+                    subprocess.check_call([str(script_path / 'pyHss_registration.sh'), PYHSS_IP, str(PYHSS_PORT), imsi, msisdn, key, op, MCC, MNC])
                 else:
                     print(f"IMSI {imsi} is already registered. Skipping pyHss_registration.")
             except subprocess.CalledProcessError as e:

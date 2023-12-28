@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/bashPYHSS_IP
 
 
 if [ "$#" -ne 6 ]; then
-    echo "Usage: $0 PYHSS_IP PYHSS_PORT UE_IMSI UE_MSISDN UE_Ki UE_OPC"
+    echo "Usage: $0 PYHSS_IP PYHSS_PORT UE_IMSI UE_MSISDN UE_Ki UE_OPC MCC MNC"
     exit 1
 fi
 
@@ -12,7 +12,8 @@ UE_IMSI=$3
 UE_MSISDN=$4
 UE_Ki=$5
 UE_OPC=$6
-
+MCC=$7
+MNC=$8
 
 response=$(curl -s -X 'GET' \
   "http://$PYHSS_IP:$PYHSS_PORT/apn/list?page=0&page_size=200" \
@@ -92,11 +93,11 @@ curl -X 'PUT' \
     \"imsi\": \"$UE_IMSI\",
     \"msisdn\": \"$UE_MSISDN\",
     \"sh_profile\": \"string\",
-    \"scscf_peer\": \"scscf.ims.mnc001.mcc001.3gppnetwork.org\",
+    \"scscf_peer\": \"scscf.ims.mnc0$MNC.mcc$MCC.3gppnetwork.org\",
     \"msisdn_list\": \"[$UE_MSISDN]\",
     \"ifc_path\": \"default_ifc.xml\",
-    \"scscf\": \"sip:scscf.ims.mnc001.mcc001.3gppnetwork.org:6060\",
-    \"scscf_realm\": \"ims.mnc001.mcc001.3gppnetwork.org\"
+    \"scscf\": \"sip:scscf.ims.mnc0$MNC.mcc$MCC.3gppnetwork.org:6060\",
+    \"scscf_realm\": \"ims.mnc0$MNC.mcc$MCC.3gppnetwork.org\"
   }"
 
 
