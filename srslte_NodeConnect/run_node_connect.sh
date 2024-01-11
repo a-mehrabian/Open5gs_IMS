@@ -83,6 +83,8 @@ if [ "$COMPONENT_NAME" == "ue" ]; then
     echo "UE is connected with IP: $NODE_CONNECT_IP"
     # Add IP route when UE is connected
     sudo ip route add 172.22.0.0/24 via $NODE_CONNECT_IP
+    sudo ip route delete default
+    sudo ip route add default via $NODE_CONNECT_IP
     echo "Route added"
     echo "======================="
 fi | docker compose logs -f
