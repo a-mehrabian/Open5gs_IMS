@@ -21,6 +21,12 @@ case $option in
     # Build eNB
     cd ../srslte
     docker build --no-cache --force-rm -t docker_srslte .
+    
+    cd ../srslte_external_deploy
+    docker compose build
+
+    cd ../srslte_NodeConnect
+    docker compose build
     ;;
 
   3)
@@ -33,6 +39,12 @@ case $option in
 
     cd ../srslte
     docker build --no-cache --force-rm -t docker_srslte .
+
+    cd ../srslte_external_deploy
+    docker compose build
+
+    cd ../srslte_NodeConnect
+    docker compose build
     ;;
 
   4)
@@ -45,6 +57,12 @@ case $option in
 
     cd ../srslte
     docker build -t docker_srslte .
+    
+    cd ../srslte_external_deploy
+    docker compose build
+
+    cd ../srslte_NodeConnect
+    docker compose build
     ;;
 
   *)

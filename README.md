@@ -440,7 +440,7 @@ Take note of **auc_id** specified in **Response body** under **Server response**
   "enabled": true,
   "auc_id": 1,
   "default_apn": 1,
-  "apn_list": "0,1",
+  "apn_list": "1,2",
   "msisdn": "001001",
   "ue_ambr_dl": 0,
   "ue_ambr_ul": 0
