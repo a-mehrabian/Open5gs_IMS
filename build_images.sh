@@ -19,7 +19,7 @@ case $option in
     
   2)
     # Build eNB
-    cd ../srslte
+    cd srslte
     docker build --no-cache --force-rm -t docker_srslte .
     
     cd ../srslte_external_deploy
@@ -57,7 +57,7 @@ case $option in
 
     cd ../srslte
     docker build -t docker_srslte .
-    
+
     cd ../srslte_external_deploy
     docker compose build
 
