@@ -420,6 +420,20 @@ services:
       interval: 10s
       timeout: 10s
       retries: 5
+  asterisk-amr:
+    build: ./asterisk-amr
+    image: asterisk-amr
+    container_name: asterisk-amr
+    env_file:
+      - .env
+    volumes:
+      - ./asterisk-amr/entrypoint.sh:/usr/bin/entrypoint.sh
+      - ./asterisk-amr/conf:/etc/asterisk
+    depends_on:
+      - scscf
+    networks:
+      default:
+        ipv4_address: ${ASTERISK_AMR_IP}
   pcscf:
     image: docker_kamailio
     container_name: pcscf

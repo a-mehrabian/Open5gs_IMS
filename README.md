@@ -42,6 +42,9 @@ docker build --no-cache --force-rm -t docker_open5gs .
 cd ../ims_base
 docker build --no-cache --force-rm -t docker_kamailio .
 
+cd ../asterisk-amr
+docker build --no-cache --force-rm -t asterisk-amr .
+
 # srsRAN eNB/gNB
 cd ../srslte
 docker build --no-cache --force-rm -t docker_srslte .
